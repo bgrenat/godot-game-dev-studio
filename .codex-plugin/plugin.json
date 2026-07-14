@@ -1,0 +1,50 @@
+{
+  "name": "godot-game-dev-studio",
+  "version": "0.1.0+codex.20260714131559",
+  "description": "Codex plugin assembled by Powehi for Godot 4.7+ game-development skills, examples, patterns, and studio orchestration.",
+  "author": {
+    "name": "Powehi",
+    "url": "https://powehi.eu"
+  },
+  "homepage": "https://powehi.eu",
+  "repository": "https://github.com/powehi-ai/godot-game-dev-studio",
+  "license": "LGPL-3.0",
+  "keywords": [
+    "codex",
+    "godot",
+    "gamedev",
+    "gdscript",
+    "game-development",
+    "skills"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Godot Game Dev Studio",
+    "shortDescription": "Godot 4.7+ gamedev skills with studio orchestration.",
+    "longDescription": "A broad Codex toolkit for Godot and game-development work, covering architecture, gameplay systems, animation, physics, UI, shaders, networking, optimization, testing, export workflows, genre patterns, publishing workflows, specialized addons, and studio-style orchestration roles. Assembled and curated by Powehi from Divergent AI / GD Agentic Skills, awesome-gamedev-agent-skills, GodotPrompter, Claude-Code-Game-Studios, godot-worldmap-builder, and other open gamedev resources.",
+    "developerName": "Powehi",
+    "category": "Developer Tools",
+    "websiteURL": "https://powehi.eu",
+    "brandColor": "#38BDF8",
+    "capabilities": [
+      "Godot 4.7+ guidance",
+      "GDScript patterns",
+      "Game architecture",
+      "Genre patterns",
+      "Publishing workflows",
+      "Godot addon examples",
+      "Studio orchestrators"
+    ],
+    "composerIcon": "./assets/plugin-icon.png",
+    "logo": "./assets/plugin-icon.png",
+    "logoDark": "./assets/plugin-icon.png",
+    "screenshots": [
+      "./assets/plugin-icon.png"
+    ],
+    "defaultPrompt": [
+      "Design a Godot gameplay system.",
+      "Review this GDScript architecture.",
+      "Plan a Godot game feature."
+    ]
+  }
+}

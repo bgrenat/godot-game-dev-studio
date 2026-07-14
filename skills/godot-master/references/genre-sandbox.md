@@ -1,0 +1,306 @@
+﻿---
+name: godot-genre-sandbox
+description: "Expert blueprint for sandbox games (Minecraft, Terraria, Garry's Mod) with physics-based interactions, cellular automata, emergent gameplay, and creative tools. Use when building open-world creation games with voxels, element systems, player-created structures, or procedural worlds. Keywords voxel, sandbox, cellular automata, MultiMesh, chunk management, emergent behavior, creative mode."
+---
+
+## Godot 4.7 Baseline
+
+- Expert patterns in this skill target **Godot 4.7+** (stable, 2026-06-18).
+- Consult the [Godot 4.7 migration guide](https://docs.godotengine.org/en/4.7/tutorials/migrating/upgrading_to_godot_4.7.html) when upgrading projects from 4.6.
+- **NEVER** assume 4.6 defaults (stretch mode, audio area_mask, RichTextLabel percent flags) without checking 4.7 migration notes.
+
+# Genre: Sandbox
+
+Physical simulation, emergent play, and player creativity define this genre.
+
+## NEVER Do (Expert Anti-Patterns)
+
+### Performance & Scalability
+- NEVER use individual `RigidBody` nodes for every block; strictly use **Static Colliders** for the world and reserve physics for dynamic props.
+- NEVER simulate the entire world every frame; strictly process **"Dirty" chunks** with active changes. Sleeping chunks must consume zero CPU.
+- NEVER update `MultiMesh` buffers every frame; strictly **batch changes** and only rebuild the buffer when a modification completes (e.g., player stops painting).
+- NEVER use standard Godot `Nodes` for every grid cell; strictly use **PackedInt32Arrays** or typed Dictionaries to keep RAM overhead minimal.
+- NEVER raycast against every individual voxel for placement; strictly use **Grid Quantization** (`floor(pos/size)`) for direct O(1) cell calculation.
+- NEVER render every block face in a chunk; strictly generate an `ArrayMesh` that only pushes **visible exterior faces** to the GPU (Culling/Greedy Meshing).
+
+### Data & Persistence
+- NEVER save raw arrays of every block transform; strictly use **Run-Length Encoding (RLE)** (e.g., "Air x 50,000") to compress uniform spaces.
+- NEVER load massive terrain chunks synchronously; strictly use `ResourceLoader.load_threaded_request()` to prevent frame stutter.
+- NEVER use standard text `.tscn` files for voxel datasets; strictly use **binary `.res` files** for 10x faster parsing.
+- NEVER ignore **Floating-Point Precision limits** (32,768 units); strictly implement floating-origin shifting for massive worlds.
+
+### Systems & Architecture
+- NEVER hardcode element interactions (`if water and fire`); strictly use a **Property System** where interactions emerge from material attributes (flammability, density).
+- NEVER trust client-side placement in multiplayer; strictly require the **Server to validate** bounds and resources.
+- NEVER manipulate the SceneTree from background generation threads; strictly use `call_deferred()` or Mutex locks for safety.
+- NEVER leave orphaned chunks in memory; strictly track loaded regions and call `queue_free()` on discarded branches.
+
+---
+
+## 🛠 Expert Components (scripts/)
+
+### Original Expert Patterns
+- [voxel_chunk_manager.gd](scripts/voxel_chunk_manager.gd) - Professional chunk management using `MultiMeshInstance3D` with batch update logic.
+- [cellular_automata_liquid.gd](scripts/cellular_automata_liquid.gd) - Optimized simulation of liquids and powders using property-based density checks.
+- [voxel_world.gd](scripts/voxel_world.gd) - Top-level world controller for grid state, tool-based editing, and chunk lifecycle.
+
+### Modular Components
+- [sandbox_patterns.gd](scripts/sandbox_patterns.gd) - Utility collection for async chunk loading, multithreading, and origin shifting.
+
+## Architecture Patterns
+
+### 1. Element System (Property-Based Emergence)
+Model material properties, not behaviors. Interactions emerge from overlapping properties.
+
+```gdscript
+# element_data.gd
+class_name ElementData extends Resource
+
+enum Type { SOLID, LIQUID, GAS, POWDER }
+@export var id: String = "air"
+@export var type: Type = Type.GAS
+@export var density: float = 0.0      # For liquid flow direction
+@export var flammable: float = 0.0    # 0-1: Chance to ignite
+@export var ignition_temp: float = 400.0
+@export var conductivity: float = 0.0  # For electricity/heat
+@export var hardness: float = 1.0     # Mining time multiplier
+
+# EDGE CASE: What if two elements have same density but different types?
+# SOLUTION: Use secondary sort (type enum priority: SOLID > LIQUID > POWDER > GAS)
+func should_swap_with(other: ElementData) -> bool:
+    if density == other.density:
+        return type > other.type  # Enum comparison: SOLID(0) > GAS(3)
+    return density > other.density
+```
+
+### 2. Cellular Automata Grid (Falling Sand Simulation)
+Update order matters. Top-down prevents "teleporting" godot-particles.
+
+```gdscript
+# world_grid.gd
+var grid: Dictionary = {}  # Vector2i -> ElementData
+var dirty_cells: Array[Vector2i] = []
+
+func _physics_process(_delta: float) -> void:
+    # CRITICAL: Sort top-to-bottom to prevent double-moves
+    dirty_cells.sort_custom(func(a, b): return a.y < b.y)
+    
+    for pos in dirty_cells:
+        simulate_cell(pos)
+    dirty_cells.clear()
+
+func simulate_cell(pos: Vector2i) -> void:
+    var cell = grid.get(pos)
+    if not cell: return
+    
+    match cell.type:
+        ElementData.Type.LIQUID, ElementData.Type.POWDER:
+            # Try down, then down-left, then down-right
+            var targets = [pos + Vector2i.DOWN, 
+                           pos + Vector2i(- 1, 1), 
+                           pos + Vector2i(1, 1)]
+            for target in targets:
+                var neighbor = grid.get(target)
+                if neighbor and cell.should_swap_with(neighbor):
+                    swap_cells(pos, target)
+                    mark_dirty(target)
+                    return
+        
+        ElementData.Type.GAS:
+            # Gases rise (inverse of liquids)
+            var targets = [pos + Vector2i.UP,
+                           pos + Vector2i(-1, -1),
+                           pos + Vector2i(1, -1)]
+            # Same swap logic...
+
+# EDGE CASE: What if multiple godot-particles want to move into same cell?
+# SOLUTION: Only mark target dirty, don't double-swap. Next frame resolves conflicts.
+```
+
+### 3. Tool System (Strategy Pattern)
+Decouple input from world modification.
+
+```gdscript
+# tool_base.gd
+class_name Tool extends Resource
+func use(world_pos: Vector2, world: WorldGrid) -> void: pass
+
+# tool_brush.gd
+extends Tool
+@export var element: ElementData
+@export var radius: int = 1
+
+func use(world_pos: Vector2, world: WorldGrid) -> void:
+    var grid_pos = Vector2i(floor(world_pos.x), floor(world_pos.y))
+    
+    # Circle brush pattern
+    for x in range(-radius, radius + 1):
+        for y in range(-radius, radius + 1):
+            if x*x + y*y <= radius*radius:  # Circle boundary
+                var target = grid_pos + Vector2i(x, y)
+                world.set_cell(target, element)
+
+# FALLBACK: If element placement fails (e.g., occupied by indestructible block)?
+# Check world.can_place(target) before set_cell(), show visual feedback.
+```
+
+### 4. Chunk-Based Rendering (3D Voxels)
+Only render visible faces. Use greedy meshing to merge adjacent blocks.
+
+```gdscript
+# See scripts/voxel_chunk_manager.gd for full implementation
+
+# EXPERT DECISION TREE:
+# - Small worlds (<100k blocks): Single MeshInstance with SurfaceTool
+# - Medium worlds (100k-1M blocks): Chunked MultiMesh (see script)
+# - Large worlds (>1M blocks): Chunked + greedy meshing + LOD
+```
+
+## Save System for Sandbox Worlds
+
+```gdscript
+# chunk_save_data.gd
+class_name ChunkSaveData extends Resource
+
+@export var chunk_coord: Vector2i
+@export var rle_data: PackedInt32Array  # [type_id, count, type_id, count...]
+
+# EXPERT TECHNIQUE: Run-Length Encoding
+static func encode_chunk(grid: Dictionary, chunk_pos: Vector2i, chunk_size: int) -> ChunkSaveData:
+    var data = ChunkSaveData.new()
+    data.chunk_coord = chunk_pos
+    
+    var run_type: int = -1
+    var run_count: int = 0
+    
+    for y in range(chunk_size):
+        for x in range(chunk_size):
+            var world_pos = chunk_pos * chunk_size + Vector2i(x, y)
+            var cell = grid.get(world_pos)
+            var type_id = cell.id if cell else 0  # 0 = air
+            
+            if type_id == run_type:
+                run_count += 1
+            else:
+                if run_count > 0:
+                    data.rle_data.append(run_type)
+                    data.rle_data.append(run_count)
+                run_type = type_id
+                run_count = 1
+    
+    # Flush final run
+    if run_count > 0:
+        data.rle_data.append(run_type)
+        data.rle_data.append(run_count)
+    
+    return data
+
+# COMPRESSION RESULT: Empty chunk (16×16 = 256 blocks of air)
+# Without RLE: 256 integers = 1024 bytes
+# With RLE: [0, 256] = 8 bytes (128x compression!)
+```
+
+## Physics Joints for Player Creations
+
+```gdscript
+# joint_tool.gd
+func create_hinge(body_a: RigidBody2D, body_b: RigidBody2D, anchor: Vector2) -> void:
+    var joint = PinJoint2D.new()
+    joint.global_position = anchor
+    joint.node_a = body_a.get_path()
+    joint.node_b = body_b.get_path()
+    joint.softness = 0.5  # Allows slight flex
+    add_child(joint)
+    
+    # EDGE CASE: What if bodies are deleted while joint exists?
+    # Joint will auto-break in Godot 4.x, but orphaned Node leaks memory.
+# SOLUTION:
+    body_a.tree_exiting.connect(func(): joint.queue_free())
+    body_b.tree_exiting.connect(func(): joint.queue_free())
+
+# FALLBACK: Player attaches joint to static geometry?
+# Check `body.freeze == false` before creating joint.
+```
+
+## Godot-Specific Expert Notes
+
+- **`MultiMeshInstance3D.multimesh.instance_count`**: MUST be set before buffer allocation. Cannot dynamically grow — requires recreation.
+- **`RigidBody2D.sleeping`**: Bodies auto-sleep after 2 seconds of no movement. Use `apply_central_impulse(Vector2.ZERO)` to force wake without adding force.
+- **`GridMap` vs `MultiMesh`**: GridMap uses MeshLibrary (great for variety), MultiMesh uses single mesh (great for speed). Combine: GridMap for structures, MultiMesh for terrain.
+- **Continuous CD**: `continuous_cd` requires convex collision shapes. Use `CapsuleShape2D` for projectiles, NOT `RectangleShape2D`.
+
+
+---
+
+## 🚀 Elite Technical Implementations (Batch 09)
+
+### 1. Greedy-Meshing Pattern (Quad Optimization)
+Rendering individual voxels is a bottleneck. Greedy meshing combines adjacent identical faces into single large quads. For maximum performance, bypass the SceneTree and submit generated arrays directly to the `RenderingServer`.
+
+```gdscript
+class_name VoxelChunkMesher extends RefCounted
+
+## Generates optimized mesh data and pushes it to the RenderingServer.
+static func build_greedy_mesh(chunk_transform: Transform3D, scenario_rid: RID) -> RID:
+    var vertices := PackedVector3Array()
+    var normals := PackedVector3Array()
+    var indices := PackedInt32Array()
+    
+    # ... algorithm calculates optimized quads ...
+    
+    var surface_array := []
+    surface_array.resize(Mesh.ARRAY_MAX)
+    surface_array[Mesh.ARRAY_VERTEX] = vertices
+    surface_array[Mesh.ARRAY_NORMAL] = normals
+    surface_array[Mesh.ARRAY_INDEX] = indices
+    
+    var mesh_rid := RenderingServer.mesh_create()
+    RenderingServer.mesh_add_surface_from_arrays(mesh_rid, Mesh.PRIMITIVE_TRIANGLES, surface_array)
+    
+    var instance_rid := RenderingServer.instance_create()
+    RenderingServer.instance_set_base(instance_rid, mesh_rid)
+    RenderingServer.instance_set_transform(instance_rid, chunk_transform)
+    RenderingServer.instance_set_scenario(instance_rid, scenario_rid)
+    
+    return instance_rid
+```
+
+### 2. Voxel-GI-Server (Dynamic Global Illumination)
+For procedural sandbox worlds, use `VoxelGI` to provide real-time indirect lighting. Interface with the `RenderingServer` to allocate GI data for chunks dynamically as they are generated.
+
+```gdscript
+class_name VoxelGIServerManager extends Node
+
+var _gi_instance_rid: RID
+
+func _ready() -> void:
+    RenderingServer.voxel_gi_set_quality(RenderingServer.VOXEL_GI_QUALITY_LOW)
+    _gi_instance_rid = RenderingServer.voxel_gi_create()
+    RenderingServer.instance_set_scenario(_gi_instance_rid, get_world_3d().scenario)
+
+func allocate_chunk_gi(chunk_aabb: AABB) -> void:
+    # Allocation requires to_cell_xform and level_counts buffers
+    RenderingServer.voxel_gi_allocate_data(_gi_instance_rid, Transform3D(), chunk_aabb, Vector3i(64,64,64), PackedByteArray(), PackedByteArray(), PackedByteArray(), PackedInt32Array())
+    RenderingServer.voxel_gi_set_dynamic_range(_gi_instance_rid, 2.0)
+```
+
+### 3. Blueprint-Sharing (Base64/JSON Serialization)
+Allow players to share creations via simple strings. Use `JSON` for readable serialization and `DisplayServer` for clipboard integration.
+
+```gdscript
+class_name BlueprintManager extends Node
+
+## Exports chunk data to the OS clipboard.
+static func export_blueprint_to_clipboard(blueprint_data: Dictionary) -> void:
+    var json_string: String = JSON.stringify(blueprint_data)
+    DisplayServer.clipboard_set(json_string)
+
+## Imports blueprint from clipboard.
+static func import_blueprint_from_clipboard() -> Dictionary:
+    var json_string: String = DisplayServer.clipboard_get()
+    var parsed_data = JSON.parse_string(json_string)
+    return parsed_data if parsed_data is Dictionary else {}
+```
+
+
+- Master Skill: [godot-master](../godot-master/SKILL.md)

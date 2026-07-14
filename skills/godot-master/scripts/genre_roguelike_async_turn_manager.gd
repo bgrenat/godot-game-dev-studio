@@ -1,0 +1,24 @@
+extends Node
+class_name AsyncTurnManager
+
+## Expert Turn Manager (Godot 4.7).
+## Asynchronous loop using 'await' to sync actions and animations.
+
+var entities: Array[Node] = []
+
+func run_turn_loop() -> void:
+	while true:
+		for entity in entities:
+			if not is_instance_valid(entity): continue
+			
+			# Start entity turn
+			entity.begin_turn()
+			
+			# Expert Pattern: Halt loop until entity emits 'finished'
+			# This ensures animations (Tweens) complete before the next turn.
+			await entity.turn_finished
+			
+			if _check_victory(): return
+
+## [SKILL NOTICE]: Use 'await' inside the turn loop to cleanly handle 
+## asynchronous actions like movement Tweens and attack animations.

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Godot Game Dev Studio icon</title>
+  <desc id="desc">A stylized Godot-inspired game studio mark with nodes, pixels, and a Powehi assembly spark.</desc>
+  <defs>
+    <linearGradient id="bg" x1="32" y1="24" x2="224" y2="232" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#38BDF8"/>
+      <stop offset="0.48" stop-color="#6366F1"/>
+      <stop offset="1" stop-color="#A855F7"/>
+    </linearGradient>
+    <linearGradient id="spark" x1="176" y1="42" x2="220" y2="94" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FDE68A"/>
+      <stop offset="1" stop-color="#F97316"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#020617" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="256" height="256" rx="56" fill="#0B1020"/>
+  <rect x="18" y="18" width="220" height="220" rx="48" fill="url(#bg)" filter="url(#softShadow)"/>
+  <path d="M64 104C64 78.6 84.6 58 110 58h36c25.4 0 46 20.6 46 46v52c0 25.4-20.6 46-46 46h-36c-25.4 0-46-20.6-46-46v-52Z" fill="#F8FAFC"/>
+  <path d="M82 115c7.5-23.5 24.8-36 46-36s38.5 12.5 46 36v44c0 13.8-11.2 25-25 25H107c-13.8 0-25-11.2-25-25v-44Z" fill="#1D4ED8"/>
+  <circle cx="108" cy="125" r="13" fill="#F8FAFC"/>
+  <circle cx="148" cy="125" r="13" fill="#F8FAFC"/>
+  <circle cx="108" cy="125" r="5" fill="#0B1020"/>
+  <circle cx="148" cy="125" r="5" fill="#0B1020"/>
+  <path d="M108 157c11.7 9.3 28.3 9.3 40 0" fill="none" stroke="#F8FAFC" stroke-width="9" stroke-linecap="round"/>
+  <path d="M88 94 68 76M168 94l20-18" stroke="#F8FAFC" stroke-width="11" stroke-linecap="round"/>
+  <path d="M183 56 195 77l24 5-18 16 3 24-21-12-22 11 5-24-17-17 24-3 10-21Z" fill="url(#spark)" stroke="#FFF7ED" stroke-width="5" stroke-linejoin="round"/>
+  <rect x="52" y="177" width="28" height="28" rx="8" fill="#0F172A" opacity="0.9"/>
+  <rect x="176" y="177" width="28" height="28" rx="8" fill="#0F172A" opacity="0.9"/>
+  <path d="M80 191h96" stroke="#0F172A" stroke-width="10" stroke-linecap="round"/>
+  <path d="M66 191h124" stroke="#F8FAFC" stroke-width="4" stroke-linecap="round" opacity="0.75"/>
+</svg>

@@ -1,0 +1,461 @@
+[gd_scene load_steps=24 format=3 uid="uid://4tmqw8w2u8o5"]
+
+[ext_resource type="Script" uid="uid://bfw3ldkpbv6r1" path="res://addons/worldmap_builder/nodes/worldmap_view.gd" id="1_fafx5"]
+[ext_resource type="Texture2D" uid="uid://dfwrk73ka6j8x" path="res://example/skilltree_borders.png" id="2_76jt8"]
+[ext_resource type="Script" uid="uid://df3uck0ooxxqy" path="res://addons/worldmap_builder/resource_types/wordmap_style.gd" id="2_oxm7o"]
+[ext_resource type="Script" uid="uid://dr8ckx0ydbaus" path="res://addons/worldmap_builder/nodes/worldmap_path.gd" id="2_oyim1"]
+[ext_resource type="Resource" uid="uid://bauso3p8ba010" path="res://example/skills/small_hp.tres" id="2_xtlsu"]
+[ext_resource type="Resource" uid="uid://momqsxlp1gfs" path="res://example/skills/small_elemental.tres" id="4_ytcj4"]
+[ext_resource type="Resource" uid="uid://c31230cm8np7i" path="res://example/skills/small_acc.tres" id="5_fevd2"]
+[ext_resource type="Resource" uid="uid://dqwiht23gapri" path="res://example/skills/small_xp.tres" id="5_sdu2a"]
+[ext_resource type="Resource" uid="uid://b50a23pxlslin" path="res://example/skills/small_evasion.tres" id="6_jp1vb"]
+[ext_resource type="Script" uid="uid://dgvxfl64wub1n" path="res://addons/worldmap_builder/nodes/worldmap_graph.gd" id="7_miljq"]
+[ext_resource type="Resource" uid="uid://b1t0k6su5o8v" path="res://example/skills/small_mp.tres" id="8_41shr"]
+[ext_resource type="Resource" uid="uid://xy4g21ll2705" path="res://example/skills/small_weapon.tres" id="9_vbyll"]
+[ext_resource type="Resource" uid="uid://blvno4nfn2sac" path="res://example/skills/small_spell.tres" id="12_jkrui"]
+[ext_resource type="Script" uid="uid://bv73nm5ocjwsq" path="res://example/input_handler.gd" id="13_3q26m"]
+[ext_resource type="Resource" uid="uid://dnpf51y01rqsa" path="res://example/skills/small_ward.tres" id="13_6sgvs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vql2y"]
+atlas = ExtResource("2_76jt8")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w5rdv"]
+load_path = "res://.godot/imported/skilltree_borders.png-b022ab63f57155a8a0a421454feb26f1.ctex"
+
+[sub_resource type="Resource" id="Resource_aa6er"]
+resource_name = "Active"
+script = ExtResource("2_oxm7o")
+icon_modulate = Color(1, 1, 1, 1)
+icon_border_modulate = Color(1, 1, 1, 1)
+connection_modulate = Color(1, 1, 1, 1)
+icon_borders = Array[Texture2D]([SubResource("AtlasTexture_vql2y")])
+straight_tex = SubResource("CompressedTexture2D_w5rdv")
+straight_tex_region = Rect2(0, 8, 128, 8)
+straight_tex_repeat = false
+priority = -5
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pr8m7"]
+atlas = ExtResource("2_76jt8")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6ivhx"]
+load_path = "res://.godot/imported/skilltree_borders.png-b022ab63f57155a8a0a421454feb26f1.ctex"
+
+[sub_resource type="Resource" id="Resource_4xltf"]
+resource_name = "Can Activate"
+script = ExtResource("2_oxm7o")
+icon_modulate = Color(1, 1, 1, 1)
+icon_border_modulate = Color(1, 1, 1, 1)
+connection_modulate = Color(1, 1, 1, 1)
+icon_borders = Array[Texture2D]([SubResource("AtlasTexture_pr8m7")])
+straight_tex = SubResource("CompressedTexture2D_6ivhx")
+straight_tex_region = Rect2(0, 16, 128, 8)
+straight_tex_repeat = false
+priority = -3
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wm6gh"]
+atlas = ExtResource("2_76jt8")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="Resource" id="Resource_2hquj"]
+resource_name = "Inactive"
+script = ExtResource("2_oxm7o")
+icon_modulate = Color(0.275248, 0.324215, 0.424479, 1)
+icon_border_modulate = Color(1, 1, 1, 1)
+connection_modulate = Color(1, 1, 1, 1)
+icon_borders = Array[Texture2D]([SubResource("AtlasTexture_wm6gh")])
+straight_tex = ExtResource("2_76jt8")
+straight_tex_region = Rect2(0, 0, 128, 8)
+straight_tex_repeat = false
+priority = 0
+
+[node name="Node" type="Node"]
+
+[node name="MarginContainer" type="ScrollContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 142.0
+offset_top = 46.0
+offset_right = -156.0
+offset_bottom = -99.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ActualMarginContainer" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Map" type="Control" parent="MarginContainer/ActualMarginContainer" node_paths=PackedStringArray("initial_item")]
+custom_minimum_size = Vector2(846, 600)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+script = ExtResource("1_fafx5")
+initial_item = NodePath("WorldmapGraph")
+initial_node = 6
+style_active = SubResource("Resource_aa6er")
+style_can_activate = SubResource("Resource_4xltf")
+style_inactive = SubResource("Resource_2hquj")
+metadata/_edit_lock_ = true
+
+[node name="Path" type="Node2D" parent="MarginContainer/ActualMarginContainer/Map"]
+script = ExtResource("2_oyim1")
+start = Vector2(0, 459.625)
+end = Vector2(108.877, 116.312)
+handle_1 = Vector2(-261.385, 92.8094)
+handle_2 = Vector2(-276.385, 478.299)
+bidirectional = true
+node_grid_snap = 1
+node_count = 6
+node_0/data = ExtResource("5_sdu2a")
+node_1/data = ExtResource("2_xtlsu")
+node_2/data = ExtResource("2_xtlsu")
+node_3/data = ExtResource("2_xtlsu")
+node_4/data = ExtResource("2_xtlsu")
+node_5/data = ExtResource("5_sdu2a")
+
+[node name="Path2" type="Node2D" parent="MarginContainer/ActualMarginContainer/Map"]
+script = ExtResource("2_oyim1")
+start = Vector2(108.877, 116.312)
+end = Vector2(471.385, 264.547)
+handle_1 = Vector2(282.615, 208.807)
+handle_2 = Vector2(-26.4655, 154.632)
+mode = 1
+bidirectional = true
+end_with_empty = true
+node_grid_snap = 1
+node_count = 8
+node_0/data = ExtResource("5_fevd2")
+node_1/data = ExtResource("5_fevd2")
+node_2/data = ExtResource("5_fevd2")
+node_3/data = ExtResource("5_fevd2")
+node_4/data = ExtResource("5_fevd2")
+node_5/data = ExtResource("5_fevd2")
+node_6/data = ExtResource("5_fevd2")
+node_7/data = ExtResource("5_fevd2")
+
+[node name="Node2D" type="Node2D" parent="MarginContainer/ActualMarginContainer/Map"]
+
+[node name="Path3" type="Node2D" parent="MarginContainer/ActualMarginContainer/Map"]
+script = ExtResource("2_oyim1")
+start = Vector2(471.385, 264.547)
+end = Vector2(774.695, 551.659)
+handle_1 = Vector2(655.095, 374.232)
+handle_2 = Vector2(-384.985, 261.791)
+mode = 1
+bidirectional = true
+node_grid_snap = 1
+node_count = 9
+node_0/data = ExtResource("6_jp1vb")
+node_1/data = ExtResource("6_jp1vb")
+node_2/data = ExtResource("6_jp1vb")
+node_3/data = ExtResource("6_jp1vb")
+node_4/data = ExtResource("6_jp1vb")
+node_5/data = ExtResource("6_jp1vb")
+node_6/data = ExtResource("6_jp1vb")
+node_7/data = ExtResource("6_jp1vb")
+node_8/data = ExtResource("6_jp1vb")
+
+[node name="Path4" type="Node2D" parent="MarginContainer/ActualMarginContainer/Map"]
+script = ExtResource("2_oyim1")
+start = Vector2(774.695, 551.659)
+end = Vector2(833.244, 100.534)
+handle_1 = Vector2(937.695, 357.403)
+handle_2 = Vector2(655.294, 319.306)
+mode = 2
+bidirectional = true
+node_grid_snap = 1
+node_count = 9
+node_0/data = ExtResource("4_ytcj4")
+node_1/data = ExtResource("4_ytcj4")
+node_2/data = ExtResource("4_ytcj4")
+node_3/data = ExtResource("4_ytcj4")
+node_4/data = ExtResource("4_ytcj4")
+node_5/data = ExtResource("4_ytcj4")
+node_6/data = ExtResource("4_ytcj4")
+node_7/data = ExtResource("4_ytcj4")
+node_8/data = ExtResource("4_ytcj4")
+
+[node name="WorldmapGraph" type="Node2D" parent="MarginContainer/ActualMarginContainer/Map"]
+script = ExtResource("7_miljq")
+connection_min_length = 64.0
+node_grid_snap = 1
+end_connection_nodes = Array[int]([4, 8, 9, 5])
+node_count = 10
+node_0/data = ExtResource("2_xtlsu")
+node_0/position = Vector2(262.132, 344.289)
+node_1/data = ExtResource("12_jkrui")
+node_1/position = Vector2(251, 286)
+node_2/data = ExtResource("8_41shr")
+node_2/position = Vector2(373, 359)
+node_3/data = ExtResource("6_jp1vb")
+node_3/position = Vector2(202.332, 321.317)
+node_4/data = null
+node_4/position = Vector2(247, 216)
+node_5/data = ExtResource("8_41shr")
+node_5/position = Vector2(306, 251)
+node_6/data = ExtResource("8_41shr")
+node_6/position = Vector2(309.995, 401.607)
+node_7/data = ExtResource("8_41shr")
+node_7/position = Vector2(400, 295)
+node_8/data = ExtResource("8_41shr")
+node_8/position = Vector2(471.385, 264.547)
+node_9/data = ExtResource("8_41shr")
+node_9/position = Vector2(309.995, 465.607)
+connection_count = 11
+connection_0/nodes = Vector2i(0, 3)
+connection_1/nodes = Vector2i(0, 1)
+connection_2/nodes = Vector2i(1, 5)
+connection_3/nodes = Vector2i(1, 4)
+connection_4/nodes = Vector2i(6, 6)
+connection_5/nodes = Vector2i(6, 0)
+connection_6/nodes = Vector2i(6, 2)
+connection_7/nodes = Vector2i(2, 7)
+connection_8/nodes = Vector2i(7, 8)
+connection_9/nodes = Vector2i(9, 6)
+connection_10/nodes = Vector2i(5, 7)
+
+[node name="WorldmapGraph2" type="Node2D" parent="MarginContainer/ActualMarginContainer/Map"]
+script = ExtResource("7_miljq")
+connection_min_length = 64.0
+node_grid_snap = 1
+end_connection_nodes = Array[int]([0, 6, 7])
+node_count = 8
+node_0/data = ExtResource("5_sdu2a")
+node_0/position = Vector2(247, 216)
+node_1/data = ExtResource("9_vbyll")
+node_1/position = Vector2(183, 216)
+node_2/data = ExtResource("9_vbyll")
+node_2/position = Vector2(247, 152)
+node_3/data = ExtResource("9_vbyll")
+node_3/position = Vector2(322, 187)
+node_4/data = ExtResource("9_vbyll")
+node_4/position = Vector2(247, 88)
+node_5/data = ExtResource("9_vbyll")
+node_5/position = Vector2(183, 152)
+node_6/data = null
+node_6/position = Vector2(108.877, 116.312)
+node_7/data = null
+node_7/position = Vector2(306, 251)
+connection_count = 7
+connection_0/nodes = Vector2i(2, 4)
+connection_1/nodes = Vector2i(1, 5)
+connection_2/nodes = Vector2i(5, 6)
+connection_3/nodes = Vector2i(0, 1)
+connection_4/nodes = Vector2i(0, 2)
+connection_5/nodes = Vector2i(3, 2)
+connection_6/nodes = Vector2i(3, 7)
+
+[node name="WorldmapGraph3" type="Node2D" parent="MarginContainer/ActualMarginContainer/Map"]
+script = ExtResource("7_miljq")
+connection_min_length = 64.0
+node_grid_snap = 1
+end_connection_nodes = Array[int]([9, 0])
+node_count = 10
+node_0/data = null
+node_0/position = Vector2(471.385, 264.547)
+node_1/data = ExtResource("13_6sgvs")
+node_1/position = Vector2(535.384, 264.547)
+node_2/data = ExtResource("13_6sgvs")
+node_2/position = Vector2(599.384, 264.547)
+node_3/data = ExtResource("13_6sgvs")
+node_3/position = Vector2(663.384, 264.547)
+node_4/data = ExtResource("13_6sgvs")
+node_4/position = Vector2(727.384, 264.547)
+node_5/data = ExtResource("13_6sgvs")
+node_5/position = Vector2(727.384, 200.547)
+node_6/data = ExtResource("13_6sgvs")
+node_6/position = Vector2(744.874, 139.664)
+node_7/data = ExtResource("13_6sgvs")
+node_7/position = Vector2(770.695, 86.9114)
+node_8/data = ExtResource("13_6sgvs")
+node_8/position = Vector2(818.965, 45.3798)
+node_9/data = null
+node_9/position = Vector2(833.244, 100.534)
+connection_count = 9
+connection_0/nodes = Vector2i(0, 1)
+connection_1/nodes = Vector2i(1, 2)
+connection_2/nodes = Vector2i(2, 3)
+connection_3/nodes = Vector2i(3, 4)
+connection_4/nodes = Vector2i(4, 5)
+connection_5/nodes = Vector2i(5, 6)
+connection_6/nodes = Vector2i(6, 7)
+connection_7/nodes = Vector2i(7, 8)
+connection_8/nodes = Vector2i(8, 9)
+
+[node name="InputHandler" type="Node" parent="." node_paths=PackedStringArray("skilltree", "skillpoint_label", "skill_reset", "stat_list", "tooltip_root", "tooltip_title", "tooltip_desc", "add_target")]
+script = ExtResource("13_3q26m")
+skilltree = NodePath("../MarginContainer/ActualMarginContainer/Map")
+skillpoint_label = NodePath("Anchors/BottomBox/Panel/Points")
+skill_reset = NodePath("Anchors/BottomBox/ResetSkills")
+stat_list = NodePath("Anchors/BottomRightBox/Box/Panel/Box/Stats")
+tooltip_root = NodePath("Tooltip")
+tooltip_title = NodePath("Tooltip/MarginContainer/VBoxContainer/PanelContainer/Label")
+tooltip_desc = NodePath("Tooltip/MarginContainer/VBoxContainer/Label2")
+add_target = NodePath("../MarginContainer/ActualMarginContainer/Map/WorldmapGraph")
+
+[node name="Tooltip" type="PanelContainer" parent="InputHandler"]
+offset_left = -274.0
+offset_top = -214.0
+offset_right = 78.0
+offset_bottom = -124.0
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="InputHandler/Tooltip"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InputHandler/Tooltip/MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="InputHandler/Tooltip/MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="InputHandler/Tooltip/MarginContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+text = "Skill Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="InputHandler/Tooltip/MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Label2" type="Label" parent="InputHandler/Tooltip/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "This skill gives +0.0001% to some useless stat.
+I hate this type of skill trees."
+
+[node name="Anchors" type="MarginContainer" parent="InputHandler"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="BottomBox" type="VBoxContainer" parent="InputHandler/Anchors"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="Label" type="Label" parent="InputHandler/Anchors/BottomBox"]
+self_modulate = Color(1, 1, 1, 0.498039)
+layout_mode = 2
+text = "Left-click to assign/unassign. Middle-click to edit"
+horizontal_alignment = 1
+
+[node name="Panel" type="PanelContainer" parent="InputHandler/Anchors/BottomBox"]
+layout_mode = 2
+
+[node name="Points" type="Label" parent="InputHandler/Anchors/BottomBox/Panel"]
+layout_mode = 2
+text = "20"
+horizontal_alignment = 1
+
+[node name="Add" type="Button" parent="InputHandler/Anchors/BottomBox/Panel"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Add 1"
+
+[node name="ResetSkills" type="Button" parent="InputHandler/Anchors/BottomBox"]
+layout_mode = 2
+focus_mode = 0
+text = "Click here to reset skills"
+
+[node name="Control" type="Control" parent="InputHandler/Anchors/BottomBox"]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="BottomRightBox" type="HBoxContainer" parent="InputHandler/Anchors"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="Control" type="Control" parent="InputHandler/Anchors/BottomRightBox"]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 2
+
+[node name="Box" type="VBoxContainer" parent="InputHandler/Anchors/BottomRightBox"]
+layout_mode = 2
+
+[node name="Panel" type="PanelContainer" parent="InputHandler/Anchors/BottomRightBox/Box"]
+layout_mode = 2
+
+[node name="Box" type="VBoxContainer" parent="InputHandler/Anchors/BottomRightBox/Box/Panel"]
+layout_mode = 2
+
+[node name="Panel" type="PanelContainer" parent="InputHandler/Anchors/BottomRightBox/Box/Panel/Box"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="InputHandler/Anchors/BottomRightBox/Box/Panel/Box/Panel"]
+layout_mode = 2
+text = "Total stats from tree:"
+
+[node name="Stats" type="Label" parent="InputHandler/Anchors/BottomRightBox/Box/Panel/Box"]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="Control2" type="Control" parent="InputHandler/Anchors/BottomRightBox/Box"]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 2
+
+[node name="BottomLeftBox" type="HBoxContainer" parent="InputHandler/Anchors"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="Box" type="VBoxContainer" parent="InputHandler/Anchors/BottomLeftBox"]
+layout_mode = 2
+
+[node name="Box2" type="HBoxContainer" parent="InputHandler/Anchors/BottomLeftBox/Box"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="InputHandler/Anchors/BottomLeftBox/Box/Box2"]
+layout_mode = 2
+text = "Save data:"
+
+[node name="SaveData" type="LineEdit" parent="InputHandler/Anchors/BottomLeftBox/Box/Box2"]
+layout_mode = 2
+
+[node name="Box" type="HBoxContainer" parent="InputHandler/Anchors/BottomLeftBox/Box"]
+layout_mode = 2
+
+[node name="Save" type="Button" parent="InputHandler/Anchors/BottomLeftBox/Box/Box"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Save"
+
+[node name="Load" type="Button" parent="InputHandler/Anchors/BottomLeftBox/Box/Box"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Load"
+
+[node name="Control2" type="Control" parent="InputHandler/Anchors/BottomLeftBox/Box"]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 2
+
+[node name="Control" type="Control" parent="InputHandler/Anchors/BottomLeftBox"]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 2
+
+[connection signal="node_gui_input" from="MarginContainer/ActualMarginContainer/Map" to="InputHandler" method="_on_map_node_gui_input"]
+[connection signal="node_mouse_entered" from="MarginContainer/ActualMarginContainer/Map" to="InputHandler" method="_on_map_node_mouse_entered"]
+[connection signal="node_mouse_exited" from="MarginContainer/ActualMarginContainer/Map" to="InputHandler" method="_on_map_node_mouse_exited"]
+[connection signal="pressed" from="InputHandler/Anchors/BottomBox/Panel/Add" to="InputHandler" method="_on_add_pressed"]
+[connection signal="pressed" from="InputHandler/Anchors/BottomBox/ResetSkills" to="InputHandler" method="_on_reset_skills_pressed"]
+[connection signal="pressed" from="InputHandler/Anchors/BottomLeftBox/Box/Box/Save" to="InputHandler" method="_on_save_pressed"]
+[connection signal="pressed" from="InputHandler/Anchors/BottomLeftBox/Box/Box/Load" to="InputHandler" method="_on_load_pressed"]
