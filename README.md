@@ -6,7 +6,7 @@ It packages a broad agentic skill library for **Godot architecture**, **GDScript
 
 This repository is a curated Codex plugin distribution. It includes and adapts open gamedev skill resources from several projects, including **[Divergent AI / GD Agentic Skills](https://github.com/thedivergentai/gd-agentic-skills)**, **[awesome-gamedev-agent-skills](https://github.com/gamedev-skills/awesome-gamedev-agent-skills)**, **[GodotPrompter](https://github.com/jame581/GodotPrompter)**, **[Claude-Code-Game-Studios](https://github.com/Donchitos/Claude-Code-Game-Studios)**, and **[godot-worldmap-builder](https://github.com/don-tnowe/godot-worldmap-builder)**. See [NOTICE.md](NOTICE.md) for provenance and credits.
 
-## SEO summary
+## Overview
 
 Godot Game Dev Studio helps Codex act as a game-development studio assistant for Godot projects. It is useful for planning and implementing Godot gameplay features, reviewing GDScript architecture, designing reusable game systems, modernizing Godot 4.7+ projects, selecting specialist skills, and coordinating AI-assisted game-development workflows.
 
@@ -105,7 +105,17 @@ Use individual specialist skills when the request is narrow:
 
 ## Skill index
 
-The full list is available in [skills_index.json](skills_index.json).
+The complete human-readable list is available in [SKILL_CATALOG.md](SKILL_CATALOG.md). Machine-readable metadata is available in [skills_index.json](skills_index.json).
+
+Current package size:
+
+| Family | Count | Purpose |
+| --- | ---: | --- |
+| `godot-*` | 96 | Core Godot expert skills |
+| `godot-prompter-*` | 54 | GodotPrompter-style implementation workflows |
+| `gamedev-*` | 27 | General game-development workflows |
+| `studio-*` | 12 | Studio-role orchestration |
+| **Total** | **189** | Full Godot Game Dev Studio library |
 
 Current package highlights and searchable keywords:
 
@@ -122,6 +132,18 @@ Current package highlights and searchable keywords:
 - game publishing workflows
 - Godot addon examples
 - Codex studio orchestrators
+
+## AI coding tool compatibility
+
+This repository is usable beyond Codex because the skills are plain Markdown files. Compatibility instructions are included for:
+
+- Claude Code: [CLAUDE.md](CLAUDE.md)
+- VS Code GitHub Copilot: [.github/copilot-instructions.md](.github/copilot-instructions.md)
+- Cursor: [.cursor/rules/godot-game-dev-studio.mdc](.cursor/rules/godot-game-dev-studio.mdc)
+- Gemini CLI: [GEMINI.md](GEMINI.md)
+- Codex and generic agents: [AGENTS.md](AGENTS.md)
+
+See [COMPATIBILITY.md](COMPATIBILITY.md) for setup guidance and recommended workflows.
 
 ## Development workflow
 

@@ -5,11 +5,13 @@
 .agent/
 .agents/
 .gemini/
-.cursor/
+.cursor/*
+!.cursor/rules/
+!.cursor/rules/godot-game-dev-studio.mdc
 .windsurf/
 .cline/
 .aider/
-GEMINI.md
+!GEMINI.md
 LEARNINGS.gemini.md
 skills-lock.json
 

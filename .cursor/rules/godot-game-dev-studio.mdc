@@ -1,0 +1,21 @@
+---
+description: Use Godot Game Dev Studio skills for Godot 4.7+ game-development work
+globs:
+  - "**/*"
+alwaysApply: true
+---
+
+# Godot Game Dev Studio Cursor rule
+
+This repository contains 189 Godot/game-development skills. Do not load them all at once.
+
+For Godot tasks:
+
+1. Start from `SKILL_CATALOG.md` or `skills_index.json`.
+2. Select the smallest relevant skill.
+3. Read `skills/<skill-name>/SKILL.md`.
+4. Read only the required references.
+5. Use Godot 4.7+ APIs and statically typed GDScript when generating code.
+6. Preserve credits in `NOTICE.md` and license terms in `LICENSE`.
+
+Use `studio-router` or `godot-master` for broad planning. Use specialist skills for implementation.
