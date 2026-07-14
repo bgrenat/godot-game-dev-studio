@@ -1,10 +1,26 @@
-# Godot Game Dev Studio
+# Godot Game Dev Studio — Codex Plugin for Godot 4.7+ Game Development
 
-**Godot Game Dev Studio** is a Codex plugin assembled and curated by **[Powehi](https://powehi.eu)** for Godot 4.7+ game-development work.
+**Godot Game Dev Studio** is a **Codex plugin for Godot 4.7+ game development**, assembled and curated by **[Powehi](https://powehi.eu)**.
 
-It packages a large agentic skill library for Godot architecture, gameplay systems, UI, animation, physics, shaders, optimization, publishing, genre blueprints, and studio-style orchestration roles.
+It packages a broad agentic skill library for **Godot architecture**, **GDScript patterns**, **gameplay systems**, **UI/UX**, **animation**, **2D/3D physics**, **shaders**, **optimization**, **publishing workflows**, **genre blueprints**, **Godot addon examples**, and **studio-style orchestration roles**.
 
 This repository is a curated Codex plugin distribution. It includes and adapts open gamedev skill resources from several projects, including **[Divergent AI / GD Agentic Skills](https://github.com/thedivergentai/gd-agentic-skills)**, **[awesome-gamedev-agent-skills](https://github.com/gamedev-skills/awesome-gamedev-agent-skills)**, **[GodotPrompter](https://github.com/jame581/GodotPrompter)**, **[Claude-Code-Game-Studios](https://github.com/Donchitos/Claude-Code-Game-Studios)**, and **[godot-worldmap-builder](https://github.com/don-tnowe/godot-worldmap-builder)**. See [NOTICE.md](NOTICE.md) for provenance and credits.
+
+## SEO summary
+
+Godot Game Dev Studio helps Codex act as a game-development studio assistant for Godot projects. It is useful for planning and implementing Godot gameplay features, reviewing GDScript architecture, designing reusable game systems, modernizing Godot 4.7+ projects, selecting specialist skills, and coordinating AI-assisted game-development workflows.
+
+Relevant areas include:
+
+- Godot 4.7+ game development
+- GDScript architecture and code review
+- Godot 2D and 3D systems
+- game AI, combat, quests, inventory, dialogue, save systems, and UI
+- shader programming and visual effects
+- procedural generation and level design
+- performance optimization and release readiness
+- Steam, itch.io, desktop, mobile, web, VR, and multiplayer workflows
+- Codex skills, AI coding agents, and agentic game-development workflows
 
 <div align="center">
   <img src="assets/hero_banner.webp" alt="Godot Game Dev Studio - Codex plugin for Godot game development" width="100%" />
@@ -37,6 +53,15 @@ This repository is a curated Codex plugin distribution. It includes and adapts o
 - `.codex-plugin/plugin.json` — Codex plugin manifest
 - `skills_index.json` — machine-readable skill index
 - `update_skills_index.py` — helper script for regenerating the index
+
+## Who this is for
+
+- Godot developers using Codex or AI coding agents
+- solo game developers who want senior-level implementation guidance
+- teams building reusable Godot gameplay architecture
+- studios prototyping game systems with AI-assisted workflows
+- developers migrating projects to Godot 4.7+
+- maintainers who want structured Godot skills instead of one-off prompts
 
 ## Codex plugin installation
 
@@ -82,15 +107,21 @@ Use individual specialist skills when the request is narrow:
 
 The full list is available in [skills_index.json](skills_index.json).
 
-Current package highlights:
+Current package highlights and searchable keywords:
 
 - Godot 4.7+ guidance
 - GDScript patterns
-- game architecture
-- genre patterns
-- publishing workflows
+- Godot game architecture
+- Godot gameplay systems
+- Godot AI navigation
+- Godot shaders and materials
+- Godot UI and UX
+- Godot multiplayer networking
+- Godot performance optimization
+- game genre patterns
+- game publishing workflows
 - Godot addon examples
-- studio orchestrators
+- Codex studio orchestrators
 
 ## Development workflow
 
