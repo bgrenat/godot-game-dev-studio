@@ -50,7 +50,7 @@ description: What this skill does and when Codex should use it.
 Before publishing a change, run:
 
 ```powershell
-python C:\Users\x-v-i\.codex\skills\.system\plugin-creator\scripts\validate_plugin.py C:\Users\x-v-i\plugins\godot-game-dev-studio
+python <codex-plugin-validator>/validate_plugin.py .
 ```
 
 If you modify skill names or descriptions, regenerate or update `skills_index.json` as needed.

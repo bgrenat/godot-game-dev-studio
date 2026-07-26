@@ -73,12 +73,6 @@ For a local personal marketplace workflow:
 codex plugin add godot-game-dev-studio@personal
 ```
 
-If your Windows `codex.exe` alias is blocked, the Codex appserver binary may work:
-
-```powershell
-C:\Users\x-v-i\.codex\plugins\.plugin-appserver\codex.exe plugin add godot-game-dev-studio@personal
-```
-
 After installing or updating the plugin, open a new Codex task/thread so Codex reloads the plugin skills.
 
 ## Recommended usage
@@ -133,9 +127,40 @@ Use one orchestrator for broad or cross-discipline work. It selects specialist s
 | [`studio-qa-playtest-lead`](skills/studio-qa-playtest-lead/SKILL.md) | Test plans, playtests, regressions, bug triage, accessibility checks, and feature acceptance. |
 | [`studio-performance-release-lead`](skills/studio-performance-release-lead/SKILL.md) | Profiling, optimization, platform readiness, releases, hotfixes, and patches. |
 
-### Complete inventory
+### Catalog
 
-Every individual skill is listed and linked in [SKILL_CATALOG.md](SKILL_CATALOG.md). Machine-readable descriptions and trigger keywords are in [skills_index.json](skills_index.json). Catalog remains canonical so names, counts, and links do not drift between documentation files.
+The full linked catalog is exposed below. Use scope to choose family, then open only skill matching task.
+
+| Catalog family | Scope | Skills |
+| --- | --- | --- |
+| Godot engine | Godot 4.7+ architecture, scenes, GDScript, animation, physics, navigation, shaders, UI, networking, testing, optimization, exports, platforms, and genre systems. | [96 `godot-*` skills](SKILL_CATALOG.md#godot--skills--96) |
+| GodotPrompter workflows | Structured implementation for systems, addons, C#, UI, multiplayer, resources, localization, XR, and production workflows. | [54 `godot-prompter-*` skills](SKILL_CATALOG.md#godot-prompter--skills--54) |
+| Game development | Game design, genres, game feel, level design, procedural generation, publishing, camera, AI, and game jams. | [27 `gamedev-*` skills](SKILL_CATALOG.md#gamedev--skills--27) |
+| Studio orchestration | Routing, creative and technical direction, production, gameplay, systems, QA, release, UX, level, narrative, and addon work. | [12 `studio-*` skills](SKILL_CATALOG.md#studio--skills--12) |
+
+<details>
+<summary>Godot engine catalog — 96 skills</summary>
+
+Domains: 2D/3D animation, physics, lighting, materials, world building, abilities, adaptation, navigation, architecture, audio, cameras, combat, composition, debugging, dialogue, economy, exports, game loops, GDScript, genres, input, inventory, multiplayer, particles, performance, platforms, procedural generation, projects, quests, raycasts, resources, RPG stats, save/load, scenes, servers, shaders, signals, state machines, tests, themes, tilemaps, turns, tweens, and UI.
+
+[Open all 96 direct skill links.](SKILL_CATALOG.md#godot--skills--96)
+</details>
+
+<details>
+<summary>GodotPrompter catalog — 54 skills</summary>
+
+Domains: 2D/3D essentials, abilities, addons, AI navigation, animation, assets, audio, cameras, components, C#, servers, dependency injection, dialogue, events, exports, GDExtension, GDScript, reviews, debugging, optimization, setup, tests, UI, HUD, input, inventory, localization, mobile, multiplayer, multithreading, VFX, physics, player controllers, procedural generation, resources, responsive UI, save/load, scenes, shaders, state machines, tweens, and XR.
+
+[Open all 54 direct skill links.](SKILL_CATALOG.md#godot-prompter--skills--54)
+</details>
+
+<details>
+<summary>Game-development catalog — 27 skills</summary>
+
+Domains: audio, camera, card games, dialogue, FPS, game AI, game feel, game jams, UI/UX, input, itch.io, levels, performance, physics tuning, platformers, procedural generation, prototypes, puzzles, roguelikes, routing, RPGs, saves, shaders, Steam, survival crafting, tower defense, and visual novels.
+
+[Open all 27 direct skill links.](SKILL_CATALOG.md#gamedev--skills--27)
+</details>
 
 Current package size:
 
@@ -190,22 +215,10 @@ Keep personal permissions, credentials, and machine paths in `.claude/settings.l
 
 ## Development workflow
 
-Validate the plugin manifest and skill metadata before publishing:
+Validate plugin manifest and skill metadata with installed Codex plugin tooling before publishing. Then reinstall:
 
 ```powershell
-python C:\Users\x-v-i\.codex\skills\.system\plugin-creator\scripts\validate_plugin.py C:\Users\x-v-i\plugins\godot-game-dev-studio
-```
-
-When preparing a local Codex reinstall, update the cachebuster:
-
-```powershell
-python C:\Users\x-v-i\.codex\skills\.system\plugin-creator\scripts\update_plugin_cachebuster.py C:\Users\x-v-i\plugins\godot-game-dev-studio
-```
-
-Then reinstall:
-
-```powershell
-C:\Users\x-v-i\.codex\plugins\.plugin-appserver\codex.exe plugin add godot-game-dev-studio@personal
+codex plugin add godot-game-dev-studio@personal
 ```
 
 ## License
