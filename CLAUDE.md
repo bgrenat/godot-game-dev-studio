@@ -12,4 +12,12 @@ Before implementing or reviewing Godot code:
 
 Never ingest all skills blindly. This repository contains 189 skills.
 
+## Native Claude Code integration
+
+- Use `/godot-route` before broad Godot, game-design, or GDScript work. It selects and loads smallest relevant skill set.
+- Delegate focused catalog discovery to `godot-skill-router` when exploration would crowd main task context.
+- Delegate read-only implementation review to `godot-quality-reviewer` after non-trivial Godot changes.
+- Use `/godot-library-check` after editing skills, skill metadata, or compatibility files.
+- `.claude/settings.local.json` is per-developer and ignored. Never add secrets or machine-specific paths to tracked configuration.
+
 Preserve Powehi and upstream attribution from [NOTICE.md](NOTICE.md).

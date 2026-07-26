@@ -103,9 +103,39 @@ Use individual specialist skills when the request is narrow:
 - platform export
 - genre-specific mechanics
 
-## Skill index
+## Skills and orchestrators
 
-The complete human-readable list is available in [SKILL_CATALOG.md](SKILL_CATALOG.md). Machine-readable metadata is available in [skills_index.json](skills_index.json).
+The library contains 189 specialist skills. Route first, load only relevant `SKILL.md` files, then read their required references. Do not load entire library into one task.
+
+| Family | Count | Use it for |
+| --- | ---: | --- |
+| `godot-*` | 96 | Godot 4.7+ engine systems: architecture, scenes, signals, GDScript, UI, animation, physics, navigation, shaders, multiplayer, testing, optimization, export, platforms, and genre mechanics. |
+| `godot-prompter-*` | 54 | Structured workflows for controllers, abilities, addons, C#, networking, localization, UI, resources, save/load, XR, and third-party Godot tools. |
+| `gamedev-*` | 27 | Cross-engine design workflows: genres, game feel, levels, procedural generation, publishing, audio, camera, AI, and game-jam scope. |
+| `studio-*` | 12 | Multi-discipline orchestration: route broad requests, coordinate specialists, set quality gates, and prepare release work. |
+
+### Studio orchestrators
+
+Use one orchestrator for broad or cross-discipline work. It selects specialist skills; it does not replace them.
+
+| Orchestrator | Responsibility |
+| --- | --- |
+| [`studio-router`](skills/studio-router/SKILL.md) | First entry for ambiguous, multi-discipline, or project-stage requests; routes skills and quality gates. |
+| [`studio-game-director`](skills/studio-game-director/SKILL.md) | Game concept, pillars, audience, genre fit, player fantasy, and feature purpose. |
+| [`studio-producer`](skills/studio-producer/SKILL.md) | Milestones, scope, sequencing, risks, acceptance criteria, and cross-team handoffs. |
+| [`studio-godot-technical-director`](skills/studio-godot-technical-director/SKILL.md) | Engine architecture, Godot APIs, scene structure, addons, budgets, networking, and exports. |
+| [`studio-gameplay-lead`](skills/studio-gameplay-lead/SKILL.md) | Movement, combat, abilities, enemies, camera, input, feedback, and core loop. |
+| [`studio-systems-designer`](skills/studio-systems-designer/SKILL.md) | Inventory, stats, economy, quests, progression, resources, balance, and save/load. |
+| [`studio-level-design-lead`](skills/studio-level-design-lead/SKILL.md) | Maps, tiles, worlds, encounters, procedural content, and world-map screens. |
+| [`studio-narrative-content-lead`](skills/studio-narrative-content-lead/SKILL.md) | Dialogue, quests, localization, narrative structure, and story-system integration. |
+| [`studio-ui-ux-game-lead`](skills/studio-ui-ux-game-lead/SKILL.md) | HUD, menus, controller navigation, accessibility, responsive `Control` layouts, and game UX. |
+| [`studio-godot-addon-integrator`](skills/studio-godot-addon-integrator/SKILL.md) | Addons, editor plugins, tool scripts, native extensions, and dependency isolation. |
+| [`studio-qa-playtest-lead`](skills/studio-qa-playtest-lead/SKILL.md) | Test plans, playtests, regressions, bug triage, accessibility checks, and feature acceptance. |
+| [`studio-performance-release-lead`](skills/studio-performance-release-lead/SKILL.md) | Profiling, optimization, platform readiness, releases, hotfixes, and patches. |
+
+### Complete inventory
+
+Every individual skill is listed and linked in [SKILL_CATALOG.md](SKILL_CATALOG.md). Machine-readable descriptions and trigger keywords are in [skills_index.json](skills_index.json). Catalog remains canonical so names, counts, and links do not drift between documentation files.
 
 Current package size:
 
@@ -137,13 +167,26 @@ Current package highlights and searchable keywords:
 
 This repository is usable beyond Codex because the skills are plain Markdown files. Compatibility instructions are included for:
 
-- Claude Code: [CLAUDE.md](CLAUDE.md)
+- Claude Code: [CLAUDE.md](CLAUDE.md) plus native project skills and subagents in [`.claude/`](.claude/)
 - VS Code GitHub Copilot: [.github/copilot-instructions.md](.github/copilot-instructions.md)
 - Cursor: [.cursor/rules/godot-game-dev-studio.mdc](.cursor/rules/godot-game-dev-studio.mdc)
 - Gemini CLI: [GEMINI.md](GEMINI.md)
 - Codex and generic agents: [AGENTS.md](AGENTS.md)
 
 See [COMPATIBILITY.md](COMPATIBILITY.md) for setup guidance and recommended workflows.
+
+### Claude Code native workflow
+
+Claude Code reads [CLAUDE.md](CLAUDE.md) automatically and discovers tracked project extensions in [`.claude/`](.claude/). Integration adds focused entry points without copying the 189-skill library into Claude startup context.
+
+| Component | Invocation | Purpose |
+| --- | --- | --- |
+| [`godot-route`](.claude/skills/godot-route/SKILL.md) | `/godot-route` | Select smallest relevant skill set, load selected instructions, then continue task. Use before broad planning, implementation, debugging, or review. |
+| [`godot-library-check`](.claude/skills/godot-library-check/SKILL.md) | `/godot-library-check` | Run metadata, plugin, and whitespace validation after skill or compatibility changes; does not regenerate derived files by default. |
+| [`godot-skill-router`](.claude/agents/godot-skill-router.md) | Delegate by name | Read-only subagent. Search catalog and return up to three relevant skills. |
+| [`godot-quality-reviewer`](.claude/agents/godot-quality-reviewer.md) | Delegate by name | Read-only Godot 4.7+ review: static typing, API, lifecycle, performance, and selected-skill anti-patterns. |
+
+Keep personal permissions, credentials, and machine paths in `.claude/settings.local.json`; Git ignores that file. Restart Claude Code once when opening session created before `.claude/` existed.
 
 ## Development workflow
 

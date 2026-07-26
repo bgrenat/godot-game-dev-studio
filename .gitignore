@@ -4,6 +4,7 @@
 # Exclude common agent configuration and memory directories
 .agent/
 .agents/
+.claude/settings.local.json
 .gemini/
 .cursor/*
 !.cursor/rules/

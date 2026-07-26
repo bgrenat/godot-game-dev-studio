@@ -22,7 +22,14 @@ The important rule for every tool is the same:
 
 ## Claude Code
 
-Claude Code can use this repository through `CLAUDE.md`.
+Claude Code can use this repository through `CLAUDE.md` and native project configuration in `.claude/`:
+
+- `.claude/skills/godot-route/`: explicit routing command, `/godot-route`.
+- `.claude/skills/godot-library-check/`: explicit metadata and packaging validation, `/godot-library-check`.
+- `.claude/agents/godot-skill-router.md`: read-only catalog-routing subagent.
+- `.claude/agents/godot-quality-reviewer.md`: read-only Godot review subagent.
+
+These files are versioned project configuration. Local Claude Code preferences belong in `.claude/settings.local.json`, which is ignored.
 
 Recommended workflow:
 
@@ -32,7 +39,7 @@ cd godot-game-dev-studio
 claude
 ```
 
-Then ask Claude Code to inspect `SKILL_CATALOG.md`, choose the right `skills/<name>/SKILL.md`, and use only the references needed for the task.
+Start work with `/godot-route`, then ask Claude Code to use only selected skill references. After library edits, run `/godot-library-check`. Claude Code discovers project skills and subagents from `.claude/`; restart once if this is the first `.claude/` directory seen by an already-running session.
 
 ## VS Code / GitHub Copilot
 
