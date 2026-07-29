@@ -1,0 +1,43 @@
+name: Validate agent support
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate plugin and agent integrations
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Validate Python scripts
+        run: python -m py_compile scripts/generate_agent_rules.py scripts/validate_agent_support.py
+
+      - name: Regenerate agent entrypoints
+        run: python scripts/generate_agent_rules.py --target all
+
+      - name: Check generated files are committed
+        shell: bash
+        run: git diff --exit-code -- .cursor .claude .github/copilot-instructions.md
+
+      - name: Validate agent support
+        run: python scripts/validate_agent_support.py
+
+      - name: Validate plugin manifest
+        shell: python
+        run: |
+          import json
+          from pathlib import Path
+          json.loads(Path('.codex-plugin/plugin.json').read_text(encoding='utf-8'))
+          print('PASS: plugin manifest JSON')
