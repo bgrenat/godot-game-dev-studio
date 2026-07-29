@@ -1,14 +1,14 @@
-# Godot Game Dev Studio — Codex Plugin for Godot 4.7+ Game Development
+# Godot Game Dev Studio — Multi-Agent Skills for Godot 4.7+
 
-**Godot Game Dev Studio** is a **Codex plugin for Godot 4.7+ game development**, assembled and curated by **[Powehi](https://powehi.eu)**.
+**Godot Game Dev Studio** is a portable **multi-agent skill library for Godot 4.7+ game development**, assembled and curated by **[Powehi](https://powehi.eu)**.
 
 It packages a broad agentic skill library for **Godot architecture**, **GDScript patterns**, **gameplay systems**, **UI/UX**, **animation**, **2D/3D physics**, **shaders**, **optimization**, **publishing workflows**, **genre blueprints**, **Godot addon examples**, and **studio-style orchestration roles**.
 
-This repository is a curated Codex plugin distribution. It includes and adapts open gamedev skill resources from several projects, including **[Divergent AI / GD Agentic Skills](https://github.com/thedivergentai/gd-agentic-skills)**, **[awesome-gamedev-agent-skills](https://github.com/gamedev-skills/awesome-gamedev-agent-skills)**, **[GodotPrompter](https://github.com/jame581/GodotPrompter)**, **[Claude-Code-Game-Studios](https://github.com/Donchitos/Claude-Code-Game-Studios)**, and **[godot-worldmap-builder](https://github.com/don-tnowe/godot-worldmap-builder)**. See [NOTICE.md](NOTICE.md) for provenance and credits.
+This repository is designed for Codex, Claude Code, Cursor, and VS Code + Copilot. It includes and adapts open gamedev skill resources from several projects, including **[Divergent AI / GD Agentic Skills](https://github.com/thedivergentai/gd-agentic-skills)**, **[awesome-gamedev-agent-skills](https://github.com/gamedev-skills/awesome-gamedev-agent-skills)**, **[GodotPrompter](https://github.com/jame581/GodotPrompter)**, **[Claude-Code-Game-Studios](https://github.com/Donchitos/Claude-Code-Game-Studios)**, and **[godot-worldmap-builder](https://github.com/don-tnowe/godot-worldmap-builder)**. See [NOTICE.md](NOTICE.md) for provenance and credits.
 
 ## Overview
 
-Godot Game Dev Studio helps Codex act as a game-development studio assistant for Godot projects. It is useful for planning and implementing Godot gameplay features, reviewing GDScript architecture, designing reusable game systems, modernizing Godot 4.7+ projects, selecting specialist skills, and coordinating AI-assisted game-development workflows.
+Godot Game Dev Studio helps AI coding agents act as a game-development studio assistant for Godot projects. It is useful for planning and implementing gameplay features, reviewing GDScript architecture, designing reusable game systems, modernizing Godot 4.7+ projects, selecting specialist skills, and coordinating AI-assisted game-development workflows.
 
 Relevant areas include:
 
