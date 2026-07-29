@@ -34,7 +34,7 @@ These files are versioned project configuration. Local Claude Code preferences b
 Recommended workflow:
 
 ```bash
-git clone https://github.com/powehi-ai/godot-game-dev-studio.git
+git clone https://github.com/powehi-eu/godot-game-dev-studio.git
 cd godot-game-dev-studio
 claude
 ```
@@ -48,7 +48,7 @@ GitHub Copilot Chat in VS Code can use `.github/copilot-instructions.md` as work
 Recommended workflow:
 
 ```bash
-git clone https://github.com/powehi-ai/godot-game-dev-studio.git
+git clone https://github.com/powehi-eu/godot-game-dev-studio.git
 code godot-game-dev-studio
 ```
 
@@ -61,7 +61,7 @@ Cursor can use `.cursor/rules/godot-game-dev-studio.mdc`.
 Recommended workflow:
 
 ```bash
-git clone https://github.com/powehi-ai/godot-game-dev-studio.git
+git clone https://github.com/powehi-eu/godot-game-dev-studio.git
 cursor godot-game-dev-studio
 ```
 
@@ -74,7 +74,7 @@ Gemini CLI can use `GEMINI.md`.
 Recommended workflow:
 
 ```bash
-git clone https://github.com/powehi-ai/godot-game-dev-studio.git
+git clone https://github.com/powehi-eu/godot-game-dev-studio.git
 cd godot-game-dev-studio
 gemini
 ```

@@ -6,7 +6,7 @@ This repository is the **Godot Game Dev Studio** Codex plugin distribution assem
 
 - **Powehi** — Codex plugin assembly, curation, metadata, icon, repository packaging, and distribution.
 - Website: [https://powehi.eu](https://powehi.eu)
-- GitHub: [https://github.com/powehi-ai](https://github.com/powehi-ai)
+- GitHub: [https://github.com/powehi-eu](https://github.com/powehi-eu)
 
 ## Upstream and third-party credits
 

@@ -19,7 +19,7 @@ The plugin exists because multiple open resources were brought together into a C
 For Powehi-related work, contact or learn more at:
 
 - Website: [https://powehi.eu](https://powehi.eu)
-- GitHub: [https://github.com/powehi-ai](https://github.com/powehi-ai)
+- GitHub: [https://github.com/powehi-eu](https://github.com/powehi-eu)
 
 For the original GD Agentic Skills project, see:
 
