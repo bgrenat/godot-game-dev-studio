@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.0 — Multi-agent integrations
+
+- Add portable entrypoints for Claude Code, Cursor, and VS Code + Copilot.
+- Add generated agent-rule tooling and validation for all 189 skills.
+- Add contributor documentation for agent integrations and MCP.
+- Add GitHub Actions validation for manifests, skills, and generated files.
+- Update the plugin description to present the project as a multi-agent Godot toolkit.
+
 ## Unreleased
 
 - Add native Claude Code project skills for routing and library validation.
