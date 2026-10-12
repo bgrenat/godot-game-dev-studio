@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-shader-basics
-description: "Imported GodotPrompter guidance for shader-basics workflows in game development projects."
+description: "Imported GodotPrompter guidance for shader-basics workflows in game development projects. Use when writing Godot shaders (.gdshader), ShaderMaterials, and uniforms."
 ---
 # Shaders in Godot 4.3+
 

@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-resource-pattern
-description: "Imported GodotPrompter guidance for resource-pattern workflows in game development projects."
+description: "Imported GodotPrompter guidance for resource-pattern workflows in game development projects. Use when modeling configuration, items, or stats as custom Godot Resources."
 ---
 # Resource Pattern in Godot 4.3+
 

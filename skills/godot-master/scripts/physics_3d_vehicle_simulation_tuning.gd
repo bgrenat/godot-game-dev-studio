@@ -2,11 +2,11 @@
 # Tuning VehicleBody3D for arcade-style high-speed racing
 extends VehicleBody3D
 
-# EXPERT NOTE: VehicleBody3D is a complex Raycast-based sim. 
-# Tuning 'Stiffness' and 'Friction' on VehicleWheel3D is 
+# EXPERT NOTE: VehicleBody3D is a complex Raycast-based sim.
+# Tuning 'Stiffness' and 'Friction' on VehicleWheel3D is
 # more important than engine force for 'feel'.
 
-func apply_drift_physics(active: bool):
+func apply_drift_physics(active: bool) -> void:
 	for wheel in get_children():
 		if wheel is VehicleWheel3D:
 			# Lower friction for drifting

@@ -26,7 +26,7 @@ func _ready() -> void:
 	# Connect to affection milestones to potentially trigger route entries
 	# AffectionManager.milestone_reached.connect(_on_affection_milestone)
 
-## Attempts to lock in a character's route. 
+## Attempts to lock in a character's route.
 ## Returns true if successful, false if already on another route.
 func lock_in_route(character_id: String) -> bool:
 	if is_route_active:
@@ -35,7 +35,7 @@ func lock_in_route(character_id: String) -> bool:
 		else:
 			push_warning("Attempted to enter %s route while already on %s route." % [character_id, current_route])
 			return false
-	
+
 	current_route = character_id
 	is_route_active = true
 	unlock_cg(character_id + "_prologue")
@@ -51,16 +51,16 @@ func unlock_cg(cg_id: String) -> void:
 
 ## Pure logic for determining ending based on stats.
 func determine_ending(character_id: String) -> EndingType:
-	var stats: Dictionary = AffectionManager.get_stats(character_id)
-	
+	var stats: Dictionary = _affection().get_stats(character_id)
+
 	if stats["trust"] < 0:
 		return EndingType.BAD
-	
+
 	if stats["attraction"] >= 80 and stats["trust"] >= 50:
 		if stats["comfort"] >= 70:
 			return EndingType.TRUE
 		return EndingType.GOOD
-	
+
 	return EndingType.NORMAL
 
 # --- Persistence ---
@@ -80,3 +80,7 @@ func load_gallery() -> void:
 		if file:
 			var data = file.get_var()
 			unlocked_cgs = data.get("unlocked_cgs", [])
+
+## Autoload registered as "Affection" (an autoload cannot share the AffectionManager class_name).
+func _affection() -> AffectionManager:
+	return get_node(^"/root/Affection") as AffectionManager

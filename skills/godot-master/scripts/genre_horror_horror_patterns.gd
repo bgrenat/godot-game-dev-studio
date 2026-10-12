@@ -1,6 +1,5 @@
 # horror_patterns.gd
-extends Node
-
+extends Node3D
 # 1. High-Performance Monster Line-of-Sight (Stealth)
 # Bypasses Area3D for immediate, physics-synced raycasting.
 func check_monster_los(monster: CharacterBody3D, player: Node3D) -> bool:
@@ -49,7 +48,7 @@ func emit_noise(origin: Transform3D, radius_rid: RID) -> void:
     var query := PhysicsShapeQueryParameters3D.new()
     query.shape_rid = radius_rid
     query.transform = origin
-    
+
     # Executes the spatial query directly in the C++ physics server.
     var overlaps := get_world_3d().direct_space_state.intersect_shape(query)
     for hit in overlaps:

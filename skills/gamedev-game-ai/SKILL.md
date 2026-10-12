@@ -1,6 +1,6 @@
 ---
 name: gamedev-game-ai
-description: "Imported awesome-gamedev-agent-skills guidance for game-ai workflows in game development projects."
+description: "Imported awesome-gamedev-agent-skills guidance for game-ai workflows in game development projects. Use when designing NPC behavior with decision layers (FSM, behavior trees, utility AI), steering, and pathfinding."
 ---
 # Game AI: decisions, steering, and pathfinding
 

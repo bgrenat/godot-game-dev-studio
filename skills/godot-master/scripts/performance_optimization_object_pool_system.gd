@@ -2,8 +2,8 @@
 # Minimal allocation strategy for high-frequency objects
 extends Node
 
-# EXPERT NOTE: Instantiating nodes is expensive. Pooling 
-# avoids the hit by toggling visibility and process mode 
+# EXPERT NOTE: Instantiating nodes is expensive. Pooling
+# avoids the hit by toggling visibility and process mode
 # instead of calling .instantiate() and .queue_free().
 
 @export var pool_size: int = 100
@@ -11,9 +11,9 @@ extends Node
 
 var pool: Array[Node] = []
 
-func _ready():
+func _ready() -> void:
 	for i in pool_size:
-		var node = bullet_scene.instantiate()
+		var node := bullet_scene.instantiate()
 		_deactivate_node(node)
 		add_child(node)
 		pool.append(node)
@@ -25,12 +25,12 @@ func spawn():
 			return node
 	return null
 
-func _activate_node(node):
+func _activate_node(node) -> void:
 	node.visible = true
 	node.set_process(true)
 	node.set_physics_process(true)
 
-func _deactivate_node(node):
+func _deactivate_node(node) -> void:
 	node.visible = false
 	node.set_process(false)
 	node.set_physics_process(false)

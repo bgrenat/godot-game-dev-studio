@@ -28,30 +28,30 @@ func _ready() -> void:
 func _input(event: InputEvent) -> void:
 	if not event.is_pressed() or event.is_echo():
 		return
-	
+
 	# Check all defined actions to see if one was just pressed
 	# We iterate the InputMap actions because event.as_text() is unreliable for logical mapping
-	var matched_action = ""
+	var matched_action := ""
 	for action in InputMap.get_actions():
 		if event.is_action_pressed(action):
 			matched_action = action
 			break
-	
+
 	if matched_action != "":
 		_process_input(matched_action)
 
 func _process_input(action_name: String) -> void:
 	# Reset the timer on any valid input to keep the "combo" alive
 	_timer.start()
-	
+
 	# Append to buffer
 	_current_buffer.append(action_name)
-	
+
 	# Optimization: If the buffer is longer than the target, we can slice it
 	# providing a "rolling window" affect.
 	if _current_buffer.size() > target_sequence.size():
 		_current_buffer.pop_front()
-		
+
 	if _current_buffer == target_sequence:
 		sequence_matched.emit()
 		if reset_on_match:

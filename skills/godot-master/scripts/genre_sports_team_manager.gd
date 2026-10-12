@@ -24,26 +24,26 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
     if not ball: return
-    
+
     # 1. Determine Strategy
     if _team_has_possession():
         current_strategy = Strategy.ATTACK
     else:
         current_strategy = Strategy.DEFEND
-        
+
     # 2. Move Anchor
     # Anchor generally follows ball but stays on team's side or moves upfield
-    var target_pos = ball.global_position
+    var target_pos := ball.global_position
     if current_strategy == Strategy.DEFEND:
          target_pos.z *= 0.5 # Stay closer to goal
-    
+
     formation_anchor.global_position = formation_anchor.global_position.lerp(target_pos, delta)
-    
+
     # 3. Assign Roles
-    var best_player = _find_closest_player_to_ball()
-    
+    var best_player := _find_closest_player_to_ball()
+
     for i in range(players.size()):
-        var player = players[i]
+        var player := players[i]
         if player == best_player:
              # Press the ball
              player.set_target(ball.global_position)
@@ -56,13 +56,13 @@ func _physics_process(delta: float) -> void:
 
 func _team_has_possession() -> bool:
     # Logic to check if any team member is controlling the ball
-    return false 
+    return false
 
 func _find_closest_player_to_ball() -> Node3D:
     var best: Node3D = null
-    var min_dist = INF
+    var min_dist := INF
     for p in players:
-        var d = p.global_position.distance_to(ball.global_position)
+        var d := p.global_position.distance_to(ball.global_position)
         if d < min_dist:
             min_dist = d
             best = p

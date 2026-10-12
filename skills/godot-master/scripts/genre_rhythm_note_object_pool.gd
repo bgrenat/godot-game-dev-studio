@@ -11,7 +11,7 @@ var _pool: Array[Node] = []
 
 func _ready() -> void:
     for i in pool_size:
-        var note = note_scene.instantiate()
+        var note := note_scene.instantiate()
         note.hide()
         note.process_mode = PROCESS_MODE_DISABLED
         add_child(note)

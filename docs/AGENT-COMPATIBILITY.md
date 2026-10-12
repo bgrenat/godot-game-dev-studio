@@ -18,4 +18,6 @@ python scripts/generate_agent_rules.py --target all
 python scripts/validate_agent_support.py
 ```
 
+The Claude Code entrypoint carries `name`/`description` frontmatter so Claude Code can discover it as a skill; the validator fails if it is missing.
+
 Use the smallest matching skill under `skills/` for a focused task. The generated files are orientation layers; they do not replace the detailed skills.

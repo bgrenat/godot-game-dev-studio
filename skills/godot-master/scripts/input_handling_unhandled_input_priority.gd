@@ -9,9 +9,9 @@ extends Node2D
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact"):
-		# This interaction only triggers if the player didn't 
+		# This interaction only triggers if the player didn't
 		# just click a 'Use' button on a menu!
 		_check_interaction()
 
-func _check_interaction():
+func _check_interaction() -> void:
 	pass

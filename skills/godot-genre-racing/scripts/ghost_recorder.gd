@@ -16,16 +16,16 @@ func _physics_process(delta: float) -> void:
         _record_snapshot()
 
 func _record_snapshot() -> void:
-    var parent = get_parent() as Node3D
+    var parent := get_parent() as Node3D
     if not parent: return
-    
+
     recording.append({
         "p": parent.global_position,
         "r": parent.global_quaternion
     })
 
 func save_ghost(path: String) -> void:
-    var file = FileAccess.open(path, FileAccess.WRITE)
+    var file := FileAccess.open(path, FileAccess.WRITE)
     # Pattern: Use binary store_var for speed and compactness.
     file.store_var(recording)
     file.close()

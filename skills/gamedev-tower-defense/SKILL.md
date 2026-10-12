@@ -1,6 +1,6 @@
 ---
 name: gamedev-tower-defense
-description: "Imported awesome-gamedev-agent-skills guidance for tower-defense workflows in game development projects."
+description: "Imported awesome-gamedev-agent-skills guidance for tower-defense workflows in game development projects. Use when building a tower defense game: enemy pathing, wave spawning, tower targeting, and economy."
 ---
 # Tower Defense
 

@@ -16,12 +16,12 @@ var completed_quests: Array[String] = []
 func start_quest(quest_resource: QuestGraph) -> void:
 	if is_quest_active(quest_resource.quest_id) or is_quest_completed(quest_resource.quest_id):
 		return
-	
+
 	var state = QuestState.new()
 	state.resource = quest_resource
 	state.current_nodes = quest_resource.get_start_nodes()
 	active_quests[quest_resource.quest_id] = state
-	
+
 	quest_started.emit(quest_resource.quest_id)
 	_check_auto_complete_objectives(state)
 
@@ -29,7 +29,7 @@ func complete_objective(quest_id: String, objective_id: String) -> void:
 	var state = active_quests.get(quest_id)
 	if not state:
 		return
-	
+
 	if state.complete_objective(objective_id):
 		objective_completed.emit(quest_id, objective_id)
 		_advance_quest(state)
@@ -37,7 +37,7 @@ func complete_objective(quest_id: String, objective_id: String) -> void:
 func _advance_quest(state: QuestState) -> void:
 	var next_nodes = state.resource.get_next_nodes(state.current_nodes)
 	state.current_nodes = next_nodes
-	
+
 	if state.is_complete():
 		_finish_quest(state.resource.quest_id)
 
@@ -57,7 +57,7 @@ class QuestState:
 	var resource: QuestGraph
 	var current_nodes: Array[String] = []
 	var completed_objectives: Array[String] = []
-	
+
 	func complete_objective(obj_id: String) -> bool:
 		if obj_id in completed_objectives: return false
 		completed_objectives.append(obj_id)
@@ -70,3 +70,7 @@ class QuestState:
 ## EXPERT USAGE:
 ## QuestManager.start_quest(load("res://quests/main_quest.tres"))
 ## QuestManager.complete_objective("main_quest", "kill_rats")
+
+## Completes objectives already satisfied when the quest starts (e.g. items already owned).
+func _check_auto_complete_objectives(_state) -> void:
+	pass

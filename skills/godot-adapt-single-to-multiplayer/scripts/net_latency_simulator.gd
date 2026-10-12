@@ -10,8 +10,8 @@ extends Node
 
 func _ready() -> void:
 	if not OS.has_feature("editor"): return
-	
-	var peer = multiplayer.multiplayer_peer as ENetMultiplayerPeer
+
+	var peer := multiplayer.multiplayer_peer as ENetMultiplayerPeer
 	if peer:
 		# ENet built-in simulation
 		# Note: Implementation varies by Godot version and Peer type

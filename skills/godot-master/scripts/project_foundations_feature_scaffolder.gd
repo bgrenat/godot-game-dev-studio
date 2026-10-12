@@ -29,42 +29,42 @@ func _run() -> void:
 	if feature_name.is_empty():
 		printerr("❌ Feature name cannot be empty")
 		return
-		
+
 	var feature_path := "res://%ss/%s/" % [feature_type, feature_name]
-	
+
 	# Create feature folder
 	if DirAccess.dir_exists_absolute(feature_path):
 		printerr("❌ Feature '%s' already exists" % feature_name)
 		return
-		
+
 	DirAccess.make_dir_recursive_absolute(feature_path)
 	print("✓ Created %s" % feature_path)
-	
+
 	# Create template files
-	var template := TEMPLATES.get(feature_type, {})
-	
+	var template: Dictionary = TEMPLATES.get(feature_type, {})
+
 	if template.has("scene"):
 		_create_base_scene(feature_path + feature_name + ".tscn")
-		
+
 	if template.has("script"):
 		_create_base_script(feature_path + feature_name + ".gd")
-		
+
 	# Create subfolders
 	for subfolder in template.get("folders", []):
-		var sub_path := feature_path + subfolder
+		var sub_path: String = feature_path + subfolder
 		DirAccess.make_dir_recursive_absolute(sub_path)
 		print("✓ Created %s" % sub_path)
-	
+
 	# Create README
 	_create_readme(feature_path)
-	
+
 	print("✅ Feature '%s' scaffolded successfully!" % feature_name)
 
 func _create_base_scene(path: String) -> void:
 	# Create minimal scene structure
 	var scene := PackedScene.new()
 	var root: Node
-	
+
 	match feature_type:
 		"entity":
 			root = CharacterBody2D.new()
@@ -72,7 +72,7 @@ func _create_base_scene(path: String) -> void:
 			root = Control.new()
 		_:
 			root = Node.new()
-			
+
 	root.name = feature_name.capitalize().replace(" ", "")
 	scene.pack(root)
 	ResourceSaver.save(scene, path)

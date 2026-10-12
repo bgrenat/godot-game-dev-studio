@@ -2,16 +2,16 @@
 # Visualizing AI paths and physics bounds in 2D
 extends Node2D
 
-# EXPERT NOTE: Use _draw() to visualize non-visual data. 
+# EXPERT NOTE: Use _draw() to visualize non-visual data.
 # Redrawing every frame allows tracking moving targets.
 
 var path: PackedVector2Array = []
 
-func _draw():
+func _draw() -> void:
 	if not OS.is_debug_build(): return
 	if path.size() < 2: return
-	
+
 	draw_polyline(path, Color.CYAN, 3.0, true)
 
-func _process(_delta):
+func _process(_delta) -> void:
 	queue_redraw()

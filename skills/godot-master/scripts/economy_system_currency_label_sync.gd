@@ -4,10 +4,10 @@ extends Label
 
 @export var currency_id: String = "gold"
 
-func _ready():
+func _ready() -> void:
 	WalletManager.balance_changed.connect(_on_balance_changed)
 	text = str(WalletManager.balances.get(currency_id, 0))
 
-func _on_balance_changed(id: String, amount: int):
+func _on_balance_changed(id: String, amount: int) -> void:
 	if id == currency_id:
 		text = str(amount)

@@ -10,7 +10,7 @@ Before implementing or reviewing Godot code:
 4. Apply Godot 4.7+ patterns, static typing, and the anti-patterns documented by the selected skill.
 5. If the task is broad, start with `skills/studio-router/SKILL.md` or `skills/godot-master/SKILL.md`.
 
-Never ingest all skills blindly. This repository contains 189 skills.
+Never ingest all skills blindly. This repository contains 188 skills.
 
 ## Native Claude Code integration
 

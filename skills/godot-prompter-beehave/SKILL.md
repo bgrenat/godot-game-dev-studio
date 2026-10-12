@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-beehave
-description: "Imported GodotPrompter guidance for beehave workflows in game development projects."
+description: "Imported GodotPrompter guidance for beehave workflows in game development projects. Use when building behavior trees with the Beehave GDScript addon."
 ---
 # Beehave
 

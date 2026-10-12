@@ -2,15 +2,15 @@
 # Halting simulations during quiz interactions
 extends Node
 
-# EXPERT NOTE: get_tree().paused is the efficient way 
+# EXPERT NOTE: get_tree().paused is the efficient way
 # to freeze the world logic while keeping the UI interactive.
 
-func open_assessment():
+func open_assessment() -> void:
 	get_tree().paused = true
 	# Animation/Tweening the UI overlay in
 	_show_quiz()
 
-func close_assessment():
+func close_assessment() -> void:
 	get_tree().paused = false
 	_hide_quiz()
 

@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-using-godot-prompter
-description: "Imported GodotPrompter guidance for using-godot-prompter workflows in game development projects."
+description: "Imported GodotPrompter guidance for using-godot-prompter workflows in game development projects. Use when getting oriented in the GodotPrompter skill set and picking which of its skills to load."
 ---
 # Using GodotPrompter
 

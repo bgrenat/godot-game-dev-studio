@@ -1,6 +1,6 @@
 ---
 name: gamedev-level-design
-description: "Imported awesome-gamedev-agent-skills guidance for level-design workflows in game development projects."
+description: "Imported awesome-gamedev-agent-skills guidance for level-design workflows in game development projects. Use when designing levels: movement metrics, blockout, pacing, flow, and playtesting before art dressing."
 ---
 # Level design
 

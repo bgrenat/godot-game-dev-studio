@@ -19,7 +19,7 @@ func _ready() -> void:
 
 ## Records the current state and input for a specific tick.
 func save_snapshot(tick: int, state: Dictionary, input: Dictionary) -> void:
-	var idx = tick % BUFFER_SIZE
+	var idx := tick % BUFFER_SIZE
 	# deep duplicate to prevent reference overrides
 	_state_buffer[idx] = state.duplicate(true)
 	_input_buffer[idx] = input.duplicate(true)
@@ -38,21 +38,21 @@ func rollback_and_resimulate(server_tick: int, current_tick: int, server_state: 
 	# 1. Snap to authoritative server state
 	if target_node.has_method("apply_state"):
 		target_node.apply_state(server_state)
-	
-	var delta = target_node.get_physics_process_delta_time()
-	
+
+	var delta := target_node.get_physics_process_delta_time()
+
 	# 2. Re-simulate from server_tick up to the present
 	for tick in range(server_tick, current_tick):
-		var hist_input = get_input(tick)
-		
+		var hist_input := get_input(tick)
+
 		# Step the logic forward
 		if target_node.has_method("process_simulation_step"):
 			target_node.process_simulation_step(delta, hist_input)
-		
+
 		# Re-save the corrected prediction
 		if target_node.has_method("get_current_state"):
 			save_snapshot(tick + 1, target_node.get_current_state(), hist_input)
-	
+
 	# 3. Clean up interpolation to prevent visual snapping
 	if target_node is Node3D or target_node is Node2D:
 		target_node.reset_physics_interpolation()

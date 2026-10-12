@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-phantom-camera
-description: "Imported GodotPrompter guidance for phantom-camera workflows in game development projects."
+description: "Imported GodotPrompter guidance for phantom-camera workflows in game development projects. Use when managing multiple prioritized camera behaviors with the Phantom Camera addon."
 ---
 # Phantom Camera
 

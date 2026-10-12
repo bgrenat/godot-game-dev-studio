@@ -2,14 +2,14 @@
 # Running networking on a separate thread via manual polling
 extends Node
 
-# EXPERT NOTE: Disabling SceneTree.multiplayer_poll allows 
+# EXPERT NOTE: Disabling SceneTree.multiplayer_poll allows
 # you to control exactly when network packets are processed.
 
-func _ready():
+func _ready() -> void:
 	# Stop the engine from automatically polling networking
 	get_tree().multiplayer_poll = false
 
-func _physics_process(_delta):
+func _physics_process(_delta) -> void:
 	# Manual pumping of the network stack, usually inside a Mutex lock
 	if multiplayer.has_multiplayer_peer():
 		multiplayer.poll()

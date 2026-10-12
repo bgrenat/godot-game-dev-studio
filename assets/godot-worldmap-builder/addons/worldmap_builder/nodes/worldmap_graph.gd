@@ -51,7 +51,7 @@ var _costs_dict := {}
 var _arc_changing := false
 
 
-func _ready():
+func _ready() -> void:
 	_connections_changed()
 
 ## Adds a node at [code]pos[/code] and connects it to [code]parent_node[/code]. [br]
@@ -69,7 +69,7 @@ func add_node(pos : Vector2, parent_node : int, node_data : WorldmapNodeData = n
 	return node_datas.size() - 1
 
 ## Removes a node, along with all of its connections.[br]
-func remove_node(index : int):
+func remove_node(index : int) -> void:
 	node_datas.remove_at(index)
 	node_positions.remove_at(index)
 	end_connection_nodes.erase(index)
@@ -94,7 +94,7 @@ func remove_node(index : int):
 	queue_redraw()
 
 ## Makes nodes with the specified indices connected or disconnected. Will remove both directions.
-func set_connected(index1 : int, index2 : int, connected : bool):
+func set_connected(index1 : int, index2 : int, connected : bool) -> void:
 	var i := 0
 	while i < connection_nodes.size():
 		var connection := connection_nodes[i]
@@ -181,7 +181,7 @@ func set_node_data(index : int, value : WorldmapNodeData) -> void:
 	get_parent().queue_redraw()
 
 
-func offset_all_nodes_xform(offset : Transform2D):
+func offset_all_nodes_xform(offset : Transform2D) -> void:
 	for i in node_positions.size():
 		node_positions[i] = offset * node_positions[i]
 
@@ -193,13 +193,13 @@ func set_node_visible(index : int, state : bool) -> void:
 		_node_controls[index].visible = state
 
 
-func _enter_tree():
+func _enter_tree() -> void:
 	if transform != Transform2D.IDENTITY:
 		offset_all_nodes_xform(transform)
 		transform = Transform2D.IDENTITY
 
 
-func _draw():
+func _draw() -> void:
 	var is_editor := Engine.is_editor_hint()
 	for x in _node_controls:
 		x.hide()
@@ -225,7 +225,7 @@ func _draw():
 			draw_texture(tex, node_positions[i] - tex_size * 0.5)
 
 
-func _add_new_node_control():
+func _add_new_node_control() -> void:
 	var new_control := Control.new()
 	new_control.gui_input.connect(_on_node_gui_input.bind(_node_controls.size()))
 	new_control.mouse_exited.connect(_on_node_mouse_exited.bind(_node_controls.size()))
@@ -348,7 +348,7 @@ func _get_property_list() -> Array:
 			&"name": "node_%d/position" % i,
 			&"type": TYPE_VECTOR2,
 		})
-	
+
 	# ---
 
 	result.append({
@@ -380,11 +380,11 @@ func _get_property_list() -> Array:
 				&"name": "connection_%d/costs" % i,
 				&"type": TYPE_VECTOR2,
 			})
-	
+
 	return result
 
 
-func _connections_changed():
+func _connections_changed() -> void:
 	connection_mode = connection_mode  # Triggers setter: updates costs to (1, 1) or (1, 0)
 	_node_neighbors.resize(node_datas.size())
 	_costs_dict.clear()

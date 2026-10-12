@@ -14,7 +14,7 @@ func generate_caves():
 		_smooth_map()
 	return map
 
-func _smooth_map():
+func _smooth_map() -> void:
 	var new_map = map.duplicate(true)
 	for x in range(1, width - 1):
 		for y in range(1, height - 1):
@@ -33,7 +33,7 @@ func _get_neighbor_count(grid_x, grid_y):
 				count += map[x][y]
 	return count
 
-func _random_fill():
+func _random_fill() -> void:
 	map.clear()
 	for x in range(width):
 		map.append([])

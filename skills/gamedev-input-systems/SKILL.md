@@ -1,6 +1,6 @@
 ---
 name: gamedev-input-systems
-description: "Imported awesome-gamedev-agent-skills guidance for input-systems workflows in game development projects."
+description: "Imported awesome-gamedev-agent-skills guidance for input-systems workflows in game development projects. Use when mapping physical inputs to named actions, supporting rebinding, multiple devices, buffering, and coyote time."
 ---
 # Input systems
 

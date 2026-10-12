@@ -2,10 +2,10 @@
 # Stress testing systems with random data
 extends Node
 
-# EXPERT NOTE: Fuzz testing catches edge-case crashes 
+# EXPERT NOTE: Fuzz testing catches edge-case crashes
 # by feeding unexpected ranges into your functions.
 
-func fuzz_test_damage_system():
+func fuzz_test_damage_system() -> void:
 	var combat = CombatLogic.new()
 	for i in 100:
 		var rand_dmg = randf_range(-1000, 5000)

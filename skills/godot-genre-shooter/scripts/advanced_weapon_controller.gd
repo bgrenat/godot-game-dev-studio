@@ -39,11 +39,11 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	_fire_timer -= delta
-	
+
 	# Recoil Recovery
 	_current_recoil = _current_recoil.move_toward(Vector2.ZERO, recoil_recovery * delta)
 	_current_spread = move_toward(_current_spread, 0.0, recoil_recovery * delta)
-	
+
 	# Apply visual rotation to camera (or weapon model)
 	if camera:
 		# Note: In real FPS, apply this as a separate offset/rotation to avoid drifting the actual view permanently
@@ -61,29 +61,29 @@ func trigger_up() -> void:
 
 func _fire() -> void:
 	if current_ammo <= 0: return # Play dry fire sound
-	
+
 	current_ammo -= 1
 	_fire_timer = fire_rate
-	
+
 	# calculate spread
 	var spread_angle = deg_to_rad(_current_spread)
-	var spread_vector = Vector3(randf_range(-spread_angle, spread_angle), randf_range(-spread_angle, spread_angle), 0)
-	
+	var spread_vector := Vector3(randf_range(-spread_angle, spread_angle), randf_range(-spread_angle, spread_angle), 0)
+
 	if is_hitscan and camera:
 		var forward = -camera.global_transform.basis.z
 		# Apply spread rotation
 		var aim_dir = forward + camera.global_transform.basis * spread_vector
 		aim_dir = aim_dir.normalized()
-		
+
 		# Raycast
 		var space = get_world_3d().direct_space_state
 		var query = PhysicsRayQueryParameters3D.create(camera.global_position, camera.global_position + aim_dir * 1000.0)
 		var result = space.intersect_ray(query)
-		
+
 		if result:
 			if result.collider.has_method("take_damage"):
 				result.collider.take_damage(damage)
-				
+
 	elif projectile_scene:
 		var proj = projectile_scene.instantiate()
 		get_tree().root.add_child(proj)
@@ -91,19 +91,19 @@ func _fire() -> void:
 		# Apply spread to projectile
 		proj.rotation.x += randf_range(-deg_to_rad(_current_spread), deg_to_rad(_current_spread))
 		proj.rotation.y += randf_range(-deg_to_rad(_current_spread), deg_to_rad(_current_spread))
-		
+
 	# Apply Recoil kick
 	_current_recoil.x = clamp(_current_recoil.x + randf_range(-recoil_kick.x, recoil_kick.x), -max_recoil_x, max_recoil_x)
 	_current_recoil.y = clamp(_current_recoil.y + recoil_kick.y, 0, max_recoil_y) # Kick up
 	_current_spread = clamp(_current_spread + spread_per_shot, 0, max_spread)
-	
+
 	weapon_fired.emit(current_ammo)
-	
+
 	# Auto-fire logic
 	if _trigger_held and fire_rate > 0:
 		await get_tree().create_timer(fire_rate).timeout
 		if _trigger_held: _fire()
 
 ## EXPERT USAGE:
-## Call trigger_down()/target_up() from Input. 
+## Call trigger_down()/target_up() from Input.
 ## Bind 'current_recoil' to a CameraGL/SpringArm offset script for visual shake.

@@ -35,17 +35,17 @@ func _physics_process(delta: float) -> void:
 
 func _find_target() -> void:
     # Simple logic: assume player is in group "player"
-    var tree = get_tree()
+    var tree := get_tree()
     if tree.has_group("player"):
         target = tree.get_nodes_in_group("player")[0]
         _state = State.CHASE
 
 func _chase_target(delta: float) -> void:
-    if not target: 
+    if not target:
         _state = State.IDLE
         return
-        
-    var dist = global_position.distance_to(target.global_position)
+
+    var dist := global_position.distance_to(target.global_position)
     if dist <= attack_range:
         _start_attack()
     else:
@@ -56,13 +56,13 @@ func _start_attack() -> void:
     _state = State.CHARGE
     _timer = windup_time
     velocity = Vector2.ZERO
-    
+
     # Show telegraph
     if telegraph_visual:
         telegraph_visual.visible = true
         telegraph_visual.modulate.a = 0.5
         # Tween transparency to imply buildup
-        var tween = create_tween()
+        var tween := create_tween()
         tween.tween_property(telegraph_visual, "modulate:a", 1.0, windup_time)
 
 func _process_charge(delta: float) -> void:
@@ -76,13 +76,13 @@ func _execute_attack() -> void:
         hitbox.monitoring = true
         # Check overlapping bodies immediately or wait for next physics frame
         # For simplicity, we assume Area2D monitors
-        
+
     if telegraph_visual:
         telegraph_visual.visible = false
-        
+
     _state = State.RECOVERY
     _timer = recovery_time
-    
+
     # Deactivate hitbox after 0.1s
     await get_tree().create_timer(0.1).timeout
     if hitbox: hitbox.monitoring = false

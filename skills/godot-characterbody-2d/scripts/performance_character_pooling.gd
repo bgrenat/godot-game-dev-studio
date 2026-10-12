@@ -5,12 +5,12 @@ extends CharacterBody2D
 # EXPERT NOTE: Characters off-screen should not run physics.
 
 func _physics_process(_delta: float) -> void:
-	# In built-in Godot, use VisibleOnScreenNotifier2D to 
+	# In built-in Godot, use VisibleOnScreenNotifier2D to
 	# toggle 'set_physics_process(false)'
 	pass
 
-func _on_screen_entered():
+func _on_screen_entered() -> void:
 	set_physics_process(true)
 
-func _on_screen_exited():
+func _on_screen_exited() -> void:
 	set_physics_process(false)

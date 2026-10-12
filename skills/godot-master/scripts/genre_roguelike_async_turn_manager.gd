@@ -10,15 +10,19 @@ func run_turn_loop() -> void:
 	while true:
 		for entity in entities:
 			if not is_instance_valid(entity): continue
-			
+
 			# Start entity turn
 			entity.begin_turn()
-			
+
 			# Expert Pattern: Halt loop until entity emits 'finished'
 			# This ensures animations (Tweens) complete before the next turn.
 			await entity.turn_finished
-			
+
 			if _check_victory(): return
 
-## [SKILL NOTICE]: Use 'await' inside the turn loop to cleanly handle 
+## [SKILL NOTICE]: Use 'await' inside the turn loop to cleanly handle
 ## asynchronous actions like movement Tweens and attack animations.
+
+## Override with the game's win/loss rules; returning true ends the turn loop.
+func _check_victory() -> bool:
+	return false

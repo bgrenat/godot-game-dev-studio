@@ -14,8 +14,8 @@ func get_optimized_path(start: Vector3, target: Vector3, layers: int = 1) -> Pac
     _query_params.target_position = target
     _query_params.navigation_layers = layers
     _query_params.path_postprocessing = NavigationPathQueryParameters3D.PATH_POSTPROCESSING_CORRIDORFUNNEL
-    
-    var map_rid := get_world_3d().get_navigation_map()
-    NavigationServer3D.query_path(map_rid, _query_params, _query_result)
-    
+
+    _query_params.map = get_world_3d().get_navigation_map()
+    NavigationServer3D.query_path(_query_params, _query_result)
+
     return _query_result.path

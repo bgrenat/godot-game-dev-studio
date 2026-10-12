@@ -9,8 +9,8 @@ extends Marker3D
 func get_spawn_position() -> Vector3:
 	if spawn_radius <= 0.0:
 		return global_position
-	
-	var offset = Vector3(
+
+	var offset := Vector3(
 		randf_range(-spawn_radius, spawn_radius),
 		0,
 		randf_range(-spawn_radius, spawn_radius)

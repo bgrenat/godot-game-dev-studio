@@ -1,6 +1,6 @@
 ---
 name: gamedev-shader-programming
-description: "Imported awesome-gamedev-agent-skills guidance for shader-programming workflows in game development projects."
+description: "Imported awesome-gamedev-agent-skills guidance for shader-programming workflows in game development projects. Use when writing vertex or fragment shaders, working with UVs and coordinate spaces, or building common visual effects."
 ---
 # Shader programming (cross-engine)
 

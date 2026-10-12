@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-ability-system
-description: "Imported GodotPrompter guidance for ability-system workflows in game development projects."
+description: "Imported GodotPrompter guidance for ability-system workflows in game development projects. Use when building a data-driven ability system in Godot with Resource-based abilities, cooldowns, effects, and tags."
 ---
 # Ability System
 

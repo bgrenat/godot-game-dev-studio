@@ -39,7 +39,7 @@ func _handles(object : Object):
 	return editor_views.any(func(x): return x._handles(object))
 
 
-func _edit(object : Object):
+func _edit(object : Object) -> void:
 	for x in editor_views:
 		if x == null:
 			continue
@@ -52,7 +52,7 @@ func _edit(object : Object):
 			x.edited_object = null
 
 
-func _forward_canvas_draw_over_viewport(overlay : Control):
+func _forward_canvas_draw_over_viewport(overlay : Control) -> void:
 	for x in editor_views:
 		x._forward_canvas_draw_over_viewport(overlay)
 
@@ -65,7 +65,7 @@ func _forward_canvas_gui_input(event : InputEvent):
 	return false
 
 
-func _enter_tree():
+func _enter_tree() -> void:
 	for x in added_scripts:
 		var x_icon = x[2]
 		if x_icon == null:
@@ -77,7 +77,7 @@ func _enter_tree():
 		add_custom_type(x[0], x[1].get_instance_base_type(), x[1], x_icon)
 
 
-func _exit_tree():
+func _exit_tree() -> void:
 	for x in added_scripts:
 		remove_custom_type(x[0])
 

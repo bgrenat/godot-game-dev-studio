@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-math-essentials
-description: "Imported GodotPrompter guidance for math-essentials workflows in game development projects."
+description: "Imported GodotPrompter guidance for math-essentials workflows in game development projects. Use when applying game math in Godot: vectors, directions, distances, interpolation, angles, and transforms."
 ---
 # Game Math in Godot 4.3+
 

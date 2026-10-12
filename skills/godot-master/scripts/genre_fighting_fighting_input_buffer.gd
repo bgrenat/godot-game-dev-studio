@@ -34,22 +34,22 @@ func _ready() -> void:
 
 func _physics_process(_delta: float) -> void:
     current_frame += 1
-    
+
     var current_inputs = _read_hardware_inputs()
-    
+
     # Store history
     input_history.push_back({
         "frame": current_frame,
         "inputs": current_inputs
     })
-    
+
     if input_history.size() > BUFFER_SIZE:
         input_history.pop_front()
-        
+
     _check_special_moves(current_frame)
 
 func _read_hardware_inputs() -> int:
-    var mask = 0
+    var mask := 0
     if Input.is_action_pressed("fight_up"): mask |= Buttons.UP
     if Input.is_action_pressed("fight_down"): mask |= Buttons.DOWN
     if Input.is_action_pressed("fight_left"): mask |= Buttons.LEFT
@@ -61,7 +61,7 @@ func _read_hardware_inputs() -> int:
 func _check_special_moves(frame_now: int) -> void:
     # Example: Quarter Circle Forward (Down -> Down+Forward -> Forward + Punch)
     # Simplified check logic
-    
+
     if is_button_just_pressed(Buttons.LIGHT_PUNCH, frame_now):
         # Look back for motion
         if check_motion_sequence([Buttons.DOWN, Buttons.DOWN | Buttons.RIGHT, Buttons.RIGHT], frame_now, 15):
@@ -83,19 +83,19 @@ func get_input_at(frame: int) -> int:
 func check_motion_sequence(sequence: Array, end_frame: int, window: int) -> bool:
     var seq_idx = sequence.size() - 1
     var current_search_frame = end_frame
-    
+
     # Trace back
     while current_search_frame > end_frame - window and seq_idx >= 0:
         var inputs = get_input_at(current_search_frame)
         var target = sequence[seq_idx]
-        
-        # Fuzzy match: does functionality hold? 
+
+        # Fuzzy match: does functionality hold?
         # (Simply checking if the bitmask contains the target bits)
         if (inputs & target) == target:
             seq_idx -= 1
-        
+
         current_search_frame -= 1
-        
+
     return seq_idx < 0
 
 ## EXPERT USAGE:

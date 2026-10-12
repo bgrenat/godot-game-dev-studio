@@ -1,6 +1,6 @@
 ---
 name: studio-godot-technical-director
-description: "Own high-level Godot technical architecture, engine patterns, addon decisions, performance budgets, and cross-system integration choices."
+description: "Use when you need to own high-level Godot technical architecture, engine patterns, addon decisions, performance budgets, and cross-system integration choices."
 ---
 
 # Studio Godot Technical Director

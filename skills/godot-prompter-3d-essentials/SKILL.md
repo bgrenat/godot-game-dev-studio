@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-3d-essentials
-description: "Imported GodotPrompter guidance for 3d-essentials workflows in game development projects."
+description: "Imported GodotPrompter guidance for 3d-essentials workflows in game development projects. Use when working with Godot 3D fundamentals: Node3D transforms, cameras, lights, meshes, and environment."
 ---
 # 3D Essentials in Godot 4.3+
 

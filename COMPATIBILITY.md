@@ -90,4 +90,4 @@ These tools can also consume the repository as plain Markdown:
 - **Cline / Roo Code**: add the repository as workspace context and ask the agent to follow `AGENTS.md`.
 - **Continue.dev**: index the repository or pin `SKILL_CATALOG.md` plus the needed `SKILL.md` files.
 
-For all tools, avoid loading every skill at once. This plugin contains 189 skills; use the catalog to choose the smallest useful subset.
+For all tools, avoid loading every skill at once. This plugin contains 188 skills; use the catalog to choose the smallest useful subset.

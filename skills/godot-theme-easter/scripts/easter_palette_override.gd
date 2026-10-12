@@ -18,10 +18,10 @@ func _ready() -> void:
 		apply_theme()
 
 func apply_theme() -> void:
-	var root = target_root if target_root else get_parent()
+	var root := target_root if target_root else get_parent()
 	if not root is Control:
 		return
-		
+
 	_apply_to_node_recursive(root)
 
 func _apply_to_node_recursive(node: Node) -> void:
@@ -42,9 +42,9 @@ func _apply_to_node_recursive(node: Node) -> void:
 func _override_stylebox(control: Control, theme_item: String, color: Color) -> void:
 	# We try to get the existing stylebox to preserve borders/radius
 	# If it's a StyleBoxFlat, we copy it. If not, we make a new one.
-	var existing = control.get_theme_stylebox(theme_item)
+	var existing := control.get_theme_stylebox(theme_item)
 	var new_style: StyleBoxFlat
-	
+
 	# Crucial: We must duplicate the stylebox to avoid modifying the global theme
 	if existing is StyleBoxFlat:
 		new_style = existing.duplicate()
@@ -52,6 +52,6 @@ func _override_stylebox(control: Control, theme_item: String, color: Color) -> v
 		new_style = StyleBoxFlat.new()
 		# Set some sensible defaults if we're creating from scratch
 		new_style.set_corner_radius_all(8)
-	
+
 	new_style.bg_color = color
 	control.add_override(theme_item, new_style)

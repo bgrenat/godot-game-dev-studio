@@ -13,20 +13,20 @@ const TYPE_WATER = 2
 const TYPE_WALL = 3
 
 static func simulate_grid(grid: Dictionary, width: int, height: int, dirty_cells: Array) -> void:
-    # Sort dirty cells bottom-up, to process floor first. 
+    # Sort dirty cells bottom-up, to process floor first.
     # Actually for falling sand, we want to process BOTTOM UP so a falling stack moves together?
     # No, iterating bottom-up allows a grain to fall into the empty space created by the grain below it moving?
     # Actually, standard is: Iterate bottom-up.
-    
+
     # Simple sort for example (Optimization: Use a proper dirty rect or active list)
     dirty_cells.sort_custom(func(a,b): return a.y > b.y) # Higher Y is lower on screen usually, check coord system
-    # Assuming Y+ is Down. 
-    
-    var processed = {} # Prevent double moves
-    
+    # Assuming Y+ is Down.
+
+    var processed := {} # Prevent double moves
+
     for pos in dirty_cells:
         if processed.has(pos): continue
-        
+
         var type = grid.get(pos, TYPE_EMPTY)
         if type == TYPE_SAND:
             _update_sand(grid, pos, processed)
@@ -38,8 +38,8 @@ static func _update_sand(grid: Dictionary, pos: Vector2i, processed: Dictionary)
     if not grid.has(down): # Empty
         _move(grid, pos, down, processed)
     else:
-        var down_left = pos + Vector2i(-1, 1)
-        var down_right = pos + Vector2i(1, 1)
+        var down_left := pos + Vector2i(-1, 1)
+        var down_right := pos + Vector2i(1, 1)
         # Random disperse
         var moves = [down_left, down_right]
         moves.shuffle()
@@ -53,10 +53,10 @@ static func _update_water(grid: Dictionary, pos: Vector2i, processed: Dictionary
     if not grid.has(down):
         _move(grid, pos, down, processed)
         return
-        
+
     # Flow sideways
-    var left = pos + Vector2i(-1, 0)
-    var right = pos + Vector2i(1, 0)
+    var left := pos + Vector2i(-1, 0)
+    var right := pos + Vector2i(1, 0)
     var moves = [left, right]
     moves.shuffle()
     for m in moves:

@@ -2,12 +2,12 @@
 # Procedural tile arrangement using WFC principles
 extends Node
 
-# EXPERT NOTE: WFC is excellent for city generation or 
+# EXPERT NOTE: WFC is excellent for city generation or
 # complex level layouts where tiles must obey adjacency rules.
 
 var entropy_map: Array = []
 
-func iterate():
+func iterate() -> void:
 	# 1. Find cell with lowest entropy
 	# 2. Collapse it to a random valid state
 	# 3. Propagate changes to neighbors

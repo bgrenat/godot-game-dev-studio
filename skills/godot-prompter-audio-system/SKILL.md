@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-audio-system
-description: "Imported GodotPrompter guidance for audio-system workflows in game development projects."
+description: "Imported GodotPrompter guidance for audio-system workflows in game development projects. Use when setting up Godot audio buses, AudioStreamPlayer nodes, positional audio, and music playback."
 ---
 # Audio System in Godot 4.3+
 

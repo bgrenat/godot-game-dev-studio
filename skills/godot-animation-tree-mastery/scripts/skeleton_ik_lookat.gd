@@ -8,18 +8,18 @@ extends AnimationTree
 
 func _physics_process(_delta: float) -> void:
     if not target_node: return
-    
+
     # 1. Drive a 'LookAt' parameter in the AnimationTree
-    # This assumes a 'SkeletonModifier3D' or an IK node is 
+    # This assumes a 'SkeletonModifier3D' or an IK node is
     # being modulated by this parameter.
-    var target_pos = target_node.global_position
-    
+    var target_pos := target_node.global_position
+
     # 2. Use string-formatted paths to avoid hardcoding
     # Pattern: "parameters/LookAt/blend_amount"
     set("parameters/LookAt/blend_amount", 1.0)
-    
+
     # 3. Smooth the target vector for the IK solver
-    var weight = 0.1
+    var weight := 0.1
     _update_ik_bone_pose(target_pos, weight)
 
 func _update_ik_bone_pose(_pos: Vector3, _weight: float) -> void:

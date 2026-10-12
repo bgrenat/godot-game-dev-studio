@@ -1,6 +1,6 @@
 ---
 name: studio-systems-designer
-description: "Coordinate inventory, stats, economy, quests, progression, save/load, resources, and data-driven Godot systems."
+description: "Use when you need to coordinate inventory, stats, economy, quests, progression, save/load, resources, and data-driven Godot systems."
 ---
 
 # Studio Systems Designer

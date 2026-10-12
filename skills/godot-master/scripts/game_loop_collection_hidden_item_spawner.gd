@@ -24,9 +24,9 @@ func spawn_items() -> void:
 	if not item_scene:
 		push_warning("HiddenItemSpawner: No item_scene assigned.")
 		return
-		
+
 	var available_points = spawn_points.duplicate()
-	
+
 	# If no manual points, try to find collision shapes to use as volumes
 	if available_points.is_empty():
 		for child in get_children():
@@ -36,22 +36,22 @@ func spawn_items() -> void:
 	if available_points.is_empty():
 		push_warning("HiddenItemSpawner: No spawn points or collision shapes found!")
 		return
-		
+
 	available_points.shuffle()
-	
+
 	var spawned_count = 0
 	for point_node in available_points:
 		if max_spawn_count > 0 and spawned_count >= max_spawn_count:
 			break
-			
+
 		if randf() > spawn_chance:
 			continue
-			
+
 		# Determine position
 		var pos = point_node.global_position
 		if point_node is CollisionShape3D:
 			pos = _get_random_point_in_shape(point_node)
-			
+
 		_spawn_at(pos)
 		spawned_count += 1
 
@@ -59,9 +59,9 @@ func _get_random_point_in_shape(shape_node: CollisionShape3D) -> Vector3:
 	var shape = shape_node.shape
 	if not shape:
 		return shape_node.global_position
-		
-	var local_point = Vector3.ZERO
-	
+
+	var local_point := Vector3.ZERO
+
 	if shape is BoxShape3D:
 		var s = shape.size
 		local_point = Vector3(
@@ -72,8 +72,8 @@ func _get_random_point_in_shape(shape_node: CollisionShape3D) -> Vector3:
 	elif shape is SphereShape3D:
 		# Random point inside sphere (volume)
 		var r = shape.radius * pow(randf(), 1.0/3.0)
-		local_point = Vector3.random_on_unit_sphere() * r
-		
+		local_point = Vector3(randfn(0.0, 1.0), randfn(0.0, 1.0), randfn(0.0, 1.0)).normalized() * r
+
 	return shape_node.to_global(local_point)
 
 func _spawn_at(pos: Vector3) -> void:

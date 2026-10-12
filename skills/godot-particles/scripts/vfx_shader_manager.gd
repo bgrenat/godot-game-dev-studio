@@ -9,15 +9,15 @@ extends Node
 
 func _ready() -> void:
     # 1. Custom Particle Shader Assignment
-    # Expert logic: Bypassing the Standard ParticlesMaterial for 
+    # Expert logic: Bypassing the Standard ParticlesMaterial for
     # custom GLSL logic (e.g., Flocking, Curl Noise, Swirling).
     _setup_custom_behavior()
 
 func _setup_custom_behavior() -> void:
-    var shader_material = ShaderMaterial.new()
+    var shader_material := ShaderMaterial.new()
     shader_material.shader = load("res://shaders/vfx/vortex_particles.gdshader")
     gpu_particles.process_material = shader_material
-    
+
     # 2. Emission Masks
     # Use a black/white texture to mask particle spawn locations.
     if gpu_particles.process_material is ShaderMaterial:
@@ -30,10 +30,10 @@ func toggle_optimization(is_visible: bool) -> void:
     set_process(is_visible)
 
 ## EXPERT NOTE:
-## Use 'Multi-Pass Material Layers': For complex effects like glowing 
-## fire with smoke, use 'Material.next_pass' to render the smoke 
+## Use 'Multi-Pass Material Layers': For complex effects like glowing
+## fire with smoke, use 'Material.next_pass' to render the smoke
 ## volume on top of the fire emission in the same system.
-## For 'particles', implement 'GPU-Calculated Orbit' logic inside the 
+## For 'particles', implement 'GPU-Calculated Orbit' logic inside the
 ## Shader to move 1,000,000 particles with ZERO CPU cost.
-## NEVER use CPUParticles for systems with >500 particles unless 
+## NEVER use CPUParticles for systems with >500 particles unless
 ## targeting low-end mobile/web without Vulkan support.

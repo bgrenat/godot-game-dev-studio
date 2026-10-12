@@ -12,5 +12,5 @@ func _unhandled_input(event: InputEvent) -> void:
 			return
 		_do_confirm()
 
-func _do_confirm():
+func _do_confirm() -> void:
 	print("Confirmed!")

@@ -2,12 +2,12 @@
 # High-speed serialization for frame snapshots
 extends Node
 
-# EXPERT NOTE: Rollback requires snapshots every frame. 
+# EXPERT NOTE: Rollback requires snapshots every frame.
 # Pre-allocating PackedByteArray ensures zero allocation stutters.
 
 var state_buffer := PackedByteArray()
 
-func _ready():
+func _ready() -> void:
 	state_buffer.resize(1024) # Reserve memory for the fighter state
 
 func save_state() -> PackedByteArray:

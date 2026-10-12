@@ -2,14 +2,14 @@
 # Minimal GdUnit4 test structure
 extends GdUnitTestSuite
 
-# EXPERT NOTE: In GdUnit4, use verify() and assert_that() 
+# EXPERT NOTE: In GdUnit4, use verify() and assert_that()
 # for readable, robust unit testing of logic scripts.
 
-func test_arithmetic_logic():
+func test_arithmetic_logic() -> void:
 	assert_that(1 + 1).is_equal(2)
 	assert_that("Godot").is_not_empty()
 
-func test_player_damage():
+func test_player_damage() -> void:
 	var player = Player.new()
 	player.take_damage(20)
 	assert_that(player.health).is_equal(80)

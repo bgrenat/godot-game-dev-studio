@@ -20,7 +20,7 @@ func _process(delta: float) -> void:
 ## Call this in _physics_process before move_and_slide for stretching,
 ## or immediately after a collision impact for squashing.
 func apply_velocity_deformation(velocity: Vector2, max_velocity: float = 1000.0) -> void:
-	var speed_ratio := clamp(velocity.length() / max_velocity, 0.0, 1.0)
+	var speed_ratio := clampf(velocity.length() / max_velocity, 0.0, 1.0)
 	# Stretch along the move axis, squash the perpendicular
 	_target_scale = _base_scale * Vector2(1.0 - speed_ratio * 0.2, 1.0 + speed_ratio * 0.4)
 	# Orient the sprite to face the movement for directional stretch
@@ -29,8 +29,8 @@ func apply_velocity_deformation(velocity: Vector2, max_velocity: float = 1000.0)
 func apply_impact_squash(impact_velocity: float) -> void:
 	if abs(impact_velocity) < impact_threshold:
 		return
-	
-	var strength := clamp(abs(impact_velocity) / 2000.0, 0.0, 0.5)
+
+	var strength := clampf(absf(impact_velocity) / 2000.0, 0.0, 0.5)
 	# Sudden squash: wide and short
 	scale = _base_scale * Vector2(1.0 + strength, 1.0 - strength)
 	_target_scale = _base_scale

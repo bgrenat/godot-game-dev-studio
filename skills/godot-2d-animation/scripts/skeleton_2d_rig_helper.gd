@@ -18,15 +18,15 @@ func setup_ik_constraint() -> void:
 		# but properties can be tuned here.
 		push_warning("Ensure a modification stack is added in the editor for this script to tune it.")
 		return
-	
-	var mod = modification_stack.get_modification(0)
+
+	var mod := modification_stack.get_modification(0)
 	if mod is SkeletonModification2DFABRIK:
 		mod.target_nodepath = get_parent().get_path_to($"../TargetMarker")
 		mod.chain_length = 3 # Number of bones to affect upward from the tip
 		print("IK Target successfully synced to TargetMarker")
 
 func update_bone_rest_pose(bone_name: String, new_transform: Transform2D) -> void:
-	var bone = find_child(bone_name) as Bone2D
+	var bone := find_child(bone_name) as Bone2D
 	if bone:
 		bone.rest = new_transform
 		# Mandatory for the skeleton to recognize the change

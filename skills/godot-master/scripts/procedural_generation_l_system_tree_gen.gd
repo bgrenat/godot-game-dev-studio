@@ -7,7 +7,7 @@ extends Node3D
 func draw_lsystem(axiom: String, rules: Dictionary, iterations: int):
 	var current = axiom
 	for i in range(iterations):
-		var next = ""
+		var next := ""
 		for char in current:
 			next += rules.get(char, char)
 		current = next

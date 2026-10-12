@@ -13,19 +13,19 @@ func _ready() -> void:
 	_original_scale = scale
 	# Offset center of mass to make it bottom-heavy (classic wobble)
 	center_of_mass = Vector3(0, -0.3, 0)
-	
+
 	body_entered.connect(_on_impact)
 	contact_monitor = true
 	max_contacts_reported = 1
 
 func _on_impact(body: Node) -> void:
 	# Squash and stretch on impact
-	var tween = create_tween()
+	var tween := create_tween()
 	tween.set_trans(Tween.TRANS_ELASTIC)
 	tween.set_ease(Tween.EASE_OUT)
-	
+
 	# Scale down Y (squash), Scale up X/Z (stretch)
-	var squash_scale = _original_scale * Vector3(1.0 + squash_factor, 1.0 - squash_factor, 1.0 + squash_factor)
-	
+	var squash_scale := _original_scale * Vector3(1.0 + squash_factor, 1.0 - squash_factor, 1.0 + squash_factor)
+
 	tween.tween_property(self, "scale", squash_scale, 0.1)
 	tween.tween_property(self, "scale", _original_scale, 0.4)

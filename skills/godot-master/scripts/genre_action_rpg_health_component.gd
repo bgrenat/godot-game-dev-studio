@@ -10,10 +10,10 @@ signal died
 
 var current_health: int
 
-func _ready():
+func _ready() -> void:
 	current_health = stats.max_health
 
-func damage(amount: int):
+func damage(amount: int) -> void:
 	current_health -= amount
 	health_changed.emit(current_health, stats.max_health)
 	if current_health <= 0:

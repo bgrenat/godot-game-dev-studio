@@ -10,10 +10,10 @@ extends RichTextLabel
 func _process(delta: float) -> void:
 	if pause_on_hover and get_global_rect().has_point(get_global_mouse_position()):
 		return
-		
-	var v_scroll = get_v_scroll_bar()
+
+	var v_scroll := get_v_scroll_bar()
 	v_scroll.value += scroll_speed * delta
-	
+
 	if v_scroll.value >= v_scroll.max_value - v_scroll.page:
 		# Optionally loop or stop
 		pass

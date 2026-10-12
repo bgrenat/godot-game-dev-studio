@@ -24,32 +24,32 @@ func start_next_wave() -> void:
 	if current_wave_index + 1 >= wave_sequence.size():
 		all_waves_complete.emit()
 		return
-		
+
 	current_wave_index += 1
 	var current_wave = wave_sequence[current_wave_index]
-	
+
 	if current_wave.pre_wave_delay > 0:
 		await get_tree().create_timer(current_wave.pre_wave_delay).timeout
-	
+
 	_trigger_wave(current_wave)
 
 func _trigger_wave(wave: WaveResource) -> void:
 	is_spawning = true
 	wave_started.emit(current_wave_index)
-	
-	var spawn_list = []
+
+	var spawn_list := []
 	for scene in wave.compositions:
 		var count = wave.compositions[scene]
 		for i in range(count):
 			spawn_list.append(scene)
-	
+
 	if wave.random_spawning:
 		spawn_list.shuffle()
-	
+
 	for enemy_scene in spawn_list:
 		_spawn_enemy(enemy_scene)
 		await get_tree().create_timer(1.0 / wave.spawn_rate).timeout
-		
+
 	is_spawning = false
 
 func _spawn_enemy(scene: PackedScene) -> void:

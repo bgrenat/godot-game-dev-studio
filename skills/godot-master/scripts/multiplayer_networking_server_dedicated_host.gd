@@ -2,12 +2,12 @@
 # Configuring a dedicated server instance
 extends Node
 
-# EXPERT NOTE: For dedicated servers, use ENetMultiplayerPeer 
+# EXPERT NOTE: For dedicated servers, use ENetMultiplayerPeer
 # and disable the scene tree rendering if not needed (Server build).
 
-func start_dedicated_server(port: int):
-	var peer = ENetMultiplayerPeer.new()
-	var error = peer.create_server(port)
+func start_dedicated_server(port: int) -> void:
+	var peer := ENetMultiplayerPeer.new()
+	var error := peer.create_server(port)
 	if error != OK:
 		printerr("Server startup failed: ", error)
 		return
@@ -15,5 +15,5 @@ func start_dedicated_server(port: int):
 	multiplayer.peer_connected.connect(_on_client_connected)
 	print("Dedicated server listening on ", port)
 
-func _on_client_connected(id: int):
+func _on_client_connected(id: int) -> void:
 	print("Client connected: ", id)

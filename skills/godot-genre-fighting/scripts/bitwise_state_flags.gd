@@ -2,7 +2,7 @@
 # Efficiently combining and tracking fighter states
 extends Node
 
-# EXPERT NOTE: Bitwise flags are the fastest way to check 
+# EXPERT NOTE: Bitwise flags are the fastest way to check
 # complex conditions (e.g. Can I block? Are we airborne AND stun?)
 
 enum FighterState {
@@ -18,5 +18,5 @@ func can_block() -> bool:
 	# If NOT airborne AND NOT stunned
 	return !(current_state & FighterState.AIRBORNE) and !(current_state & FighterState.STUNNED)
 
-func add_state(state: FighterState):
+func add_state(state: FighterState) -> void:
 	current_state |= state

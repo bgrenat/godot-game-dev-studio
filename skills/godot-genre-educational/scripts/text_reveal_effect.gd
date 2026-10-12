@@ -4,10 +4,10 @@
 extends RichTextEffect
 class_name RichTextWobble
 
-# EXPERT NOTE: Custom effects allow for 'game-ifying' 
+# EXPERT NOTE: Custom effects allow for 'game-ifying'
 # educational text reading for younger users.
 
-var bbcode = "wobble"
+var bbcode := "wobble"
 
 func _process_custom_fx(char_fx):
 	var speed = char_fx.env.get("speed", 5.0)

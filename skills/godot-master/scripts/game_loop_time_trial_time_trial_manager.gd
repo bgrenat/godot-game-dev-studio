@@ -26,21 +26,21 @@ func start_lap() -> void:
 
 func pass_checkpoint(index: int) -> void:
 	if not is_racing: return
-	
+
 	# Linear progression check
 	if index == current_checkpoint_index + 1:
 		current_checkpoint_index = index
 		checkpoint_passed.emit(index, current_lap_time)
-		
+
 		if index == total_checkpoints - 1:
 			_finish_lap()
 
 func _finish_lap() -> void:
 	is_racing = false
-	var is_best = current_lap_time < best_time
+	var is_best := current_lap_time < best_time
 	if is_best:
 		best_time = current_lap_time
-	
+
 	lap_finished.emit(current_lap_time, is_best)
 
 func _process(delta: float) -> void:

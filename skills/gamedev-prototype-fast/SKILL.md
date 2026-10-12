@@ -1,6 +1,6 @@
 ---
 name: gamedev-prototype-fast
-description: "Imported awesome-gamedev-agent-skills guidance for prototype-fast workflows in game development projects."
+description: "Imported awesome-gamedev-agent-skills guidance for prototype-fast workflows in game development projects. Use when prototyping a mechanic quickly to decide whether to keep, kill, or refactor it."
 ---
 # Prototype Fast
 

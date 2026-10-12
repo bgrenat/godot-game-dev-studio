@@ -1,6 +1,6 @@
 ---
 name: gamedev-steam-publish
-description: "Imported awesome-gamedev-agent-skills guidance for steam-publish workflows in game development projects."
+description: "Imported awesome-gamedev-agent-skills guidance for steam-publish workflows in game development projects. Use when shipping on Steam: store page setup, SteamPipe build uploads, and release checklists."
 ---
 # Steam Publish (Steamworks + SteamPipe)
 

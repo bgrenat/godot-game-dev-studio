@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-multiplayer-sync
-description: "Imported GodotPrompter guidance for multiplayer-sync workflows in game development projects."
+description: "Imported GodotPrompter guidance for multiplayer-sync workflows in game development projects. Use when replicating state with MultiplayerSynchronizer and MultiplayerSpawner, interpolation, and prediction."
 ---
 # Multiplayer Synchronization in Godot 4.3+
 

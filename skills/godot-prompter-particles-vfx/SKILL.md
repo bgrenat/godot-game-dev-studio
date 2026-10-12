@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-particles-vfx
-description: "Imported GodotPrompter guidance for particles-vfx workflows in game development projects."
+description: "Imported GodotPrompter guidance for particles-vfx workflows in game development projects. Use when creating particle effects and VFX with GPUParticles or CPUParticles in Godot."
 ---
 # Particle Systems in Godot 4.3+
 

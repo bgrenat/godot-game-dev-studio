@@ -35,7 +35,7 @@ func purchase_upgrade(upgrade_id: String, cost: int) -> bool:
         if not save_data["upgrades"].has(upgrade_id):
             save_data["upgrades"][upgrade_id] = 0
         save_data["upgrades"][upgrade_id] += 1
-        
+
         currency_changed.emit(save_data["currency"])
         upgrade_purchased.emit(upgrade_id, save_data["upgrades"][upgrade_id])
         save_progress()
@@ -51,7 +51,7 @@ func save_progress() -> void:
         var json_str = JSON.stringify(save_data)
         # Simple obfuscation (XOR or base64) to deter casual edits
         # For real security, use FileAccess.open_encrypted_with_pass
-        var encrypted = Marshalls.utf8_to_base64(json_str) 
+        var encrypted = Marshalls.utf8_to_base64(json_str)
         file.store_string(encrypted)
         file.close()
 
@@ -63,8 +63,8 @@ func load_progress() -> void:
     if file:
         var encrypted = file.get_as_text()
         var json_str = Marshalls.base64_to_utf8(encrypted)
-        var json = JSON.new()
-        var parse_result = json.parse(json_str)
+        var json := JSON.new()
+        var parse_result := json.parse(json_str)
         if parse_result == OK:
             save_data = json.data
         else:
@@ -72,5 +72,5 @@ func load_progress() -> void:
         file.close()
 
 ## EXPERT USAGE:
-## Autoload this script. Call add_currency() at end of run. 
+## Autoload this script. Call add_currency() at end of run.
 ## Check get_upgrade_level() during gameplay to apply buffs.

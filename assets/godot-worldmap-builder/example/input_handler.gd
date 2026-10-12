@@ -19,13 +19,13 @@ extends Node
 @export var add_node_index := 3
 
 
-func _ready():
+func _ready() -> void:
 	skilltree.max_unlock_cost = starting_skillpoints
 	_skillpoints_changed()
 	tooltip_root.hide()
 
 
-func _skillpoints_changed():
+func _skillpoints_changed() -> void:
 	skillpoint_label.text = skillpoint_label_format.format([skilltree.max_unlock_cost])
 	skill_reset.disabled = skilltree.max_unlock_cost >= starting_skillpoints
 	var stat_list_text : Array[String] = []
@@ -47,7 +47,7 @@ func _skillpoints_changed():
 	stat_list.text = "\n".join(stat_list_text)
 
 
-func _on_map_node_gui_input(event : InputEvent, path : NodePath, node_in_path : int, resource : WorldmapNodeData):
+func _on_map_node_gui_input(event : InputEvent, path : NodePath, node_in_path : int, resource : WorldmapNodeData) -> void:
 	if event is InputEventMouseMotion:
 		tooltip_root.global_position = event.global_position
 
@@ -68,24 +68,24 @@ func _on_map_node_gui_input(event : InputEvent, path : NodePath, node_in_path : 
 			skilltree.get_node(path).remove_node(node_in_path)
 
 
-func _unhandled_input(event : InputEvent):
+func _unhandled_input(event : InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_MIDDLE && event.pressed:
 			add_node_index = add_target.add_node(event.position * skilltree.get_global_transform(), add_node_index)
 
 
-func _on_map_node_mouse_entered(_path : NodePath, _node_in_path : int, resource : WorldmapNodeData):
+func _on_map_node_mouse_entered(_path : NodePath, _node_in_path : int, resource : WorldmapNodeData) -> void:
 	tooltip_root.show()
 	tooltip_title.text = resource.name
 	tooltip_desc.text = resource.desc
 	tooltip_root.size = Vector2.ZERO
 
 
-func _on_map_node_mouse_exited(_path : NodePath, _node_in_path : int, _resource : WorldmapNodeData):
+func _on_map_node_mouse_exited(_path : NodePath, _node_in_path : int, _resource : WorldmapNodeData) -> void:
 	tooltip_root.hide()
 
 
-func _on_reset_skills_pressed():
+func _on_reset_skills_pressed() -> void:
 	skilltree.max_unlock_cost = starting_skillpoints
 	skilltree.reset()
 	_skillpoints_changed()
@@ -96,14 +96,14 @@ func _on_add_pressed() -> void:
 	_skillpoints_changed()
 
 
-func _on_save_pressed():
+func _on_save_pressed() -> void:
 	$"Anchors/BottomLeftBox/Box/Box2/SaveData".text = var_to_str([
 		skilltree.max_unlock_cost,
 		skilltree.get_state(),
 	])
 
 
-func _on_load_pressed():
+func _on_load_pressed() -> void:
 	var varr = str_to_var($"Anchors/BottomLeftBox/Box/Box2/SaveData".text)
 	if !varr is Array || varr.size() < 2: return
 	if !varr[0] is int: return

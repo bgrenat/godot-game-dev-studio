@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-procedural-generation
-description: "Imported GodotPrompter guidance for procedural-generation workflows in game development projects."
+description: "Imported GodotPrompter guidance for procedural-generation workflows in game development projects. Use when generating seeded procedural content in Godot with RandomNumberGenerator, noise, and tilemaps."
 ---
 # Procedural Generation in Godot 4.3+
 

@@ -2,7 +2,7 @@
 # Advanced trauma-based screenshake using noise [27]
 extends Camera2D
 
-# EXPERT NOTE: Noise-based shake is superior to random offsets as 
+# EXPERT NOTE: Noise-based shake is superior to random offsets as
 # it prevents high-frequency jitter and feels more organic.
 
 @export var trauma_reduction_rate: float = 1.0
@@ -27,7 +27,7 @@ func _process(delta: float) -> void:
 
 func _execute_shake() -> void:
 	# Using squared trauma makes the shake feel more explosive [28]
-	var shake = trauma * trauma
+	var shake := trauma * trauma
 	noise_y += 1
 	rotation = max_roll * shake * noise.get_noise_2d(noise.seed, noise_y)
 	offset.x = max_offset.x * shake * noise.get_noise_2d(noise.seed * 2, noise_y)

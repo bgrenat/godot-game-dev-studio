@@ -16,15 +16,15 @@ func _ready() -> void:
 		_cached_playback = animation_tree.get(state_machine_path + "/playback")
 
 func travel_to(state_name: String, immediate := false) -> bool:
-	if not_cached_playback:
+	if not _cached_playback:
 		push_error("AnimationTree playback not found")
 		return false
-	
+
 	if immediate:
 		_cached_playback.start(state_name)
 	else:
 		_cached_playback.travel(state_name)
-	
+
 	return true
 
 func get_current_state() -> String:
@@ -53,10 +53,10 @@ func set_blend_amount(blend_var: String, amount: float) -> void:
 ## var travel_mgr := TreeTravelManager.new()
 ## travel_mgr.animation_tree = $AnimationTree
 ## add_child(travel_mgr)
-## 
+##
 ## # State machine transitions
 ## travel_mgr.travel_to("Walk")
 ## travel_mgr.set_condition("is_attacking", true)
-## 
+##
 ## # Blend space control
 ## travel_mgr.set_blend_position("MovementBlend", Vector2(velocity.x, velocity.y))

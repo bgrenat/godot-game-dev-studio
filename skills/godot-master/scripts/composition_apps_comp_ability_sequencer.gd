@@ -5,7 +5,7 @@ extends Node
 ## Manages child 'Ability' nodes and their activation sequence.
 
 func cast_ability(ability_name: String) -> void:
-	var ability = get_node_or_null(ability_name)
+	var ability := get_node_or_null(ability_name)
 	if ability and ability.has_method("execute"):
 		ability.execute()
 

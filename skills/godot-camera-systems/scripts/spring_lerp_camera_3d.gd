@@ -8,11 +8,11 @@ extends Camera3D
 
 func _physics_process(delta: float) -> void:
 	if not target: return
-	
-	var target_pos = target.global_position + offset
-	
-	# Spring-based follow prevents the 'elastic' feel of simple lerp 
+
+	var target_pos := target.global_position + offset
+
+	# Spring-based follow prevents the 'elastic' feel of simple lerp
 	# and reduces visual stutter at high speeds.
 	global_position = global_position.lerp(target_pos, delta * spring_stiffness)
-	
+
 	look_at(target.global_position)

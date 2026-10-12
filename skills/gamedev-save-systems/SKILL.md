@@ -1,6 +1,6 @@
 ---
 name: gamedev-save-systems
-description: "Imported awesome-gamedev-agent-skills guidance for save-systems workflows in game development projects."
+description: "Imported awesome-gamedev-agent-skills guidance for save-systems workflows in game development projects. Use when designing save files: what to serialize, crash-safe atomic writes, slots, and versioned migration of old saves."
 ---
 # Save systems
 

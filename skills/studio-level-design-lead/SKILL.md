@@ -1,6 +1,6 @@
 ---
 name: studio-level-design-lead
-description: "Coordinate levels, maps, tiles, world building, progression paths, procedural generation, encounters, and Godot worldmap/skill-tree screens."
+description: "Use when you need to coordinate levels, maps, tiles, world building, progression paths, procedural generation, encounters, and Godot worldmap/skill-tree screens."
 ---
 
 # Studio Level Design Lead

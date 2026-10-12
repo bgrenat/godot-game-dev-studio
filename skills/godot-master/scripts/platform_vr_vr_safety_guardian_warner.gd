@@ -7,12 +7,15 @@ extends Node
 @export var camera: XRCamera3D
 
 func _process(_delta: float) -> void:
-	# Reference frame 2D bounds (square/rectangle area)
-	var bounds := XRServer.get_reference_frame_bounds_2d()
-	if bounds.size == Vector2.ZERO: return # No boundary set
-	
+	# The play area is a polygon in the XR reference frame (empty if no boundary is set).
+	var interface := XRServer.primary_interface
+	if interface == null: return
+	var area := interface.get_play_area()
+	if area.is_empty(): return
+	var polygon := PackedVector2Array()
+	for p in area: polygon.append(Vector2(p.x, p.z))
 	var cam_pos_2d := Vector2(camera.position.x, camera.position.z)
-	if not bounds.has_point(cam_pos_2d):
+	if not Geometry2D.is_point_in_polygon(cam_pos_2d, polygon):
 		_warn_player_out_of_bounds()
 
 func _warn_player_out_of_bounds() -> void:

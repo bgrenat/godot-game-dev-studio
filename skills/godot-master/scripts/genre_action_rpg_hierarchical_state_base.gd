@@ -14,13 +14,13 @@ func _physics_process(delta: float) -> void:
         current_state.physics_tick(delta)
 
 func transition(target_path: NodePath, params: Dictionary = {}) -> void:
-    var next_state = get_node_or_null(target_path)
+    var next_state := get_node_or_null(target_path)
     if not next_state: return
-    
+
     if current_state.has_method(&"on_exit"):
         current_state.on_exit()
-        
+
     current_state = next_state
-    
+
     if current_state.has_method(&"on_enter"):
         current_state.on_enter(params)

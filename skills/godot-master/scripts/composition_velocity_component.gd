@@ -2,7 +2,7 @@
 # Encapsulating movement logic for reuse across entities
 class_name VelocityComponent extends Node
 
-# EXPERT NOTE: Use a velocity component to share movement code 
+# EXPERT NOTE: Use a velocity component to share movement code
 # between Player and Enemies without deep inheritance.
 
 @export var max_speed: float = 300.0
@@ -11,7 +11,7 @@ class_name VelocityComponent extends Node
 var velocity: Vector2 = Vector2.ZERO
 
 func accelerate_in_direction(direction: Vector2, delta: float) -> void:
-	var target_velocity = direction * max_speed
+	var target_velocity := direction * max_speed
 	velocity = velocity.move_toward(target_velocity, acceleration * delta)
 
 func apply_velocity(character: CharacterBody2D) -> void:

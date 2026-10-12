@@ -1,6 +1,6 @@
 ---
 name: studio-godot-addon-integrator
-description: "Evaluate, integrate, isolate, and document Godot addons, editor plugins, tools, and third-party dependencies."
+description: "Use when you need to evaluate, integrate, isolate, and document Godot addons, editor plugins, tools, and third-party dependencies."
 ---
 
 # Studio Godot Addon Integrator

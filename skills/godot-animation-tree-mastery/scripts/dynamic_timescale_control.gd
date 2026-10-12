@@ -10,7 +10,7 @@ func apply_movement_haste(multiplier: float) -> void:
 	set("parameters/MovementTime/scale", multiplier)
 
 func bullet_time_transition(target_scale: float, duration: float) -> void:
-	var tween = create_tween()
+	var tween := create_tween()
 	# Tweens can target AnimationTree parameters directly!
 	tween.tween_property(self, "parameters/GlobalTime/scale", target_scale, duration)\
 		.set_trans(Tween.TRANS_SINE)

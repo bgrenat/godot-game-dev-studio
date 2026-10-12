@@ -2,14 +2,14 @@
 # Validating client requests at the entry point
 extends Node
 
-# EXPERT NOTE: RPC authority checks are the first line of defense. 
+# EXPERT NOTE: RPC authority checks are the first line of defense.
 # Use get_remote_sender_id() to identify and validate peers.
 
 @rpc("any_peer", "call_local", "reliable")
-func commit_transaction(item_id: String, amount: int):
+func commit_transaction(item_id: String, amount: int) -> void:
 	if not multiplayer.is_server(): return
-	
-	var peer_id = multiplayer.get_remote_sender_id()
+
+	var peer_id := multiplayer.get_remote_sender_id()
 	if _can_afford(peer_id, amount):
 		_apply_transaction(peer_id, item_id, amount)
 	else:

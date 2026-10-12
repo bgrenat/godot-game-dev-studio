@@ -15,16 +15,16 @@ func _physics_process(_delta: float) -> void:
 		_perform_shift()
 
 func _perform_shift() -> void:
-	var shift = -player.global_position
+	var shift := -player.global_position
 	total_offset += shift
-	
+
 	# Shift world root and update physics interpolation
 	world_root.global_position += shift
 	player.global_position += shift
 	player.reset_physics_interpolation()
-	
+
 	# Sync shaders (Global Uniforms)
 	RenderingServer.global_shader_parameter_set("world_offset", total_offset)
 
-## [SKILL NOTICE]: Use 'reset_physics_interpolation()' during 
+## [SKILL NOTICE]: Use 'reset_physics_interpolation()' during
 ## origin shifts to prevent 1-frame visual 'streaking' or 'warping'.

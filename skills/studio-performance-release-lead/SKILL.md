@@ -1,6 +1,6 @@
 ---
 name: studio-performance-release-lead
-description: "Coordinate Godot profiling, optimization, export readiness, platform checks, release checklists, store workflow, and post-launch patch planning."
+description: "Use when you need to coordinate Godot profiling, optimization, export readiness, platform checks, release checklists, store workflow, and post-launch patch planning."
 ---
 
 # Studio Performance Release Lead

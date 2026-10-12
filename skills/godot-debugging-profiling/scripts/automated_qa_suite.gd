@@ -7,14 +7,14 @@ extends SceneTree
 ## Main entry point for automated QA.
 func _init() -> void:
 	print("=== Automated QA Suite: Initialization ===")
-	
+
 	# Execute tests sequentially
 	var results := []
 	results.append(run_unit_tests())
 	results.append(run_smoke_tests())
-	
+
 	# Report and Quit
-	var fail_count = results.count(false)
+	var fail_count := results.count(false)
 	if fail_count > 0:
 		printerr("QA Suite: FAILED (%d failures)" % fail_count)
 		quit(1) # Exit with error code for CI

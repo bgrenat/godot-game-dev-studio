@@ -14,6 +14,10 @@ func start_death_timer() -> void:
 	timeout.connect(_on_timeout)
 
 func _on_timeout() -> void:
-	RevivalGlobalManager.trigger_death()
+	_revival().trigger_death()
 
 ## Tip: Use 'one_shot' timers for death logic to avoid recursive respawns if dying during the timer.
+
+## Autoload registered as "Revival" (an autoload cannot share the RevivalGlobalManager class_name).
+func _revival() -> RevivalGlobalManager:
+	return get_node(^"/root/Revival") as RevivalGlobalManager

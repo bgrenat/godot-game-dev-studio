@@ -42,12 +42,12 @@ Expert blueprint for party games balancing accessibility, variety, and social fu
 ## 🛠 Expert Components (scripts/)
 
 ### Original Expert Patterns
-- [party_input_router.gd](scripts/party_input_router.gd) - Professional local multiplayer solution mapping `device_id` to `player_id`.
+- [party_input_router.gd](../scripts/genre_party_party_input_router.gd) - Professional local multiplayer solution mapping `device_id` to `player_id`.
 
 ### Modular Components
-- [player_join_manager.gd](scripts/player_join_manager.gd) - Slot mapping logic using raw JoypadButton event parsing.
-- [split_screen_manager.gd](scripts/split_screen_manager.gd) - SubViewport synchronization for shared physics worlds.
-- [tournament_state.gd](scripts/tournament_state.gd) - Persistent Autoload singleton for cross-scene state.
+- [player_join_manager.gd](../scripts/genre_party_player_join_manager.gd) - Slot mapping logic using raw JoypadButton event parsing.
+- [split_screen_manager.gd](../scripts/genre_party_split_screen_manager.gd) - SubViewport synchronization for shared physics worlds.
+- [tournament_state.gd](../scripts/genre_party_tournament_state.gd) - Persistent Autoload singleton for cross-scene state.
 
 ---
 
@@ -231,4 +231,4 @@ func _on_shake_requested(intensity: float) -> void:
 ```
 
 
-- Master Skill: [godot-master](../godot-master/SKILL.md)
+- Master Skill: [godot-master](../SKILL.md)

@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-hud-system
-description: "Imported GodotPrompter guidance for hud-system workflows in game development projects."
+description: "Imported GodotPrompter guidance for hud-system workflows in game development projects. Use when building an in-game HUD on a CanvasLayer: health bars, score, and notifications."
 ---
 # HUD Systems in Godot 4.3+
 

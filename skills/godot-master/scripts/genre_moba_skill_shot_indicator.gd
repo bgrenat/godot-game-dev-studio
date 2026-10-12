@@ -11,10 +11,10 @@ var _is_active: bool = false
 
 func _draw() -> void:
     if not _is_active: return
-    
+
     # 1. Visual Telegraphing
     # Draw a rectangle representing the skill-shot collision box.
-    var rect = Rect2(0, -_path_width/2, _path_length, _path_width)
+    var rect := Rect2(0, -_path_width/2, _path_length, _path_width)
     draw_rect(rect, indicator_color, true)
     draw_rect(rect, Color.WHITE, false, 2.0) # Outline
 
@@ -35,5 +35,5 @@ func _physics_process(_delta: float) -> void:
         look_at(get_global_mouse_position())
 
 ## EXPERT NOTE:
-## For performance, use a single MeshInstance2D or a Shader-based Plane 
+## For performance, use a single MeshInstance2D or a Shader-based Plane
 ## instead of _draw() if many indicators are active simultaneously.

@@ -1,6 +1,6 @@
 ---
 name: studio-router
-description: "Route broad Godot and game-development requests to the right GD Agentic Skills studio orchestrator, specialist skills, and quality gates."
+description: "Use when you need to route broad Godot and game-development requests to the right GD Agentic Skills studio orchestrator, specialist skills, and quality gates."
 ---
 
 # Studio Router
@@ -36,7 +36,7 @@ Use this first when a request is broad, ambiguous, multi-disciplinary, or projec
 
 - Core Godot: `godot-project-foundations`, `godot-scene-management`, `godot-gdscript-mastery`, `godot-signal-architecture`, `godot-resource-data-patterns`, `godot-autoload-architecture`.
 - GodotPrompter depth: `godot-prompter-godot-project-setup`, `godot-prompter-gdscript-patterns`, `godot-prompter-gdscript-advanced`, `godot-prompter-godot-code-review`.
-- Gameplay: `godot-characterbody-2d`, `godot-input-handling`, `godot-state-machine-advanced`, `godot-ability-system`, `godot-combat-system`, `godot-ai-navigation`, `gamedev-game-feel`.
+- Gameplay: `godot-characterbody-2d`, `godot-input-handling`, `godot-state-machine-advanced`, `godot-ability-system`, `godot-combat-system`, `godot-navigation-pathfinding`, `gamedev-game-feel`.
 - Systems: `godot-inventory-system`, `godot-rpg-stats`, `godot-quest-system`, `godot-economy-system`, `godot-save-load-systems`, `gamedev-save-systems`.
 - World and levels: `godot-tilemap-mastery`, `godot-3d-world-building`, `godot-camera-systems`, `gamedev-level-design`, `gamedev-procedural-gen`.
 - UI and UX: `godot-ui-containers`, `godot-ui-theming`, `godot-ui-rich-text`, `godot-prompter-responsive-ui`, `gamedev-game-ui-ux`.

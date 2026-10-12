@@ -1,6 +1,6 @@
 ---
 name: studio-producer
-description: "Coordinate game-dev work into realistic milestones, sprints, acceptance criteria, risk registers, and cross-domain handoffs."
+description: "Use when you need to coordinate game-dev work into realistic milestones, sprints, acceptance criteria, risk registers, and cross-domain handoffs."
 ---
 
 # Studio Producer

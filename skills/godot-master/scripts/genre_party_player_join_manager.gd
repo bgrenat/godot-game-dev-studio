@@ -15,9 +15,9 @@ func _unhandled_input(event: InputEvent) -> void:
     if event is InputEventJoypadButton and event.is_pressed() and not event.is_echo():
         if not active_players.values().has(event.device):
             if active_players.size() < max_players:
-                var next_player_index = active_players.size()
+                var next_player_index := active_players.size()
                 active_players[next_player_index] = event.device
                 player_joined.emit(next_player_index, event.device)
-                
+
                 # Mark as handled to prevent multiple joins from one press.
                 get_viewport().set_input_as_handled()

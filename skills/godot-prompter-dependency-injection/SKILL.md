@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-dependency-injection
-description: "Imported GodotPrompter guidance for dependency-injection workflows in game development projects."
+description: "Imported GodotPrompter guidance for dependency-injection workflows in game development projects. Use when decoupling Godot systems with dependency injection, service locators, or exported dependencies for testability."
 ---
 # Dependency Injection in Godot 4.3+
 

@@ -5,7 +5,7 @@ extends TileMapLayer
 # Each TileMapLayer acts as a single large physics body.
 
 func set_one_way_platform(map_pos: Vector2i, enabled: bool) -> void:
-	var data = get_cell_tile_data(map_pos)
+	var data := get_cell_tile_data(map_pos)
 	if data:
 		# Accessing physics shapes directly via TileData
 		# Note: Changing this at runtime affects ALL cells using this Tile ID

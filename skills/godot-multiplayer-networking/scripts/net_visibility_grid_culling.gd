@@ -8,7 +8,7 @@ extends Node
 var player_sectors: Dictionary = {} # PeerID: Vector2i
 
 func update_interest(peer_id: int, pos: Vector3) -> void:
-	var sector = Vector2i(pos.x / grid_size, pos.z / grid_size)
+	var sector := Vector2i(pos.x / grid_size, pos.z / grid_size)
 	if player_sectors.get(peer_id) != sector:
 		player_sectors[peer_id] = sector
 		# Re-calculate visibility set for this peer...

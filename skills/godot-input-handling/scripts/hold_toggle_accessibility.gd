@@ -11,9 +11,9 @@ func _physics_process(_delta: float) -> void:
 			_sprint_active = !_sprint_active
 	else:
 		_sprint_active = Input.is_action_pressed("sprint")
-	
+
 	if _sprint_active:
 		_apply_sprint()
 
-func _apply_sprint():
+func _apply_sprint() -> void:
 	pass

@@ -6,16 +6,18 @@ extends Node
 
 func save_data(key: String, value: Variant) -> bool:
 	if not OS.has_feature("web"): return false
-	
+
 	var json_str := JSON.stringify(value)
 	var storage := JavaScriptBridge.get_interface("localStorage")
-	
-	try:
-		storage.setItem(key, json_str)
-		return true
-	except: # Handles QuotaExceededError
+
+	# GDScript has no try/except: let JavaScript catch QuotaExceededError and report back.
+	var ok: Variant = JavaScriptBridge.eval(
+		"(function(k, v){ try { localStorage.setItem(k, v); return true; } catch (e) { return false; } })(%s, %s)"
+		% [JSON.stringify(key), JSON.stringify(json_str)])
+	if not ok:
 		push_error("WebLocalStorage: Storage quota exceeded or blocked.")
 		return false
+	return true
 
 func load_data(key: String) -> Variant:
 	var storage := JavaScriptBridge.get_interface("localStorage")

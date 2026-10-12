@@ -26,27 +26,27 @@ func _ready() -> void:
 func _process(delta: float) -> void:
     # 1. Decay trauma
     trauma = max(trauma - decay * delta, 0.0)
-    
+
     # 2. Apply shake
     if trauma > 0:
         _apply_shake()
-    
-    # 3. Handle Lead Room (Logic should usually be in a separate controller, 
+
+    # 3. Handle Lead Room (Logic should usually be in a separate controller,
     # but integrated here for reference)
-    var target_vel = Vector2.ZERO # In practice, get from Player.velocity
-    var target_offset = target_vel.normalized() * lead_distance
+    var target_vel := Vector2.ZERO # In practice, get from Player.velocity
+    var target_offset := target_vel.normalized() * lead_distance
     offset = offset.lerp(target_offset, lead_speed * delta)
 
 func add_trauma(amount: float) -> void:
     trauma = min(trauma + amount, 1.0)
 
 func _apply_shake() -> void:
-    var amount = pow(trauma, trauma_power)
+    var amount := pow(trauma, trauma_power)
     _noise_y += 1
     rotation = max_roll * amount * noise.get_noise_2d(noise.seed, _noise_y)
     offset.x = max_offset.x * amount * noise.get_noise_2d(noise.seed * 2, _noise_y)
     offset.y = max_offset.y * amount * noise.get_noise_2d(noise.seed * 3, _noise_y)
 
 ## EXPERT NOTE:
-## Noise shake is superior to Random shake because it produces 'smooth' jitter 
+## Noise shake is superior to Random shake because it produces 'smooth' jitter
 ## that replicates handheld camera weight.

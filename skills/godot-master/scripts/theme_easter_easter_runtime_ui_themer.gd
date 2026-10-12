@@ -13,7 +13,7 @@ func apply_easter_theme(root_node: Node) -> void:
 			_theme_button(child)
 		elif child is Panel:
 			_theme_panel(child)
-		
+
 		# Recursive injection
 		apply_easter_theme(child)
 
@@ -23,7 +23,12 @@ func _theme_button(btn: Button) -> void:
 	style.set_corner_radius_all(12)
 	style.border_width_bottom = 4
 	style.border_color = Color.WHITE
-	
+
 	btn.add_theme_stylebox_override("normal", style)
 
 ## Rule: Always 'duplicate()' or create 'new()' StyleBoxes to avoid global leakage.
+
+func _theme_panel(panel: Panel) -> void:
+	var style := StyleBoxFlat.new()
+	style.bg_color = PASTEL_MINT
+	panel.add_theme_stylebox_override(&"panel", style)

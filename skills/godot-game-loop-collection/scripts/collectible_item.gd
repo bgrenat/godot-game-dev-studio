@@ -27,16 +27,16 @@ func _on_body_entered(body: Node) -> void:
 func collect() -> void:
 	# 1. Play feedback (Audio/VFX)
 	if vfx_on_collect:
-		var vfx = vfx_on_collect.instantiate()
+		var vfx := vfx_on_collect.instantiate()
 		get_parent().add_child(vfx)
 		vfx.global_position = global_position
-	
+
 	# 2. Notify Manager
 	# The Manager should listen to this signal via manual connection of `get_tree().get_nodes_in_group("collectibles")`
 	# OR simpler: Use a global signal bus.
 	# Here, we emit locally. A manager would connect to this instance if spawned dynamically.
 	item_collected.emit(collection_id)
-	
+
 	# 3. Destroy
 	if consume_on_collect:
 		queue_free()

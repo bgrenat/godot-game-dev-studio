@@ -1,6 +1,6 @@
 ---
 name: gamedev-rpg
-description: "Imported awesome-gamedev-agent-skills guidance for rpg workflows in game development projects."
+description: "Imported awesome-gamedev-agent-skills guidance for rpg workflows in game development projects. Use when building an RPG: stats and progression, inventory and equipment, quests, dialogue, and combat."
 ---
 # RPG
 

@@ -8,10 +8,10 @@ extends Node
 @export var trigger_bus: String = "Dialog"
 
 func duck_bus(amount_db: float = -15.0, duration: float = 0.5) -> void:
-	var bus_idx = AudioServer.get_bus_index(target_bus)
-	var original_db = AudioServer.get_bus_volume_db(bus_idx)
-	
-	var tween = create_tween().set_trans(Tween.TRANS_SINE)
+	var bus_idx := AudioServer.get_bus_index(target_bus)
+	var original_db := AudioServer.get_bus_volume_db(bus_idx)
+
+	var tween := create_tween().set_trans(Tween.TRANS_SINE)
 	tween.tween_method(func(v): AudioServer.set_bus_volume_db(bus_idx, v), original_db, amount_db, 0.1)
 	tween.tween_interval(duration)
 	tween.tween_method(func(v): AudioServer.set_bus_volume_db(bus_idx, v), amount_db, original_db, 0.5)

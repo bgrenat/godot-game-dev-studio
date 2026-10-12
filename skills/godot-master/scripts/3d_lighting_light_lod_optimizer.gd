@@ -8,15 +8,15 @@ extends OmniLight3D
 @export var visibility_cutoff_distance := 30.0
 
 func _process(_delta: float) -> void:
-	var camera = get_viewport().get_camera_3d()
+	var camera := get_viewport().get_camera_3d()
 	if !camera: return
-	
-	var dist = global_position.distance_to(camera.global_position)
-	
+
+	var dist := global_position.distance_to(camera.global_position)
+
 	# Discrete lod steps
 	shadow_enabled = (dist < shadow_cutoff_distance)
 	visible = (dist < visibility_cutoff_distance)
-	
+
 	# Architecture Tip: Distance fading is smoother than binary visibility.
 	distance_fade_enabled = true
 	distance_fade_begin = 25.0

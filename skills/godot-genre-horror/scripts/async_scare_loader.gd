@@ -13,5 +13,5 @@ func execute_jump_scare() -> void:
     # Retreives the pre-loaded resource without stalling the main thread.
     var scare_scene := ResourceLoader.load_threaded_get(SCARE_PATH) as PackedScene
     if scare_scene:
-        var instance = scare_scene.instantiate()
+        var instance := scare_scene.instantiate()
         get_tree().root.add_child(instance)

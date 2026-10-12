@@ -12,4 +12,4 @@ For Godot/game-development tasks:
 - Keep answers grounded in Godot 4.7+ and GDScript best practices.
 - Preserve [NOTICE.md](NOTICE.md) and license attribution.
 
-Avoid loading all 189 skills at once.
+Avoid loading all 188 skills at once.

@@ -1,6 +1,6 @@
 ---
 name: gamedev-physics-tuning
-description: "Imported awesome-gamedev-agent-skills guidance for physics-tuning workflows in game development projects."
+description: "Imported awesome-gamedev-agent-skills guidance for physics-tuning workflows in game development projects. Use when fixing jitter, tunneling, or floaty physics by tuning fixed timestep, interpolation, mass, drag, CCD, and layers."
 ---
 # Physics tuning
 

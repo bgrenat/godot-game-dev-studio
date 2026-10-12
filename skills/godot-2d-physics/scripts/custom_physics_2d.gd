@@ -19,28 +19,28 @@ func _physics_process(delta: float) -> void:
         velocity.y += gravity * delta
     else:
         velocity.y = 0.0 # Reset accum
-        
+
     # 2. Input
-    var dir = Input.get_axis("ui_left", "ui_right")
+    var dir := Input.get_axis("ui_left", "ui_right")
     if dir:
         velocity.x = dir * speed
     else:
         velocity.x = move_toward(velocity.x, 0, speed * delta * 5.0) # Friction
-        
+
     if Input.is_action_just_pressed("ui_accept") and is_on_floor():
         velocity.y = jump_force
-        
+
     # 3. Apply External Forces (Knockback)
     velocity += external_force * delta
     external_force = external_force.move_toward(Vector2.ZERO, 1000.0 * delta)
-    
+
     # 4. Move
     move_and_slide()
 
 func apply_knockback(force: Vector2) -> void:
     # Set immediate velocity? Or Add to external force?
     # Instant velocity change is usually snappier for hits
-    velocity += force 
+    velocity += force
 
 ## EXPERT USAGE:
 ## Extend for PlayerController.

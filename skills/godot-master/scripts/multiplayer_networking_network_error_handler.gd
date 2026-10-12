@@ -2,13 +2,13 @@
 # Gracefully handling disconnects and timeouts
 extends Node
 
-func _ready():
+func _ready() -> void:
 	multiplayer.server_disconnected.connect(_on_server_disconnected)
 	multiplayer.connection_failed.connect(_on_connection_failed)
 
-func _on_server_disconnected():
+func _on_server_disconnected() -> void:
 	# Transition back to main menu with cleanup
 	get_tree().change_scene_to_file("res://main_menu.tscn")
 
-func _on_connection_failed():
+func _on_connection_failed() -> void:
 	printerr("Failed to establish network link.")

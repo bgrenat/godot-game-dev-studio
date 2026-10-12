@@ -2,7 +2,7 @@
 # Advanced collision layer/mask management logic
 extends Node
 
-# EXPERT NOTE: Use Bit-shifting or Enums for collision layers 
+# EXPERT NOTE: Use Bit-shifting or Enums for collision layers
 # rather than magic numbers to prevent 'Collision Matrix Hell'.
 
 enum Layer {
@@ -13,13 +13,13 @@ enum Layer {
 	HAZARD = 16
 }
 
-func setup_projectile(node: CollisionObject2D):
+func setup_projectile(node: CollisionObject2D) -> void:
 	# Projectiles should be on PROJECTILE layer (8)
 	# And mask for WORLD (1) and ENEMY (4)
 	node.collision_layer = Layer.PROJECTILE
 	node.collision_mask = Layer.WORLD | Layer.ENEMY
 
-func set_ignore_player(node: CollisionObject2D, ignore: bool):
+func set_ignore_player(node: CollisionObject2D, ignore: bool) -> void:
 	if ignore:
 		node.collision_mask &= ~Layer.PLAYER # Bitwise NOT and AND to remove
 	else:

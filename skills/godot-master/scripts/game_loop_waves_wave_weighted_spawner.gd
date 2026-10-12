@@ -19,17 +19,17 @@ func spawn_enemy() -> Node3D:
 	if enemy_scenes.is_empty() or spawn_weights.size() != enemy_scenes.size():
 		push_error("WaveWeightedSpawner: enemy_scenes and spawn_weights must match in size.")
 		return null
-	
+
 	# Expert weighted selection using RNG.rand_weighted
-	var index = _rng.rand_weighted(spawn_weights)
-	var enemy = enemy_scenes[index].instantiate() as Node3D
-	
+	var index := _rng.rand_weighted(spawn_weights)
+	var enemy := enemy_scenes[index].instantiate() as Node3D
+
 	add_child(enemy)
 	enemy.global_position = _get_random_pos()
-	
+
 	return enemy
 
 func _get_random_pos() -> Vector3:
-	var angle = randf() * TAU
-	var distance = randf() * spawn_radius
+	var angle := randf() * TAU
+	var distance := randf() * spawn_radius
 	return global_position + Vector3(cos(angle) * distance, 0, sin(angle) * distance)

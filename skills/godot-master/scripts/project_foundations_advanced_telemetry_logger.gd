@@ -8,11 +8,11 @@ class TelemetrySink extends Logger:
 	var _log_mutex := Mutex.new()
 	var _session_log: Array[String] = []
 
-	func _log_error(message: String) -> void:
-		_process_log(message, true)
+	func _log_error(function: String, file: String, line: int, code: String, rationale: String, _editor_notify: bool, _error_type: int, _script_backtraces: Array[ScriptBacktrace]) -> void:
+		_process_log("%s:%d %s(): %s %s" % [file, line, function, code, rationale], true)
 
-	func _log_message(message: String, _level: int = 0) -> void:
-		_process_log(message, false)
+	func _log_message(message: String, error: bool) -> void:
+		_process_log(message, error)
 
 	func _process_log(message: String, is_error: bool) -> void:
 		# Multi-threaded safety is CRITICAL for Loggers

@@ -5,8 +5,8 @@ extends Area2D
 @export var item_data: InventoryItem
 @export var count: int = 1
 
-func _on_body_entered(body: Node2D):
+func _on_body_entered(body: Node2D) -> void:
 	if body.has_method("get_inventory"):
-		var inv = body.get_inventory() as InventoryData
+		var inv := body.get_inventory() as InventoryData
 		if inv.add_item(item_data, count):
 			queue_free()

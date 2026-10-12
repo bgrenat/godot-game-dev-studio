@@ -18,18 +18,18 @@ func log_result(is_correct: bool) -> void:
     _recent_results.append(is_correct)
     if _recent_results.size() > window_size:
         _recent_results.remove_at(0)
-    
+
     _evaluate_difficulty()
-    
+
     if not is_correct:
         _provide_contextual_hint()
 
 func _evaluate_difficulty() -> void:
     if _recent_results.size() < window_size: return
-    
-    var correct_count = _recent_results.count(true)
-    var ratio = float(correct_count) / window_size
-    
+
+    var correct_count := _recent_results.count(true)
+    var ratio := float(correct_count) / window_size
+
     if ratio >= up_threshold:
         _current_difficulty_level += 1
         difficulty_changed.emit(_current_difficulty_level)
@@ -41,18 +41,18 @@ func _evaluate_difficulty() -> void:
 
 func _provide_contextual_hint() -> void:
     # 1. Branching Hint Logic
-    # Professionals provide progressive disclosure: 
+    # Professionals provide progressive disclosure:
     # Small nudge -> Tooltip -> Full explanation.
     var consecutive_fails = 0
     for i in range(_recent_results.size() -1, -1, -1):
         if not _recent_results[i]: consecutive_fails += 1
         else: break
-        
+
     match consecutive_fails:
         1: hint_suggested.emit("Focus on the highlighted area.")
         2: hint_suggested.emit("Remember: Addition happens before multiplication in this step.")
         3: hint_suggested.emit("Let's review the PEMDAS tutorial together.")
 
 ## EXPERT NOTE:
-## Store '_current_difficulty_level' in a 'StudentProfile' Resource 
+## Store '_current_difficulty_level' in a 'StudentProfile' Resource
 ## to maintain a tailored experience across sessions.

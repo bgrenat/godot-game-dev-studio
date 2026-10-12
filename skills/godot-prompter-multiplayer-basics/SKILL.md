@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-multiplayer-basics
-description: "Imported GodotPrompter guidance for multiplayer-basics workflows in game development projects."
+description: "Imported GodotPrompter guidance for multiplayer-basics workflows in game development projects. Use when setting up Godot multiplayer: ENet peers, RPCs, authority, and lobbies."
 ---
 # Multiplayer Basics in Godot 4.3+
 

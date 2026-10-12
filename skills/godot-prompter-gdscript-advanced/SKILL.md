@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-gdscript-advanced
-description: "Imported GodotPrompter guidance for gdscript-advanced workflows in game development projects."
+description: "Imported GodotPrompter guidance for gdscript-advanced workflows in game development projects. Use when optimizing or hardening production GDScript beyond the fundamentals."
 ---
 # GDScript Advanced
 

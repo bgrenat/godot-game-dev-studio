@@ -11,20 +11,20 @@ var _player_assignments: Dictionary = {} # player_id -> device_id
 
 func _unhandled_input(event: InputEvent) -> void:
     if event is InputEventJoypadButton or event is InputEventJoypadMotion:
-        var device_id = event.device
-        
+        var device_id := event.device
+
         # 1. Join Logic
         if event.is_action_pressed("ui_accept"):
             _handle_join_request(device_id)
-            
+
         # 2. Input Isolation
-        var player_id = _get_player_from_device(device_id)
+        var player_id := _get_player_from_device(device_id)
         if player_id != -1:
             _route_input(player_id, event)
 
 func _handle_join_request(device_id: int) -> void:
     if device_id not in _player_assignments.values():
-        var new_player_id = _player_assignments.size() + 1
+        var new_player_id := _player_assignments.size() + 1
         if new_player_id <= 4:
             _player_assignments[new_player_id] = device_id
             player_joined.emit(new_player_id, device_id)
@@ -40,13 +40,13 @@ func _route_input(player_id: int, event: InputEvent) -> void:
     # 3. Action Prefixing
     # In a professional party game, you shouldn't just check 'Input.is_action_pressed'.
     # You must map the device-specific events to player-abstracted signals.
-    
+
     # Placeholder for action-mapping logic
     # var action_name = _map_event_to_action(event)
     # player_input_received.emit(player_id, action_name, event.get_action_strength(action_name))
     pass
 
 ## EXPERT NOTE:
-## Use 'InputMap.action_add_event()' at runtime to dynamically create 
-## "p1_jump", "p2_jump" actions maped to specific Device IDs. 
+## Use 'InputMap.action_add_event()' at runtime to dynamically create
+## "p1_jump", "p2_jump" actions maped to specific Device IDs.
 ## NEVER share a single "jump" action across players in local multiplayer.

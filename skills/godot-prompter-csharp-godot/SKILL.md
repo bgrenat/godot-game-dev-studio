@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-csharp-godot
-description: "Imported GodotPrompter guidance for csharp-godot workflows in game development projects."
+description: "Imported GodotPrompter guidance for csharp-godot workflows in game development projects. Use when writing Godot games in C#: project setup, conventions, API differences from GDScript, and interop."
 ---
 # C# in Godot 4.3+
 

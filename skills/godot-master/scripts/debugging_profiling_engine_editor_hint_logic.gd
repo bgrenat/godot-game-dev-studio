@@ -3,10 +3,10 @@
 @tool
 extends Node3D
 
-# EXPERT NOTE: Use Engine.is_editor_hint() to run 
+# EXPERT NOTE: Use Engine.is_editor_hint() to run
 # visualization tools safely while designing.
 
-func _process(_delta):
+func _process(_delta) -> void:
 	if Engine.is_editor_hint():
 		# Update gizmo or helper mesh in real-time
 		pass

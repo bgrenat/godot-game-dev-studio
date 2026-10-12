@@ -57,11 +57,11 @@ func set_node_data(index : int, value : WorldmapNodeData) -> void:
 	assert(false, "Method WorldmapViewItem::set_node_data() not implemented!")
 
 ## Abstract method. Must offset all nodes by a vector.
-func offset_all_nodes(offset : Vector2):
+func offset_all_nodes(offset : Vector2) -> void:
 	offset_all_nodes_xform(Transform2D(Vector2(1, 0), Vector2(0, 1), offset))
 
 ## Abstract method. Must offset all nodes by a Transform2D.
-func offset_all_nodes_xform(offset : Transform2D):
+func offset_all_nodes_xform(offset : Transform2D) -> void:
 	assert(false, "Method WorldmapViewItem::offset_all_nodes_xform() not implemented!")
 
 ## Must return the [Rect2] that encloses all worldmap nodes on this node, relative to this node's origin position.
@@ -82,12 +82,12 @@ func set_node_visible(index : int, state : bool) -> void:
 	assert(false, "Method WorldmapViewItem::set_node_visible() not implemented!")
 
 
-func _set_grid_snap(v : int):
+func _set_grid_snap(v : int) -> void:
 	if !is_inside_tree(): return
 	get_parent().node_grid_snap = maxf(v, 0)
 
 
-func _on_node_gui_input(event : InputEvent, index : int):
+func _on_node_gui_input(event : InputEvent, index : int) -> void:
 	var data_under := get_node_data(index)
 	if data_under == null:
 		return
@@ -95,7 +95,7 @@ func _on_node_gui_input(event : InputEvent, index : int):
 	node_gui_input.emit(event, index, data_under)
 
 
-func _on_node_mouse_entered(index : int):
+func _on_node_mouse_entered(index : int) -> void:
 	var data_under := get_node_data(index)
 	if data_under == null:
 		return
@@ -103,7 +103,7 @@ func _on_node_mouse_entered(index : int):
 	node_mouse_entered.emit(index, data_under)
 
 
-func _on_node_mouse_exited(index : int):
+func _on_node_mouse_exited(index : int) -> void:
 	var data_under := get_node_data(index)
 	if data_under == null:
 		return

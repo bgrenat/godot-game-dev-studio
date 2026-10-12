@@ -65,7 +65,7 @@ Editor tool for auditing resource sizes to optimize build footprints.
 ### [export_ci_github_actions.yml](scripts/export_ci_github_actions.yml)
 Professional CI/CD workflow for automated multi-platform Godot releases.
 
-### [export_steam_upload.ps1](scripts/export_steam_upload.ps1)
+### export_steam_upload.ps1
 Expert script for automating SteamPipe uploads using `steamcmd` and VDF manifests.
 
 ### [export_universal_manager.gd](scripts/export_universal_manager.gd)

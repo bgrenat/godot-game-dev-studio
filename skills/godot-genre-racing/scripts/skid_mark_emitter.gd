@@ -9,12 +9,12 @@ class_name SkidMarkEmitter
 @export var threshold := 2.0
 
 func _physics_process(_delta: float) -> void:
-    var car = get_parent() as CharacterBody3D
+    var car := get_parent() as CharacterBody3D
     if not car: return
-    
+
     # Calculate lateral velocity (drifting)
-    var side_vel = car.global_transform.basis.x.dot(car.velocity)
-    
+    var side_vel := car.global_transform.basis.x.dot(car.velocity)
+
     # Pattern: Only emit when exceeding a slip threshold to save draw calls.
     if abs(side_vel) > threshold:
         if smoke_particles: smoke_particles.emitting = true

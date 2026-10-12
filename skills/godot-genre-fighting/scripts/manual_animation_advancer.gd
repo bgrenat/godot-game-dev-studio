@@ -2,12 +2,12 @@
 # Syncing animations strictly to physics/rollback frames
 extends AnimationMixer
 
-# EXPERT NOTE: For determinism, stop child AnimationPlayers 
+# EXPERT NOTE: For determinism, stop child AnimationPlayers
 # and manually call advance() inside _physics_process().
 
-func _ready():
+func _ready() -> void:
 	callback_mode_process = ANIMATION_CALLBACK_MODE_PROCESS_MANUAL
 
-func step_animation(delta: float):
+func step_animation(delta: float) -> void:
 	# Advancing by fixed delta to ensure frame-sync with logic
 	advance(delta)

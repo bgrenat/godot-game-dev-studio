@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-scene-organization
-description: "Imported GodotPrompter guidance for scene-organization workflows in game development projects."
+description: "Imported GodotPrompter guidance for scene-organization workflows in game development projects. Use when deciding how to split, compose, and connect Godot scenes and nodes."
 ---
 # Scene Organization
 

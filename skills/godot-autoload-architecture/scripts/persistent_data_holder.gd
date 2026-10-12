@@ -8,6 +8,6 @@ extends Node
 var inventory: Array[String] = []
 var settings: Dictionary = {"volume": 0.8, "fullscreen": false}
 
-func add_item(item: String):
+func add_item(item: String) -> void:
 	inventory.append(item)
 	print("Items persistent: ", inventory)

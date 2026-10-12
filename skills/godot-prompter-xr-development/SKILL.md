@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-xr-development
-description: "Imported GodotPrompter guidance for xr-development workflows in game development projects."
+description: "Imported GodotPrompter guidance for xr-development workflows in game development projects. Use when building VR or AR games in Godot with OpenXR."
 ---
 # XR Development in Godot 4.3+
 

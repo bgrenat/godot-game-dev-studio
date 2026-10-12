@@ -23,26 +23,26 @@ func _handle_z_axis(delta: float) -> void:
     if z_height > 0 or z_velocity > 0:
         z_velocity -= gravity * delta
         z_height += z_velocity * delta
-        
+
         # Hit the ground
         if z_height <= 0:
             z_height = 0.0
             z_velocity = 0.0
-            
+
     # Jump input
     if Input.is_action_just_pressed("jump") and is_on_ground():
         z_velocity = jump_force
 
     # Apply to visuals (negative Y moves up on screen)
     visual_root.position.y = -z_height
-    
+
     # Scale shadow based on height
-    var scale_amount = remap(z_height, 0.0, 100.0, 1.0, 0.5)
+    var scale_amount := remap(z_height, 0.0, 100.0, 1.0, 0.5)
     shadow.scale = Vector2(scale_amount, scale_amount)
     shadow.modulate.a = remap(z_height, 0.0, 100.0, 1.0, 0.2)
-    
+
 func _handle_movement(delta: float) -> void:
-    var input = Input.get_vector("move_left", "move_right", "move_up", "move_down")
+    var input := Input.get_vector("move_left", "move_right", "move_up", "move_down")
     velocity = input * move_speed
     move_and_slide()
 

@@ -1,6 +1,6 @@
 ---
 name: gamedev-platformer
-description: "Imported awesome-gamedev-agent-skills guidance for platformer workflows in game development projects."
+description: "Imported awesome-gamedev-agent-skills guidance for platformer workflows in game development projects. Use when building a 2D platformer: run/jump feel, coyote time, level structure, hazards, and goals."
 ---
 # Platformer
 

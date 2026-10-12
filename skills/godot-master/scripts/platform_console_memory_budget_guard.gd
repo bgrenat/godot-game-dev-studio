@@ -9,14 +9,14 @@ extends Node
 
 func _ready() -> void:
 	# Check memory periodically
-	var timer = Timer.new()
+	var timer := Timer.new()
 	timer.wait_time = 5.0
 	timer.autostart = true
 	timer.timeout.connect(_check_memory)
 	add_child(timer)
 
 func _check_memory() -> void:
-	var usage_mb = OS.get_static_memory_usage() / 1024 / 1024
+	var usage_mb := OS.get_static_memory_usage() / 1024 / 1024
 	if usage_mb > (ram_limit_mb * cleanup_threshold_pct):
 		_trigger_emergency_cleanup()
 

@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-responsive-ui
-description: "Imported GodotPrompter guidance for responsive-ui workflows in game development projects."
+description: "Imported GodotPrompter guidance for responsive-ui workflows in game development projects. Use when making Godot UI adapt to different resolutions and aspect ratios with stretch modes and anchors."
 ---
 # Responsive UI in Godot 4.3+
 

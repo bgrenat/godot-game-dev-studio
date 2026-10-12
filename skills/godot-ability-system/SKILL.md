@@ -36,6 +36,9 @@ Ability orchestration with cooldown registry, can_use checks, and visual cooldow
 ### [ability_resource.gd](scripts/ability_resource.gd)
 Scriptable ability resource base class with metadata, stats, and effects array. Virtual execute() method for inheritance (ProjectileAbility, BuffAbility).
 
+### [ability.gd](scripts/ability.gd)
+Base `Ability` node expected by `ability_container.gd`: exposes `ability_name`, `cooldown`, and overridable `can_activate()` / `activate()`.
+
 ### [buff_stat.gd](scripts/buff_stat.gd)
 Resource-Driven Buff System setup. Extends Resource and creates highly modular, drag-and-drop ability data.
 

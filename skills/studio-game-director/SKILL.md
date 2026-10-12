@@ -1,6 +1,6 @@
 ---
 name: studio-game-director
-description: "Coordinate game concept, pillars, genre fit, player fantasy, feature scope, and cross-discipline creative decisions before Godot implementation."
+description: "Use when you need to coordinate game concept, pillars, genre fit, player fantasy, feature scope, and cross-discipline creative decisions before Godot implementation."
 ---
 
 # Studio Game Director

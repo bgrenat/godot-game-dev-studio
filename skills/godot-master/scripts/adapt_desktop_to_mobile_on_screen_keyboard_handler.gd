@@ -8,12 +8,20 @@ class_name OnScreenKeyboardHandler
 @export var layout_container: Control # The main UI root to shift
 
 func _ready() -> void:
-    # Connect to the OS virtual keyboard signals
-    DisplayServer.virtual_keyboard_update.connect(_on_virtual_keyboard_changed)
+    # DisplayServer exposes no keyboard signal: poll the height and react on change.
+    set_process(OS.has_feature("mobile"))
+
+var _last_keyboard_height := -1
+
+func _process(_delta: float) -> void:
+    var height := DisplayServer.virtual_keyboard_get_height()
+    if height != _last_keyboard_height:
+        _last_keyboard_height = height
+        _on_virtual_keyboard_changed(height)
 
 func _on_virtual_keyboard_changed(keyboard_height: float) -> void:
     if not OS.has_feature("mobile"): return
-    
+
     if keyboard_height > 0:
         # Keyboard opened.
         # Push the UI up by the height of the keyboard

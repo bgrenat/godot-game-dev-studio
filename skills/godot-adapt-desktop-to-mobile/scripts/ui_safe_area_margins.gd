@@ -12,15 +12,15 @@ func _ready() -> void:
 func _apply_safe_area() -> void:
     if not OS.has_feature("mobile"):
         return
-        
+
     var safe_area: Rect2i = DisplayServer.get_display_safe_area()
     var window_size: Vector2i = DisplayServer.window_get_size()
-    
-    var left_margin = safe_area.position.x
-    var top_margin = safe_area.position.y
-    var right_margin = window_size.x - safe_area.end.x
-    var bottom_margin = window_size.y - safe_area.end.y
-    
+
+    var left_margin := safe_area.position.x
+    var top_margin := safe_area.position.y
+    var right_margin := window_size.x - safe_area.end.x
+    var bottom_margin := window_size.y - safe_area.end.y
+
     add_theme_constant_override("margin_left", left_margin)
     add_theme_constant_override("margin_top", top_margin)
     add_theme_constant_override("margin_right", right_margin)

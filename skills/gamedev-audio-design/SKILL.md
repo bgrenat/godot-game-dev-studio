@@ -1,6 +1,6 @@
 ---
 name: gamedev-audio-design
-description: "Imported awesome-gamedev-agent-skills guidance for audio-design workflows in game development projects."
+description: "Imported awesome-gamedev-agent-skills guidance for audio-design workflows in game development projects. Use when designing audio buses and mixing, ducking music under dialogue, adaptive music, or SFX variation."
 ---
 # Audio design
 

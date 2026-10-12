@@ -12,7 +12,7 @@ func prefetch_assets(paths: Array[String]) -> void:
 func _load_asset(path: String) -> void:
 	# ResourceLoader.load() on a background thread pre-fills the internal cache.
 	# Subsequent calls to 'load()' on the main thread will be instant.
-	var _res = ResourceLoader.load(path)
+	var _res := ResourceLoader.load(path)
 	print("Console: Prefetched ", path)
 
 ## Rule: Only prefetch non-critical assets (SFX, MeshData) to avoid I/O bottlenecks.

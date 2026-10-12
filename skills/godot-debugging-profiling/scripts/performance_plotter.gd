@@ -20,7 +20,7 @@ func _get_enemy_count() -> int:
 func capture_error_state(context: String) -> String:
     # 2. Automated Diagnostic Capture
     # Gathers stack traces and scene tree structure for bug reports.
-    var report = {
+    var report := {
         "timestamp": Time.get_datetime_string_from_system(),
         "context": context,
         "stack_trace": get_stack(),
@@ -31,5 +31,5 @@ func capture_error_state(context: String) -> String:
 
 ## EXPERT NOTE:
 ## Use 'push_error()' and 'push_warning()' instead of 'print()' for logic errors.
-## These appear in the Debugger tab with red/yellow icons and stack traces, 
+## These appear in the Debugger tab with red/yellow icons and stack traces,
 ## making them impossible to miss compared to standard console output.

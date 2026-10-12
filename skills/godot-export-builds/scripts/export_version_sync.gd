@@ -5,9 +5,9 @@ extends EditorScript
 ## Pulls latest Git tag/hash and injects it into 'project.godot'.
 
 func _run() -> void:
-	var output = []
+	var output := []
 	var exit_code = OS.execute("git", ["describe", "--always", "--tags"], output)
-	
+
 	if exit_code == 0:
 		var version_str = output[0].strip_edges()
 		ProjectSettings.set_setting("application/config/version", version_str)

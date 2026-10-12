@@ -13,7 +13,7 @@ func _ready() -> void:
 func _glimmer_loop() -> void:
 	while true:
 		await get_tree().create_timer(glimmer_frequency + randf_range(-2, 2)).timeout
-		var tween = create_tween()
+		var tween := create_tween()
 		tween.tween_property(glimmer_light, "light_energy", 2.0, 0.5)
 		tween.tween_property(glimmer_light, "light_energy", 0.0, 0.5)
 

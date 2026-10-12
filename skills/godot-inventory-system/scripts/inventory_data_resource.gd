@@ -2,7 +2,7 @@
 # Centralized inventory storage and logic
 class_name InventoryData extends Resource
 
-# EXPERT NOTE: Move all logic into the Resource to make it 
+# EXPERT NOTE: Move all logic into the Resource to make it
 # decoupled from any specific Node (Player vs Chest).
 
 signal inventory_updated
@@ -17,20 +17,20 @@ func add_item(new_item: InventoryItem, count: int = 1) -> bool:
 				slot.quantity += count
 				inventory_updated.emit()
 				return true
-				
+
 	# 2. Find empty slot
 	for i in range(slots.size()):
 		if slots[i].item == null:
-			var new_slot = ItemSlot.new()
+			var new_slot := ItemSlot.new()
 			new_slot.item = new_item
 			new_slot.quantity = count
 			slots[i] = new_slot
 			inventory_updated.emit()
 			return true
-			
+
 	return false
 
-func remove_at(index: int):
+func remove_at(index: int) -> void:
 	slots[index].item = null
 	slots[index].quantity = 0
 	inventory_updated.emit()

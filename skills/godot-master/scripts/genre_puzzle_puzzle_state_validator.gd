@@ -15,9 +15,9 @@ func update_state(piece_id: String, state: Variant) -> void:
 
 func _check_win() -> void:
 	# Expert Pattern: Compare dictionaries directly
-	if current_state.recursive_equal(target_state):
+	if current_state.recursive_equal(target_state, 100):
 		solved.emit()
 		print("Puzzle Solved!")
 
-## [SKILL NOTICE]: Use 'Dictionary.recursive_equal()' for multi-layered 
+## [SKILL NOTICE]: Use 'Dictionary.recursive_equal()' for multi-layered
 ## win conditions. It is significantly faster than manual nested loops.

@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-godot-ui
-description: "Imported GodotPrompter guidance for godot-ui workflows in game development projects."
+description: "Imported GodotPrompter guidance for godot-ui workflows in game development projects. Use when building Godot Control-based UI: containers, anchors, themes, and focus."
 ---
 # Godot UI — Control Nodes, Themes & Layout
 

@@ -8,17 +8,17 @@ extends Node
 class_name PBRMaterialBuilder
 
 static func build(albedo: Texture2D, normal: Texture2D = null, orm: Texture2D = null) -> StandardMaterial3D:
-    var mat = StandardMaterial3D.new()
-    
+    var mat := StandardMaterial3D.new()
+
     # 1. Albedo
     if albedo:
         mat.albedo_texture = albedo
-        
+
     # 2. Normal
     if normal:
         mat.normal_enabled = true
         mat.normal_texture = normal
-        
+
     # 3. ORM (Occlusion, Roughness, Metallic)
     if orm:
         mat.orm_texture = orm
@@ -32,7 +32,7 @@ static func build(albedo: Texture2D, normal: Texture2D = null, orm: Texture2D = 
         # Default defaults
         mat.roughness = 0.5
         mat.metallic = 0.0
-        
+
     return mat
 
 static func build_triplanar(albedo: Texture2D, normal: Texture2D = null) -> StandardMaterial3D:

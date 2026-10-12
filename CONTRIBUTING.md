@@ -32,14 +32,21 @@ skills/<skill-name>/
 ```yaml
 ---
 name: my-skill
-description: What this skill does and when Codex should use it.
+description: What this skill does. Use when <the situations that should trigger it>.
 ---
 ```
+
+- `name` must match the folder name.
+- `description` must contain a `Use when` clause (or `Keywords:`); `update_skills_index.py --validate` enforces it.
+- Relative links in Markdown must resolve; the validator checks every link.
 
 ## Code and asset standards
 
 - Use Godot 4.7+ idioms where possible.
 - Keep GDScript statically typed when scripts are included.
+- Scripts must compile with Godot 4.7. A snippet that needs game context (an autoload, an addon, an asset) may be listed in `scripts/gdscript_known_failures.txt`; document that dependency in the script header.
+- Do not reuse a `class_name` already declared by another script of the same skill, and never shadow a native Godot class.
+- Edit `godot-*` scripts in their own skill, then copy them to their `skills/godot-master/scripts/` mirror.
 - Avoid adding editor caches, build exports, or generated local state.
 - Do not remove third-party license notices.
 - Add attribution to [NOTICE.md](NOTICE.md) when importing or adapting external material.
@@ -49,11 +56,15 @@ description: What this skill does and when Codex should use it.
 
 Before publishing a change, run:
 
-```powershell
-python <codex-plugin-validator>/validate_plugin.py .
+```bash
+python update_skills_index.py            # regenerate skills_index.json after adding/renaming a skill or editing a description
+python update_skills_index.py --validate # every description needs a "Use when" clause or keywords
+python scripts/generate_agent_rules.py --target all
+python scripts/validate_agent_support.py # entrypoints, frontmatter, index completeness, godot-master mirrors, Markdown links, personal paths
+python scripts/check_gdscript.py --godot <path-to-godot-4.7>  # compiles every library script
 ```
 
-If you modify skill names or descriptions, regenerate or update `skills_index.json` as needed.
+Also run the Codex plugin validator if it is installed (`python <codex-plugin-validator>/validate_plugin.py .`). GitHub Actions runs all checks above, including the Godot 4.7 compile step.
 
 ## License
 

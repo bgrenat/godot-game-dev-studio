@@ -1,6 +1,6 @@
 ---
 name: gamedev-card-game
-description: "Imported awesome-gamedev-agent-skills guidance for card-game workflows in game development projects."
+description: "Imported awesome-gamedev-agent-skills guidance for card-game workflows in game development projects. Use when building a card game: card data, deck/hand/discard zones, turn structure, and effect resolution."
 ---
 # Card Game
 

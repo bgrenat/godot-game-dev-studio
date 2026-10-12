@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-godot-testing
-description: "Imported GodotPrompter guidance for godot-testing workflows in game development projects."
+description: "Imported GodotPrompter guidance for godot-testing workflows in game development projects. Use when writing unit or integration tests for Godot with GUT or gdUnit4 and running them in CI."
 ---
 # Godot Testing
 

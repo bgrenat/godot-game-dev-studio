@@ -2,11 +2,11 @@
 # Correct pattern for deleting keys during iteration
 extends Node
 
-func cleanup_expired_data(data: Dictionary):
+func cleanup_expired_data(data: Dictionary) -> void:
 	# NEVER erase from the dict while iterating it directly.
 	# Create a copy of keys to iterate instead.
-	var keys_to_check = data.keys()
-	
+	var keys_to_check := data.keys()
+
 	for key in keys_to_check:
 		if _is_expired(data[key]):
 			data.erase(key) # Safe because we iterate the clone

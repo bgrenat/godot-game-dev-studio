@@ -19,17 +19,17 @@ var game_state: Dictionary = {
 
 func take_snapshot() -> void:
     # 1. Recursive Deep Copy of State
-    var snapshot = game_state.duplicate(true)
+    var snapshot := game_state.duplicate(true)
     _history.append(snapshot)
-    
+
     if _history.size() > max_history:
         _history.remove_at(0)
 
 func rollback() -> bool:
     # 2. Multi-Level Undo
-    if _history.is_empty(): 
+    if _history.is_empty():
         return false
-        
+
     game_state = _history.pop_back()
     _apply_state()
     return true
@@ -46,9 +46,9 @@ func set_flag(flag: String, value: Variant) -> void:
     game_state.flags[flag] = value
 
 ## EXPERT NOTE:
-## Use the 'Command Pattern' for non-trivial state changes (like inventory). 
-## For 'genre-visual-novel', implement 'Character Sprite Layering' where a 
-## single Actor node can have its 'base', 'eyes', 'mouth', and 'clothes' 
+## Use the 'Command Pattern' for non-trivial state changes (like inventory).
+## For 'genre-visual-novel', implement 'Character Sprite Layering' where a
+## single Actor node can have its 'base', 'eyes', 'mouth', and 'clothes'
 ## textures swapped independently via game_state variables.
-## NEVER hardcode dialogue; use a JSON parser to map game_state.dialogue_id 
+## NEVER hardcode dialogue; use a JSON parser to map game_state.dialogue_id
 ## to specific lines in a localization-ready data file.

@@ -10,7 +10,7 @@ var _pool: Array[AudioStreamPlayer] = []
 func _ready() -> void:
     # 1. Initialize Sound Pool
     for i in range(MAX_POOL_SIZE):
-        var player = AudioStreamPlayer.new()
+        var player := AudioStreamPlayer.new()
         add_child(player)
         _pool.append(player)
 
@@ -34,5 +34,5 @@ func _find_available_player() -> AudioStreamPlayer:
 
 ## NEVER LIST:
 ## - NEVER play positional 3D audio on a node that dies.
-## - Use 'AudioStreamPlayer3D' but parent it to the world root, 
+## - Use 'AudioStreamPlayer3D' but parent it to the world root,
 ##   setting its 'global_position' manually.

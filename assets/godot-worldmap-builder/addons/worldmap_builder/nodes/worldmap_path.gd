@@ -71,7 +71,7 @@ func get_distance_between_points() -> float:
 ## Align points so that distance between them equals the specified amount. [br]
 ## The [member start] point will always stay in place. [br]
 ## [b]Note:[/b] undefined behaviour for the [code]PathMode.BEZIER[/code] mode.
-func set_distance_between_points(value : float):
+func set_distance_between_points(value : float) -> void:
 	var segment_count := node_datas.size() + (1 if end_with_empty else 0)
 	if mode == PathMode.ARC:
 		var radius := (start - handle_1).length()
@@ -155,7 +155,7 @@ func set_node_data(index : int, value : WorldmapNodeData) -> void:
 	node_datas[index - 1] = value
 
 
-func offset_all_nodes_xform(offset : Transform2D):
+func offset_all_nodes_xform(offset : Transform2D) -> void:
 	start = offset * start
 	end = offset * end
 	handle_1 = offset * handle_1
@@ -167,7 +167,7 @@ func set_node_visible(index : int, state : bool) -> void:
 		_node_controls[index - 1].visible = state
 
 
-func _enter_tree():
+func _enter_tree() -> void:
 	if end.x == INF:
 		end = start + Vector2(64.0, 0.0)
 		handle_1 = start + Vector2(0.0, 0.0)
@@ -178,7 +178,7 @@ func _enter_tree():
 		transform = Transform2D.IDENTITY
 
 
-func _draw():
+func _draw() -> void:
 	var count_points := get_node_count() - 1
 	var angle_diff := (start - handle_1).angle_to(end - handle_1)
 	var is_editor := Engine.is_editor_hint()
@@ -263,7 +263,7 @@ func _get(property : StringName):
 	return null
 
 
-func _property_can_revert(property : StringName):
+func _property_can_revert(property : StringName) -> bool:
 	match property:
 		&"start":
 			return end != start
@@ -273,6 +273,7 @@ func _property_can_revert(property : StringName):
 			return handle_1 != start
 		&"handle_2":
 			return handle_2 != end
+	return false
 
 
 func _property_get_revert(property : StringName):
@@ -285,6 +286,7 @@ func _property_get_revert(property : StringName):
 			return start
 		&"handle_2":
 			return end
+	return null
 
 
 func _get_property_list() -> Array:
@@ -304,7 +306,7 @@ func _get_property_list() -> Array:
 			&"hint": PROPERTY_HINT_RESOURCE_TYPE,
 			&"hint_string": "WorldmapNodeData",
 		})
-	
+
 	result.append({
 		&"name": "node_set_all",
 		&"type": TYPE_OBJECT,

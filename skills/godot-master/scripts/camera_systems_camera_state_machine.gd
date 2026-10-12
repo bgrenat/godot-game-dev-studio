@@ -2,7 +2,7 @@
 # Managing transitions between multiple camera states
 extends Node
 
-# This pattern uses a central manager to handle transitions 
+# This pattern uses a central manager to handle transitions
 # between 'Follow', 'Static', and 'Cinematic' camera states.
 
 enum State { FOLLOW, STATIC, CINEMATIC }
@@ -12,7 +12,7 @@ var current_state: State = State.FOLLOW
 
 func transition_to_static(pos: Vector2, duration: float = 1.0) -> void:
 	current_state = State.STATIC
-	var tween = create_tween()
+	var tween := create_tween()
 	# Disable smoothing during manual transition to take full control
 	main_camera.position_smoothing_enabled = false
 	tween.tween_property(main_camera, "global_position", pos, duration)\
@@ -22,5 +22,5 @@ func transition_to_static(pos: Vector2, duration: float = 1.0) -> void:
 
 func set_follow_target(node: Node2D) -> void:
 	current_state = State.FOLLOW
-	# Use RemoteTransform2D on target to drive camera position 
+	# Use RemoteTransform2D on target to drive camera position
 	# for perfectly decoupled logic.

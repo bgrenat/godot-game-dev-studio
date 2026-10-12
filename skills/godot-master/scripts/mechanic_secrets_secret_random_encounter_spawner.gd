@@ -9,7 +9,7 @@ extends Node
 
 func attempt_spawn(spawn_parent: Node, spawn_pos: Vector3) -> void:
 	if randf() <= spawn_chance:
-		var instance = rare_entity_scene.instantiate()
+		var instance := rare_entity_scene.instantiate()
 		spawn_parent.add_child(instance)
 		instance.global_position = spawn_pos
 

@@ -1,6 +1,6 @@
 ---
 name: gamedev-survival-crafting
-description: "Imported awesome-gamedev-agent-skills guidance for survival-crafting workflows in game development projects."
+description: "Imported awesome-gamedev-agent-skills guidance for survival-crafting workflows in game development projects. Use when building a survival-crafting game: gather-craft-build loop, survival needs, tech progression, and base building."
 ---
 # Survival Crafting
 

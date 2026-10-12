@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-save-load
-description: "Imported GodotPrompter guidance for save-load workflows in game development projects."
+description: "Imported GodotPrompter guidance for save-load workflows in game development projects. Use when choosing and implementing a Godot save format: ConfigFile, JSON, Resources, or binary."
 ---
 # Save / Load Systems in Godot 4.3+
 

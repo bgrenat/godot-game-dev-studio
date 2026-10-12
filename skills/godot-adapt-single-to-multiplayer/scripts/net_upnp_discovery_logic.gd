@@ -5,9 +5,9 @@ extends Node
 ## Automates port forwarding and local peer discovery for P2P play.
 
 func setup_upnp(port: int) -> void:
-	var upnp = UPNP.new()
-	var error = upnp.discover()
-	
+	var upnp := UPNP.new()
+	var error := upnp.discover()
+
 	if error == OK:
 		if upnp.get_gateway() and upnp.get_gateway().is_valid_gateway():
 			upnp.add_port_mapping(port)

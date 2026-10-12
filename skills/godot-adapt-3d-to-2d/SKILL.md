@@ -57,7 +57,7 @@ Sprite2D shadow simulator exploiting Godot 4.x `Transform2D` matrix skew shear t
 ### [nav_region_flattening.gd](scripts/nav_region_flattening.gd)
 Topdown 2D pathfinding workaround allowing "aerial" units to cross walls by leveraging multiple tiered 2D Navigation Layers instead of proper 3D verticality.
 
-### [ortho_to_perspective_fx.gd](scripts/ortho_to_perspective_fx.gd)
+### [ortho_to_perspective_fx.gdshader](scripts/ortho_to_perspective_fx.gdshader)
 Screen space CanvasItem warp Shader simulating a Mode 7 / tabletop perspective pitch. Maps top screen coordinates via division pinching.
 
 ### [2d_lighting_normals.gd](scripts/2d_lighting_normals.gd)

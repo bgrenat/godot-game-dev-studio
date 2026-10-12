@@ -20,11 +20,11 @@ func _on_area_entered(other_area: Area2D) -> void:
 
 func _check_z_overlap(other: SimulatedDepthArea2D) -> bool:
     # 1D AABB intersection math applied to our simulated vertical "Z" dimension
-    var my_top = base_z_height + z_thickness
-    var my_bottom = base_z_height
-    var other_top = other.base_z_height + other.z_thickness
-    var other_bottom = other.base_z_height
-    
+    var my_top := base_z_height + z_thickness
+    var my_bottom := base_z_height
+    var other_top := other.base_z_height + other.z_thickness
+    var other_bottom := other.base_z_height
+
     return my_top >= other_bottom and my_bottom <= other_top
 
 ## Call this to dynamically update height if attached to a jumping player

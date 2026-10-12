@@ -16,22 +16,22 @@ func _ready() -> void:
 		_configure_headless()
 	else:
 		print("[HeadlessManager] Running in Graphical Mode")
-	
+
 	# 2. Parse Arguments
 	_parse_cmdline_args()
 
 func _configure_headless() -> void:
 	# Disable visual-only processing if necessary
 	# Note: Godot 4 headless automatically disables rendering, but we can save more
-	
+
 	# Limit physics if not needed, or lock FPS
 	Engine.max_fps = 60 # Server tick rate
-	
+
 	# Lower audio bus volume or disable
 	AudioServer.set_bus_mute(0, true)
 
 func _parse_cmdline_args() -> void:
-	var args = OS.get_cmdline_user_args()
+	var args := OS.get_cmdline_user_args()
 	for arg in args:
 		if arg.begins_with("--port="):
 			var port = arg.split("=")[1].to_int()

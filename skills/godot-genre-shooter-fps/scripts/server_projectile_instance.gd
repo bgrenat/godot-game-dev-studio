@@ -1,5 +1,5 @@
 # server_projectile_instance.gd
-extends Node
+extends Node3D
 class_name ServerProjectileInstance
 
 # Nodeless Projectile Spawning via Servers

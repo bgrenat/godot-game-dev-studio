@@ -1,6 +1,6 @@
 ---
 name: gamedev-itch-publish
-description: "Imported awesome-gamedev-agent-skills guidance for itch-publish workflows in game development projects."
+description: "Imported awesome-gamedev-agent-skills guidance for itch-publish workflows in game development projects. Use when publishing or updating a build on itch.io with butler push and channels."
 ---
 # itch.io Publish (butler)
 

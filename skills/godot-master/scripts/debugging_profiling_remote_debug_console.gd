@@ -2,12 +2,12 @@
 # Real-time command console for mobile/deployed builds
 extends CanvasLayer
 
-# EXPERT NOTE: Remote builds don't show the Terminal. 
+# EXPERT NOTE: Remote builds don't show the Terminal.
 # A custom UI console allows running commands on-device.
 
-@onready var line_edit = $LineEdit
+@onready var line_edit := $LineEdit
 
-func _on_text_submitted(cmd: String):
+func _on_text_submitted(cmd: String) -> void:
 	match cmd:
 		"noclip": _toggle_noclip()
 		"gold": _add_gold(1000)

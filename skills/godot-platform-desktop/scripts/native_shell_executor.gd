@@ -5,8 +5,8 @@ extends Node
 ## Allows running CLI tools and capturing their output for editor integrations.
 
 func run_shell_command(command: String, args: PackedStringArray) -> String:
-	var output = []
-	var err = OS.execute(command, args, output, true)
+	var output := []
+	var err := OS.execute(command, args, output, true)
 	if err == OK:
 		return "".join(output)
 	return "Error: " + str(err)

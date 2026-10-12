@@ -8,18 +8,18 @@ extends Camera2D
 
 func _process(delta: float) -> void:
 	if not target: return
-	
+
 	# Rule of Thirds: Offset the target slightly above center
-	var v_offset = get_viewport_rect().size.y * vertical_offset_ratio
-	
+	var v_offset := get_viewport_rect().size.y * vertical_offset_ratio
+
 	# Lead Room: Shift camera in direction of target velocity
-	var velocity = Vector2.ZERO
+	var velocity := Vector2.ZERO
 	if "velocity" in target:
 		velocity = target.velocity
-	
-	var lead_offset = velocity * look_ahead_factor
-	
-	var goal_pos = target.global_position + lead_offset + Vector2(0, v_offset)
-	
+
+	var lead_offset := velocity * look_ahead_factor
+
+	var goal_pos := target.global_position + lead_offset + Vector2(0, v_offset)
+
 	# Smoothly interpolate to the framed goal
 	global_position = global_position.lerp(goal_pos, 5.0 * delta)

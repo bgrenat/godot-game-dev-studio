@@ -17,13 +17,13 @@ class Game_Signals:
     signal world_reset_started
 
 # Instantiate the groups
-var UI = UI_Signals.new()
-var Game = Game_Signals.new()
+var UI := UI_Signals.new()
+var Game := Game_Signals.new()
 
 # 2. Cross-Frame Stability (CONNECT_DEFERRED)
 # Expert logic: Use deferred connections for dangerous scene changes.
 func trigger_safe_world_reset() -> void:
-    # Logic: If this signal triggers a scene load, deferred ensures 
+    # Logic: If this signal triggers a scene load, deferred ensures
     # it happens after the current frame processing completes.
     Game.world_reset_started.emit()
 
@@ -32,13 +32,13 @@ func connect_heavy_listener(target: Object, method: String) -> void:
     Game.entity_spawned.connect(Callable(target, method), CONNECT_DEFERRED)
 
 ## EXPERT NOTE:
-## Use 'Signal Up, Call Down': Nodes should NEVER 'get_parent()'. 
+## Use 'Signal Up, Call Down': Nodes should NEVER 'get_parent()'.
 ## They emit signals that parents (or the Event Bus) listen to.
-## For 'signal-architecture', use 'Typed Signal Parameters': 
-## 'signal damaged(amount: int, source: Node)' to eliminate 
+## For 'signal-architecture', use 'Typed Signal Parameters':
+## 'signal damaged(amount: int, source: Node)' to eliminate
 ## runtime type bugs and improve IDE autocomplete.
-## Use 'Ref-Counted Connections': Transient objects should 
-## disconnect in their '_exit_tree()' to prevent memory leaks 
+## Use 'Ref-Counted Connections': Transient objects should
+## disconnect in their '_exit_tree()' to prevent memory leaks
 ## and 'Object is freed' errors.
-## NEVER allow UI nodes to modify Game State directly; they 
+## NEVER allow UI nodes to modify Game State directly; they
 ## should emit a signal, and a Controller should handle the logic.

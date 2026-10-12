@@ -36,12 +36,12 @@ func sync_with_physics() -> void:
 # EXPERT NOTE: Queues a function to execute safely during the engine's idle time.
 func end_level(path: String) -> void:
     call_deferred(&"_deferred_goto_scene", path)
-    
+
 func _deferred_goto_scene(path: String) -> void:
     if get_tree().current_scene:
         get_tree().current_scene.free()
-    var next_scene = ResourceLoader.load(path) as PackedScene
-    var instance = next_scene.instantiate()
+    var next_scene := ResourceLoader.load(path) as PackedScene
+    var instance := next_scene.instantiate()
     get_tree().root.add_child(instance)
     get_tree().current_scene = instance
 

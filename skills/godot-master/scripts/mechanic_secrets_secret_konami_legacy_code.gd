@@ -12,7 +12,11 @@ func _ready() -> void:
 
 func _on_konami(combo_name: String) -> void:
 	if combo_name == "Konami":
-		SecretMetaPersistence.unlock_meta_secret("konami_legacy_achieved")
+		_secretmeta().unlock_meta_secret("konami_legacy_achieved")
 		# Give 30 lives or enable debug mode...
 
 ## Rule: The Konami code is a 'Gamer Rite of Passage'—always include it in retro-styled projects.
+
+## Autoload registered as "SecretMeta" (an autoload cannot share the SecretMetaPersistence class_name).
+func _secretmeta() -> SecretMetaPersistence:
+	return get_node(^"/root/SecretMeta") as SecretMetaPersistence

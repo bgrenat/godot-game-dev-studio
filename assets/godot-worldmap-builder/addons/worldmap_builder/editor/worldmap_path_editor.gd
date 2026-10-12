@@ -37,7 +37,7 @@ var context_menu : Popup
 var drop_handler : Control
 
 
-func _init(plugin : EditorPlugin):
+func _init(plugin : EditorPlugin) -> void:
 	var ctrl := plugin.get_editor_interface().get_base_control()
 	draw_marker = ctrl.get_theme_icon(&"EditorPathSharpHandle", &"EditorIcons")
 	draw_marker_add = ctrl.get_theme_icon(&"EditorHandleAdd", &"EditorIcons")
@@ -50,7 +50,7 @@ func _init(plugin : EditorPlugin):
 	self.plugin = plugin
 
 
-func _exit_tree():
+func _exit_tree() -> void:
 	drop_handler.queue_free()
 
 
@@ -58,7 +58,7 @@ func _handles(object : Object):
 	return object is WorldmapPath || object is WorldmapGraph
 
 
-func _forward_canvas_draw_over_viewport(overlay : Control):
+func _forward_canvas_draw_over_viewport(overlay : Control) -> void:
 	if edited_object == null:
 		return
 
@@ -104,7 +104,7 @@ func _forward_canvas_draw_over_viewport(overlay : Control):
 				overlay.draw_texture(draw_marker, markers[3] - marker_size * 0.5)
 
 
-func _draw_graph(overlay : Control, vp_xform : Transform2D, markers : Array[Vector2]):
+func _draw_graph(overlay : Control, vp_xform : Transform2D, markers : Array[Vector2]) -> void:
 	var pos_arr : Array = edited_object.node_positions.duplicate()
 	for i in pos_arr.size():
 		pos_arr[i] += edited_object.global_position

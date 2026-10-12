@@ -1,7 +1,773 @@
 [
   {
+    "name": "gamedev-audio-design",
+    "description": "Imported awesome-gamedev-agent-skills guidance for audio-design workflows in game development projects. Use when designing audio buses and mixing, ducking music under dialogue, adaptive music, or SFX variation.",
+    "keywords": [
+      "adaptive",
+      "agent",
+      "audio",
+      "awesome",
+      "buses",
+      "design",
+      "designing",
+      "development",
+      "dialogue",
+      "ducking",
+      "game",
+      "gamedev",
+      "guidance",
+      "imported",
+      "mixing",
+      "music",
+      "projects",
+      "skills",
+      "under",
+      "variation",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "gamedev-camera-systems",
+    "description": "Imported awesome-gamedev-agent-skills guidance for camera-systems workflows in game development projects. Use when building smooth-follow, deadzone, look-ahead, bounded, or third-person orbit cameras and camera shake.",
+    "keywords": [
+      "agent",
+      "ahead",
+      "awesome",
+      "bounded",
+      "building",
+      "camera",
+      "cameras",
+      "deadzone",
+      "development",
+      "follow",
+      "game",
+      "gamedev",
+      "guidance",
+      "imported",
+      "look",
+      "orbit",
+      "person",
+      "projects",
+      "shake",
+      "skills",
+      "smooth",
+      "systems",
+      "third",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "gamedev-card-game",
+    "description": "Imported awesome-gamedev-agent-skills guidance for card-game workflows in game development projects. Use when building a card game: card data, deck/hand/discard zones, turn structure, and effect resolution.",
+    "keywords": [
+      "agent",
+      "awesome",
+      "building",
+      "card",
+      "data",
+      "deck",
+      "development",
+      "discard",
+      "effect",
+      "game",
+      "gamedev",
+      "guidance",
+      "hand",
+      "imported",
+      "projects",
+      "resolution",
+      "skills",
+      "structure",
+      "turn",
+      "when",
+      "workflows",
+      "zones"
+    ]
+  },
+  {
+    "name": "gamedev-dialogue-systems",
+    "description": "Imported awesome-gamedev-agent-skills guidance for dialogue-systems workflows in game development projects. Use when designing branching dialogue graphs with choices, conditions, and variables, or choosing between Ink/Yarn and a custom system.",
+    "keywords": [
+      "agent",
+      "awesome",
+      "between",
+      "branching",
+      "choices",
+      "choosing",
+      "conditions",
+      "custom",
+      "designing",
+      "development",
+      "dialogue",
+      "game",
+      "gamedev",
+      "graphs",
+      "guidance",
+      "imported",
+      "projects",
+      "skills",
+      "system",
+      "systems",
+      "variables",
+      "when",
+      "with",
+      "workflows",
+      "yarn"
+    ]
+  },
+  {
+    "name": "gamedev-fps-shooter",
+    "description": "Imported awesome-gamedev-agent-skills guidance for fps-shooter workflows in game development projects. Use when building a first-person shooter: look/move controller, hitscan or projectile shooting, weapon feel, and combat.",
+    "keywords": [
+      "agent",
+      "awesome",
+      "building",
+      "combat",
+      "controller",
+      "development",
+      "feel",
+      "first",
+      "game",
+      "gamedev",
+      "guidance",
+      "hitscan",
+      "imported",
+      "look",
+      "move",
+      "person",
+      "projectile",
+      "projects",
+      "shooter",
+      "shooting",
+      "skills",
+      "weapon",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "gamedev-game-ai",
+    "description": "Imported awesome-gamedev-agent-skills guidance for game-ai workflows in game development projects. Use when designing NPC behavior with decision layers (FSM, behavior trees, utility AI), steering, and pathfinding.",
+    "keywords": [
+      "agent",
+      "awesome",
+      "behavior",
+      "decision",
+      "designing",
+      "development",
+      "game",
+      "gamedev",
+      "guidance",
+      "imported",
+      "layers",
+      "pathfinding",
+      "projects",
+      "skills",
+      "steering",
+      "trees",
+      "utility",
+      "when",
+      "with",
+      "workflows"
+    ]
+  },
+  {
+    "name": "gamedev-game-feel",
+    "description": "Imported awesome-gamedev-agent-skills guidance for game-feel workflows in game development projects. Use when adding juice and feedback: screen shake, hit-stop, easing, particles, and input responsiveness.",
+    "keywords": [
+      "adding",
+      "agent",
+      "awesome",
+      "development",
+      "easing",
+      "feedback",
+      "feel",
+      "game",
+      "gamedev",
+      "guidance",
+      "imported",
+      "input",
+      "juice",
+      "particles",
+      "projects",
+      "responsiveness",
+      "screen",
+      "shake",
+      "skills",
+      "stop",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "gamedev-game-jam",
+    "description": "Imported awesome-gamedev-agent-skills guidance for game-jam workflows in game development projects. Use when planning and scoping a game jam entry against a theme and a fixed deadline through to submission.",
+    "keywords": [
+      "against",
+      "agent",
+      "awesome",
+      "deadline",
+      "development",
+      "entry",
+      "fixed",
+      "game",
+      "gamedev",
+      "guidance",
+      "imported",
+      "planning",
+      "projects",
+      "scoping",
+      "skills",
+      "submission",
+      "theme",
+      "through",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "gamedev-game-ui-ux",
+    "description": "Imported awesome-gamedev-agent-skills guidance for game-ui-ux workflows in game development projects. Use when building responsive HUDs and menus that scale across screens and support gamepad focus navigation.",
+    "keywords": [
+      "across",
+      "agent",
+      "awesome",
+      "building",
+      "development",
+      "focus",
+      "game",
+      "gamedev",
+      "gamepad",
+      "guidance",
+      "huds",
+      "imported",
+      "menus",
+      "navigation",
+      "projects",
+      "responsive",
+      "scale",
+      "screens",
+      "skills",
+      "support",
+      "that",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "gamedev-input-systems",
+    "description": "Imported awesome-gamedev-agent-skills guidance for input-systems workflows in game development projects. Use when mapping physical inputs to named actions, supporting rebinding, multiple devices, buffering, and coyote time.",
+    "keywords": [
+      "actions",
+      "agent",
+      "awesome",
+      "buffering",
+      "coyote",
+      "development",
+      "devices",
+      "game",
+      "gamedev",
+      "guidance",
+      "imported",
+      "input",
+      "inputs",
+      "mapping",
+      "multiple",
+      "named",
+      "physical",
+      "projects",
+      "rebinding",
+      "skills",
+      "supporting",
+      "systems",
+      "time",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "gamedev-itch-publish",
+    "description": "Imported awesome-gamedev-agent-skills guidance for itch-publish workflows in game development projects. Use when publishing or updating a build on itch.io with butler push and channels.",
+    "keywords": [
+      "agent",
+      "awesome",
+      "build",
+      "butler",
+      "channels",
+      "development",
+      "game",
+      "gamedev",
+      "guidance",
+      "imported",
+      "itch",
+      "projects",
+      "publish",
+      "publishing",
+      "push",
+      "skills",
+      "updating",
+      "when",
+      "with",
+      "workflows"
+    ]
+  },
+  {
+    "name": "gamedev-level-design",
+    "description": "Imported awesome-gamedev-agent-skills guidance for level-design workflows in game development projects. Use when designing levels: movement metrics, blockout, pacing, flow, and playtesting before art dressing.",
+    "keywords": [
+      "agent",
+      "awesome",
+      "before",
+      "blockout",
+      "design",
+      "designing",
+      "development",
+      "dressing",
+      "flow",
+      "game",
+      "gamedev",
+      "guidance",
+      "imported",
+      "level",
+      "levels",
+      "metrics",
+      "movement",
+      "pacing",
+      "playtesting",
+      "projects",
+      "skills",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "gamedev-performance-optimization",
+    "description": "Imported awesome-gamedev-agent-skills guidance for performance-optimization workflows in game development projects. Use when profiling to find a bottleneck and applying fixes such as pooling, batching, LOD, and culling.",
+    "keywords": [
+      "agent",
+      "applying",
+      "awesome",
+      "batching",
+      "bottleneck",
+      "culling",
+      "development",
+      "find",
+      "fixes",
+      "game",
+      "gamedev",
+      "guidance",
+      "imported",
+      "optimization",
+      "performance",
+      "pooling",
+      "profiling",
+      "projects",
+      "skills",
+      "such",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "gamedev-physics-tuning",
+    "description": "Imported awesome-gamedev-agent-skills guidance for physics-tuning workflows in game development projects. Use when fixing jitter, tunneling, or floaty physics by tuning fixed timestep, interpolation, mass, drag, CCD, and layers.",
+    "keywords": [
+      "agent",
+      "awesome",
+      "development",
+      "drag",
+      "fixed",
+      "fixing",
+      "floaty",
+      "game",
+      "gamedev",
+      "guidance",
+      "imported",
+      "interpolation",
+      "jitter",
+      "layers",
+      "mass",
+      "physics",
+      "projects",
+      "skills",
+      "timestep",
+      "tuning",
+      "tunneling",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "gamedev-platformer",
+    "description": "Imported awesome-gamedev-agent-skills guidance for platformer workflows in game development projects. Use when building a 2D platformer: run/jump feel, coyote time, level structure, hazards, and goals.",
+    "keywords": [
+      "agent",
+      "awesome",
+      "building",
+      "coyote",
+      "development",
+      "feel",
+      "game",
+      "gamedev",
+      "goals",
+      "guidance",
+      "hazards",
+      "imported",
+      "jump",
+      "level",
+      "platformer",
+      "projects",
+      "skills",
+      "structure",
+      "time",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "gamedev-procedural-gen",
+    "description": "Imported awesome-gamedev-agent-skills guidance for procedural-gen workflows in game development projects. Use when generating seeded, deterministic levels, terrain, or loot with noise, cellular automata, BSP, or WFC.",
+    "keywords": [
+      "agent",
+      "automata",
+      "awesome",
+      "cellular",
+      "deterministic",
+      "development",
+      "game",
+      "gamedev",
+      "generating",
+      "guidance",
+      "imported",
+      "levels",
+      "loot",
+      "noise",
+      "procedural",
+      "projects",
+      "seeded",
+      "skills",
+      "terrain",
+      "when",
+      "with",
+      "workflows"
+    ]
+  },
+  {
+    "name": "gamedev-prototype-fast",
+    "description": "Imported awesome-gamedev-agent-skills guidance for prototype-fast workflows in game development projects. Use when prototyping a mechanic quickly to decide whether to keep, kill, or refactor it.",
+    "keywords": [
+      "agent",
+      "awesome",
+      "decide",
+      "development",
+      "fast",
+      "game",
+      "gamedev",
+      "guidance",
+      "imported",
+      "keep",
+      "kill",
+      "mechanic",
+      "projects",
+      "prototype",
+      "prototyping",
+      "quickly",
+      "refactor",
+      "skills",
+      "when",
+      "whether",
+      "workflows"
+    ]
+  },
+  {
+    "name": "gamedev-puzzle",
+    "description": "Imported awesome-gamedev-agent-skills guidance for puzzle workflows in game development projects. Use when building grid or board puzzle games: board model, rules, matching or pushing, scoring, undo, and level progression.",
+    "keywords": [
+      "agent",
+      "awesome",
+      "board",
+      "building",
+      "development",
+      "game",
+      "gamedev",
+      "games",
+      "grid",
+      "guidance",
+      "imported",
+      "level",
+      "matching",
+      "model",
+      "progression",
+      "projects",
+      "pushing",
+      "puzzle",
+      "rules",
+      "scoring",
+      "skills",
+      "undo",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "gamedev-roguelike",
+    "description": "Imported awesome-gamedev-agent-skills guidance for roguelike workflows in game development projects. Use when building a roguelike: turn engine, procedural dungeons, field of view, permadeath, and run economy.",
+    "keywords": [
+      "agent",
+      "awesome",
+      "building",
+      "development",
+      "dungeons",
+      "economy",
+      "engine",
+      "field",
+      "game",
+      "gamedev",
+      "guidance",
+      "imported",
+      "permadeath",
+      "procedural",
+      "projects",
+      "roguelike",
+      "skills",
+      "turn",
+      "view",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "gamedev-router",
+    "description": "Imported awesome-gamedev-agent-skills guidance for router workflows in game development projects. Use when a game-development request is broad and the right engine and minimal skill set must be chosen first.",
+    "keywords": [
+      "agent",
+      "awesome",
+      "broad",
+      "chosen",
+      "development",
+      "engine",
+      "first",
+      "game",
+      "gamedev",
+      "guidance",
+      "imported",
+      "minimal",
+      "must",
+      "projects",
+      "request",
+      "right",
+      "router",
+      "skill",
+      "skills",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "gamedev-rpg",
+    "description": "Imported awesome-gamedev-agent-skills guidance for rpg workflows in game development projects. Use when building an RPG: stats and progression, inventory and equipment, quests, dialogue, and combat.",
+    "keywords": [
+      "agent",
+      "awesome",
+      "building",
+      "combat",
+      "development",
+      "dialogue",
+      "equipment",
+      "game",
+      "gamedev",
+      "guidance",
+      "imported",
+      "inventory",
+      "progression",
+      "projects",
+      "quests",
+      "skills",
+      "stats",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "gamedev-save-systems",
+    "description": "Imported awesome-gamedev-agent-skills guidance for save-systems workflows in game development projects. Use when designing save files: what to serialize, crash-safe atomic writes, slots, and versioned migration of old saves.",
+    "keywords": [
+      "agent",
+      "atomic",
+      "awesome",
+      "crash",
+      "designing",
+      "development",
+      "files",
+      "game",
+      "gamedev",
+      "guidance",
+      "imported",
+      "migration",
+      "projects",
+      "safe",
+      "save",
+      "saves",
+      "serialize",
+      "skills",
+      "slots",
+      "systems",
+      "versioned",
+      "what",
+      "when",
+      "workflows",
+      "writes"
+    ]
+  },
+  {
+    "name": "gamedev-shader-programming",
+    "description": "Imported awesome-gamedev-agent-skills guidance for shader-programming workflows in game development projects. Use when writing vertex or fragment shaders, working with UVs and coordinate spaces, or building common visual effects.",
+    "keywords": [
+      "agent",
+      "awesome",
+      "building",
+      "common",
+      "coordinate",
+      "development",
+      "effects",
+      "fragment",
+      "game",
+      "gamedev",
+      "guidance",
+      "imported",
+      "programming",
+      "projects",
+      "shader",
+      "shaders",
+      "skills",
+      "spaces",
+      "vertex",
+      "visual",
+      "when",
+      "with",
+      "workflows",
+      "working",
+      "writing"
+    ]
+  },
+  {
+    "name": "gamedev-steam-publish",
+    "description": "Imported awesome-gamedev-agent-skills guidance for steam-publish workflows in game development projects. Use when shipping on Steam: store page setup, SteamPipe build uploads, and release checklists.",
+    "keywords": [
+      "agent",
+      "awesome",
+      "build",
+      "checklists",
+      "development",
+      "game",
+      "gamedev",
+      "guidance",
+      "imported",
+      "page",
+      "projects",
+      "publish",
+      "release",
+      "setup",
+      "shipping",
+      "skills",
+      "steam",
+      "steampipe",
+      "store",
+      "uploads",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "gamedev-survival-crafting",
+    "description": "Imported awesome-gamedev-agent-skills guidance for survival-crafting workflows in game development projects. Use when building a survival-crafting game: gather-craft-build loop, survival needs, tech progression, and base building.",
+    "keywords": [
+      "agent",
+      "awesome",
+      "base",
+      "build",
+      "building",
+      "craft",
+      "crafting",
+      "development",
+      "game",
+      "gamedev",
+      "gather",
+      "guidance",
+      "imported",
+      "loop",
+      "needs",
+      "progression",
+      "projects",
+      "skills",
+      "survival",
+      "tech",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "gamedev-tower-defense",
+    "description": "Imported awesome-gamedev-agent-skills guidance for tower-defense workflows in game development projects. Use when building a tower defense game: enemy pathing, wave spawning, tower targeting, and economy.",
+    "keywords": [
+      "agent",
+      "awesome",
+      "building",
+      "defense",
+      "development",
+      "economy",
+      "enemy",
+      "game",
+      "gamedev",
+      "guidance",
+      "imported",
+      "pathing",
+      "projects",
+      "skills",
+      "spawning",
+      "targeting",
+      "tower",
+      "wave",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "gamedev-visual-novel",
+    "description": "Imported awesome-gamedev-agent-skills guidance for visual-novel workflows in game development projects. Use when building a visual novel: branching script, text box and character presentation, choices, save anywhere, backlog, skip, and auto.",
+    "keywords": [
+      "agent",
+      "anywhere",
+      "auto",
+      "awesome",
+      "backlog",
+      "branching",
+      "building",
+      "character",
+      "choices",
+      "development",
+      "game",
+      "gamedev",
+      "guidance",
+      "imported",
+      "novel",
+      "presentation",
+      "projects",
+      "save",
+      "script",
+      "skills",
+      "skip",
+      "text",
+      "visual",
+      "when",
+      "workflows"
+    ]
+  },
+  {
     "name": "godot-2d-animation",
-    "description": "\"Expert patterns for 2D animation in Godot using AnimatedSprite2D and skeletal cutout rigs. Use when implementing sprite frame animations, procedural animation (squash/stretch), cutout bone hierarchies, or frame-perfect timing systems. Trigger keywords: AnimatedSprite2D, SpriteFrames, animation_finished, animation_looped, frame_changed, frame_progress, set_frame_and_progress, cutout animation, skeletal 2D, Bone2D, procedural animation, animation state machine, advance(0).\"",
+    "description": "Expert patterns for 2D animation in Godot using AnimatedSprite2D and skeletal cutout rigs. Use when implementing sprite frame animations, procedural animation (squash/stretch), cutout bone hierarchies, or frame-perfect timing systems. Trigger keywords: AnimatedSprite2D, SpriteFrames, animation_finished, animation_looped, frame_changed, frame_progress, set_frame_and_progress, cutout animation, skeletal 2D, Bone2D, procedural animation, animation state machine, advance(0).",
     "keywords": [
       "AnimatedSprite2D",
       "SpriteFrames",
@@ -20,7 +786,7 @@
   },
   {
     "name": "godot-2d-physics",
-    "description": "\"Expert patterns for Godot 2D physics including collision layers/masks, Area2D triggers, raycasting, and PhysicsDirectSpaceState2D queries. Use when implementing collision detection, trigger zones, line-of-sight systems, or manual physics queries. Trigger keywords: CollisionShape2D, CollisionPolygon2D, collision_layer, collision_mask, set_collision_layer_value, set_collision_mask_value, Area2D, body_entered, body_exited, RayCast2D, force_raycast_update, PhysicsPointQueryParameters2D, PhysicsShapeQueryParameters2D, direct_space_state, move_and_collide, move_and_slide.\"",
+    "description": "Expert patterns for Godot 2D physics including collision layers/masks, Area2D triggers, raycasting, and PhysicsDirectSpaceState2D queries. Use when implementing collision detection, trigger zones, line-of-sight systems, or manual physics queries. Trigger keywords: CollisionShape2D, CollisionPolygon2D, collision_layer, collision_mask, set_collision_layer_value, set_collision_mask_value, Area2D, body_entered, body_exited, RayCast2D, force_raycast_update, PhysicsPointQueryParameters2D, PhysicsShapeQueryParameters2D, direct_space_state, move_and_collide, move_and_slide.",
     "keywords": [
       "CollisionShape2D",
       "CollisionPolygon2D",
@@ -42,7 +808,7 @@
   },
   {
     "name": "godot-3d-lighting",
-    "description": "\"Expert patterns for Godot 3D lighting including DirectionalLight3D shadow cascades, OmniLight3D attenuation, SpotLight3D projectors, VoxelGI vs SDFGI, and LightmapGI baking. Use when implementing realistic 3D lighting, shadow optimization, global illumination, or light probes. Trigger keywords: DirectionalLight3D, OmniLight3D, SpotLight3D, shadow_enabled, directional_shadow_mode, directional_shadow_split, omni_range, omni_attenuation, spot_range, spot_angle, VoxelGI, SDFGI, LightmapGI, ReflectionProbe, Environment, WorldEnvironment.\"",
+    "description": "Expert patterns for Godot 3D lighting including DirectionalLight3D shadow cascades, OmniLight3D attenuation, SpotLight3D projectors, VoxelGI vs SDFGI, and LightmapGI baking. Use when implementing realistic 3D lighting, shadow optimization, global illumination, or light probes. Trigger keywords: DirectionalLight3D, OmniLight3D, SpotLight3D, shadow_enabled, directional_shadow_mode, directional_shadow_split, omni_range, omni_attenuation, spot_range, spot_angle, VoxelGI, SDFGI, LightmapGI, ReflectionProbe, Environment, WorldEnvironment.",
     "keywords": [
       "DirectionalLight3D",
       "OmniLight3D",
@@ -64,7 +830,7 @@
   },
   {
     "name": "godot-3d-materials",
-    "description": "\"Expert patterns for Godot 3D PBR materials using StandardMaterial3D including albedo, metallic/roughness workflows, normal maps, ORM texture packing, transparency modes, and shader conversion. Use when creating realistic 3D surfaces, PBR workflows, or material optimization. Trigger keywords: StandardMaterial3D, BaseMaterial3D, albedo_texture, metallic, metallic_texture, roughness, roughness_texture, normal_texture, normal_enabled, orm_texture, transparency, alpha_scissor, alpha_hash, cull_mode, ShaderMaterial, shader parameters.\"",
+    "description": "Expert patterns for Godot 3D PBR materials using StandardMaterial3D including albedo, metallic/roughness workflows, normal maps, ORM texture packing, transparency modes, and shader conversion. Use when creating realistic 3D surfaces, PBR workflows, or material optimization. Trigger keywords: StandardMaterial3D, BaseMaterial3D, albedo_texture, metallic, metallic_texture, roughness, roughness_texture, normal_texture, normal_enabled, orm_texture, transparency, alpha_scissor, alpha_hash, cull_mode, ShaderMaterial, shader parameters.",
     "keywords": [
       "StandardMaterial3D",
       "BaseMaterial3D",
@@ -86,7 +852,7 @@
   },
   {
     "name": "godot-3d-world-building",
-    "description": "\"Expert patterns for 3D level design using GridMap with MeshLibrary, CSG constructive solid geometry, WorldEnvironment setup, ProceduralSkyMaterial, and volumetric fog. Use when building 3D levels, modular tilesets, BSP-style geometry, or environmental effects. Trigger keywords: GridMap, MeshLibrary, set_cell_item, get_cell_item, map_to_local, local_to_map, CSGCombiner3D, CSGBox3D, CSGSphere3D, CSGPolygon3D, WorldEnvironment, Environment, Sky, ProceduralSkyMaterial, PanoramaSkyMaterial, fog_enabled, volumetric_fog_enabled.\"",
+    "description": "Expert patterns for 3D level design using GridMap with MeshLibrary, CSG constructive solid geometry, WorldEnvironment setup, ProceduralSkyMaterial, and volumetric fog. Use when building 3D levels, modular tilesets, BSP-style geometry, or environmental effects. Trigger keywords: GridMap, MeshLibrary, set_cell_item, get_cell_item, map_to_local, local_to_map, CSGCombiner3D, CSGBox3D, CSGSphere3D, CSGPolygon3D, WorldEnvironment, Environment, Sky, ProceduralSkyMaterial, PanoramaSkyMaterial, fog_enabled, volumetric_fog_enabled.",
     "keywords": [
       "GridMap",
       "MeshLibrary",
@@ -109,7 +875,7 @@
   },
   {
     "name": "godot-ability-system",
-    "description": "\"Expert patterns for RPG/action ability systems including cooldown strategies, combo systems, ability chaining, skill trees with prerequisites, upgrade paths, and resource management. Use when implementing unlockable abilities, character progression, or complex skill systems. Trigger keywords: PlayerAbility, AbilityManager, cooldown, SkillTree, SkillNode, prerequisites, can_use, execute, ComboSystem, ability_chain, global_cooldown, charge_system, upgrade_path.\"",
+    "description": "Expert patterns for RPG/action ability systems including cooldown strategies, combo systems, ability chaining, skill trees with prerequisites, upgrade paths, and resource management. Use when implementing unlockable abilities, character progression, or complex skill systems. Trigger keywords: PlayerAbility, AbilityManager, cooldown, SkillTree, SkillNode, prerequisites, can_use, execute, ComboSystem, ability_chain, global_cooldown, charge_system, upgrade_path.",
     "keywords": [
       "PlayerAbility",
       "AbilityManager",
@@ -128,7 +894,7 @@
   },
   {
     "name": "godot-adapt-2d-to-3d",
-    "description": "\"Expert patterns for migrating 2D games to 3D including node type conversions, camera systems (third-person, first-person, orbit), physics layer migration, sprite-to-model art pipeline, and control scheme adaptations. Use when porting 2D projects to 3D or adding 3D elements. Trigger keywords: CharacterBody2D to CharacterBody3D, Area2D to Area3D, Camera2D to Camera3D, Vector2 to Vector3, collision_layer migration, sprite to MeshInstance3D, 2D to 3D conversion.\"",
+    "description": "Expert patterns for migrating 2D games to 3D including node type conversions, camera systems (third-person, first-person, orbit), physics layer migration, sprite-to-model art pipeline, and control scheme adaptations. Use when porting 2D projects to 3D or adding 3D elements. Trigger keywords: CharacterBody2D to CharacterBody3D, Area2D to Area3D, Camera2D to Camera3D, Vector2 to Vector3, collision_layer migration, sprite to MeshInstance3D, 2D to 3D conversion.",
     "keywords": [
       "CharacterBody2D to CharacterBody3D",
       "Area2D to Area3D",
@@ -141,7 +907,7 @@
   },
   {
     "name": "godot-adapt-3d-to-2d",
-    "description": "\"Expert patterns for simplifying 3D games to 2D including dimension reduction strategies, camera flattening, physics conversion, 3D-to-sprite art pipeline, and control simplification. Use when porting 3D to 2D, creating 2D versions for mobile, or prototyping. Trigger keywords: CharacterBody3D to CharacterBody2D, Camera3D to Camera2D, Vector3 to Vector2, flatten Z-axis, orthogonal projection, 3D to sprite conversion, performance optimization.\"",
+    "description": "Expert patterns for simplifying 3D games to 2D including dimension reduction strategies, camera flattening, physics conversion, 3D-to-sprite art pipeline, and control simplification. Use when porting 3D to 2D, creating 2D versions for mobile, or prototyping. Trigger keywords: CharacterBody3D to CharacterBody2D, Camera3D to Camera2D, Vector3 to Vector2, flatten Z-axis, orthogonal projection, 3D to sprite conversion, performance optimization.",
     "keywords": [
       "CharacterBody3D to CharacterBody2D",
       "Camera3D to Camera2D",
@@ -154,7 +920,7 @@
   },
   {
     "name": "godot-adapt-desktop-to-mobile",
-    "description": "\"Expert patterns for porting desktop games to mobile including touch control schemes (virtual joystick, gesture detection), UI scaling for small screens, performance optimization for mobile GPUs, battery life management, and platform-specific features. Use when creating mobile ports or cross-platform mobile builds. Trigger keywords: TouchScreenButton, virtual_joystick, gesture_detector, InputEventScreenTouch, InputEventScreenDrag, mobile_optimization, battery_saving, adaptive_performance, MOBILE_ENABLED.\"",
+    "description": "Expert patterns for porting desktop games to mobile including touch control schemes (virtual joystick, gesture detection), UI scaling for small screens, performance optimization for mobile GPUs, battery life management, and platform-specific features. Use when creating mobile ports or cross-platform mobile builds. Trigger keywords: TouchScreenButton, virtual_joystick, gesture_detector, InputEventScreenTouch, InputEventScreenDrag, mobile_optimization, battery_saving, adaptive_performance, MOBILE_ENABLED.",
     "keywords": [
       "TouchScreenButton",
       "virtual_joystick",
@@ -169,7 +935,7 @@
   },
   {
     "name": "godot-adapt-mobile-to-desktop",
-    "description": "\"Expert patterns for scaling mobile games to desktop including mouse/keyboard controls, increased resolution and graphical fidelity, expanded UI layouts, settings menus, window management, and platform-specific features. Use when creating desktop ports or cross-platform releases. Trigger keywords: mouse_controls, keyboard_shortcuts, resolution_scaling, graphics_settings, fullscreen_toggle, window_modes, Steam_integration, desktop_optimization.\"",
+    "description": "Expert patterns for scaling mobile games to desktop including mouse/keyboard controls, increased resolution and graphical fidelity, expanded UI layouts, settings menus, window management, and platform-specific features. Use when creating desktop ports or cross-platform releases. Trigger keywords: mouse_controls, keyboard_shortcuts, resolution_scaling, graphics_settings, fullscreen_toggle, window_modes, Steam_integration, desktop_optimization.",
     "keywords": [
       "mouse_controls",
       "keyboard_shortcuts",
@@ -183,7 +949,7 @@
   },
   {
     "name": "godot-adapt-single-to-multiplayer",
-    "description": "\"Expert patterns for adding multiplayer to single-player games including client-server architecture, authoritative server design, MultiplayerSynchronizer, lag compensation (client prediction, server reconciliation), input buffering, and anti-cheat measures. Use when retrofitting multiplayer, porting to online play, or designing networked gameplay. Trigger keywords: MultiplayerPeer, ENetMultiplayerPeer, SceneMultiplayer, MultiplayerSynchronizer, rpc, rpc_id, multiplayer_authority, client_prediction, server_reconciliation, lag_compensation, rollback.\"",
+    "description": "Expert patterns for adding multiplayer to single-player games including client-server architecture, authoritative server design, MultiplayerSynchronizer, lag compensation (client prediction, server reconciliation), input buffering, and anti-cheat measures. Use when retrofitting multiplayer, porting to online play, or designing networked gameplay. Trigger keywords: MultiplayerPeer, ENetMultiplayerPeer, SceneMultiplayer, MultiplayerSynchronizer, rpc, rpc_id, multiplayer_authority, client_prediction, server_reconciliation, lag_compensation, rollback.",
     "keywords": [
       "MultiplayerPeer",
       "ENetMultiplayerPeer",
@@ -199,33 +965,20 @@
     ]
   },
   {
-    "name": "godot-navigation-pathfinding",
-    "description": "\"Expert blueprint for AI pathfinding (tower defense, RTS, stealth) using NavigationAgent2D/3D, NavigationServer, avoidance, and dynamic navigation mesh generation. Use when implementing enemy AI, NPC movement, or obstacle avoidance. Keywords NavigationAgent2D, NavigationRegion2D, pathfinding, NavigationServer, avoidance, baking, NavigationObstacle.\"",
-    "keywords": [
-      "NavigationAgent2D",
-      "NavigationRegion2D",
-      "pathfinding",
-      "NavigationServer",
-      "avoidance",
-      "baking",
-      "NavigationObstacle"
-    ]
-  },
-  {
     "name": "godot-analyst",
-    "description": "\"Godot Expert Analyst: Anara. Visionary project scoring and certification for Godot 4.7+ architecture. Use when evaluating project health, modernity, scalability, or generating Visionary Certificates. Keywords: analyst, Anara, scoring, certification, architecture audit, Godot 4.7.\"",
+    "description": "Godot Expert Analyst: Anara. Visionary project scoring and certification for Godot 4.7+ architecture. Use when evaluating project health, modernity, scalability, or generating Visionary Certificates. Keywords: analyst, Anara, scoring, certification, architecture audit, Godot 4.7.",
     "keywords": [
       "analyst",
       "Anara",
       "scoring",
       "certification",
       "architecture audit",
-      "Godot 4"
+      "Godot 4.7"
     ]
   },
   {
     "name": "godot-animation-player",
-    "description": "\"Expert patterns for AnimationPlayer including track types (Value, Method, Audio, Bezier), root motion extraction, animation callbacks, procedural animation generation, call mode optimization, and RESET tracks. Use for timeline-based animations, cutscenes, or UI transitions. Trigger keywords: AnimationPlayer, Animation, track_insert_key, root_motion, animation_finished, RESET_track, call_mode, animation_set_next, queue, blend_times.\"",
+    "description": "Expert patterns for AnimationPlayer including track types (Value, Method, Audio, Bezier), root motion extraction, animation callbacks, procedural animation generation, call mode optimization, and RESET tracks. Use for timeline-based animations, cutscenes, or UI transitions. Trigger keywords: AnimationPlayer, Animation, track_insert_key, root_motion, animation_finished, RESET_track, call_mode, animation_set_next, queue, blend_times.",
     "keywords": [
       "AnimationPlayer",
       "Animation",
@@ -241,7 +994,7 @@
   },
   {
     "name": "godot-animation-tree-mastery",
-    "description": "\"Expert patterns for AnimationTree including StateMachine transitions, BlendSpace2D for directional movement, BlendTree for layered animations, root motion, transition conditions, advance expressions, and state machine sub-states. Use for complex character animation systems with movement blending and state management. Trigger keywords: AnimationTree, AnimationNodeStateMachine, BlendSpace2D, BlendSpace1D, BlendTree, transition_request, blend_position, advance_expression, AnimationNodeAdd2, AnimationNodeBlend2, root_motion.\"",
+    "description": "Expert patterns for AnimationTree including StateMachine transitions, BlendSpace2D for directional movement, BlendTree for layered animations, root motion, transition conditions, advance expressions, and state machine sub-states. Use for complex character animation systems with movement blending and state management. Trigger keywords: AnimationTree, AnimationNodeStateMachine, BlendSpace2D, BlendSpace1D, BlendTree, transition_request, blend_position, advance_expression, AnimationNodeAdd2, AnimationNodeBlend2, root_motion.",
     "keywords": [
       "AnimationTree",
       "AnimationNodeStateMachine",
@@ -258,7 +1011,7 @@
   },
   {
     "name": "godot-audio-systems",
-    "description": "\"Expert patterns for Godot audio including AudioStreamPlayer variants (2D positional, 3D spatial), AudioBus mixing architecture, dynamic effects (reverb, EQ,compression), audio pooling for performance, music transitions (crossfade, bpm-sync), and procedural audio generation. Use for music systems, sound effects, spatial audio, or audio-reactive gameplay. Trigger keywords: AudioStreamPlayer, AudioStreamPlayer2D, AudioStreamPlayer3D, AudioBus, AudioServer, AudioEffect, music_crossfade, audio_pool, positional_audio, reverb, bus_volume.\"",
+    "description": "Expert patterns for Godot audio including AudioStreamPlayer variants (2D positional, 3D spatial), AudioBus mixing architecture, dynamic effects (reverb, EQ,compression), audio pooling for performance, music transitions (crossfade, bpm-sync), and procedural audio generation. Use for music systems, sound effects, spatial audio, or audio-reactive gameplay. Trigger keywords: AudioStreamPlayer, AudioStreamPlayer2D, AudioStreamPlayer3D, AudioBus, AudioServer, AudioEffect, music_crossfade, audio_pool, positional_audio, reverb, bus_volume.",
     "keywords": [
       "AudioStreamPlayer",
       "AudioStreamPlayer2D",
@@ -275,25 +1028,18 @@
   },
   {
     "name": "godot-auditor",
-    "description": "\"Godot Expert Auditor: Aurelius. Exhaustive never-list enforcement and architectural slap-down for Godot 4.7 projects.\"",
+    "description": "Godot Expert Auditor: Aurelius. Exhaustive never-list enforcement and architectural slap-down for Godot 4.7 projects. Use when auditing or reviewing a Godot project for anti-patterns, never-list violations, or architectural problems. Keywords: audit, review, anti-pattern, never-list, architecture.",
     "keywords": [
-      "auditor",
-      "exhaustive",
-      "down",
-      "architectural",
-      "expert",
-      "slap",
-      "godot",
-      "enforcement",
-      "never",
-      "projects",
-      "list",
-      "aurelius"
+      "audit",
+      "review",
+      "anti-pattern",
+      "never-list",
+      "architecture"
     ]
   },
   {
     "name": "godot-autoload-architecture",
-    "description": "\"Expert patterns for Godot AutoLoad (singleton) architecture including global state management, scene transitions, signal-based communication, dependency injection, autoload initialization order, and anti-patterns to avoid. Use for game managers, save systems, audio controllers, or cross-scene resources. Trigger keywords: AutoLoad, singleton, GameManager, SceneTransitioner, SaveManager, global_state, autoload_order, signal_bus, dependency_injection.\"",
+    "description": "Expert patterns for Godot AutoLoad (singleton) architecture including global state management, scene transitions, signal-based communication, dependency injection, autoload initialization order, and anti-patterns to avoid. Use for game managers, save systems, audio controllers, or cross-scene resources. Trigger keywords: AutoLoad, singleton, GameManager, SceneTransitioner, SaveManager, global_state, autoload_order, signal_bus, dependency_injection.",
     "keywords": [
       "AutoLoad",
       "singleton",
@@ -308,19 +1054,19 @@
   },
   {
     "name": "godot-builder",
-    "description": "\"Expert-level toolkit for modular Godot 4.7+ CLI automation and headless build orchestration. Use when you need to: (1) Build complex scene trees or UI layouts programmatically, (2) Automate expert 3D asset pipelines (glTF -> Collision), (3) Optimize procedural geometry headlessly (CSG -> Static Mesh), or (4) Engineer production-grade CI/CD pipelines. Set GODOT_PATH env var for custom engine location. Keywords: Godot CLI, headless, CI, export, builder, 4.7.\"",
+    "description": "Expert-level toolkit for modular Godot 4.7+ CLI automation and headless build orchestration. Use when you need to: (1) Build complex scene trees or UI layouts programmatically, (2) Automate expert 3D asset pipelines (glTF to Collision), (3) Optimize procedural geometry headlessly (CSG to Static Mesh), or (4) Engineer production-grade CI/CD pipelines. Set GODOT_PATH env var for custom engine location. Keywords: Godot CLI, headless, CI, export, builder, 4.7.",
     "keywords": [
       "Godot CLI",
       "headless",
       "CI",
       "export",
       "builder",
-      "4"
+      "4.7"
     ]
   },
   {
     "name": "godot-camera-systems",
-    "description": "\"Expert patterns for 2D/3D camera control including smooth following (lerp, position_smoothing), camera shake (trauma system), screen shake with frequency parameters, deadzone/drag for platformers, look-ahead prediction, and camera transitions. Use for player cameras, cinematic sequences, or multi-camera systems. Trigger keywords: Camera2D, Camera3D, SpringArm3D, position_smoothing, camera_shake, trauma_system, look_ahead, drag_margin, camera_limits, camera_transition.\"",
+    "description": "Expert patterns for 2D/3D camera control including smooth following (lerp, position_smoothing), camera shake (trauma system), screen shake with frequency parameters, deadzone/drag for platformers, look-ahead prediction, and camera transitions. Use for player cameras, cinematic sequences, or multi-camera systems. Trigger keywords: Camera2D, Camera3D, SpringArm3D, position_smoothing, camera_shake, trauma_system, look_ahead, drag_margin, camera_limits, camera_transition.",
     "keywords": [
       "Camera2D",
       "Camera3D",
@@ -336,7 +1082,7 @@
   },
   {
     "name": "godot-characterbody-2d",
-    "description": "\"Expert patterns for CharacterBody2D including platformer movement (coyote time, jump buffering, variable jump height), top-down movement (8-way, tank controls), collision handling, one-way platforms, and state machines. Use for player characters, NPCs, or enemies. Trigger keywords: CharacterBody2D, move_and_slide, is_on_floor, coyote_time, jump_buffer, velocity, get_slide_collision, one_way_platforms, state_machine.\"",
+    "description": "Expert patterns for CharacterBody2D including platformer movement (coyote time, jump buffering, variable jump height), top-down movement (8-way, tank controls), collision handling, one-way platforms, and state machines. Use for player characters, NPCs, or enemies. Trigger keywords: CharacterBody2D, move_and_slide, is_on_floor, coyote_time, jump_buffer, velocity, get_slide_collision, one_way_platforms, state_machine.",
     "keywords": [
       "CharacterBody2D",
       "move_and_slide",
@@ -351,7 +1097,7 @@
   },
   {
     "name": "godot-combat-system",
-    "description": "\"Expert patterns for combat systems including hitbox/hurtbox architecture, damage calculation (DamageData class), health components, combat state machines, combo systems, ability cooldowns, and damage popups. Use for action games, RPGs, or fighting games. Trigger keywords: Hitbox, Hurtbox, DamageData, HealthComponent, combat_state, combo_system, ability_cooldown, invincibility_frames, damage_popup.\"",
+    "description": "Expert patterns for combat systems including hitbox/hurtbox architecture, damage calculation (DamageData class), health components, combat state machines, combo systems, ability cooldowns, and damage popups. Use for action games, RPGs, or fighting games. Trigger keywords: Hitbox, Hurtbox, DamageData, HealthComponent, combat_state, combo_system, ability_cooldown, invincibility_frames, damage_popup.",
     "keywords": [
       "Hitbox",
       "Hurtbox",
@@ -366,7 +1112,7 @@
   },
   {
     "name": "godot-composition",
-    "description": "\"Expert architectural standards for building scalable Godot GAMES (RPGs, Platformers, Shooters) using the Composition pattern (Entity-Component). Use when designing player controllers, NPCs, enemies, weapons, or complex gameplay systems. Enforces \\\"Has-A\\\" relationships for game entities. Trigger keywords: Entity-Component, ECS, Gameplay, Actors, NPCs, Enemies, Weapons, Hitboxes, Game Loop, Level Design.\"",
+    "description": "Expert architectural standards for building scalable Godot GAMES (RPGs, Platformers, Shooters) using the Composition pattern (Entity-Component). Use when designing player controllers, NPCs, enemies, weapons, or complex gameplay systems. Enforces \\\"Has-A\\\" relationships for game entities. Trigger keywords: Entity-Component, ECS, Gameplay, Actors, NPCs, Enemies, Weapons, Hitboxes, Game Loop, Level Design.",
     "keywords": [
       "Entity-Component",
       "ECS",
@@ -382,40 +1128,40 @@
   },
   {
     "name": "godot-composition-apps",
-    "description": "\"Expert architectural standards for building scalable Godot applications (Apps, Tools, UI, or Games) using the Composition pattern. Use when designing node structures, refactoring monolithic scripts, or implementing complex behaviors. Enforces \\\"Has-A\\\" relationships over \\\"Is-A\\\" inheritance.\"",
+    "description": "Expert architectural standards for building scalable Godot applications (Apps, Tools, UI, or Games) using the Composition pattern. Use when designing node structures, refactoring monolithic scripts, or implementing complex behaviors. Enforces \\\"Has-A\\\" relationships over \\\"Is-A\\\" inheritance.",
     "keywords": [
-      "standards",
       "applications",
-      "pattern",
-      "when",
-      "monolithic",
       "apps",
-      "scalable",
-      "expert",
+      "architectural",
+      "behaviors",
+      "building",
+      "complex",
       "composition",
       "designing",
+      "enforces",
+      "expert",
+      "games",
+      "godot",
+      "implementing",
+      "inheritance",
+      "monolithic",
       "node",
       "over",
-      "behaviors",
-      "relationships",
+      "pattern",
       "refactoring",
-      "inheritance",
-      "games",
-      "building",
-      "godot",
+      "relationships",
+      "scalable",
+      "scripts",
+      "standards",
       "structures",
       "tools",
       "using",
-      "architectural",
-      "scripts",
-      "enforces",
-      "implementing",
-      "complex"
+      "when"
     ]
   },
   {
     "name": "godot-debugging-profiling",
-    "description": "\"Expert debugging workflows including print debugging (push_warning, push_error, assert), breakpoints (conditional breakpoints), Godot Debugger (stack trace, variables, remote debug), profiler (time profiler, memory monitor), error handling patterns, and performance optimization. Use for bug fixing, performance tuning, or development diagnostics. Trigger keywords: breakpoint, print_debug, push_error, assert, profiler, remote_debug, memory_leak, orphan_nodes, Performance.get_monitor.\"",
+    "description": "Expert debugging workflows including print debugging (push_warning, push_error, assert), breakpoints (conditional breakpoints), Godot Debugger (stack trace, variables, remote debug), profiler (time profiler, memory monitor), error handling patterns, and performance optimization. Use for bug fixing, performance tuning, or development diagnostics. Trigger keywords: breakpoint, print_debug, push_error, assert, profiler, remote_debug, memory_leak, orphan_nodes, Performance.get_monitor.",
     "keywords": [
       "breakpoint",
       "print_debug",
@@ -425,12 +1171,12 @@
       "remote_debug",
       "memory_leak",
       "orphan_nodes",
-      "Performance"
+      "Performance.get_monitor"
     ]
   },
   {
     "name": "godot-dialogue-system",
-    "description": "\"Expert patterns for branching dialogue systems including dialogue graphs (Resource-based), character portraits, player choices, conditional dialogue (flags/quests), typewriter effects, localization support, and voice acting integration. Use for narrative games, RPGs, or visual novels. Trigger keywords: DialogueLine, DialogueChoice, DialogueGraph, dialogue_manager, typewriter_effect, branching_dialogue, dialogue_flags, localization, voice_acting.\"",
+    "description": "Expert patterns for branching dialogue systems including dialogue graphs (Resource-based), character portraits, player choices, conditional dialogue (flags/quests), typewriter effects, localization support, and voice acting integration. Use for narrative games, RPGs, or visual novels. Trigger keywords: DialogueLine, DialogueChoice, DialogueGraph, dialogue_manager, typewriter_effect, branching_dialogue, dialogue_flags, localization, voice_acting.",
     "keywords": [
       "DialogueLine",
       "DialogueChoice",
@@ -445,7 +1191,7 @@
   },
   {
     "name": "godot-economy-system",
-    "description": "\"Expert patterns for game economies including currency management (multi-currency, wallet system), shop systems (buy/sell prices, stock limits), dynamic pricing (supply/demand), loot tables (weighted drops, rarity tiers), and economic balance (inflation control, currency sinks). Use for RPGs, trading games, or resource management systems. Trigger keywords: EconomyManager, currency, shop_item, loot_table, dynamic_pricing, buy_sell_spread, currency_sink, inflation, item_rarity.\"",
+    "description": "Expert patterns for game economies including currency management (multi-currency, wallet system), shop systems (buy/sell prices, stock limits), dynamic pricing (supply/demand), loot tables (weighted drops, rarity tiers), and economic balance (inflation control, currency sinks). Use for RPGs, trading games, or resource management systems. Trigger keywords: EconomyManager, currency, shop_item, loot_table, dynamic_pricing, buy_sell_spread, currency_sink, inflation, item_rarity.",
     "keywords": [
       "EconomyManager",
       "currency",
@@ -460,7 +1206,7 @@
   },
   {
     "name": "godot-export-builds",
-    "description": "\"Expert patterns for multi-platform exports including export templates (Windows/Linux/macOS/Android/iOS/Web), command-line exports (headless mode), platform-specific settings (codesign, notarization, Android SDK), feature flags (OS.has_feature), CI/CD pipelines (GitHub Actions), and build optimization (size reduction, debug stripping). Use for release preparation or automated deployment. Trigger keywords: export_preset, export_template, headless_export, platform_specific, feature_flag, CI_CD, build_optimization, codesign, Android_SDK.\"",
+    "description": "Expert patterns for multi-platform exports including export templates (Windows/Linux/macOS/Android/iOS/Web), command-line exports (headless mode), platform-specific settings (codesign, notarization, Android SDK), feature flags (OS.has_feature), CI/CD pipelines (GitHub Actions), and build optimization (size reduction, debug stripping). Use for release preparation or automated deployment. Trigger keywords: export_preset, export_template, headless_export, platform_specific, feature_flag, CI_CD, build_optimization, codesign, Android_SDK.",
     "keywords": [
       "export_preset",
       "export_template",
@@ -477,41 +1223,41 @@
     "name": "godot-game-loop-collection",
     "description": "Use when implementing collection quests, scavenger hunts, or \"find all X\" objectives.",
     "keywords": [
-      "find",
-      "scavenger",
-      "objectives",
       "collection",
-      "when",
+      "find",
       "hunts",
       "implementing",
-      "quests"
+      "objectives",
+      "quests",
+      "scavenger",
+      "when"
     ]
   },
   {
     "name": "godot-game-loop-harvest",
     "description": "Data-driven resource harvesting system (mining, logging, foraging) for Godot 4. Use when implementing gathering mechanics with tool/tier validation, health depletion, item spawning, and persistence.",
     "keywords": [
-      "resource",
-      "when",
-      "gathering",
-      "driven",
-      "system",
-      "persistence",
-      "tier",
+      "data",
       "depletion",
-      "validation",
-      "mining",
-      "mechanics",
-      "logging",
+      "driven",
+      "foraging",
+      "gathering",
       "godot",
-      "item",
       "harvesting",
       "health",
-      "foraging",
-      "tool",
-      "spawning",
       "implementing",
-      "data",
+      "item",
+      "logging",
+      "mechanics",
+      "mining",
+      "persistence",
+      "resource",
+      "spawning",
+      "system",
+      "tier",
+      "tool",
+      "validation",
+      "when",
       "with"
     ]
   },
@@ -519,54 +1265,54 @@
     "name": "godot-game-loop-time-trial",
     "description": "Expert patterns for racing mechanics, checkpoint tracking, and ghost recording/playback in Godot 4. Use when building racing games, speed-run platformers, or arcade trials.",
     "keywords": [
-      "patterns",
-      "racing",
-      "speed",
-      "expert",
-      "tracking",
-      "recording",
-      "when",
-      "games",
-      "platformers",
-      "mechanics",
       "arcade",
       "building",
-      "trials",
-      "godot",
       "checkpoint",
+      "expert",
+      "games",
       "ghost",
-      "playback"
+      "godot",
+      "mechanics",
+      "patterns",
+      "platformers",
+      "playback",
+      "racing",
+      "recording",
+      "speed",
+      "tracking",
+      "trials",
+      "when"
     ]
   },
   {
     "name": "godot-game-loop-waves",
     "description": "Expert patterns for managing combat waves, difficulty scaling, and automated enemy spawning in Godot 4. Use when building wave-based shooters, tower defense, or arena games.",
     "keywords": [
-      "patterns",
-      "waves",
       "arena",
-      "shooters",
-      "when",
-      "managing",
-      "combat",
-      "expert",
-      "tower",
-      "defense",
-      "based",
       "automated",
-      "enemy",
-      "scaling",
-      "games",
+      "based",
       "building",
-      "godot",
+      "combat",
+      "defense",
       "difficulty",
+      "enemy",
+      "expert",
+      "games",
+      "godot",
+      "managing",
+      "patterns",
+      "scaling",
+      "shooters",
       "spawning",
-      "wave"
+      "tower",
+      "wave",
+      "waves",
+      "when"
     ]
   },
   {
     "name": "godot-gdscript-mastery",
-    "description": "\"Expert GDScript best practices including static typing (var x: int, func returns void), signal architecture (signal up call down), unique node access (%NodeName, @onready), script structure (extends, class_name, signals, exports, methods), and performance patterns (dict.get with defaults, avoid get_node in loops). Use for code review, refactoring, or establishing project standards. Trigger keywords: static_typing, signal_architecture, unique_nodes, @onready, class_name, signal_up_call_down, gdscript_style_guide.\"",
+    "description": "Expert GDScript best practices including static typing (var x: int, func returns void), signal architecture (signal up call down), unique node access (%NodeName, @onready), script structure (extends, class_name, signals, exports, methods), and performance patterns (dict.get with defaults, avoid get_node in loops). Use for code review, refactoring, or establishing project standards. Trigger keywords: static_typing, signal_architecture, unique_nodes, @onready, class_name, signal_up_call_down, gdscript_style_guide.",
     "keywords": [
       "static_typing",
       "signal_architecture",
@@ -579,7 +1325,7 @@
   },
   {
     "name": "godot-genre-action-rpg",
-    "description": "\"Comprehensive blueprint for Action RPGs including real-time combat (hitbox/hurtbox, stat-based damage), character progression (RPG stats, leveling, skill trees), loot systems (procedural item generation, affixes, rarity tiers), equipment systems (gear slots, stat modifiers), and ability systems (cooldowns, mana cost, AOE). Based on expert ARPG design from Diablo, Path of Exile, Souls-like developers. Trigger keywords: action_rpg, loot_generator, rpg_stats, skill_tree, hitbox_combat, item_affixes, equipment_slots, ability_cooldown, stat_scaling.\"",
+    "description": "Comprehensive blueprint for Action RPGs including real-time combat (hitbox/hurtbox, stat-based damage), character progression (RPG stats, leveling, skill trees), loot systems (procedural item generation, affixes, rarity tiers), equipment systems (gear slots, stat modifiers), and ability systems (cooldowns, mana cost, AOE). Based on expert ARPG design from Diablo, Path of Exile, Souls-like developers. Trigger keywords: action_rpg, loot_generator, rpg_stats, skill_tree, hitbox_combat, item_affixes, equipment_slots, ability_cooldown, stat_scaling.",
     "keywords": [
       "action_rpg",
       "loot_generator",
@@ -594,7 +1340,7 @@
   },
   {
     "name": "godot-genre-battle-royale",
-    "description": "\"Expert blueprint for Battle Royale games including shrinking zone/storm mechanics (phase-based, damage scaling), large-scale networking (relevancy, tick rate optimization), deployment systems (plane, freefall, parachute), loot spawning (weighted tables, rarity), and performance optimization (LOD, occlusion culling, object pooling). Use for multiplayer survival games or last-one-standing formats. Trigger keywords: battle_royale, zone_shrink, storm_damage, deployment_system, loot_spawn, networking_optimization, relevancy_system, snapshot_interpolation.\"",
+    "description": "Expert blueprint for Battle Royale games including shrinking zone/storm mechanics (phase-based, damage scaling), large-scale networking (relevancy, tick rate optimization), deployment systems (plane, freefall, parachute), loot spawning (weighted tables, rarity), and performance optimization (LOD, occlusion culling, object pooling). Use for multiplayer survival games or last-one-standing formats. Trigger keywords: battle_royale, zone_shrink, storm_damage, deployment_system, loot_spawn, networking_optimization, relevancy_system, snapshot_interpolation.",
     "keywords": [
       "battle_royale",
       "zone_shrink",
@@ -608,7 +1354,7 @@
   },
   {
     "name": "godot-genre-card-game",
-    "description": "\"Expert blueprint for digital card games (CCG/Deckbuilders) including card data structures (Resource-based), deck management (draw/discard/reshuffle), turn logic, hand layout (arcing), drag-and-drop UI, effect resolution (Command pattern), and visual polish (godot-tweening, shaders). Use for CCG, deckbuilders, or tactical card games. Trigger keywords: card_game, deck_manager, card_data, hand_layout, drag_drop_cards, effect_resolution, command_pattern, draw_pile, discard_pile.\"",
+    "description": "Expert blueprint for digital card games (CCG/Deckbuilders) including card data structures (Resource-based), deck management (draw/discard/reshuffle), turn logic, hand layout (arcing), drag-and-drop UI, effect resolution (Command pattern), and visual polish (godot-tweening, shaders). Use for CCG, deckbuilders, or tactical card games. Trigger keywords: card_game, deck_manager, card_data, hand_layout, drag_drop_cards, effect_resolution, command_pattern, draw_pile, discard_pile.",
     "keywords": [
       "card_game",
       "deck_manager",
@@ -623,7 +1369,7 @@
   },
   {
     "name": "godot-genre-educational",
-    "description": "\"Expert blueprint for educational games including gamification loops (learn/apply/feedback/adapt), progress tracking (student profiles, mastery %), adaptive difficulty (target 70% success rate), spaced repetition, curriculum trees (prerequisite system), and visual feedback (confetti, XP bars). Use for learning apps, training simulations, or edutainment. Trigger keywords: educational_game, gamification, adaptive_difficulty, spaced_repetition, student_profile, curriculum_tree, mastery_tracking.\"",
+    "description": "Expert blueprint for educational games including gamification loops (learn/apply/feedback/adapt), progress tracking (student profiles, mastery %), adaptive difficulty (target 70% success rate), spaced repetition, curriculum trees (prerequisite system), and visual feedback (confetti, XP bars). Use for learning apps, training simulations, or edutainment. Trigger keywords: educational_game, gamification, adaptive_difficulty, spaced_repetition, student_profile, curriculum_tree, mastery_tracking.",
     "keywords": [
       "educational_game",
       "gamification",
@@ -636,7 +1382,7 @@
   },
   {
     "name": "godot-genre-fighting",
-    "description": "\"Expert blueprint for fighting games including frame data (startup/active/recovery frames, advantage on hit/block), hitbox/hurtbox systems, input buffering (5-10 frames), motion input detection (QCF, DP), combo systems (damage scaling, cancel hierarchy), character states (idle/attacking/hitstun/blockstun), and rollback netcode. Based on FGC competitive design. Trigger keywords: fighting_game, frame_data, hitbox_hurtbox, input_buffer, motion_inputs, combo_system, rollback_netcode, cancel_system, advantage_frames.\"",
+    "description": "Expert blueprint for fighting games including frame data (startup/active/recovery frames, advantage on hit/block), hitbox/hurtbox systems, input buffering (5-10 frames), motion input detection (QCF, DP), combo systems (damage scaling, cancel hierarchy), character states (idle/attacking/hitstun/blockstun), and rollback netcode. Based on FGC competitive design. Trigger keywords: fighting_game, frame_data, hitbox_hurtbox, input_buffer, motion_inputs, combo_system, rollback_netcode, cancel_system, advantage_frames.",
     "keywords": [
       "fighting_game",
       "frame_data",
@@ -651,7 +1397,7 @@
   },
   {
     "name": "godot-genre-horror",
-    "description": "\"Expert blueprint for horror games including tension pacing (sawtooth wave: buildup/peak/relief), Director system (macro AI controlling pacing), sensory AI (vision/sound detection), sanity/stress systems (camera shake, audio distortion), lighting atmosphere (volumetric fog, dynamic shadows), and \\\"dual brain\\\" AI (cheating director + honest senses). Use for psychological horror, survival horror, or atmospheric games. Trigger keywords: horror_game, tension_pacing, director_system, sensory_perception, sanity_system, volumetric_fog, AI_reaction_time.\"",
+    "description": "Expert blueprint for horror games including tension pacing (sawtooth wave: buildup/peak/relief), Director system (macro AI controlling pacing), sensory AI (vision/sound detection), sanity/stress systems (camera shake, audio distortion), lighting atmosphere (volumetric fog, dynamic shadows), and \\\"dual brain\\\" AI (cheating director + honest senses). Use for psychological horror, survival horror, or atmospheric games. Trigger keywords: horror_game, tension_pacing, director_system, sensory_perception, sanity_system, volumetric_fog, AI_reaction_time.",
     "keywords": [
       "horror_game",
       "tension_pacing",
@@ -664,7 +1410,7 @@
   },
   {
     "name": "godot-genre-idle-clicker",
-    "description": "\"Expert blueprint for idle/clicker games including big number handling (mantissa + exponent system), exponential growth curves (cost_growth_factor 1.15x), generator systems (auto-producers), offline progress calculation, prestige systems (reset for permanent multipliers), number formatting (K/M/B suffixes, scientific notation). Use for incremental games, idle games, or cookie clicker derivatives. Trigger keywords: idle_game, big_number, exponential_growth, generator_system, offline_progress, prestige_system, number_formatting.\"",
+    "description": "Expert blueprint for idle/clicker games including big number handling (mantissa + exponent system), exponential growth curves (cost_growth_factor 1.15x), generator systems (auto-producers), offline progress calculation, prestige systems (reset for permanent multipliers), number formatting (K/M/B suffixes, scientific notation). Use for incremental games, idle games, or cookie clicker derivatives. Trigger keywords: idle_game, big_number, exponential_growth, generator_system, offline_progress, prestige_system, number_formatting.",
     "keywords": [
       "idle_game",
       "big_number",
@@ -677,7 +1423,7 @@
   },
   {
     "name": "godot-genre-metroidvania",
-    "description": "\"Expert blueprint for Metroidvanias including ability-gated exploration (locks/keys), interconnected world design (backtracking with shortcuts), persistent state tracking (collectibles, boss defeats), room transitions (seamless loading), map systems (grid-based revelation), and ability versatility (combat + traversal). Use for exploration platformers or action-adventure games. Trigger keywords: metroidvania, ability_gating, interconnected_world, backtracking, map_system, persistent_state, room_transition, soft_locks.\"",
+    "description": "Expert blueprint for Metroidvanias including ability-gated exploration (locks/keys), interconnected world design (backtracking with shortcuts), persistent state tracking (collectibles, boss defeats), room transitions (seamless loading), map systems (grid-based revelation), and ability versatility (combat + traversal). Use for exploration platformers or action-adventure games. Trigger keywords: metroidvania, ability_gating, interconnected_world, backtracking, map_system, persistent_state, room_transition, soft_locks.",
     "keywords": [
       "metroidvania",
       "ability_gating",
@@ -691,7 +1437,7 @@
   },
   {
     "name": "godot-genre-moba",
-    "description": "\"Expert blueprint for MOBA games including lane logic (minion wave spawning every 30s), tower aggro priority (hero attacking ally over minion over hero), click-to-move controls (RTS-style raycasting), hero ability systems (QWER cooldowns, mana cost), fog of war (SubViewport projections), and authoritative networking (server validates damage). Use for competitive 5v5 or arena games. Trigger keywords: MOBA, lane_manager, minion_waves, tower_aggro, click_to_move, ability_cooldowns, fog_of_war, comeback_mechanics.\"",
+    "description": "Expert blueprint for MOBA games including lane logic (minion wave spawning every 30s), tower aggro priority (hero attacking ally over minion over hero), click-to-move controls (RTS-style raycasting), hero ability systems (QWER cooldowns, mana cost), fog of war (SubViewport projections), and authoritative networking (server validates damage). Use for competitive 5v5 or arena games. Trigger keywords: MOBA, lane_manager, minion_waves, tower_aggro, click_to_move, ability_cooldowns, fog_of_war, comeback_mechanics.",
     "keywords": [
       "MOBA",
       "lane_manager",
@@ -705,7 +1451,7 @@
   },
   {
     "name": "godot-genre-open-world",
-    "description": "\"Expert blueprint for open world games including chunk-based streaming (load/unload regions dynamically), floating origin (prevent precision jitter beyond 5000 units), HLOD (hierarchical LOD for distant meshes), persistent state (track entity changes across unloaded chunks), POI discovery systems (compass, markers), and threaded loading (prevent stutters). Use for RPGs, sandboxes, or exploration games. Trigger keywords: open_world, chunk_streaming, floating_origin, HLOD, persistent_state, POI_discovery, threaded_loading.\"",
+    "description": "Expert blueprint for open world games including chunk-based streaming (load/unload regions dynamically), floating origin (prevent precision jitter beyond 5000 units), HLOD (hierarchical LOD for distant meshes), persistent state (track entity changes across unloaded chunks), POI discovery systems (compass, markers), and threaded loading (prevent stutters). Use for RPGs, sandboxes, or exploration games. Trigger keywords: open_world, chunk_streaming, floating_origin, HLOD, persistent_state, POI_discovery, threaded_loading.",
     "keywords": [
       "open_world",
       "chunk_streaming",
@@ -718,7 +1464,7 @@
   },
   {
     "name": "godot-genre-party",
-    "description": "\"Expert blueprint for party games including minigame resource system (define via .tres files), local multiplayer input (4-player controller management), asymmetric gameplay (1v3 balance), scene management (clean minigame loading/unloading), persistent scoring (track wins across rounds), and split-screen rendering (SubViewport per player). Use for Mario Party-style games or WarioWare collections. Trigger keywords: party_game, minigame_collection, local_multiplayer, asymmetric_gameplay, split_screen, dynamic_input_mapping.\"",
+    "description": "Expert blueprint for party games including minigame resource system (define via .tres files), local multiplayer input (4-player controller management), asymmetric gameplay (1v3 balance), scene management (clean minigame loading/unloading), persistent scoring (track wins across rounds), and split-screen rendering (SubViewport per player). Use for Mario Party-style games or WarioWare collections. Trigger keywords: party_game, minigame_collection, local_multiplayer, asymmetric_gameplay, split_screen, dynamic_input_mapping.",
     "keywords": [
       "party_game",
       "minigame_collection",
@@ -730,7 +1476,7 @@
   },
   {
     "name": "godot-genre-platformer",
-    "description": "\"Expert blueprint for platformer games including precision movement (coyote time, jump buffering, variable jump height), game feel polish (squash/stretch, particle trails, camera shake), level design principles (difficulty curves, checkpoint placement), collectible systems (progression rewards), and accessibility options (assist mode, remappable controls). Based on Celeste/Hollow Knight design research. Trigger keywords: platformer, coyote_time, jump_buffer, game_feel, level_design, precision_movement.\"",
+    "description": "Expert blueprint for platformer games including precision movement (coyote time, jump buffering, variable jump height), game feel polish (squash/stretch, particle trails, camera shake), level design principles (difficulty curves, checkpoint placement), collectible systems (progression rewards), and accessibility options (assist mode, remappable controls). Based on Celeste/Hollow Knight design research. Trigger keywords: platformer, coyote_time, jump_buffer, game_feel, level_design, precision_movement.",
     "keywords": [
       "platformer",
       "coyote_time",
@@ -742,7 +1488,7 @@
   },
   {
     "name": "godot-genre-puzzle",
-    "description": "\"Expert blueprint for puzzle games including undo systems (Command pattern for state reversal), grid-based logic (Sokoban-style mechanics), non-verbal tutorials (teach through level design), win condition checking, state management, and visual feedback (instant confirmation of valid moves). Use for logic puzzles, physics puzzles, or match-3 games. Trigger keywords: puzzle_game, undo_system, command_pattern, grid_logic, non_verbal_tutorial, state_management.\"",
+    "description": "Expert blueprint for puzzle games including undo systems (Command pattern for state reversal), grid-based logic (Sokoban-style mechanics), non-verbal tutorials (teach through level design), win condition checking, state management, and visual feedback (instant confirmation of valid moves). Use for logic puzzles, physics puzzles, or match-3 games. Trigger keywords: puzzle_game, undo_system, command_pattern, grid_logic, non_verbal_tutorial, state_management.",
     "keywords": [
       "puzzle_game",
       "undo_system",
@@ -754,7 +1500,7 @@
   },
   {
     "name": "godot-genre-racing",
-    "description": "\"Expert blueprint for racing games including vehicle physics (VehicleBody3D, suspension, friction), checkpoint systems (prevent shortcuts), rubber-banding AI (keep races competitive), drifting mechanics (reduce friction, boost on exit), camera feel (FOV increase with speed, motion blur), and UI (speedometer, lap timer, minimap). Use for arcade racers, kart racing, or realistic sims. Trigger keywords: racing_game, vehicle_physics, checkpoint_system, rubber_banding, drifting_mechanics, camera_feel.\"",
+    "description": "Expert blueprint for racing games including vehicle physics (VehicleBody3D, suspension, friction), checkpoint systems (prevent shortcuts), rubber-banding AI (keep races competitive), drifting mechanics (reduce friction, boost on exit), camera feel (FOV increase with speed, motion blur), and UI (speedometer, lap timer, minimap). Use for arcade racers, kart racing, or realistic sims. Trigger keywords: racing_game, vehicle_physics, checkpoint_system, rubber_banding, drifting_mechanics, camera_feel.",
     "keywords": [
       "racing_game",
       "vehicle_physics",
@@ -766,7 +1512,7 @@
   },
   {
     "name": "godot-genre-rhythm",
-    "description": "\"Expert blueprint for rhythm games including audio synchronization (BPM conductor, latency compensation with AudioServer.get_time_since_last_mix), note highways (scroll speed, timing windows), judgment systems (Perfect/Great/Good/Bad/Miss), scoring with combo multipliers, input processing (lane-based, hold note detection), and chart/beatmap loading. Based on DDR/osu!/Beat Saber research. Trigger keywords: rhythm_game, audio_sync, timing_judgment, note_highway, combo_system, BPM_conductor, latency_compensation.\"",
+    "description": "Expert blueprint for rhythm games including audio synchronization (BPM conductor, latency compensation with AudioServer.get_time_since_last_mix), note highways (scroll speed, timing windows), judgment systems (Perfect/Great/Good/Bad/Miss), scoring with combo multipliers, input processing (lane-based, hold note detection), and chart/beatmap loading. Based on DDR/osu!/Beat Saber research. Trigger keywords: rhythm_game, audio_sync, timing_judgment, note_highway, combo_system, BPM_conductor, latency_compensation.",
     "keywords": [
       "rhythm_game",
       "audio_sync",
@@ -779,7 +1525,7 @@
   },
   {
     "name": "godot-genre-roguelike",
-    "description": "\"Expert blueprint for roguelikes including procedural generation (Walker method, BSP rooms), permadeath with meta-progression (unlock persistence), run state vs meta state separation, seeded RNG (shareable runs), loot/relic systems (hook-based modifiers), and difficulty scaling (floor-based progression). Use for dungeon crawlers, action roguelikes, or roguelites. Trigger keywords: roguelike, procedural_generation, permadeath, meta_progression, seeded_RNG, relic_system, run_state.\"",
+    "description": "Expert blueprint for roguelikes including procedural generation (Walker method, BSP rooms), permadeath with meta-progression (unlock persistence), run state vs meta state separation, seeded RNG (shareable runs), loot/relic systems (hook-based modifiers), and difficulty scaling (floor-based progression). Use for dungeon crawlers, action roguelikes, or roguelites. Trigger keywords: roguelike, procedural_generation, permadeath, meta_progression, seeded_RNG, relic_system, run_state.",
     "keywords": [
       "roguelike",
       "procedural_generation",
@@ -792,7 +1538,7 @@
   },
   {
     "name": "godot-genre-romance",
-    "description": "\"Expert blueprint for romance games and dating sims (Tokimeki Memorial, Monster Prom, Persona social links) focusing on affection systems, multi-stat relationships, dated events, and route branching. Use when building relationship-centric games, social simulations, or otome games. Keywords romance, dating sim, affection system, relationship stats, date events, character routes, love interest.\"",
+    "description": "Expert blueprint for romance games and dating sims (Tokimeki Memorial, Monster Prom, Persona social links) focusing on affection systems, multi-stat relationships, dated events, and route branching. Use when building relationship-centric games, social simulations, or otome games. Keywords romance, dating sim, affection system, relationship stats, date events, character routes, love interest.",
     "keywords": [
       "romance",
       "dating sim",
@@ -805,7 +1551,7 @@
   },
   {
     "name": "godot-genre-rts",
-    "description": "\"Expert blueprint for real-time strategy games including unit selection (drag box, shift-add), command systems (move, attack, gather), pathfinding (NavigationAgent2D with RVO avoidance), fog of war (SubViewport mask shader), resource economy (gather/build loop), and AI opponents (behavior trees, utility AI). Use for base-building RTS or tactical combat games. Trigger keywords: RTS, unit_selection, command_system, fog_of_war, pathfinding_RVO, resource_economy, command_queue.\"",
+    "description": "Expert blueprint for real-time strategy games including unit selection (drag box, shift-add), command systems (move, attack, gather), pathfinding (NavigationAgent2D with RVO avoidance), fog of war (SubViewport mask shader), resource economy (gather/build loop), and AI opponents (behavior trees, utility AI). Use for base-building RTS or tactical combat games. Trigger keywords: RTS, unit_selection, command_system, fog_of_war, pathfinding_RVO, resource_economy, command_queue.",
     "keywords": [
       "RTS",
       "unit_selection",
@@ -818,7 +1564,7 @@
   },
   {
     "name": "godot-genre-sandbox",
-    "description": "\"Expert blueprint for sandbox games (Minecraft, Terraria, Garry's Mod) with physics-based interactions, cellular automata, emergent gameplay, and creative tools. Use when building open-world creation games with voxels, element systems, player-created structures, or procedural worlds. Keywords voxel, sandbox, cellular automata, MultiMesh, chunk management, emergent behavior, creative mode.\"",
+    "description": "Expert blueprint for sandbox games (Minecraft, Terraria, Garry's Mod) with physics-based interactions, cellular automata, emergent gameplay, and creative tools. Use when building open-world creation games with voxels, element systems, player-created structures, or procedural worlds. Keywords voxel, sandbox, cellular automata, MultiMesh, chunk management, emergent behavior, creative mode.",
     "keywords": [
       "voxel",
       "sandbox",
@@ -831,7 +1577,7 @@
   },
   {
     "name": "godot-genre-shooter",
-    "description": "\"Expert blueprint for FPS/TPS shooter games (Call of Duty, Counter-Strike, Apex Legends, Fortnite) covering weapon systems, recoil patterns, hitscan vs projectile, aim assist, multiplayer prediction, and gunplay feel. Use when building competitive shooters, battle royales, or tactical FPS games requiring responsive combat. Keywords hitscan, recoil pattern, aim assist, client prediction, weapon archetype, projectile physics, hit registration.\"",
+    "description": "Expert blueprint for FPS/TPS shooter games (Call of Duty, Counter-Strike, Apex Legends, Fortnite) covering weapon systems, recoil patterns, hitscan vs projectile, aim assist, multiplayer prediction, and gunplay feel. Use when building competitive shooters, battle royales, or tactical FPS games requiring responsive combat. Keywords hitscan, recoil pattern, aim assist, client prediction, weapon archetype, projectile physics, hit registration.",
     "keywords": [
       "hitscan",
       "recoil pattern",
@@ -844,7 +1590,7 @@
   },
   {
     "name": "godot-genre-shooter-fps",
-    "description": "\"Expert blueprint for First-Person Shooters (Doom, Quake, Battlefield, Overwatch) focusing on physics-based movement, acceleration/friction, camera sway, weapon bobbing, and high-precision hit registration. Use when building tight, responsive FPS combat with advanced camera mechanics. Keywords FPS, movement physics, weapon bobbing, camera sway, hitscan, ground detection, air control.\"",
+    "description": "Expert blueprint for First-Person Shooters (Doom, Quake, Battlefield, Overwatch) focusing on physics-based movement, acceleration/friction, camera sway, weapon bobbing, and high-precision hit registration. Use when building tight, responsive FPS combat with advanced camera mechanics. Keywords FPS, movement physics, weapon bobbing, camera sway, hitscan, ground detection, air control.",
     "keywords": [
       "FPS",
       "movement physics",
@@ -857,7 +1603,7 @@
   },
   {
     "name": "godot-genre-simulation",
-    "description": "\"Expert blueprint for simulation and tycoon games (SimCity, RollerCoaster Tycoon, Factorio, Two Point Hospital) covering economy management, time progression, interconnected systems, NPC simulation, and feedback loops. Use when building management sims, tycoon games, city builders, or resource optimization games. Keywords tycoon, economy system, resource management, time scale, feedback loop, progression unlock, simulation tick.\"",
+    "description": "Expert blueprint for simulation and tycoon games (SimCity, RollerCoaster Tycoon, Factorio, Two Point Hospital) covering economy management, time progression, interconnected systems, NPC simulation, and feedback loops. Use when building management sims, tycoon games, city builders, or resource optimization games. Keywords tycoon, economy system, resource management, time scale, feedback loop, progression unlock, simulation tick.",
     "keywords": [
       "tycoon",
       "economy system",
@@ -870,7 +1616,7 @@
   },
   {
     "name": "godot-genre-sports",
-    "description": "\"Expert blueprint for sports games (FIFA, NBA 2K, Rocket League, Tony Hawk) covering physics-based ball interaction, team AI formations, contextual input, and broadcast camera systems. Use when building soccer, basketball, hockey, racing sports, or arcade sports games. Keywords ball physics, magnus effect, formation AI, team tactics, contextual controls, steering behaviors.\"",
+    "description": "Expert blueprint for sports games (FIFA, NBA 2K, Rocket League, Tony Hawk) covering physics-based ball interaction, team AI formations, contextual input, and broadcast camera systems. Use when building soccer, basketball, hockey, racing sports, or arcade sports games. Keywords ball physics, magnus effect, formation AI, team tactics, contextual controls, steering behaviors.",
     "keywords": [
       "ball physics",
       "magnus effect",
@@ -882,7 +1628,7 @@
   },
   {
     "name": "godot-genre-stealth",
-    "description": "\"Expert blueprint for stealth games (Splinter Cell, Hitman, Dishonored, Thief) covering AI detection systems, vision cones, sound propagation, alert states, light/shadow mechanics, and systemic design. Use when building stealth-action, tactical infiltration, or immersive sim games requiring enemy awareness systems. Keywords vision cone, detection, alert state, sound propagation, light level, systemic AI, gradual detection.\"",
+    "description": "Expert blueprint for stealth games (Splinter Cell, Hitman, Dishonored, Thief) covering AI detection systems, vision cones, sound propagation, alert states, light/shadow mechanics, and systemic design. Use when building stealth-action, tactical infiltration, or immersive sim games requiring enemy awareness systems. Keywords vision cone, detection, alert state, sound propagation, light level, systemic AI, gradual detection.",
     "keywords": [
       "vision cone",
       "detection",
@@ -895,7 +1641,7 @@
   },
   {
     "name": "godot-genre-survival",
-    "description": "\"Expert blueprint for survival games (Minecraft, Don't Starve, The Forest, Rust) covering needs systems, resource gathering, crafting recipes, base building, and progression balancing. Use when building open-world survival, crafting-focused, or resource management games. Keywords survival, needs system, crafting, inventory, hunger, resource gathering, base building.\"",
+    "description": "Expert blueprint for survival games (Minecraft, Don't Starve, The Forest, Rust) covering needs systems, resource gathering, crafting recipes, base building, and progression balancing. Use when building open-world survival, crafting-focused, or resource management games. Keywords survival, needs system, crafting, inventory, hunger, resource gathering, base building.",
     "keywords": [
       "survival",
       "needs system",
@@ -908,7 +1654,7 @@
   },
   {
     "name": "godot-genre-tower-defense",
-    "description": "\"Expert blueprint for tower defense games (Bloons TD, Kingdom Rush, Fieldrunners) covering wave management, tower targeting logic, path algorithms, economy balance, and mazing mechanics. Use when building TD, lane defense, or tower placement strategy games. Keywords tower defense, wave spawner, pathfinding, targeting priority, mazing, NavigationServer baking.\"",
+    "description": "Expert blueprint for tower defense games (Bloons TD, Kingdom Rush, Fieldrunners) covering wave management, tower targeting logic, path algorithms, economy balance, and mazing mechanics. Use when building TD, lane defense, or tower placement strategy games. Keywords tower defense, wave spawner, pathfinding, targeting priority, mazing, NavigationServer baking.",
     "keywords": [
       "tower defense",
       "wave spawner",
@@ -920,7 +1666,7 @@
   },
   {
     "name": "godot-genre-visual-novel",
-    "description": "\"Expert blueprint for visual novels (Doki Doki Literature Club, Phoenix Wright, Steins;Gate) focusing on branching narratives, dialogue systems, choice consequences, rollback mechanics, and persistent flags. Use when building story-driven, choice-based, or dating sim games. Keywords visual novel, dialogue system, branching narrative, typewriter effect, rollback, bbcode, RichTextLabel.\"",
+    "description": "Expert blueprint for visual novels (Doki Doki Literature Club, Phoenix Wright, Steins;Gate) focusing on branching narratives, dialogue systems, choice consequences, rollback mechanics, and persistent flags. Use when building story-driven, choice-based, or dating sim games. Keywords visual novel, dialogue system, branching narrative, typewriter effect, rollback, bbcode, RichTextLabel.",
     "keywords": [
       "visual novel",
       "dialogue system",
@@ -933,7 +1679,7 @@
   },
   {
     "name": "godot-input-handling",
-    "description": "\"Expert patterns for input handling covering InputMap actions, InputEvent processing, controller support, rebinding, deadzones, and input buffering. Use when setting up player controls, implementing input systems, or adding gamepad/accessibility features. Keywords InputMap, InputEvent, gamepad, controller, rebinding, deadzone, input buffer.\"",
+    "description": "Expert patterns for input handling covering InputMap actions, InputEvent processing, controller support, rebinding, deadzones, and input buffering. Use when setting up player controls, implementing input systems, or adding gamepad/accessibility features. Keywords InputMap, InputEvent, gamepad, controller, rebinding, deadzone, input buffer.",
     "keywords": [
       "InputMap",
       "InputEvent",
@@ -946,7 +1692,7 @@
   },
   {
     "name": "godot-inventory-system",
-    "description": "\"Expert blueprint for inventory systems (Diablo, Resident Evil, Minecraft) covering slot-based containers, stacking logic, weight limits, equipment systems, and drag-drop UI. Use when building RPG inventories, survival item management, or loot systems. Keywords inventory, slot, stack, equipment, crafting, item, Resource, drag-drop.\"",
+    "description": "Expert blueprint for inventory systems (Diablo, Resident Evil, Minecraft) covering slot-based containers, stacking logic, weight limits, equipment systems, and drag-drop UI. Use when building RPG inventories, survival item management, or loot systems. Keywords inventory, slot, stack, equipment, crafting, item, Resource, drag-drop.",
     "keywords": [
       "inventory",
       "slot",
@@ -960,46 +1706,50 @@
   },
   {
     "name": "godot-master",
-    "description": "\"Consolidated expert library for professional Godot 4.7+ game and application development. Orchestrates 92 Domain Skills through architectural workflows, anti-pattern catalogs, performance budgets, and Server API patterns. Use when: (1) starting a new Godot project, (2) designing game or app architecture, (3) building entity/component systems, (4) debugging performance or physics issues, (5) choosing between 2D/3D approaches, (6) implementing multiplayer, (7) optimizing draw calls or script time, (8) porting between platforms, (9) migrating from 4.6 to 4.7. Primary entry point for ALL Godot development tasks. Keywords: Godot 4.7, AreaLight3D, HDR, Asset Store, godot-master.\"",
+    "description": "Consolidated expert library for professional Godot 4.7+ game and application development. Orchestrates 94 Domain Skills through architectural workflows, anti-pattern catalogs, performance budgets, and Server API patterns. Use when: (1) starting a new Godot project, (2) designing game or app architecture, (3) building entity/component systems, (4) debugging performance or physics issues, (5) choosing between 2D/3D approaches, (6) implementing multiplayer, (7) optimizing draw calls or script time, (8) porting between platforms, (9) migrating from 4.6 to 4.7. Primary entry point for ALL Godot development tasks. Keywords: Godot 4.7, AreaLight3D, HDR, Asset Store, godot-master.",
     "keywords": [
-      "Godot 4"
+      "Godot 4.7",
+      "AreaLight3D",
+      "HDR",
+      "Asset Store",
+      "godot-master"
     ]
   },
   {
     "name": "godot-mechanic-revival",
     "description": "Use when implementing player death, resurrection, or \"second chance\" mechanics.",
     "keywords": [
-      "player",
-      "when",
-      "resurrection",
-      "mechanics",
-      "implementing",
-      "second",
+      "chance",
       "death",
-      "chance"
+      "implementing",
+      "mechanics",
+      "player",
+      "resurrection",
+      "second",
+      "when"
     ]
   },
   {
     "name": "godot-mechanic-secrets",
     "description": "Use when implementing cheat codes, hidden interactions, or unlockable content based on player input/behavior.",
     "keywords": [
-      "unlockable",
       "based",
-      "player",
       "behavior",
-      "content",
-      "interactions",
-      "when",
-      "input",
+      "cheat",
       "codes",
-      "implementing",
+      "content",
       "hidden",
-      "cheat"
+      "implementing",
+      "input",
+      "interactions",
+      "player",
+      "unlockable",
+      "when"
     ]
   },
   {
     "name": "godot-multiplayer-networking",
-    "description": "\"Expert blueprint for multiplayer networking (Among Us, Brawlhalla, Terraria) using Godot's high-level API covering RPCs, state synchronization, authoritative servers, client prediction, and lobby systems. Use when building online multiplayer, LAN co-op, or networked games. Keywords multiplayer, RPC, ENetMultiplayerPeer, MultiplayerSynchronizer, authority, client prediction, rollback.\"",
+    "description": "Expert blueprint for multiplayer networking (Among Us, Brawlhalla, Terraria) using Godot's high-level API covering RPCs, state synchronization, authoritative servers, client prediction, and lobby systems. Use when building online multiplayer, LAN co-op, or networked games. Keywords multiplayer, RPC, ENetMultiplayerPeer, MultiplayerSynchronizer, authority, client prediction, rollback.",
     "keywords": [
       "multiplayer",
       "RPC",
@@ -1012,7 +1762,7 @@
   },
   {
     "name": "godot-navigation-pathfinding",
-    "description": "\"Expert blueprint for AI pathfinding (tower defense, RTS, stealth) using NavigationAgent2D/3D, NavigationServer, avoidance, and dynamic navigation mesh generation. Use when implementing enemy AI, NPC movement, or obstacle avoidance. Keywords NavigationAgent2D, NavigationRegion2D, pathfinding, NavigationServer, avoidance, baking, NavigationObstacle.\"",
+    "description": "Expert blueprint for AI pathfinding (tower defense, RTS, stealth) using NavigationAgent2D/3D, NavigationServer, avoidance, and dynamic navigation mesh generation. Use when implementing enemy AI, NPC movement, or obstacle avoidance. Keywords NavigationAgent2D, NavigationRegion2D, pathfinding, NavigationServer, avoidance, baking, NavigationObstacle.",
     "keywords": [
       "NavigationAgent2D",
       "NavigationRegion2D",
@@ -1025,7 +1775,7 @@
   },
   {
     "name": "godot-particles",
-    "description": "\"Expert blueprint for GPU particle systems (explosions, magic effects, weather, trails) using GPUParticles2D/3D, ParticleProcessMaterial, gradients, sub-emitters, and custom shaders. Use when creating VFX, environmental effects, or visual feedback. Keywords GPUParticles2D, ParticleProcessMaterial, emission_shape, color_ramp, sub_emitter, one_shot.\"",
+    "description": "Expert blueprint for GPU particle systems (explosions, magic effects, weather, trails) using GPUParticles2D/3D, ParticleProcessMaterial, gradients, sub-emitters, and custom shaders. Use when creating VFX, environmental effects, or visual feedback. Keywords GPUParticles2D, ParticleProcessMaterial, emission_shape, color_ramp, sub_emitter, one_shot.",
     "keywords": [
       "GPUParticles2D",
       "ParticleProcessMaterial",
@@ -1037,7 +1787,7 @@
   },
   {
     "name": "godot-performance-optimization",
-    "description": "\"Expert blueprint for performance profiling and optimization (frame drops, memory leaks, draw calls) using Godot Profiler, object pooling, visibility culling, and bottleneck identification. Use when diagnosing lag, optimizing for target FPS, or reducing memory usage. Keywords profiling, Godot Profiler, bottleneck, object pooling, VisibleOnScreenNotifier, draw calls, MultiMesh.\"",
+    "description": "Expert blueprint for performance profiling and optimization (frame drops, memory leaks, draw calls) using Godot Profiler, object pooling, visibility culling, and bottleneck identification. Use when diagnosing lag, optimizing for target FPS, or reducing memory usage. Keywords profiling, Godot Profiler, bottleneck, object pooling, VisibleOnScreenNotifier, draw calls, MultiMesh.",
     "keywords": [
       "profiling",
       "Godot Profiler",
@@ -1050,7 +1800,7 @@
   },
   {
     "name": "godot-physics-3d",
-    "description": "\"Expert patterns for Godot 3D physics (Jolt/PhysX), including Ragdolls, PhysicalBones, Joint3D constraints, RayCasting optimizations, and collision layers. Use for rigid body simulations, character physics, or complex interactions. Trigger keywords: RigidBody3D, PhysicalBone3D, Jolt, Ragdoll, Skeleton3D, Joint3D, PinJoint3D, HingeJoint3D, Generic6DOFJoint3D, RayCast3D, PhysicsDirectSpaceState3D.\"",
+    "description": "Expert patterns for Godot 3D physics (Jolt/PhysX), including Ragdolls, PhysicalBones, Joint3D constraints, RayCasting optimizations, and collision layers. Use for rigid body simulations, character physics, or complex interactions. Trigger keywords: RigidBody3D, PhysicalBone3D, Jolt, Ragdoll, Skeleton3D, Joint3D, PinJoint3D, HingeJoint3D, Generic6DOFJoint3D, RayCast3D, PhysicsDirectSpaceState3D.",
     "keywords": [
       "RigidBody3D",
       "PhysicalBone3D",
@@ -1067,7 +1817,7 @@
   },
   {
     "name": "godot-platform-console",
-    "description": "\"Expert blueprint for console platforms (PlayStation, Xbox, Nintendo Switch) covering controller-first UI, certification requirements (TRCs/TCRs), platform services (achievements, cloud saves), and performance compliance. Use when targeting console releases or implementing gamepad-only interfaces. Keywords console, PlayStation, Xbox, Switch, TRC, TCR, certification, controller, gamepad, achievements.\"",
+    "description": "Expert blueprint for console platforms (PlayStation, Xbox, Nintendo Switch) covering controller-first UI, certification requirements (TRCs/TCRs), platform services (achievements, cloud saves), and performance compliance. Use when targeting console releases or implementing gamepad-only interfaces. Keywords console, PlayStation, Xbox, Switch, TRC, TCR, certification, controller, gamepad, achievements.",
     "keywords": [
       "console",
       "PlayStation",
@@ -1083,7 +1833,7 @@
   },
   {
     "name": "godot-platform-desktop",
-    "description": "\"Expert blueprint for desktop platforms (Windows/Linux/macOS) covering keyboard/mouse controls, settings menus, window management (fullscreen, resolution), keybind remapping, and Steam integration. Use when targeting PC platforms or implementing desktop-specific features. Keywords desktop, Windows, Linux, macOS, settings, keybinds, ConfigFile, DisplayServer, Steam, fullscreen.\"",
+    "description": "Expert blueprint for desktop platforms (Windows/Linux/macOS) covering keyboard/mouse controls, settings menus, window management (fullscreen, resolution), keybind remapping, and Steam integration. Use when targeting PC platforms or implementing desktop-specific features. Keywords desktop, Windows, Linux, macOS, settings, keybinds, ConfigFile, DisplayServer, Steam, fullscreen.",
     "keywords": [
       "desktop",
       "Windows",
@@ -1099,7 +1849,7 @@
   },
   {
     "name": "godot-platform-mobile",
-    "description": "\"Expert blueprint for mobile platforms (Android/iOS) covering touch controls, virtual joysticks, responsive UI, safe areas (notches), battery optimization, and app store guidelines. Use when targeting mobile releases or implementing touch input. Keywords mobile, Android, iOS, touch, InputEventScreenTouch, virtual joystick, safe area, battery, app store, orientation.\"",
+    "description": "Expert blueprint for mobile platforms (Android/iOS) covering touch controls, virtual joysticks, responsive UI, safe areas (notches), battery optimization, and app store guidelines. Use when targeting mobile releases or implementing touch input. Keywords mobile, Android, iOS, touch, InputEventScreenTouch, virtual joystick, safe area, battery, app store, orientation.",
     "keywords": [
       "mobile",
       "Android",
@@ -1115,7 +1865,7 @@
   },
   {
     "name": "godot-platform-vr",
-    "description": "\"Expert blueprint for VR platforms (Meta Quest, PSVR, SteamVR, Pico) covering XR toolkit (OpenXR), comfort settings (vignetting, snap turning, teleport), motion controls, hand tracking, and 90+ FPS requirements. Use when targeting VR headsets or implementing immersive 3D experiences. Keywords VR, XR, OpenXR, Meta Quest, motion sickness, comfort, locomotion, XRController3D, foveated rendering.\"",
+    "description": "Expert blueprint for VR platforms (Meta Quest, PSVR, SteamVR, Pico) covering XR toolkit (OpenXR), comfort settings (vignetting, snap turning, teleport), motion controls, hand tracking, and 90+ FPS requirements. Use when targeting VR headsets or implementing immersive 3D experiences. Keywords VR, XR, OpenXR, Meta Quest, motion sickness, comfort, locomotion, XRController3D, foveated rendering.",
     "keywords": [
       "VR",
       "XR",
@@ -1130,7 +1880,7 @@
   },
   {
     "name": "godot-platform-web",
-    "description": "\"Expert blueprint for web/browser platforms (HTML5 export) covering WebGL/WebGPU rendering, custom loading screens, JavaScriptBridge integration, LocalStorage saves, and size optimization. Use when exporting to web or implementing browser-specific features. Keywords web, HTML5, WebGL, WebGPU, JavaScriptBridge, localStorage, canvas, browser API.\"",
+    "description": "Expert blueprint for web/browser platforms (HTML5 export) covering WebGL/WebGPU rendering, custom loading screens, JavaScriptBridge integration, LocalStorage saves, and size optimization. Use when exporting to web or implementing browser-specific features. Keywords web, HTML5, WebGL, WebGPU, JavaScriptBridge, localStorage, canvas, browser API.",
     "keywords": [
       "web",
       "HTML5",
@@ -1144,7 +1894,7 @@
   },
   {
     "name": "godot-procedural-generation",
-    "description": "\"Expert blueprint for procedural content generation (dungeons, terrain, loot, levels) using FastNoiseLite, random walks, BSP trees, Wave Function Collapse, and seeded randomization. Use when creating roguelikes, sandbox games, or dynamic content. Keywords procedural, generation, FastNoiseLite, Perlin noise, BSP, drunkard walk, Wave Function Collapse, seeding.\"",
+    "description": "Expert blueprint for procedural content generation (dungeons, terrain, loot, levels) using FastNoiseLite, random walks, BSP trees, Wave Function Collapse, and seeded randomization. Use when creating roguelikes, sandbox games, or dynamic content. Keywords procedural, generation, FastNoiseLite, Perlin noise, BSP, drunkard walk, Wave Function Collapse, seeding.",
     "keywords": [
       "procedural",
       "generation",
@@ -1158,18 +1908,20 @@
   },
   {
     "name": "godot-project-foundations",
-    "description": "\"Expert blueprint for Godot 4 project organization (feature-based folders, naming conventions, version control). Enforces snake_case files, PascalCase nodes, %SceneUniqueNames, and .gitignore best practices. Use when starting new projects or refactoring structure. Keywords project organization, naming conventions, snake_case, PascalCase, feature-based, .gitignore, .gdignore.\"",
+    "description": "Expert blueprint for Godot 4 project organization (feature-based folders, naming conventions, version control). Enforces snake_case files, PascalCase nodes, %SceneUniqueNames, and .gitignore best practices. Use when starting new projects or refactoring structure. Keywords project organization, naming conventions, snake_case, PascalCase, feature-based, .gitignore, .gdignore.",
     "keywords": [
       "project organization",
       "naming conventions",
       "snake_case",
       "PascalCase",
-      "feature-based"
+      "feature-based",
+      ".gitignore",
+      ".gdignore"
     ]
   },
   {
     "name": "godot-project-templates",
-    "description": "\"Expert blueprint for genre-specific project boilerplates (2D platformer, top-down RPG, 3D FPS) including directory structures, AutoLoad patterns, and core systems. Use when bootstrapping new projects or migrating architecture. Keywords project templates, boilerplate, 2D platformer, RPG, FPS, AutoLoad, scene structure.\"",
+    "description": "Expert blueprint for genre-specific project boilerplates (2D platformer, top-down RPG, 3D FPS) including directory structures, AutoLoad patterns, and core systems. Use when bootstrapping new projects or migrating architecture. Keywords project templates, boilerplate, 2D platformer, RPG, FPS, AutoLoad, scene structure.",
     "keywords": [
       "project templates",
       "boilerplate",
@@ -1181,8 +1933,1284 @@
     ]
   },
   {
+    "name": "godot-prompter-2d-essentials",
+    "description": "Imported GodotPrompter guidance for 2d-essentials workflows in game development projects. Use when working with Godot 2D fundamentals: draw order, z_index, CanvasLayer, sprites, and 2D transforms.",
+    "keywords": [
+      "canvaslayer",
+      "development",
+      "draw",
+      "essentials",
+      "fundamentals",
+      "game",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "order",
+      "projects",
+      "sprites",
+      "transforms",
+      "when",
+      "with",
+      "workflows",
+      "working",
+      "z_index"
+    ]
+  },
+  {
+    "name": "godot-prompter-3d-essentials",
+    "description": "Imported GodotPrompter guidance for 3d-essentials workflows in game development projects. Use when working with Godot 3D fundamentals: Node3D transforms, cameras, lights, meshes, and environment.",
+    "keywords": [
+      "cameras",
+      "development",
+      "environment",
+      "essentials",
+      "fundamentals",
+      "game",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "lights",
+      "meshes",
+      "node3d",
+      "projects",
+      "transforms",
+      "when",
+      "with",
+      "workflows",
+      "working"
+    ]
+  },
+  {
+    "name": "godot-prompter-ability-system",
+    "description": "Imported GodotPrompter guidance for ability-system workflows in game development projects. Use when building a data-driven ability system in Godot with Resource-based abilities, cooldowns, effects, and tags.",
+    "keywords": [
+      "abilities",
+      "ability",
+      "based",
+      "building",
+      "cooldowns",
+      "data",
+      "development",
+      "driven",
+      "effects",
+      "game",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "projects",
+      "resource",
+      "system",
+      "tags",
+      "when",
+      "with",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-addon-development",
+    "description": "Imported GodotPrompter guidance for addon-development workflows in game development projects. Use when writing Godot editor plugins: custom nodes, inspector plugins, docks, gizmos, and toolbar buttons.",
+    "keywords": [
+      "addon",
+      "buttons",
+      "custom",
+      "development",
+      "docks",
+      "editor",
+      "game",
+      "gizmos",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "inspector",
+      "nodes",
+      "plugins",
+      "projects",
+      "toolbar",
+      "when",
+      "workflows",
+      "writing"
+    ]
+  },
+  {
+    "name": "godot-prompter-ai-navigation",
+    "description": "Imported GodotPrompter guidance for ai-navigation workflows in game development projects. Use when implementing NavigationAgent2D/3D pathfinding, steering behaviors, simple behavior trees, or patrol patterns.",
+    "keywords": [
+      "behavior",
+      "behaviors",
+      "development",
+      "game",
+      "godotprompter",
+      "guidance",
+      "implementing",
+      "imported",
+      "navigation",
+      "navigationagent2d",
+      "pathfinding",
+      "patrol",
+      "patterns",
+      "projects",
+      "simple",
+      "steering",
+      "trees",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-animation-system",
+    "description": "Imported GodotPrompter guidance for animation-system workflows in game development projects. Use when choosing between AnimationPlayer and AnimationTree, blending animations, or driving state-machine animation.",
+    "keywords": [
+      "animation",
+      "animationplayer",
+      "animations",
+      "animationtree",
+      "between",
+      "blending",
+      "choosing",
+      "development",
+      "driving",
+      "game",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "machine",
+      "projects",
+      "state",
+      "system",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-assets-pipeline",
+    "description": "Imported GodotPrompter guidance for assets-pipeline workflows in game development projects. Use when configuring Godot asset import settings, .import files, texture/audio/3D import, and resource loading.",
+    "keywords": [
+      "asset",
+      "assets",
+      "audio",
+      "configuring",
+      "development",
+      "files",
+      "game",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "import",
+      "imported",
+      "loading",
+      "pipeline",
+      "projects",
+      "resource",
+      "settings",
+      "texture",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-audio-system",
+    "description": "Imported GodotPrompter guidance for audio-system workflows in game development projects. Use when setting up Godot audio buses, AudioStreamPlayer nodes, positional audio, and music playback.",
+    "keywords": [
+      "audio",
+      "audiostreamplayer",
+      "buses",
+      "development",
+      "game",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "music",
+      "nodes",
+      "playback",
+      "positional",
+      "projects",
+      "setting",
+      "system",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-beehave",
+    "description": "Imported GodotPrompter guidance for beehave workflows in game development projects. Use when building behavior trees with the Beehave GDScript addon.",
+    "keywords": [
+      "addon",
+      "beehave",
+      "behavior",
+      "building",
+      "development",
+      "game",
+      "gdscript",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "projects",
+      "trees",
+      "when",
+      "with",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-camera-system",
+    "description": "Imported GodotPrompter guidance for camera-system workflows in game development projects. Use when setting up Camera2D/Camera3D limits, smoothing, follow, zoom, and screen shake in Godot.",
+    "keywords": [
+      "camera",
+      "camera2d",
+      "camera3d",
+      "development",
+      "follow",
+      "game",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "limits",
+      "projects",
+      "screen",
+      "setting",
+      "shake",
+      "smoothing",
+      "system",
+      "when",
+      "workflows",
+      "zoom"
+    ]
+  },
+  {
+    "name": "godot-prompter-component-system",
+    "description": "Imported GodotPrompter guidance for component-system workflows in game development projects. Use when structuring entities by composition with small reusable component nodes instead of deep inheritance.",
+    "keywords": [
+      "component",
+      "composition",
+      "deep",
+      "development",
+      "entities",
+      "game",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "inheritance",
+      "instead",
+      "nodes",
+      "projects",
+      "reusable",
+      "small",
+      "structuring",
+      "system",
+      "when",
+      "with",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-csharp-godot",
+    "description": "Imported GodotPrompter guidance for csharp-godot workflows in game development projects. Use when writing Godot games in C#: project setup, conventions, API differences from GDScript, and interop.",
+    "keywords": [
+      "conventions",
+      "csharp",
+      "development",
+      "differences",
+      "from",
+      "game",
+      "games",
+      "gdscript",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "interop",
+      "project",
+      "projects",
+      "setup",
+      "when",
+      "workflows",
+      "writing"
+    ]
+  },
+  {
+    "name": "godot-prompter-csharp-signals",
+    "description": "Imported GodotPrompter guidance for csharp-signals workflows in game development projects. Use when declaring, connecting, and emitting Godot signals from C#.",
+    "keywords": [
+      "connecting",
+      "csharp",
+      "declaring",
+      "development",
+      "emitting",
+      "from",
+      "game",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "projects",
+      "signals",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-dedicated-server",
+    "description": "Imported GodotPrompter guidance for dedicated-server workflows in game development projects. Use when building a headless Godot dedicated server: export, server loop, and deployment.",
+    "keywords": [
+      "building",
+      "dedicated",
+      "deployment",
+      "development",
+      "export",
+      "game",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "headless",
+      "imported",
+      "loop",
+      "projects",
+      "server",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-dependency-injection",
+    "description": "Imported GodotPrompter guidance for dependency-injection workflows in game development projects. Use when decoupling Godot systems with dependency injection, service locators, or exported dependencies for testability.",
+    "keywords": [
+      "decoupling",
+      "dependencies",
+      "dependency",
+      "development",
+      "exported",
+      "game",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "injection",
+      "locators",
+      "projects",
+      "service",
+      "systems",
+      "testability",
+      "when",
+      "with",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-dialogue-manager",
+    "description": "Imported GodotPrompter guidance for dialogue-manager workflows in game development projects. Use when authoring branching dialogue with the Dialogue Manager addon, including conditions, mutations, and translation.",
+    "keywords": [
+      "addon",
+      "authoring",
+      "branching",
+      "conditions",
+      "development",
+      "dialogue",
+      "game",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "including",
+      "manager",
+      "mutations",
+      "projects",
+      "translation",
+      "when",
+      "with",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-dialogue-system",
+    "description": "Imported GodotPrompter guidance for dialogue-system workflows in game development projects. Use when building a custom Resource-based dialogue system with a dialogue UI in Godot.",
+    "keywords": [
+      "based",
+      "building",
+      "custom",
+      "development",
+      "dialogue",
+      "game",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "projects",
+      "resource",
+      "system",
+      "when",
+      "with",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-event-bus",
+    "description": "Imported GodotPrompter guidance for event-bus workflows in game development projects. Use when setting up a global signal hub autoload so unrelated nodes communicate without direct references.",
+    "keywords": [
+      "autoload",
+      "communicate",
+      "development",
+      "direct",
+      "event",
+      "game",
+      "global",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "nodes",
+      "projects",
+      "references",
+      "setting",
+      "signal",
+      "unrelated",
+      "when",
+      "without",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-export-pipeline",
+    "description": "Imported GodotPrompter guidance for export-pipeline workflows in game development projects. Use when configuring Godot export presets, platform templates, and automated or CI exports.",
+    "keywords": [
+      "automated",
+      "configuring",
+      "development",
+      "export",
+      "exports",
+      "game",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "pipeline",
+      "platform",
+      "presets",
+      "projects",
+      "templates",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-gdextension",
+    "description": "Imported GodotPrompter guidance for gdextension workflows in game development projects. Use when writing native C++ or Rust code for Godot through GDExtension or wrapping an existing native library.",
+    "keywords": [
+      "code",
+      "development",
+      "existing",
+      "game",
+      "gdextension",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "library",
+      "native",
+      "projects",
+      "rust",
+      "through",
+      "when",
+      "workflows",
+      "wrapping",
+      "writing"
+    ]
+  },
+  {
+    "name": "godot-prompter-gdscript-advanced",
+    "description": "Imported GodotPrompter guidance for gdscript-advanced workflows in game development projects. Use when optimizing or hardening production GDScript beyond the fundamentals.",
+    "keywords": [
+      "advanced",
+      "beyond",
+      "development",
+      "fundamentals",
+      "game",
+      "gdscript",
+      "godotprompter",
+      "guidance",
+      "hardening",
+      "imported",
+      "optimizing",
+      "production",
+      "projects",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-gdscript-patterns",
+    "description": "Imported GodotPrompter guidance for gdscript-patterns workflows in game development projects. Use when writing idiomatic, statically typed GDScript: type hints, signals, exports, and common patterns.",
+    "keywords": [
+      "common",
+      "development",
+      "exports",
+      "game",
+      "gdscript",
+      "godotprompter",
+      "guidance",
+      "hints",
+      "idiomatic",
+      "imported",
+      "patterns",
+      "projects",
+      "signals",
+      "statically",
+      "type",
+      "typed",
+      "when",
+      "workflows",
+      "writing"
+    ]
+  },
+  {
+    "name": "godot-prompter-godot-brainstorming",
+    "description": "Imported GodotPrompter guidance for godot-brainstorming workflows in game development projects. Use when designing a Godot feature or system before coding: scene tree, signal map, and data flow.",
+    "keywords": [
+      "before",
+      "brainstorming",
+      "coding",
+      "data",
+      "designing",
+      "development",
+      "feature",
+      "flow",
+      "game",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "projects",
+      "scene",
+      "signal",
+      "system",
+      "tree",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-godot-code-review",
+    "description": "Imported GodotPrompter guidance for godot-code-review workflows in game development projects. Use when reviewing a Godot project's GDScript or C# against a structured checklist.",
+    "keywords": [
+      "against",
+      "checklist",
+      "code",
+      "development",
+      "game",
+      "gdscript",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "project",
+      "projects",
+      "review",
+      "reviewing",
+      "structured",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-godot-debugging",
+    "description": "Imported GodotPrompter guidance for godot-debugging workflows in game development projects. Use when diagnosing Godot runtime issues with breakpoints, signal tracing, the profiler, and remote scene inspection.",
+    "keywords": [
+      "breakpoints",
+      "debugging",
+      "development",
+      "diagnosing",
+      "game",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "inspection",
+      "issues",
+      "profiler",
+      "projects",
+      "remote",
+      "runtime",
+      "scene",
+      "signal",
+      "tracing",
+      "when",
+      "with",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-godot-optimization",
+    "description": "Imported GodotPrompter guidance for godot-optimization workflows in game development projects. Use when optimizing Godot performance: profiler, draw calls, physics, GDScript hot paths, memory, and pooling.",
+    "keywords": [
+      "calls",
+      "development",
+      "draw",
+      "game",
+      "gdscript",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "memory",
+      "optimization",
+      "optimizing",
+      "paths",
+      "performance",
+      "physics",
+      "pooling",
+      "profiler",
+      "projects",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-godot-project-setup",
+    "description": "Imported GodotPrompter guidance for godot-project-setup workflows in game development projects. Use when scaffolding a new Godot project: folder layout, project settings, autoloads, and version control.",
+    "keywords": [
+      "autoloads",
+      "control",
+      "development",
+      "folder",
+      "game",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "layout",
+      "project",
+      "projects",
+      "scaffolding",
+      "settings",
+      "setup",
+      "version",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-godot-testing",
+    "description": "Imported GodotPrompter guidance for godot-testing workflows in game development projects. Use when writing unit or integration tests for Godot with GUT or gdUnit4 and running them in CI.",
+    "keywords": [
+      "development",
+      "game",
+      "gdunit4",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "integration",
+      "projects",
+      "running",
+      "testing",
+      "tests",
+      "them",
+      "unit",
+      "when",
+      "with",
+      "workflows",
+      "writing"
+    ]
+  },
+  {
+    "name": "godot-prompter-godot-ui",
+    "description": "Imported GodotPrompter guidance for godot-ui workflows in game development projects. Use when building Godot Control-based UI: containers, anchors, themes, and focus.",
+    "keywords": [
+      "anchors",
+      "based",
+      "building",
+      "containers",
+      "control",
+      "development",
+      "focus",
+      "game",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "projects",
+      "themes",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-hud-system",
+    "description": "Imported GodotPrompter guidance for hud-system workflows in game development projects. Use when building an in-game HUD on a CanvasLayer: health bars, score, and notifications.",
+    "keywords": [
+      "bars",
+      "building",
+      "canvaslayer",
+      "development",
+      "game",
+      "godotprompter",
+      "guidance",
+      "health",
+      "imported",
+      "notifications",
+      "projects",
+      "score",
+      "system",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-input-handling",
+    "description": "Imported GodotPrompter guidance for input-handling workflows in game development projects. Use when handling input in Godot: the InputEvent pipeline, InputMap actions, _input versus _unhandled_input, and gamepads.",
+    "keywords": [
+      "_input",
+      "_unhandled_input",
+      "actions",
+      "development",
+      "game",
+      "gamepads",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "handling",
+      "imported",
+      "input",
+      "inputevent",
+      "inputmap",
+      "pipeline",
+      "projects",
+      "versus",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-inventory-system",
+    "description": "Imported GodotPrompter guidance for inventory-system workflows in game development projects. Use when building an inventory system in Godot: item Resources, slots, stacking, and inventory UI.",
+    "keywords": [
+      "building",
+      "development",
+      "game",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "inventory",
+      "item",
+      "projects",
+      "resources",
+      "slots",
+      "stacking",
+      "system",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-limboai",
+    "description": "Imported GodotPrompter guidance for limboai workflows in game development projects. Use when building behavior trees and hierarchical state machines with the LimboAI addon.",
+    "keywords": [
+      "addon",
+      "behavior",
+      "building",
+      "development",
+      "game",
+      "godotprompter",
+      "guidance",
+      "hierarchical",
+      "imported",
+      "limboai",
+      "machines",
+      "projects",
+      "state",
+      "trees",
+      "when",
+      "with",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-localization",
+    "description": "Imported GodotPrompter guidance for localization workflows in game development projects. Use when localizing a Godot game with tr(), CSV or PO translation files, and locale switching.",
+    "keywords": [
+      "development",
+      "files",
+      "game",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "locale",
+      "localization",
+      "localizing",
+      "projects",
+      "switching",
+      "translation",
+      "when",
+      "with",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-math-essentials",
+    "description": "Imported GodotPrompter guidance for math-essentials workflows in game development projects. Use when applying game math in Godot: vectors, directions, distances, interpolation, angles, and transforms.",
+    "keywords": [
+      "angles",
+      "applying",
+      "development",
+      "directions",
+      "distances",
+      "essentials",
+      "game",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "interpolation",
+      "math",
+      "projects",
+      "transforms",
+      "vectors",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-mobile-development",
+    "description": "Imported GodotPrompter guidance for mobile-development workflows in game development projects. Use when shipping a Godot game to Android or iOS: signing, lifecycle, permissions, plugins, IAP, and mobile performance.",
+    "keywords": [
+      "android",
+      "development",
+      "game",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "lifecycle",
+      "mobile",
+      "performance",
+      "permissions",
+      "plugins",
+      "projects",
+      "shipping",
+      "signing",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-multiplayer-basics",
+    "description": "Imported GodotPrompter guidance for multiplayer-basics workflows in game development projects. Use when setting up Godot multiplayer: ENet peers, RPCs, authority, and lobbies.",
+    "keywords": [
+      "authority",
+      "basics",
+      "development",
+      "enet",
+      "game",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "lobbies",
+      "multiplayer",
+      "peers",
+      "projects",
+      "rpcs",
+      "setting",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-multiplayer-sync",
+    "description": "Imported GodotPrompter guidance for multiplayer-sync workflows in game development projects. Use when replicating state with MultiplayerSynchronizer and MultiplayerSpawner, interpolation, and prediction.",
+    "keywords": [
+      "development",
+      "game",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "interpolation",
+      "multiplayer",
+      "multiplayerspawner",
+      "multiplayersynchronizer",
+      "prediction",
+      "projects",
+      "replicating",
+      "state",
+      "sync",
+      "when",
+      "with",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-multithreading",
+    "description": "Imported GodotPrompter guidance for multithreading workflows in game development projects. Use when moving expensive work off the main thread with WorkerThreadPool, Thread, Mutex, or Semaphore safely.",
+    "keywords": [
+      "development",
+      "expensive",
+      "game",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "main",
+      "moving",
+      "multithreading",
+      "mutex",
+      "projects",
+      "safely",
+      "semaphore",
+      "thread",
+      "when",
+      "with",
+      "work",
+      "workerthreadpool",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-particles-vfx",
+    "description": "Imported GodotPrompter guidance for particles-vfx workflows in game development projects. Use when creating particle effects and VFX with GPUParticles or CPUParticles in Godot.",
+    "keywords": [
+      "cpuparticles",
+      "creating",
+      "development",
+      "effects",
+      "game",
+      "godot",
+      "godotprompter",
+      "gpuparticles",
+      "guidance",
+      "imported",
+      "particle",
+      "particles",
+      "projects",
+      "when",
+      "with",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-phantom-camera",
+    "description": "Imported GodotPrompter guidance for phantom-camera workflows in game development projects. Use when managing multiple prioritized camera behaviors with the Phantom Camera addon.",
+    "keywords": [
+      "addon",
+      "behaviors",
+      "camera",
+      "development",
+      "game",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "managing",
+      "multiple",
+      "phantom",
+      "prioritized",
+      "projects",
+      "when",
+      "with",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-physics-system",
+    "description": "Imported GodotPrompter guidance for physics-system workflows in game development projects. Use when working with Godot physics bodies, collision shapes, layers and masks, areas, and raycasts.",
+    "keywords": [
+      "areas",
+      "bodies",
+      "collision",
+      "development",
+      "game",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "layers",
+      "masks",
+      "physics",
+      "projects",
+      "raycasts",
+      "shapes",
+      "system",
+      "when",
+      "with",
+      "workflows",
+      "working"
+    ]
+  },
+  {
+    "name": "godot-prompter-player-controller",
+    "description": "Imported GodotPrompter guidance for player-controller workflows in game development projects. Use when building a 2D or 3D player controller with CharacterBody or RigidBody.",
+    "keywords": [
+      "building",
+      "characterbody",
+      "controller",
+      "development",
+      "game",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "player",
+      "projects",
+      "rigidbody",
+      "when",
+      "with",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-popochiu",
+    "description": "Imported GodotPrompter guidance for popochiu workflows in game development projects. Use when building a point-and-click adventure with the Popochiu addon.",
+    "keywords": [
+      "addon",
+      "adventure",
+      "building",
+      "click",
+      "development",
+      "game",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "point",
+      "popochiu",
+      "projects",
+      "when",
+      "with",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-procedural-generation",
+    "description": "Imported GodotPrompter guidance for procedural-generation workflows in game development projects. Use when generating seeded procedural content in Godot with RandomNumberGenerator, noise, and tilemaps.",
+    "keywords": [
+      "content",
+      "development",
+      "game",
+      "generating",
+      "generation",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "noise",
+      "procedural",
+      "projects",
+      "randomnumbergenerator",
+      "seeded",
+      "tilemaps",
+      "when",
+      "with",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-resource-pattern",
+    "description": "Imported GodotPrompter guidance for resource-pattern workflows in game development projects. Use when modeling configuration, items, or stats as custom Godot Resources.",
+    "keywords": [
+      "configuration",
+      "custom",
+      "development",
+      "game",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "items",
+      "modeling",
+      "pattern",
+      "projects",
+      "resource",
+      "resources",
+      "stats",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-responsive-ui",
+    "description": "Imported GodotPrompter guidance for responsive-ui workflows in game development projects. Use when making Godot UI adapt to different resolutions and aspect ratios with stretch modes and anchors.",
+    "keywords": [
+      "adapt",
+      "anchors",
+      "aspect",
+      "development",
+      "different",
+      "game",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "making",
+      "modes",
+      "projects",
+      "ratios",
+      "resolutions",
+      "responsive",
+      "stretch",
+      "when",
+      "with",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-save-load",
+    "description": "Imported GodotPrompter guidance for save-load workflows in game development projects. Use when choosing and implementing a Godot save format: ConfigFile, JSON, Resources, or binary.",
+    "keywords": [
+      "binary",
+      "choosing",
+      "configfile",
+      "development",
+      "format",
+      "game",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "implementing",
+      "imported",
+      "json",
+      "load",
+      "projects",
+      "resources",
+      "save",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-scene-organization",
+    "description": "Imported GodotPrompter guidance for scene-organization workflows in game development projects. Use when deciding how to split, compose, and connect Godot scenes and nodes.",
+    "keywords": [
+      "compose",
+      "connect",
+      "deciding",
+      "development",
+      "game",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "nodes",
+      "organization",
+      "projects",
+      "scene",
+      "scenes",
+      "split",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-shader-basics",
+    "description": "Imported GodotPrompter guidance for shader-basics workflows in game development projects. Use when writing Godot shaders (.gdshader), ShaderMaterials, and uniforms.",
+    "keywords": [
+      "basics",
+      "development",
+      "game",
+      "gdshader",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "projects",
+      "shader",
+      "shadermaterials",
+      "shaders",
+      "uniforms",
+      "when",
+      "workflows",
+      "writing"
+    ]
+  },
+  {
+    "name": "godot-prompter-state-machine",
+    "description": "Imported GodotPrompter guidance for state-machine workflows in game development projects. Use when choosing and implementing a finite state machine pattern in Godot.",
+    "keywords": [
+      "choosing",
+      "development",
+      "finite",
+      "game",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "implementing",
+      "imported",
+      "machine",
+      "pattern",
+      "projects",
+      "state",
+      "when",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-tween-animation",
+    "description": "Imported GodotPrompter guidance for tween-animation workflows in game development projects. Use when animating properties procedurally with Tweens instead of AnimationPlayer.",
+    "keywords": [
+      "animating",
+      "animation",
+      "animationplayer",
+      "development",
+      "game",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "instead",
+      "procedurally",
+      "projects",
+      "properties",
+      "tween",
+      "tweens",
+      "when",
+      "with",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-using-godot-prompter",
+    "description": "Imported GodotPrompter guidance for using-godot-prompter workflows in game development projects. Use when getting oriented in the GodotPrompter skill set and picking which of its skills to load.",
+    "keywords": [
+      "development",
+      "game",
+      "getting",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "load",
+      "oriented",
+      "picking",
+      "projects",
+      "prompter",
+      "skill",
+      "skills",
+      "using",
+      "when",
+      "which",
+      "workflows"
+    ]
+  },
+  {
+    "name": "godot-prompter-xr-development",
+    "description": "Imported GodotPrompter guidance for xr-development workflows in game development projects. Use when building VR or AR games in Godot with OpenXR.",
+    "keywords": [
+      "building",
+      "development",
+      "game",
+      "games",
+      "godot",
+      "godotprompter",
+      "guidance",
+      "imported",
+      "openxr",
+      "projects",
+      "when",
+      "with",
+      "workflows"
+    ]
+  },
+  {
     "name": "godot-quest-system",
-    "description": "\"Expert blueprint for quest  tracking systems (objectives, progress, rewards, branching chains) using Resource-based quests, signal-driven updates, and AutoLoad managers. Use when implementing RPG quests or mission systems. Keywords quest, objectives, Quest Resource, QuestObjective, signal-driven, branching, rewards, AutoLoad.\"",
+    "description": "Expert blueprint for quest  tracking systems (objectives, progress, rewards, branching chains) using Resource-based quests, signal-driven updates, and AutoLoad managers. Use when implementing RPG quests or mission systems. Keywords quest, objectives, Quest Resource, QuestObjective, signal-driven, branching, rewards, AutoLoad.",
     "keywords": [
       "quest",
       "objectives",
@@ -1196,7 +3224,7 @@
   },
   {
     "name": "godot-raycasting-queries",
-    "description": "\"Expert blueprint for physics queries using RayCast, ShapeCast, and DirectSpaceState. Covers hit detection, volume overlap, mouse picking, and high-performance server-side intersection queries. Use when implementing projectiles, LOS, terrain grounding, or AI sensors. Keywords raycast, shapecast, direct_space_state, intersect_ray, intersect_shape, PhysicsRayQueryParameters, collision mask, mouse picking.\"",
+    "description": "Expert blueprint for physics queries using RayCast, ShapeCast, and DirectSpaceState. Covers hit detection, volume overlap, mouse picking, and high-performance server-side intersection queries. Use when implementing projectiles, LOS, terrain grounding, or AI sensors. Keywords raycast, shapecast, direct_space_state, intersect_ray, intersect_shape, PhysicsRayQueryParameters, collision mask, mouse picking.",
     "keywords": [
       "raycast",
       "shapecast",
@@ -1210,7 +3238,7 @@
   },
   {
     "name": "godot-resource-data-patterns",
-    "description": "\"Expert blueprint for data-oriented design using Resource/RefCounted classes (item databases, character stats, reusable data structures). Covers typed arrays, serialization, nested resources, and resource caching. Use when implementing data systems OR inventory/stats/dialogue databases. Keywords Resource, RefCounted, ItemData, CharacterStats, database, serialization, @export, typed arrays.\"",
+    "description": "Expert blueprint for data-oriented design using Resource/RefCounted classes (item databases, character stats, reusable data structures). Covers typed arrays, serialization, nested resources, and resource caching. Use when implementing data systems OR inventory/stats/dialogue databases. Keywords Resource, RefCounted, ItemData, CharacterStats, database, serialization, @export, typed arrays.",
     "keywords": [
       "Resource",
       "RefCounted",
@@ -1224,7 +3252,7 @@
   },
   {
     "name": "godot-rpg-stats",
-    "description": "\"Expert blueprint for RPG stat systems (attributes, leveling, modifiers, damage formulas) using Resource-based stats, stackable modifiers, and derived stat calculations. Use when implementing character progression OR equipment/buff systems. Keywords stats, attributes, leveling, modifiers, CharacterStats, derived stats, damage calculation, XP.\"",
+    "description": "Expert blueprint for RPG stat systems (attributes, leveling, modifiers, damage formulas) using Resource-based stats, stackable modifiers, and derived stat calculations. Use when implementing character progression OR equipment/buff systems. Keywords stats, attributes, leveling, modifiers, CharacterStats, derived stats, damage calculation, XP.",
     "keywords": [
       "stats",
       "attributes",
@@ -1238,7 +3266,7 @@
   },
   {
     "name": "godot-save-load-systems",
-    "description": "\"Expert blueprint for save/load systems using JSON/binary serialization, PERSIST group pattern, versioning, and migration. Covers player progress, settings, game state persistence, and error recovery. Use when implementing save systems OR data persistence. Keywords save, load, JSON, FileAccess, user://, serialization, version migration, PERSIST group.\"",
+    "description": "Expert blueprint for save/load systems using JSON/binary serialization, PERSIST group pattern, versioning, and migration. Covers player progress, settings, game state persistence, and error recovery. Use when implementing save systems OR data persistence. Keywords save, load, JSON, FileAccess, user://, serialization, version migration, PERSIST group.",
     "keywords": [
       "save",
       "load",
@@ -1252,7 +3280,7 @@
   },
   {
     "name": "godot-scene-management",
-    "description": "\"Expert blueprint for scene loading, transitions, async (background) loading, instance management, and caching. Covers fade transitions, loading screens, dynamic spawning, and scene persistence. Use when implementing level changes OR dynamic content loading. Keywords scene, loading, transition, async, ResourceLoader, change_scene, preload, PackedScene, fade.\"",
+    "description": "Expert blueprint for scene loading, transitions, async (background) loading, instance management, and caching. Covers fade transitions, loading screens, dynamic spawning, and scene persistence. Use when implementing level changes OR dynamic content loading. Keywords scene, loading, transition, async, ResourceLoader, change_scene, preload, PackedScene, fade.",
     "keywords": [
       "scene",
       "loading",
@@ -1267,7 +3295,7 @@
   },
   {
     "name": "godot-server-architecture",
-    "description": "\"Expert blueprint for low-level server access (RenderingServer, PhysicsServer2D/3D, NavigationServer) using RIDs for maximum performance. Bypasses scene tree overhead for procedural generation, particle systems, and voxel engines. Use when nodes are too slow OR managing thousands of objects. Keywords RenderingServer, PhysicsServer, NavigationServer, RID, canvas_item, body_create, low-level, performance.\"",
+    "description": "Expert blueprint for low-level server access (RenderingServer, PhysicsServer2D/3D, NavigationServer) using RIDs for maximum performance. Bypasses scene tree overhead for procedural generation, particle systems, and voxel engines. Use when nodes are too slow OR managing thousands of objects. Keywords RenderingServer, PhysicsServer, NavigationServer, RID, canvas_item, body_create, low-level, performance.",
     "keywords": [
       "RenderingServer",
       "PhysicsServer",
@@ -1281,7 +3309,7 @@
   },
   {
     "name": "godot-shaders-basics",
-    "description": "\"Expert blueprint for shader programming (visual effects, post-processing, material customization) using Godot's GLSL-like shader language. Covers canvas_item (2D), spatial (3D), uniforms, built-in variables, and performance. Use when implementing custom effects OR stylized rendering. Keywords shader, GLSL, fragment, vertex, canvas_item, spatial, uniform, UV, COLOR, ALBEDO, post-processing.\"",
+    "description": "Expert blueprint for shader programming (visual effects, post-processing, material customization) using Godot's GLSL-like shader language. Covers canvas_item (2D), spatial (3D), uniforms, built-in variables, and performance. Use when implementing custom effects OR stylized rendering. Keywords shader, GLSL, fragment, vertex, canvas_item, spatial, uniform, UV, COLOR, ALBEDO, post-processing.",
     "keywords": [
       "shader",
       "GLSL",
@@ -1298,7 +3326,7 @@
   },
   {
     "name": "godot-signal-architecture",
-    "description": "\"Expert blueprint for signal-driven architecture using \\\"Signal Up, Call Down\\\" pattern for loose coupling. Covers typed signals, signal chains, one-shot connections, and AutoLoad event buses. Use when implementing event systems OR decoupling nodes. Keywords signal, emit, connect, CONNECT_ONE_SHOT, CONNECT_REFERENCE_COUNTED, event bus, AutoLoad, decoupling.\"",
+    "description": "Expert blueprint for signal-driven architecture using \\\"Signal Up, Call Down\\\" pattern for loose coupling. Covers typed signals, signal chains, one-shot connections, and AutoLoad event buses. Use when implementing event systems OR decoupling nodes. Keywords signal, emit, connect, CONNECT_ONE_SHOT, CONNECT_REFERENCE_COUNTED, event bus, AutoLoad, decoupling.",
     "keywords": [
       "signal",
       "emit",
@@ -1312,7 +3340,7 @@
   },
   {
     "name": "godot-state-machine-advanced",
-    "description": "\"Expert blueprint for hierarchical finite state machines (HSM) and pushdown automata for complex AI/character behaviors. Covers state stacks, sub-states, transition validation, and state context passing. Use when basic FSMs are insufficient OR implementing layered AI. Keywords state machine, HSM, hierarchical, pushdown automata, state stack, FSM, AI behavior.\"",
+    "description": "Expert blueprint for hierarchical finite state machines (HSM) and pushdown automata for complex AI/character behaviors. Covers state stacks, sub-states, transition validation, and state context passing. Use when basic FSMs are insufficient OR implementing layered AI. Keywords state machine, HSM, hierarchical, pushdown automata, state stack, FSM, AI behavior.",
     "keywords": [
       "state machine",
       "HSM",
@@ -1325,7 +3353,7 @@
   },
   {
     "name": "godot-testing-patterns",
-    "description": "\"Expert blueprint for testing patterns using GUT (Godot Unit Test), integration tests, mock/stub patterns, async testing, and validation techniques. Covers assert patterns, signal testing, and CI/CD integration. Use when implementing tests OR validating game logic. Keywords GUT, unit test, integration test, assert, mock, stub, GutTest, watch_signals, TDD.\"",
+    "description": "Expert blueprint for testing patterns using GUT (Godot Unit Test), integration tests, mock/stub patterns, async testing, and validation techniques. Covers assert patterns, signal testing, and CI/CD integration. Use when implementing tests OR validating game logic. Keywords GUT, unit test, integration test, assert, mock, stub, GutTest, watch_signals, TDD.",
     "keywords": [
       "GUT",
       "unit test",
@@ -1342,21 +3370,21 @@
     "name": "godot-theme-easter",
     "description": "Use when applying a specific Easter holiday theme (Eggs, Bunnies, Pastels) to a game.",
     "keywords": [
+      "applying",
+      "bunnies",
       "easter",
       "eggs",
-      "pastels",
       "game",
-      "bunnies",
-      "applying",
-      "when",
-      "theme",
       "holiday",
-      "specific"
+      "pastels",
+      "specific",
+      "theme",
+      "when"
     ]
   },
   {
     "name": "godot-tilemap-mastery",
-    "description": "\"Expert blueprint for TileMapLayer and TileSet systems for efficient 2D level design. Covers terrain autotiling, physics layers, custom data, navigation integration, and runtime manipulation. Use when building grid-based levels OR implementing destructible tiles. Keywords TileMapLayer, TileSet, terrain, autotiling, atlas, physics layer, custom data.\"",
+    "description": "Expert blueprint for TileMapLayer and TileSet systems for efficient 2D level design. Covers terrain autotiling, physics layers, custom data, navigation integration, and runtime manipulation. Use when building grid-based levels OR implementing destructible tiles. Keywords TileMapLayer, TileSet, terrain, autotiling, atlas, physics layer, custom data.",
     "keywords": [
       "TileMapLayer",
       "TileSet",
@@ -1369,7 +3397,7 @@
   },
   {
     "name": "godot-turn-system",
-    "description": "\"Expert blueprint for turn-based combat with turn order, action points, phase management, and timeline systems for strategy/RPG games. Covers speed-based initiative, interrupts, and simultaneous turns. Use when implementing turn-based combat OR tactical systems. Keywords turn-based, initiative, action points, phase, round, turn order, combat.\"",
+    "description": "Expert blueprint for turn-based combat with turn order, action points, phase management, and timeline systems for strategy/RPG games. Covers speed-based initiative, interrupts, and simultaneous turns. Use when implementing turn-based combat OR tactical systems. Keywords turn-based, initiative, action points, phase, round, turn order, combat.",
     "keywords": [
       "turn-based",
       "initiative",
@@ -1382,7 +3410,7 @@
   },
   {
     "name": "godot-tweening",
-    "description": "\"Expert blueprint for programmatic animation using Tween for smooth property transitions, UI effects, camera movements, and juice. Covers easing functions, parallel tweens, chaining, and lifecycle management. Use when implementing UI animations OR procedural movement. Keywords Tween, easing, interpolation, EASE_IN_OUT, TRANS_CUBIC, tween_property, tween_callback.\"",
+    "description": "Expert blueprint for programmatic animation using Tween for smooth property transitions, UI effects, camera movements, and juice. Covers easing functions, parallel tweens, chaining, and lifecycle management. Use when implementing UI animations OR procedural movement. Keywords Tween, easing, interpolation, EASE_IN_OUT, TRANS_CUBIC, tween_property, tween_callback.",
     "keywords": [
       "Tween",
       "easing",
@@ -1395,7 +3423,7 @@
   },
   {
     "name": "godot-ui-containers",
-    "description": "\"Expert blueprint for responsive UI layouts using Container nodes (HBoxContainer, VBoxContainer, GridContainer, MarginContainer, ScrollContainer). Covers size flags, anchors, split containers, and dynamic layouts. Use when building adaptive interfaces OR implementing responsive menus. Keywords Container, HBoxContainer, VBoxContainer, GridContainer, size_flags, EXPAND_FILL, anchors, responsive.\"",
+    "description": "Expert blueprint for responsive UI layouts using Container nodes (HBoxContainer, VBoxContainer, GridContainer, MarginContainer, ScrollContainer). Covers size flags, anchors, split containers, and dynamic layouts. Use when building adaptive interfaces OR implementing responsive menus. Keywords Container, HBoxContainer, VBoxContainer, GridContainer, size_flags, EXPAND_FILL, anchors, responsive.",
     "keywords": [
       "Container",
       "HBoxContainer",
@@ -1409,7 +3437,7 @@
   },
   {
     "name": "godot-ui-rich-text",
-    "description": "\"Expert blueprint for RichTextLabel with BBCode formatting (bold, italic, colors, images, clickable links) and custom effects. Covers meta tags, RichTextEffect shaders, and dynamic content. Use when implementing dialogue systems OR formatted text. Keywords RichTextLabel, BBCode, [b], [color], [url], meta_clicked, RichTextEffect, dialogue.\"",
+    "description": "Expert blueprint for RichTextLabel with BBCode formatting (bold, italic, colors, images, clickable links) and custom effects. Covers meta tags, RichTextEffect shaders, and dynamic content. Use when implementing dialogue systems OR formatted text. Keywords RichTextLabel, BBCode, [b], [color], [url], meta_clicked, RichTextEffect, dialogue.",
     "keywords": [
       "RichTextLabel",
       "BBCode",
@@ -1423,7 +3451,7 @@
   },
   {
     "name": "godot-ui-theming",
-    "description": "\"Expert blueprint for UI themes using Theme resources, StyleBoxes, custom fonts, and theme overrides for consistent visual styling. Covers StyleBoxFlat/Texture, theme inheritance, dynamic theme switching, and font variations. Use when implementing consistent UI styling OR supporting multiple themes. Keywords Theme, StyleBox, StyleBoxFlat, add_theme_override, font, theme inheritance, dark mode.\"",
+    "description": "Expert blueprint for UI themes using Theme resources, StyleBoxes, custom fonts, and theme overrides for consistent visual styling. Covers StyleBoxFlat/Texture, theme inheritance, dynamic theme switching, and font variations. Use when implementing consistent UI styling OR supporting multiple themes. Keywords Theme, StyleBox, StyleBoxFlat, add_theme_override, font, theme inheritance, dark mode.",
     "keywords": [
       "Theme",
       "StyleBox",
@@ -1432,6 +3460,270 @@
       "font",
       "theme inheritance",
       "dark mode"
+    ]
+  },
+  {
+    "name": "studio-game-director",
+    "description": "Use when you need to coordinate game concept, pillars, genre fit, player fantasy, feature scope, and cross-discipline creative decisions before Godot implementation.",
+    "keywords": [
+      "before",
+      "concept",
+      "coordinate",
+      "creative",
+      "cross",
+      "decisions",
+      "discipline",
+      "fantasy",
+      "feature",
+      "game",
+      "genre",
+      "godot",
+      "implementation",
+      "need",
+      "pillars",
+      "player",
+      "scope",
+      "when"
+    ]
+  },
+  {
+    "name": "studio-gameplay-lead",
+    "description": "Use when you need to coordinate player movement, combat, abilities, camera, enemies, input, game feel, and moment-to-moment Godot gameplay implementation.",
+    "keywords": [
+      "abilities",
+      "camera",
+      "combat",
+      "coordinate",
+      "enemies",
+      "feel",
+      "game",
+      "gameplay",
+      "godot",
+      "implementation",
+      "input",
+      "moment",
+      "movement",
+      "need",
+      "player",
+      "when"
+    ]
+  },
+  {
+    "name": "studio-godot-addon-integrator",
+    "description": "Use when you need to evaluate, integrate, isolate, and document Godot addons, editor plugins, tools, and third-party dependencies.",
+    "keywords": [
+      "addons",
+      "dependencies",
+      "document",
+      "editor",
+      "evaluate",
+      "godot",
+      "integrate",
+      "isolate",
+      "need",
+      "party",
+      "plugins",
+      "third",
+      "tools",
+      "when"
+    ]
+  },
+  {
+    "name": "studio-godot-technical-director",
+    "description": "Use when you need to own high-level Godot technical architecture, engine patterns, addon decisions, performance budgets, and cross-system integration choices.",
+    "keywords": [
+      "addon",
+      "architecture",
+      "budgets",
+      "choices",
+      "cross",
+      "decisions",
+      "engine",
+      "godot",
+      "high",
+      "integration",
+      "level",
+      "need",
+      "patterns",
+      "performance",
+      "system",
+      "technical",
+      "when"
+    ]
+  },
+  {
+    "name": "studio-level-design-lead",
+    "description": "Use when you need to coordinate levels, maps, tiles, world building, progression paths, procedural generation, encounters, and Godot worldmap/skill-tree screens.",
+    "keywords": [
+      "building",
+      "coordinate",
+      "encounters",
+      "generation",
+      "godot",
+      "levels",
+      "maps",
+      "need",
+      "paths",
+      "procedural",
+      "progression",
+      "screens",
+      "skill",
+      "tiles",
+      "tree",
+      "when",
+      "world",
+      "worldmap"
+    ]
+  },
+  {
+    "name": "studio-narrative-content-lead",
+    "description": "Use when you need to coordinate dialogue, quests, narrative structure, localization, content consistency, and story-facing Godot systems.",
+    "keywords": [
+      "consistency",
+      "content",
+      "coordinate",
+      "dialogue",
+      "facing",
+      "godot",
+      "localization",
+      "narrative",
+      "need",
+      "quests",
+      "story",
+      "structure",
+      "systems",
+      "when"
+    ]
+  },
+  {
+    "name": "studio-performance-release-lead",
+    "description": "Use when you need to coordinate Godot profiling, optimization, export readiness, platform checks, release checklists, store workflow, and post-launch patch planning.",
+    "keywords": [
+      "checklists",
+      "checks",
+      "coordinate",
+      "export",
+      "godot",
+      "launch",
+      "need",
+      "optimization",
+      "patch",
+      "planning",
+      "platform",
+      "post",
+      "profiling",
+      "readiness",
+      "release",
+      "store",
+      "when",
+      "workflow"
+    ]
+  },
+  {
+    "name": "studio-producer",
+    "description": "Use when you need to coordinate game-dev work into realistic milestones, sprints, acceptance criteria, risk registers, and cross-domain handoffs.",
+    "keywords": [
+      "acceptance",
+      "coordinate",
+      "criteria",
+      "cross",
+      "domain",
+      "game",
+      "handoffs",
+      "into",
+      "milestones",
+      "need",
+      "realistic",
+      "registers",
+      "risk",
+      "sprints",
+      "when",
+      "work"
+    ]
+  },
+  {
+    "name": "studio-qa-playtest-lead",
+    "description": "Use when you need to coordinate QA plans, playtest scripts, smoke checks, regression tests, bug triage, accessibility checks, and Godot feature acceptance criteria.",
+    "keywords": [
+      "acceptance",
+      "accessibility",
+      "checks",
+      "coordinate",
+      "criteria",
+      "feature",
+      "godot",
+      "need",
+      "plans",
+      "playtest",
+      "regression",
+      "scripts",
+      "smoke",
+      "tests",
+      "triage",
+      "when"
+    ]
+  },
+  {
+    "name": "studio-router",
+    "description": "Use when you need to route broad Godot and game-development requests to the right GD Agentic Skills studio orchestrator, specialist skills, and quality gates.",
+    "keywords": [
+      "agentic",
+      "broad",
+      "development",
+      "game",
+      "gates",
+      "godot",
+      "need",
+      "orchestrator",
+      "quality",
+      "requests",
+      "right",
+      "route",
+      "skills",
+      "specialist",
+      "studio",
+      "when"
+    ]
+  },
+  {
+    "name": "studio-systems-designer",
+    "description": "Use when you need to coordinate inventory, stats, economy, quests, progression, save/load, resources, and data-driven Godot systems.",
+    "keywords": [
+      "coordinate",
+      "data",
+      "driven",
+      "economy",
+      "godot",
+      "inventory",
+      "load",
+      "need",
+      "progression",
+      "quests",
+      "resources",
+      "save",
+      "stats",
+      "systems",
+      "when"
+    ]
+  },
+  {
+    "name": "studio-ui-ux-game-lead",
+    "description": "Use when you need to coordinate HUD, menus, responsive Godot Control layouts, input navigation, accessibility, and game-facing UX flows.",
+    "keywords": [
+      "accessibility",
+      "control",
+      "coordinate",
+      "facing",
+      "flows",
+      "game",
+      "godot",
+      "input",
+      "layouts",
+      "menus",
+      "navigation",
+      "need",
+      "responsive",
+      "when"
     ]
   }
 ]

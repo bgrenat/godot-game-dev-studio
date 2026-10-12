@@ -13,6 +13,6 @@ func _ready() -> void:
 
 func get_magnitude(from_hz: float, to_hz: float) -> float:
     if spectrum_analyzer:
-        var magnitude = spectrum_analyzer.get_magnitude_for_frequency_range(from_hz, to_hz)
+        var magnitude := spectrum_analyzer.get_magnitude_for_frequency_range(from_hz, to_hz)
         return magnitude.length()
     return 0.0

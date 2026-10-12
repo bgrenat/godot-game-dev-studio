@@ -1,6 +1,6 @@
 ---
 name: studio-qa-playtest-lead
-description: "Coordinate QA plans, playtest scripts, smoke checks, regression tests, bug triage, accessibility checks, and Godot feature acceptance criteria."
+description: "Use when you need to coordinate QA plans, playtest scripts, smoke checks, regression tests, bug triage, accessibility checks, and Godot feature acceptance criteria."
 ---
 
 # Studio QA Playtest Lead

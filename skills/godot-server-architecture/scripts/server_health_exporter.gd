@@ -11,15 +11,15 @@ func _ready() -> void:
 	if DisplayServer.get_name() != "headless":
 		queue_free()
 		return
-	
-	var timer = Timer.new()
+
+	var timer := Timer.new()
 	timer.wait_time = export_interval
 	timer.autostart = true
 	timer.timeout.connect(_export_metrics)
 	add_child(timer)
 
 func _export_metrics() -> void:
-	var metrics = {
+	var metrics := {
 		"timestamp": Time.get_unix_time_from_system(),
 		"performance": {
 			"fps": Performance.get_monitor(Performance.TIME_FPS),
@@ -36,16 +36,16 @@ func _export_metrics() -> void:
 			"bandwidth_out": _get_enet_bandwidth_out()
 		}
 	}
-	
+
 	# Print to standard output in JSON format for scraping tools like Filebeat or Promtail
 	print("METRICS_DUMP:" + JSON.stringify(metrics))
 
 func _get_enet_bandwidth_in() -> float:
-	var peer = multiplayer.multiplayer_peer
+	var peer := multiplayer.multiplayer_peer
 	if peer is ENetMultiplayerPeer:
-		# Note: ENet doesn't expose raw bandwidth easily in high-level API, 
+		# Note: ENet doesn't expose raw bandwidth easily in high-level API,
 		# but you can track it via custom packet counting.
-		return 0.0 
+		return 0.0
 	return 0.0
 
 func _get_enet_bandwidth_out() -> float:

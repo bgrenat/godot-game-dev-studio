@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-multithreading
-description: "Imported GodotPrompter guidance for multithreading workflows in game development projects."
+description: "Imported GodotPrompter guidance for multithreading workflows in game development projects. Use when moving expensive work off the main thread with WorkerThreadPool, Thread, Mutex, or Semaphore safely."
 ---
 # Multithreading
 

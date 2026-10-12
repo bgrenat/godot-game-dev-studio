@@ -39,7 +39,7 @@ func _get_available_sfx_player() -> AudioStreamPlayer:
 	for player in _sfx_pool:
 		if not player.playing:
 			return player
-	
+
 	# Optional: Steal oldest voice if critical (not implemented here for simplicity)
 	push_warning("SFX pool exhausted")
 	return null
@@ -47,8 +47,8 @@ func _get_available_sfx_player() -> AudioStreamPlayer:
 func play_music(stream: AudioStream, crossfade_duration := 2.0) -> void:
 	# Crossfade logic would go here, utilizing a Tween to lower current track vol
 	# and raise new track vol.
-	
-	var tween = create_tween()
+
+	var tween := create_tween()
 	# ... (Implementation of crossfade omitted for brevity, but this is where it lives)
 	pass
 

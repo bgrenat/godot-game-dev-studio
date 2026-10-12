@@ -1,8 +1,7 @@
 # rid_loot_spawner.gd
 # Bypassing Nodes for massive loot quantity
-extends Node
-
-# EXPERT NOTE: Rendering thousands of loot items as nodes 
+extends Node3D
+# EXPERT NOTE: Rendering thousands of loot items as nodes
 # is slow. Use RenderingServer directly for CPU efficiency.
 
 func spawn_loot_render_only(pos: Vector3, mesh_rid: RID):

@@ -1,6 +1,6 @@
 ---
 name: gamedev-performance-optimization
-description: "Imported awesome-gamedev-agent-skills guidance for performance-optimization workflows in game development projects."
+description: "Imported awesome-gamedev-agent-skills guidance for performance-optimization workflows in game development projects. Use when profiling to find a bottleneck and applying fixes such as pooling, batching, LOD, and culling."
 ---
 # Performance optimization
 

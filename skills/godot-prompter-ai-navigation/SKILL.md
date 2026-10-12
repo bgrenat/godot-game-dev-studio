@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-ai-navigation
-description: "Imported GodotPrompter guidance for ai-navigation workflows in game development projects."
+description: "Imported GodotPrompter guidance for ai-navigation workflows in game development projects. Use when implementing NavigationAgent2D/3D pathfinding, steering behaviors, simple behavior trees, or patrol patterns."
 ---
 # AI Navigation in Godot 4.3+
 

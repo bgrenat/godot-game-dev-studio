@@ -25,7 +25,7 @@ func get_3d_mouse_pos(camera: Camera3D) -> Vector3:
     var ray_dir := camera.project_ray_normal(mouse_pos)
     var ray_query := PhysicsRayQueryParameters3D.create(ray_origin, ray_origin + ray_dir * 1000)
     var result := camera.get_world_3d().direct_space_state.intersect_ray(ray_query)
-    
+
     return result.position if result else Vector3.ZERO
 
 # 4. CanvasLayer Layering in 3D
@@ -69,7 +69,7 @@ func setup_mixed_resolution() -> void:
 # EXPERT NOTE: Render 3D at a lower resolution then upscale to a 2D viewport.
 func setup_retro_render(sub_viewport: SubViewport) -> void:
     sub_viewport.size = Vector2i(320, 180)
-    sub_viewport.texture_filter = Viewport.TEXTURE_FILTER_NEAREST
+    sub_viewport.canvas_item_default_texture_filter = Viewport.DEFAULT_CANVAS_ITEM_TEXTURE_FILTER_NEAREST
 
 # 10. Mixing 2D and 3D Input
 # EXPERT NOTE: Ensure UI consumes events before the 3D raycast triggers logic.

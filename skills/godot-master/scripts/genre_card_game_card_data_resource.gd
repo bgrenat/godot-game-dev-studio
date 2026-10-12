@@ -2,7 +2,7 @@
 # Defining cards as lightweight data-driven Resources
 class_name CardData extends Resource
 
-# EXPERT NOTE: Resources allow designers to edit card stats 
+# EXPERT NOTE: Resources allow designers to edit card stats
 # in the Godot Inspector, saving them as .tres files.
 
 @export var card_name: String = "Blank"
@@ -11,7 +11,7 @@ class_name CardData extends Resource
 @export var health: int = 1
 
 # Setter with changed emission for reactive UI
-func update_stats(new_atk, new_hp):
+func update_stats(new_atk, new_hp) -> void:
 	attack = new_atk
 	health = new_hp
 	emit_changed()

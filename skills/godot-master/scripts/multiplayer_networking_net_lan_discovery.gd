@@ -16,8 +16,8 @@ func broadcast_presence(server_name: String) -> void:
 
 func _process(_delta) -> void:
 	if udp.get_available_packet_count() > 0:
-		var packet = udp.get_packet()
-		var msg = packet.get_string_from_utf8()
+		var packet := udp.get_packet()
+		var msg := packet.get_string_from_utf8()
 		# Add to local server list...
 
 ## Rule: UDP broadcasting is for LAN only. For Internet discovery, use an external Web API bridge.

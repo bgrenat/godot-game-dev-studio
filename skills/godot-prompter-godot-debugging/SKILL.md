@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-godot-debugging
-description: "Imported GodotPrompter guidance for godot-debugging workflows in game development projects."
+description: "Imported GodotPrompter guidance for godot-debugging workflows in game development projects. Use when diagnosing Godot runtime issues with breakpoints, signal tracing, the profiler, and remote scene inspection."
 ---
 # Godot Debugging
 

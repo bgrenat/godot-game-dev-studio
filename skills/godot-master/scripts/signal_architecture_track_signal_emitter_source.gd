@@ -2,14 +2,17 @@
 # Identifying which node fired a shared signal
 extends Node
 
-func _ready():
+func _ready() -> void:
 	# Connect multiple buttons to the same handler
 	for btn in $Menu/Buttons.get_children():
 		# Append the emitter itself to the callback arguments
 		btn.pressed.connect(_on_button_pressed, CONNECT_APPEND_SOURCE_OBJECT)
 
-func _on_button_pressed(source: Button):
+func _on_button_pressed(source: Button) -> void:
 	print("Clicked: ", source.name)
 	match source.name:
 		"Quit": get_tree().quit()
 		"Start": _start_game()
+
+func _start_game() -> void:
+	pass # Change to the gameplay scene here.

@@ -10,12 +10,11 @@ var affection_stats: Dictionary[StringName, int] = {
 
 # 2. Custom RichTextEffect for Emotive Text
 # EXPERT NOTE: Create dynamic text animations (like shaking) via BBCode effects.
-@tool
-class_name ShakeEffect extends RichTextEffect
-var bbcode := "shake"
-func _process_custom_fx(char_fx: CharFXTransform) -> bool:
-    char_fx.transform = char_fx.transform.translated(Vector2(randf_range(-1, 1), 0))
-    return true
+class ShakeEffect extends RichTextEffect:
+    var bbcode := "shake"
+    func _process_custom_fx(char_fx: CharFXTransform) -> bool:
+        char_fx.transform = char_fx.transform.translated(Vector2(randf_range(-1, 1), 0))
+        return true
 
 # 3. Context-Aware Localization
 # EXPERT NOTE: Resolves ambiguities (e.g., "Close" the door vs "Close" in distance).

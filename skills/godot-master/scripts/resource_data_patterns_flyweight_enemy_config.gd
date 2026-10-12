@@ -7,7 +7,7 @@ extends CharacterBody2D
 
 @export var config: EnemyConfigResource
 
-func _ready():
+func _ready() -> void:
 	if config:
 		$Sprite3D.texture = config.skin
 		$HealthComponent.max_health = config.hp

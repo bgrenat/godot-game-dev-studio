@@ -1,8 +1,8 @@
 # Skill Catalog
 
-Godot Game Dev Studio currently packages **189 skills** across four families:
+Godot Game Dev Studio currently packages **188 skills** across four families:
 
-- **96 `godot-*` skills** from the main Godot expert library
+- **95 `godot-*` skills** from the main Godot expert library
 - **54 `godot-prompter-*` skills** adapted from GodotPrompter-style workflows
 - **27 `gamedev-*` skills** adapted from general game-development agent skills
 - **12 `studio-*` skills** for multi-role studio orchestration
@@ -39,7 +39,7 @@ For machine-readable metadata, descriptions, and keywords, see [skills_index.jso
 - [`gamedev-tower-defense`](skills/gamedev-tower-defense/SKILL.md)
 - [`gamedev-visual-novel`](skills/gamedev-visual-novel/SKILL.md)
 
-## `godot-*` skills — 96
+## `godot-*` skills — 95
 
 - [`godot-2d-animation`](skills/godot-2d-animation/SKILL.md)
 - [`godot-2d-physics`](skills/godot-2d-physics/SKILL.md)
@@ -52,7 +52,6 @@ For machine-readable metadata, descriptions, and keywords, see [skills_index.jso
 - [`godot-adapt-desktop-to-mobile`](skills/godot-adapt-desktop-to-mobile/SKILL.md)
 - [`godot-adapt-mobile-to-desktop`](skills/godot-adapt-mobile-to-desktop/SKILL.md)
 - [`godot-adapt-single-to-multiplayer`](skills/godot-adapt-single-to-multiplayer/SKILL.md)
-- [`godot-ai-navigation`](skills/godot-ai-navigation/SKILL.md)
 - [`godot-analyst`](skills/godot-analyst/SKILL.md)
 - [`godot-animation-player`](skills/godot-animation-player/SKILL.md)
 - [`godot-animation-tree-mastery`](skills/godot-animation-tree-mastery/SKILL.md)

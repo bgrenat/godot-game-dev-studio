@@ -34,7 +34,11 @@ def render(target: str) -> str:
     if target == "copilot":
         return common + "\nWhen a request is specific, identify and read the matching skill before proposing code.\n"
     if target == "claude":
-        return common + "\nClaude Code should read this file and then the relevant skill before implementing changes.\n"
+        return (
+            "---\nname: godot-game-dev-studio\n"
+            "description: Entry point for Godot 4.7+ game development with this skill library. "
+            "Use when writing, reviewing, or designing Godot/GDScript code; routes to the smallest relevant skill.\n---\n\n"
+        ) + common + "\nClaude Code should read this file and then the relevant skill before implementing changes.\n"
     raise ValueError(target)
 
 

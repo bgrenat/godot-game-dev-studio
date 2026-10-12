@@ -55,7 +55,7 @@ func set_portrait_mode() -> void:
 # EXPERT NOTE: Access native Android APIs (like SDK version) via JNI bridge.
 func get_android_sdk_int() -> int:
     if OS.has_feature(&"android"):
-        var build_version = JavaClassWrapper.wrap("android.os.Build$VERSION")
+        var build_version := JavaClassWrapper.wrap("android.os.Build$VERSION")
         return build_version.SDK_INT
     return -1
 

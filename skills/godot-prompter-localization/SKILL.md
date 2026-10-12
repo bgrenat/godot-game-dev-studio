@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-localization
-description: "Imported GodotPrompter guidance for localization workflows in game development projects."
+description: "Imported GodotPrompter guidance for localization workflows in game development projects. Use when localizing a Godot game with tr(), CSV or PO translation files, and locale switching."
 ---
 # Localization in Godot 4.3+
 

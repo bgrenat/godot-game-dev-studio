@@ -31,36 +31,36 @@ func _ready() -> void:
 func start_next_wave() -> void:
     if is_wave_active:
         return
-        
+
     current_wave_index += 1
     if current_wave_index >= waves.size():
         all_waves_complete.emit()
         return
-        
+
     is_wave_active = true
     wave_started.emit(current_wave_index)
-    
-    var wave_groups = waves[current_wave_index]
-    
+
+    var wave_groups := waves[current_wave_index]
+
     # Process groups in parallel or sequence? usually parallel logic per group
     for group in wave_groups:
         _process_wave_group(group)
 
 func _process_wave_group(group: WaveGroup) -> void:
     await get_tree().create_timer(group.initial_delay).timeout
-    
+
     for i in range(group.count):
         _spawn_enemy(group.enemy_scene)
         await get_tree().create_timer(group.interval).timeout
 
 func _spawn_enemy(scene: PackedScene) -> void:
-    var spawn = spawn_points[0] # Simple single spawn logic
-    var enemy = scene.instantiate()
+    var spawn := spawn_points[0] # Simple single spawn logic
+    var enemy := scene.instantiate()
     spawn.add_child(enemy) # Or add to a container
     enemy.global_position = spawn.global_position
-    
+
     active_enemies += 1
-    
+
     # Connect signal safely
     if enemy.has_signal("died"):
         enemy.died.connect(_on_enemy_died)
@@ -77,7 +77,7 @@ func _on_enemy_died() -> void:
 func _all_spawns_finished() -> bool:
     # Need a more robust check in real prod to ensure not just 0 enemies but 0 pending spawns
     # For now, simplest check:
-    return true 
+    return true
 
 func _setup_debug_waves() -> void:
     # Placeholder to prevent crash

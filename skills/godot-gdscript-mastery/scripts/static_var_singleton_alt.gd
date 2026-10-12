@@ -3,13 +3,13 @@
 extends Node
 class_name GlobalState
 
-# EXPERT NOTE: static var is shared across all scripts. 
+# EXPERT NOTE: static var is shared across all scripts.
 # Accessible via GlobalState.score from anywhere.
 
 static var score: int = 0
 static var unlocked_levels: Array[int] = [1]
 
-static func add_score(val: int):
+static func add_score(val: int) -> void:
 	score += val
 
 static func is_unlocked(lvl: int) -> bool:

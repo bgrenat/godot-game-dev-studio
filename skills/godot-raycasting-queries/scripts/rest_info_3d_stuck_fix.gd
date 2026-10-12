@@ -7,11 +7,11 @@ extends CollisionObject3D
 func detect_stuck_state():
 	var space_state = get_world_3d().direct_space_state
 	var query = PhysicsShapeQueryParameters3D.new()
-	
+
 	# Query using the object's own first shape
-	query.shape_rid = get_shape_rid(0)
+	query.shape_rid = shape_owner_get_shape(get_shape_owners()[0], 0).get_rid()
 	query.transform = global_transform
-	
+
 	# get_rest_info returns exact contact position and normal if overlapping
 	var res = space_state.get_rest_info(query)
 	if res.size() > 0:

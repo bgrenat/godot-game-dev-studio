@@ -2,16 +2,16 @@
 # Offloading heavy proc-gen tasks to WorkerThreadPool
 extends Node
 
-# EXPERT NOTE: Procedural generation creates 'frame-time spikes'. 
+# EXPERT NOTE: Procedural generation creates 'frame-time spikes'.
 # Offloading to a thread prevents the game from freezing.
 
-func request_chunk(chunk_pos: Vector2i):
+func request_chunk(chunk_pos: Vector2i) -> void:
 	WorkerThreadPool.add_task(_generate_chunk_task.bind(chunk_pos))
 
-func _generate_chunk_task(pos: Vector2i):
+func _generate_chunk_task(pos: Vector2i) -> void:
 	# Heavy noise calculations here
 	var data = _calc_data(pos)
-	
+
 	# Pass data back to main thread for node instantiation
 	call_deferred("_finalize_chunk", pos, data)
 

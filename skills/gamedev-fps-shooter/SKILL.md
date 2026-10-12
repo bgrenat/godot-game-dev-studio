@@ -1,6 +1,6 @@
 ---
 name: gamedev-fps-shooter
-description: "Imported awesome-gamedev-agent-skills guidance for fps-shooter workflows in game development projects."
+description: "Imported awesome-gamedev-agent-skills guidance for fps-shooter workflows in game development projects. Use when building a first-person shooter: look/move controller, hitscan or projectile shooting, weapon feel, and combat."
 ---
 # FPS Shooter
 

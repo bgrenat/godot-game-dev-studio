@@ -7,9 +7,9 @@ extends CharacterBody2D
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
-		var dir = Input.get_axis("left", "right")
+		var dir := Input.get_axis("left", "right")
 		# Only accelerate if we aren't at max air speed
 		if abs(velocity.x) < max_air_speed or sign(dir) != sign(velocity.x):
 			velocity.x += dir * air_acceleration * delta
-	
+
 	move_and_slide()

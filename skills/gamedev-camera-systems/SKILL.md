@@ -1,6 +1,6 @@
 ---
 name: gamedev-camera-systems
-description: "Imported awesome-gamedev-agent-skills guidance for camera-systems workflows in game development projects."
+description: "Imported awesome-gamedev-agent-skills guidance for camera-systems workflows in game development projects. Use when building smooth-follow, deadzone, look-ahead, bounded, or third-person orbit cameras and camera shake."
 ---
 # Camera systems
 

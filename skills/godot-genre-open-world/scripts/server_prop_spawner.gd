@@ -1,5 +1,5 @@
 # server_prop_spawner.gd
-extends Node
+extends Node3D
 class_name ServerPropSpawner
 
 # Nodeless Server-Side Object Placement
@@ -13,11 +13,11 @@ func spawn_visual_prop(mesh_rid: RID, material_rid: RID, xform: Transform3D) -> 
     RenderingServer.instance_set_base(instance_rid, mesh_rid)
     RenderingServer.instance_set_surface_override_material(instance_rid, 0, material_rid)
     RenderingServer.instance_set_transform(instance_rid, xform)
-    
+
     # Assign to current 3D world scenario.
     var scenario := get_world_3d().scenario
     RenderingServer.instance_set_scenario(instance_rid, scenario)
-    
+
     _spawned_rids.append(instance_rid)
     return instance_rid
 

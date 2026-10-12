@@ -2,17 +2,17 @@
 # Preventing resource leakage across shared templates
 extends Node
 
-# EXPERT NOTE: Resources are shared by reference. 
+# EXPERT NOTE: Resources are shared by reference.
 # You MUST duplicate() them to avoid global state pollution.
 
 @export var template_stats: BaseStats
 
 var current_stats: BaseStats
 
-func _ready():
+func _ready() -> void:
 	# EXPERT: Deep duplicate ensures this instance has its own health/buffs
 	current_stats = template_stats.duplicate()
 
-func apply_poison():
+func apply_poison() -> void:
 	# Only affects this specific instance
 	current_stats.max_health -= 5

@@ -8,14 +8,14 @@ class_name MagnusBallPhysics
 
 func _physics_process(delta: float) -> void:
 	# Magnus Effect: Force perpendicular to both velocity and spin
-	var spin = angular_velocity
-	var velocity = linear_velocity
-	
+	var spin := angular_velocity
+	var velocity := linear_velocity
+
 	# Expert Pattern: Cross product determines lift direction
-	var magnus_force = spin.cross(velocity) * magnus_coefficient
-	
+	var magnus_force := spin.cross(velocity) * magnus_coefficient
+
 	# Apply central force to simulate aerodynamic lift/curve
 	apply_central_force(magnus_force)
 
-## [SKILL NOTICE]: Use 'PhysicsMaterial' on the RigidBody3D for 
+## [SKILL NOTICE]: Use 'PhysicsMaterial' on the RigidBody3D for
 ## friction and bounce. Use 'Magnus Effect' for realistic curve balls.

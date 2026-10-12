@@ -9,12 +9,10 @@ enum NavLayers {
 	SWIM = 8
 }
 
-func set_agent_capability(agent_rid: RID, layers: int) -> void:
+func set_agent_capability(agent: NavigationAgent3D, layers: int) -> void:
 	# Navigation layers use a 32-bit integer bitmask.
 	# This allows one agent to only use specific regions/links.
-	NavigationServer3D.agent_set_navigation_layers(agent_rid, layers)
+	agent.navigation_layers = layers
 
-func unlock_swimming(agent_rid: RID) -> void:
-	var mask = NavigationServer3D.agent_get_navigation_layers(agent_rid)
-	mask |= NavLayers.SWIM # Add swim bit
-	NavigationServer3D.agent_set_navigation_layers(agent_rid, mask)
+func unlock_swimming(agent: NavigationAgent3D) -> void:
+	agent.navigation_layers |= NavLayers.SWIM # Add swim bit

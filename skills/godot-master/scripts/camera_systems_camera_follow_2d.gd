@@ -19,7 +19,7 @@ var _last_target_pos: Vector2 = Vector2.ZERO
 func _ready() -> void:
     if not target:
         push_warning("CameraFollow2D: No target assigned.")
-    
+
     # Enable built-in smoothing as base
     position_smoothing_enabled = true
     position_smoothing_speed = follow_smoothing
@@ -27,22 +27,22 @@ func _ready() -> void:
 func _process(delta: float) -> void:
     if not target:
         return
-        
+
     var target_pos = target.global_position
-    
+
     if look_ahead_enabled:
         # Calculate target velocity if it's not a CharacterBody
         var current_velocity = (target_pos - _last_target_pos) / delta if delta > 0 else Vector2.ZERO
         if target is CharacterBody2D:
             current_velocity = target.get_real_velocity()
-            
+
         _target_velocity = _target_velocity.lerp(current_velocity, velocity_smoothing * delta)
         _last_target_pos = target_pos
-        
+
         # Apply look-ahead offset
-        var offset_vec = _target_velocity.normalized() * look_ahead_distance
+        var offset_vec := _target_velocity.normalized() * look_ahead_distance
         target_pos += offset_vec
-        
+
     global_position = target_pos
 
 ## Helper to set camera limits from a ColorRect or reference shape

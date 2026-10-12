@@ -5,7 +5,7 @@ extends Node
 # EXPERT NOTE: Milliseconds lack the precision for microbenchmarking;
 # always use Time.get_ticks_usec() for CPU cycle measurements.
 
-func benchmark_operation(callable: Callable):
+func benchmark_operation(callable: Callable) -> void:
 	var begin := Time.get_ticks_usec()
 	callable.call()
 	var end := Time.get_ticks_usec()

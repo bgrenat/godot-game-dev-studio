@@ -23,15 +23,15 @@ func _physics_process(delta: float) -> void:
         _perform_scan()
 
 func _perform_scan() -> void:
-    var space = get_world_2d().direct_space_state
-    var query = PhysicsShapeQueryParameters2D.new()
-    var shape = CircleShape2D.new()
+    var space := get_world_2d().direct_space_state
+    var query := PhysicsShapeQueryParameters2D.new()
+    var shape := CircleShape2D.new()
     shape.radius = scan_radius
-    
+
     query.shape = shape
     query.transform = global_transform
     query.collision_mask = collision_mask
-    
+
     _cached_results = space.intersect_shape(query)
     results_updated.emit(_cached_results)
 
@@ -40,12 +40,12 @@ func get_results() -> Array[Dictionary]:
 
 func get_closest() -> Node2D:
     var closest: Node2D = null
-    var min_dist = INF
-    
+    var min_dist := INF
+
     for res in _cached_results:
-        var collider = res.collider as Node2D
+        var collider := res.collider as Node2D
         if collider and collider != self:
-             var d = global_position.distance_squared_to(collider.global_position)
+             var d := global_position.distance_squared_to(collider.global_position)
              if d < min_dist:
                  min_dist = d
                  closest = collider

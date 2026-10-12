@@ -7,6 +7,6 @@ extends CharacterBody2D
 # SOLUTION: Keep physics high-precision, but round the Sprite's position.
 
 func _process(_delta: float) -> void:
-	var sprite = $Sprite2D
+	var sprite := $Sprite2D
 	# Round to nearest pixel for display only
 	sprite.global_position = global_position.round()

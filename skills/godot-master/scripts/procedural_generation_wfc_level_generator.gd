@@ -23,27 +23,27 @@ func _init_grid() -> void:
     for x in grid_size.x:
         _grid.append([])
         for y in grid_size.y:
-            var cell = Cell.new()
+            var cell := Cell.new()
             cell.possibilities = tile_library.duplicate()
             _grid[x].append(cell)
 
 func _collapse_next() -> void:
     # 2. Entropy Selection
-    # Expert logic: Select the cell with the FEWEST possibilities 
+    # Expert logic: Select the cell with the FEWEST possibilities
     # to collapse next (Min-Entropy Heuristic).
     var cell = _find_lowest_entropy()
-    if not cell: 
+    if not cell:
         print("Level Generation Complete")
         return
-        
+
     cell.selected_tile = cell.possibilities.pick_random()
     cell.collapsed = true
     cell.possibilities = [cell.selected_tile]
-    
+
     # 3. Constraint Propagation
     # Update neighbors based on the newly selected tile's rules.
     _propagate_constraints()
-    
+
     # Recursively collapse until finished
     _collapse_next()
 
@@ -56,11 +56,11 @@ func _propagate_constraints() -> void:
     pass
 
 ## EXPERT NOTE:
-## Use 'Poisson Disk Sampling': For object distribution (trees/rocks), 
-## use Poisson Disk instead of pure Random to ensure a minimum 
+## Use 'Poisson Disk Sampling': For object distribution (trees/rocks),
+## use Poisson Disk instead of pure Random to ensure a minimum
 ## distance between items, preventing unrealistic 'clumping'.
-## For 'procedural-generation', use 'WorkerThreadPool' to run 
-## generation in the background, allowing for 'Infinite World' 
+## For 'procedural-generation', use 'WorkerThreadPool' to run
+## generation in the background, allowing for 'Infinite World'
 ## loading without frame-stutters.
-## NEVER use 'randi()' for map seeds; use a unique 'RandomNumberGenerator' 
+## NEVER use 'randi()' for map seeds; use a unique 'RandomNumberGenerator'
 ## instance per level to ensure the same seed ALWAYS produces the same map.

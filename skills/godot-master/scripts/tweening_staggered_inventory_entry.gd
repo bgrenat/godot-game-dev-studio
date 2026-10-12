@@ -2,9 +2,9 @@
 # Looping through collections for sequential entry effects
 extends GridContainer
 
-func animate_items():
-	var tween = create_tween()
-	
+func animate_items() -> void:
+	var tween := create_tween()
+
 	# Because set_parallel is false, these run one-by-one
 	for child in get_children():
 		child.scale = Vector2.ZERO

@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-godot-brainstorming
-description: "Imported GodotPrompter guidance for godot-brainstorming workflows in game development projects."
+description: "Imported GodotPrompter guidance for godot-brainstorming workflows in game development projects. Use when designing a Godot feature or system before coding: scene tree, signal map, and data flow."
 ---
 # Godot Brainstorming
 

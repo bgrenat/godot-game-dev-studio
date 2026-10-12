@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-addon-development
-description: "Imported GodotPrompter guidance for addon-development workflows in game development projects."
+description: "Imported GodotPrompter guidance for addon-development workflows in game development projects. Use when writing Godot editor plugins: custom nodes, inspector plugins, docks, gizmos, and toolbar buttons."
 ---
 # Addon Development in Godot 4.3+
 

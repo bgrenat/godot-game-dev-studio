@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-limboai
-description: "Imported GodotPrompter guidance for limboai workflows in game development projects."
+description: "Imported GodotPrompter guidance for limboai workflows in game development projects. Use when building behavior trees and hierarchical state machines with the LimboAI addon."
 ---
 # LimboAI
 

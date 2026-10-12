@@ -21,23 +21,23 @@ var _cooldown: float = 0.0
 
 func _ready() -> void:
     # Setup Area2D for range
-    var area = Area2D.new()
-    var shape = CollisionShape2D.new()
-    var circle = CircleShape2D.new()
+    var area := Area2D.new()
+    var shape := CollisionShape2D.new()
+    var circle := CircleShape2D.new()
     circle.radius = range_radius
     shape.shape = circle
     area.add_child(shape)
     add_child(area)
-    
+
     area.body_entered.connect(_on_body_entered)
     area.body_exited.connect(_on_body_exited)
 
 func _physics_process(delta: float) -> void:
     _cooldown -= delta
-    
+
     if not is_instance_valid(current_target):
         _acquire_target()
-        
+
     if current_target:
         _rotate_toward(current_target.global_position)
         if _cooldown <= 0:
@@ -47,21 +47,21 @@ func _acquire_target() -> void:
     if targets_in_range.is_empty():
         current_target = null
         return
-        
+
     # Sort or pick based on priority
     # Simplified: just pick first valid
     current_target = targets_in_range[0]
 
 func _fire() -> void:
     _cooldown = 1.0 / fire_rate
-    
+
     if projectile_scene:
-        var proj = projectile_scene.instantiate()
+        var proj := projectile_scene.instantiate()
         get_tree().root.add_child(proj)
         proj.global_position = global_position
         # Assume projectile has setup method
         if proj.has_method("setup") and current_target:
-            var dir = global_position.direction_to(current_target.global_position)
+            var dir := global_position.direction_to(current_target.global_position)
             proj.setup(dir, global_position)
 
 func _rotate_toward(pos: Vector2) -> void:

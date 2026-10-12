@@ -2,13 +2,13 @@
 # Saving progress to human-readable ConfigFiles
 extends Node
 
-# EXPERT NOTE: ConfigFile is safer than JSON for educational settings 
+# EXPERT NOTE: ConfigFile is safer than JSON for educational settings
 # as it allows for structured sections and easier recovery.
 
-var config = ConfigFile.new()
+var config := ConfigFile.new()
 const SAVE_PATH = "user://student_profile.cfg"
 
-func save_progress(level_id: String, score: int):
+func save_progress(level_id: String, score: int) -> void:
 	config.load(SAVE_PATH)
 	config.set_value("Progress", level_id, score)
 	config.save(SAVE_PATH)

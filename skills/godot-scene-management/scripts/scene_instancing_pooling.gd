@@ -9,7 +9,7 @@ var _pool: Array = []
 
 func _ready() -> void:
 	for i in pool_size:
-		var instance = scene_to_pool.instantiate()
+		var instance := scene_to_pool.instantiate()
 		instance.visible = false
 		instance.process_mode = Node.PROCESS_MODE_DISABLED
 		add_child(instance)

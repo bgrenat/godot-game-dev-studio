@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-2d-essentials
-description: "Imported GodotPrompter guidance for 2d-essentials workflows in game development projects."
+description: "Imported GodotPrompter guidance for 2d-essentials workflows in game development projects. Use when working with Godot 2D fundamentals: draw order, z_index, CanvasLayer, sprites, and 2D transforms."
 ---
 # 2D Essentials in Godot 4.3+
 

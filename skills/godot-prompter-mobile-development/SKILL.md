@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-mobile-development
-description: "Imported GodotPrompter guidance for mobile-development workflows in game development projects."
+description: "Imported GodotPrompter guidance for mobile-development workflows in game development projects. Use when shipping a Godot game to Android or iOS: signing, lifecycle, permissions, plugins, IAP, and mobile performance."
 ---
 # Mobile Development
 

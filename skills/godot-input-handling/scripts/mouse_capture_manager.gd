@@ -11,7 +11,7 @@ func _ready() -> void:
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
 		_toggle_capture(!_captured)
-		
+
 	if _captured and event is InputEventMouseMotion:
 		# Expert: Apply sensitivity scaling here
 		var rot = -event.relative * sensitivity
@@ -21,5 +21,5 @@ func _toggle_capture(enable: bool) -> void:
 	_captured = enable
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED if enable else Input.MOUSE_MODE_VISIBLE
 
-func _apply_rotation(_rot: Vector2):
+func _apply_rotation(_rot: Vector2) -> void:
 	pass

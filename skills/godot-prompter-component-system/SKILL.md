@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-component-system
-description: "Imported GodotPrompter guidance for component-system workflows in game development projects."
+description: "Imported GodotPrompter guidance for component-system workflows in game development projects. Use when structuring entities by composition with small reusable component nodes instead of deep inheritance."
 ---
 # Component System in Godot 4.3+
 

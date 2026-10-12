@@ -1,6 +1,5 @@
 # combat_system_patterns.gd
-extends Node
-
+extends Node3D
 # 1. Safe Duck-Typing for Damage
 # EXPERT NOTE: Safely test if a target can receive damage without needing to know its exact class.
 func _on_hitbox_impact(target: Node) -> void:

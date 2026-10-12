@@ -8,7 +8,7 @@ class_name DesktopInputAdapter
 
 # Configuration -> Action Map
 # Maps "mobile_action_name": [Keycodes]
-var key_map = {
+var key_map := {
     "interact": [KEY_E, KEY_SPACE],
     "inventory": [KEY_I, KEY_TAB],
     "pause": [KEY_ESCAPE],
@@ -25,9 +25,9 @@ func _inject_input_map() -> void:
     for action in key_map:
         if not InputMap.has_action(action):
             InputMap.add_action(action)
-        
+
         for key in key_map[action]:
-            var ev = InputEventKey.new()
+            var ev := InputEventKey.new()
             ev.keycode = key
             if not InputMap.action_has_event(action, ev):
                 InputMap.action_add_event(action, ev)
@@ -35,7 +35,7 @@ func _inject_input_map() -> void:
 func _enable_mouse_look() -> void:
     # If the game uses virtual joystick aiming on mobile,
     # we want mouse aiming on desktop.
-    
+
     # This is often handled in the Player script, but we can emit signals
     pass
 

@@ -6,13 +6,13 @@ extends Node
 
 func _ready() -> void:
     var numbers: Array[int] = [1, 2, 3, 4, 5, 6]
-    
+
     # 1. Lambda Filtering & Mapping
-    var evens = numbers.filter(func(n): return n % 2 == 0)
-    var doubled = evens.map(func(n): return n * 2)
-    
+    var evens := numbers.filter(func(n): return n % 2 == 0)
+    var doubled := evens.map(func(n): return n * 2)
+
     # 2. Higher-Order Function (Function returning a Callable)
-    var multiplier_for_3 = make_multiplier(3)
+    var multiplier_for_3 := make_multiplier(3)
     print(multiplier_for_3.call(10)) # Outputs 30
 
 ## Returns a lambda that multiplies input by 'factor'

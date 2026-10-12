@@ -19,11 +19,11 @@ func _ready() -> void:
 ## Collects data from the game and saves to disk.
 func execute_save() -> void:
 	# Note: In a real project, pull this from a global Inventory or Stats manager
-	var data_to_save = _gather_harvest_data()
-	
-	var file = FileAccess.open(save_path, FileAccess.WRITE)
+	var data_to_save := _gather_harvest_data()
+
+	var file := FileAccess.open(save_path, FileAccess.WRITE)
 	if file:
-		var json_string = JSON.stringify(data_to_save)
+		var json_string := JSON.stringify(data_to_save)
 		file.store_line(json_string)
 		print_rich("[color=cyan][Harvest] Progress auto-saved to %s[/color]" % save_path)
 	else:

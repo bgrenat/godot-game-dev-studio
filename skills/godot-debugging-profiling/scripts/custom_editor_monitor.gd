@@ -5,7 +5,7 @@ extends Node
 # EXPERT NOTE: add_custom_monitor lets you see game-specific
 # bottlenecks (AI count, active projectiles) in the Monitors tab.
 
-func _ready():
+func _ready() -> void:
 	Performance.add_custom_monitor("Game/ActiveProjectiles", _get_projectile_count)
 
 func _get_projectile_count() -> int:

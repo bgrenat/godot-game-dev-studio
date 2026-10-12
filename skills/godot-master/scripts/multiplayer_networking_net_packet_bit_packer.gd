@@ -5,7 +5,7 @@ extends Node
 ## Manually serializes data into PackedByteArray for minimum overhead.
 
 func pack_player_state(pos: Vector3, rot: Vector3, hp: int) -> PackedByteArray:
-	var buffer = StreamPeerBuffer.new()
+	var buffer := StreamPeerBuffer.new()
 	buffer.put_float(pos.x) # 4 bytes
 	buffer.put_float(pos.y) # 4 bytes
 	buffer.put_float(pos.z) # 4 bytes
@@ -14,7 +14,7 @@ func pack_player_state(pos: Vector3, rot: Vector3, hp: int) -> PackedByteArray:
 	return buffer.data_array
 
 func unpack_player_state(data: PackedByteArray) -> Dictionary:
-	var buffer = StreamPeerBuffer.new()
+	var buffer := StreamPeerBuffer.new()
 	buffer.data_array = data
 	return {
 		"pos": Vector3(buffer.get_float(), buffer.get_float(), buffer.get_float()),

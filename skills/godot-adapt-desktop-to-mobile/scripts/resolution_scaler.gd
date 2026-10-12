@@ -22,14 +22,14 @@ func _process(delta: float) -> void:
     timer += delta
     if timer >= check_interval:
         timer = 0.0
-        var current_fps = Engine.get_frames_per_second()
-        var current_scale = get_viewport().scaling_3d_scale
-        
+        var current_fps := Engine.get_frames_per_second()
+        var current_scale := get_viewport().scaling_3d_scale
+
         if current_fps < target_fps - 5:
             # Dropping frames, decrease 3D resolution
             var new_scale = clampf(current_scale - scale_step, min_scale, 1.0)
             get_viewport().scaling_3d_scale = new_scale
-            
+
         elif current_fps > target_fps + 2 and current_scale < 1.0:
             # Plenty of headroom, try increasing resolution
             var new_scale = clampf(current_scale + (scale_step / 2.0), min_scale, 1.0)

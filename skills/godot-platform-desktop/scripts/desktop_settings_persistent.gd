@@ -13,8 +13,8 @@ func save_desktop_state() -> void:
 	_config.set_value("display", "mode", window.mode)
 	_config.set_value("display", "size", window.size)
 	_config.set_value("display", "position", window.position)
-	
-	var err = _config.save(SETTINGS_PATH)
+
+	var err := _config.save(SETTINGS_PATH)
 	if err != OK:
 		push_error("DesktopSettings: Failed to save to ", SETTINGS_PATH)
 

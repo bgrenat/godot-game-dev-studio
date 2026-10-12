@@ -1,6 +1,6 @@
 ---
 name: gamedev-router
-description: "Imported awesome-gamedev-agent-skills guidance for router workflows in game development projects."
+description: "Imported awesome-gamedev-agent-skills guidance for router workflows in game development projects. Use when a game-development request is broad and the right engine and minimal skill set must be chosen first."
 ---
 # Master Router — Game-Development Skill Dispatcher
 

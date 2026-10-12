@@ -2,10 +2,10 @@
 # Data structure for a single inventory slot
 class_name ItemSlot extends Resource
 
-# EXPERT NOTE: Using a Resource for slots makes the 
+# EXPERT NOTE: Using a Resource for slots makes the
 # inventory system serializable and easy to sync with UI.
 
-signal changed
+# `changed` is inherited from Resource: emit it, do not redeclare it.
 
 @export var item: InventoryItem:
 	set(val):

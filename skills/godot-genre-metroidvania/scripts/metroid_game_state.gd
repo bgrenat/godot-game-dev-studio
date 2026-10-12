@@ -16,13 +16,13 @@ func is_door_open(id: StringName) -> bool:
 	return opened_doors.get(id, false)
 
 func save_world() -> void:
-	var f = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
-	var data = {
+	var f := FileAccess.open(SAVE_PATH, FileAccess.WRITE)
+	var data := {
 		"doors": opened_doors,
 		"items": collected_items,
 		"fog": visited_cells
 	}
 	f.store_line(JSON.stringify(data))
 
-## [SKILL NOTICE]: Use 'StringName' for IDs to minimize memory 
+## [SKILL NOTICE]: Use 'StringName' for IDs to minimize memory
 ## and 'JSON' for human-readable save-game debugging.

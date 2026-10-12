@@ -1,0 +1,52 @@
+# Scripts that cannot compile on their own: they reference context the library does not ship
+# (user autoloads such as QuestManager/WalletManager, the gdUnit4 or DialogueManager addons,
+# game classes such as Player, game assets under res://, or a class_name also declared by
+# another skill). Regenerate with: python scripts/check_gdscript.py --godot <godot> --update-baseline
+skills/godot-ability-system/scripts/ability_resource.gd
+skills/godot-adapt-2d-to-3d/scripts/sprite_plane.gd
+skills/godot-audio-systems/scripts/audio_footstep_surface_selector.gd
+skills/godot-autoload-architecture/scripts/static_state_manager.gd
+skills/godot-combat-system/scripts/hitbox_component.gd
+skills/godot-composition/scripts/health_component.gd
+skills/godot-dialogue-system/scripts/dialogue_event_bridge.gd
+skills/godot-dialogue-system/scripts/dialogue_portrait_manager.gd
+skills/godot-dialogue-system/scripts/dialogue_ui_controller.gd
+skills/godot-economy-system/scripts/currency_label_sync.gd
+skills/godot-economy-system/scripts/currency_pickup_effect.gd
+skills/godot-economy-system/scripts/economy_persistence_handler.gd
+skills/godot-economy-system/scripts/loot_drop_economy_bridge.gd
+skills/godot-economy-system/scripts/loot_table_weighted.gd
+skills/godot-economy-system/scripts/shop_system_logic.gd
+skills/godot-genre-action-rpg/scripts/base_stat_resource.gd
+skills/godot-genre-action-rpg/scripts/hitbox_component.gd
+skills/godot-genre-moba/scripts/status_effect_data.gd
+skills/godot-genre-roguelike/scripts/dungeon_generator.gd
+skills/godot-genre-roguelike/scripts/weighted_loot_table.gd
+skills/godot-genre-shooter/scripts/advanced_weapon_controller.gd
+skills/godot-genre-survival/scripts/inventory_data.gd
+skills/godot-genre-survival/scripts/modular_inventory_controller.gd
+skills/godot-inventory-system/scripts/inventory_ui_controller.gd
+skills/godot-mechanic-revival/scripts/revival_checkpoint_validator.gd
+skills/godot-mechanic-secrets/scripts/secret_progress_threshold_unlocker.gd
+skills/godot-multiplayer-networking/scripts/multiplayer_spawner_manager.gd
+skills/godot-multiplayer-networking/scripts/net_anti_desync_reconciler.gd
+skills/godot-quest-system/scripts/branching_quest_data.gd
+skills/godot-quest-system/scripts/kill_objective_trigger.gd
+skills/godot-quest-system/scripts/quest_giver_dialogue_hook.gd
+skills/godot-quest-system/scripts/quest_graph_manager.gd
+skills/godot-quest-system/scripts/quest_persistence_loader.gd
+skills/godot-quest-system/scripts/quest_ui_tracker.gd
+skills/godot-quest-system/scripts/timed_quest_challenge.gd
+skills/godot-resource-data-patterns/scripts/flyweight_enemy_config.gd
+skills/godot-resource-data-patterns/scripts/resource_preloading_strategy.gd
+skills/godot-testing-patterns/scripts/basic_unit_test.gd
+skills/godot-testing-patterns/scripts/integration_test_base.gd
+skills/godot-testing-patterns/scripts/mock_dependency_test.gd
+skills/godot-testing-patterns/scripts/parameter_fuzz_tester.gd
+skills/godot-testing-patterns/scripts/physics_collision_test.gd
+skills/godot-testing-patterns/scripts/scene_integration_test.gd
+skills/godot-testing-patterns/scripts/signal_emission_test.gd
+skills/godot-testing-patterns/scripts/test_data_factory.gd
+skills/godot-testing-patterns/scripts/wait_for_frame_test.gd
+skills/godot-theme-easter/scripts/easter_custom_cursor_manager.gd
+skills/godot-theme-easter/scripts/easter_shimmer_vfx_emitter.gd

@@ -5,7 +5,7 @@ extends Node
 # EXPERT NOTE: capture_script_backtraces(true) is expensive;
 # it captures local variable states which blocks deallocation.
 
-func generate_detailed_report():
+func generate_detailed_report() -> void:
 	var backtraces := Engine.capture_script_backtraces(true)
 	for frame in backtraces:
 		var file := frame.get_frame_file(0)

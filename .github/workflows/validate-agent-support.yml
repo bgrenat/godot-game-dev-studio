@@ -22,7 +22,7 @@ jobs:
           python-version: '3.x'
 
       - name: Validate Python scripts
-        run: python -m py_compile scripts/generate_agent_rules.py scripts/validate_agent_support.py
+        run: python -m py_compile update_skills_index.py scripts/generate_agent_rules.py scripts/validate_agent_support.py scripts/check_gdscript.py
 
       - name: Regenerate agent entrypoints
         run: python scripts/generate_agent_rules.py --target all
@@ -30,6 +30,15 @@ jobs:
       - name: Check generated files are committed
         shell: bash
         run: git diff --exit-code -- .cursor .claude .github/copilot-instructions.md
+
+      - name: Check skills index is up to date
+        shell: bash
+        run: |
+          python update_skills_index.py
+          git diff --exit-code -- skills_index.json
+
+      - name: Validate skill descriptions
+        run: python update_skills_index.py --validate
 
       - name: Validate agent support
         run: python scripts/validate_agent_support.py
@@ -41,3 +50,27 @@ jobs:
           from pathlib import Path
           json.loads(Path('.codex-plugin/plugin.json').read_text(encoding='utf-8'))
           print('PASS: plugin manifest JSON')
+
+  gdscript:
+    name: Compile GDScript with Godot 4.7
+    runs-on: ubuntu-latest
+    env:
+      GODOT_VERSION: 4.7-stable
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Download Godot
+        shell: bash
+        run: |
+          curl -sSfL -o godot.zip "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}/Godot_v${GODOT_VERSION}_linux.x86_64.zip"
+          unzip -q godot.zip
+          echo "GODOT=$PWD/Godot_v${GODOT_VERSION}_linux.x86_64" >> "$GITHUB_ENV"
+
+      - name: Compile every library script
+        run: python scripts/check_gdscript.py

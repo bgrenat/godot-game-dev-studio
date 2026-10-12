@@ -13,12 +13,12 @@ class_name RhythmUIFeedback
 }
 
 func show_feedback(result_name: String) -> void:
-    var label = Label.new()
+    var label := Label.new()
     label.text = result_name
     label.modulate = feedback_colors.get(result_name, Color.WHITE)
     add_child(label)
-    
-    var tween = create_tween()
+
+    var tween := create_tween()
     # Pattern: Fade out and move up simultaneously.
     tween.set_parallel(true)
     tween.tween_property(label, "position:y", label.position.y - 50, 0.4)

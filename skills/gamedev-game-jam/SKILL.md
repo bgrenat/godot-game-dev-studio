@@ -1,6 +1,6 @@
 ---
 name: gamedev-game-jam
-description: "Imported awesome-gamedev-agent-skills guidance for game-jam workflows in game development projects."
+description: "Imported awesome-gamedev-agent-skills guidance for game-jam workflows in game development projects. Use when planning and scoping a game jam entry against a theme and a fixed deadline through to submission."
 ---
 # Game Jam
 

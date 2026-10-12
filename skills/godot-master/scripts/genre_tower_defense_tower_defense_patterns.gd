@@ -1,6 +1,5 @@
 # tower_defense_patterns.gd
-extends Node
-
+extends Node3D
 # 1. Finding Primary Target (Furthest/First)
 # EXPERT NOTE: Use functional reduction to efficiently find the enemy with the most path progress.
 func get_first_target(enemies: Array[Node3D]) -> Node3D:

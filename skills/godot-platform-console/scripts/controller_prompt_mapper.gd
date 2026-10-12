@@ -5,9 +5,9 @@ extends RefCounted
 ## Detects hardware type to display correct button prompts (PS/Xbox/Switch).
 
 static func get_prompt_path(device_id: int) -> String:
-	var guid = Input.get_joy_guid(device_id)
-	var name = Input.get_joy_name(device_id).to_lower()
-	
+	var guid := Input.get_joy_guid(device_id)
+	var name := Input.get_joy_name(device_id).to_lower()
+
 	# Detect platform from standardized SDL2 identifiers
 	if "nintendo" in name or "switch" in name:
 		return "res://ui/prompts/nintendo_set.tres"

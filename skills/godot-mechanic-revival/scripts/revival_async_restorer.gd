@@ -10,13 +10,13 @@ extends Node
 func restore_property(target: Node, property: String, target_value: float) -> void:
 	if not target or not property in target:
 		return
-		
-	var tween = create_tween().bind_node(self)
-	
+
+	var tween := create_tween().bind_node(self)
+
 	# Organic S-curve restoration
 	tween.set_trans(Tween.TRANS_SINE)
 	tween.set_ease(Tween.EASE_IN_OUT)
-	
+
 	tween.tween_property(target, property, target_value, restoration_duration)
 
 ## Convenience for full health/mana recovery

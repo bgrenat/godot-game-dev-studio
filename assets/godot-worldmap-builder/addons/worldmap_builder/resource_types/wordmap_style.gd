@@ -22,7 +22,7 @@ extends Resource
 @export var priority := 0
 
 
-func draw_node(canvas : CanvasItem, data : WorldmapNodeData, pos : Vector2):
+func draw_node(canvas : CanvasItem, data : WorldmapNodeData, pos : Vector2) -> void:
 	if data == null:
 		return
 
@@ -34,7 +34,7 @@ func draw_node(canvas : CanvasItem, data : WorldmapNodeData, pos : Vector2):
 		canvas.draw_texture(used_border, pos - used_border.get_size() * 0.5, icon_border_modulate)
 
 
-func draw_connection(canvas : CanvasItem, other : WorldmapStyle, pos1 : Vector2, pos2 : Vector2):
+func draw_connection(canvas : CanvasItem, other : WorldmapStyle, pos1 : Vector2, pos2 : Vector2) -> void:
 	if other.priority > priority:
 		other.draw_connection(canvas, other, pos2, pos1)
 		return

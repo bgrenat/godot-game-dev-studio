@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-state-machine
-description: "Imported GodotPrompter guidance for state-machine workflows in game development projects."
+description: "Imported GodotPrompter guidance for state-machine workflows in game development projects. Use when choosing and implementing a finite state machine pattern in Godot."
 ---
 # State Machines in Godot 4.3+
 

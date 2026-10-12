@@ -14,19 +14,19 @@ func _ready() -> void:
     multimesh.transform_format = MultiMesh.TRANSFORM_3D
     multimesh.instance_count = instance_count
     multimesh.mesh = _get_standard_grass_mesh()
-    
+
     _populate_instances()
 
 func _populate_instances() -> void:
     # 2. Bulk Transform Assignment
     # Professional games set all transforms at once to minimize state changes.
     for i in instance_count:
-        var pos = Vector3(
+        var pos := Vector3(
             randf_range(-area_size, area_size),
             0,
             randf_range(-area_size, area_size)
         )
-        var basis = Basis().rotated(Vector3.UP, randf() * PI)
+        var basis := Basis().rotated(Vector3.UP, randf() * PI)
         multimesh.set_instance_transform(i, Transform3D(basis, pos))
 
 func _get_standard_grass_mesh() -> Mesh:
@@ -34,9 +34,9 @@ func _get_standard_grass_mesh() -> Mesh:
     return QuadMesh.new()
 
 ## EXPERT NOTE:
-## Use 'Draw Call Batching': MultiMesh reduces 10,000 individual nodes 
+## Use 'Draw Call Batching': MultiMesh reduces 10,000 individual nodes
 ## into a SINGLE draw call, drastically reducing CPU/GPU overhead.
-## For 'performance-optimization', implement 'VisibilityNotifier' to 
+## For 'performance-optimization', implement 'VisibilityNotifier' to
 ## hide the entire MultiMesh node when off-screen.
-## NEVER call 'get_node()' or 'find_child()' in '_process'; always 
+## NEVER call 'get_node()' or 'find_child()' in '_process'; always
 ## cache references in '@onready' or unique instance IDs.

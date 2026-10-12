@@ -8,10 +8,10 @@ extends EditorScript
 func _run() -> void:
 	print("=== Scene Naming Validator ===")
 	var violations := []
-	
+
 	# Scan all .tscn files
 	_scan_directory("res://", violations)
-	
+
 	if violations.is_empty():
 		print("✓ All scenes follow naming conventions!")
 	else:
@@ -23,19 +23,19 @@ func _scan_directory(path: String, violations: Array) -> void:
 	var dir := DirAccess.open(path)
 	if not dir:
 		return
-		
+
 	dir.list_dir_begin()
 	var file_name := dir.get_next()
-	
+
 	while file_name != "":
 		var full_path := path + file_name
-		
+
 		if dir.current_is_dir():
 			if not file_name.begins_with("."):
 				_scan_directory(full_path + "/", violations)
 		elif file_name.ends_with(".tscn"):
 			_validate_scene(full_path, violations)
-			
+
 		file_name = dir.get_next()
 
 func _validate_scene(scene_path: String, violations: Array) -> void:
@@ -43,9 +43,9 @@ func _validate_scene(scene_path: String, violations: Array) -> void:
 	var filename := scene_path.get_file().get_basename()
 	if not _is_snake_case(filename):
 		violations.append("%s: Filename not snake_case" % scene_path)
-	
+
 	# 2. Load scene and check node names
-	var scene := load(scene_path)
+	var scene := load(scene_path) as PackedScene
 	if scene:
 		var root := scene.instantiate()
 		_check_node_naming(root, scene_path, violations)
@@ -55,7 +55,7 @@ func _check_node_naming(node: Node, scene_path: String, violations: Array) -> vo
 	# Node names should be PascalCase
 	if not _is_pascal_case(node.name):
 		violations.append("%s: Node '%s' not PascalCase" % [scene_path, node.name])
-	
+
 	for child in node.get_children():
 		_check_node_naming(child, scene_path, violations)
 

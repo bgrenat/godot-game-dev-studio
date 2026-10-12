@@ -21,11 +21,11 @@ Before you begin the audit, internalize these truths:
 ### 📂 Sector I: The Foundation (Project Structure & Organization)
 *Invoke these when inspecting directory trees, naming conventions, and resource allocation.*
 
-- **[Folder Structure Protocol](categories/folder-structure.md)**: The skeleton of the project. **NEVER** mix assets with code; keep scripts in `/src` or `/scripts`.
-- **[Naming Conventions Protocol](categories/naming-conventions.md)**: The language of the machine. **NEVER** use inconsistent casing (PascalCase for classes, snake_case for files).
+- **Folder Structure Protocol**: The skeleton of the project. **NEVER** mix assets with code; keep scripts in `/src` or `/scripts`.
+- **Naming Conventions Protocol**: The language of the machine. **NEVER** use inconsistent casing (PascalCase for classes, snake_case for files).
 - **[Resource Management Protocol](categories/resource-management.md)**: Preventing memory leaks. **NEVER** leave unused resources loaded in the scene tree.
-- **[Scene Organization Protocol](categories/scene-organization.md)**: Maintaining hierarchy. **NEVER** create deep scene nesting that exceeds 6 levels without abstraction.
-- **[Signal Management Protocol](categories/signal-management.md)**: Decoupling the mind. **NEVER** connect signals manually in the editor for dynamic objects; use code for clarity.
+- **Scene Organization Protocol**: Maintaining hierarchy. **NEVER** create deep scene nesting that exceeds 6 levels without abstraction.
+- **Signal Management Protocol**: Decoupling the mind. **NEVER** connect signals manually in the editor for dynamic objects; use code for clarity.
 
 ---
 
@@ -105,7 +105,7 @@ GDScript in version 4 is a high-performance language—if you treat it as such. 
 
 - **[Analyst Audit Standards Protocol](categories/analyst.md)**: How Anara measures my presence.
 - **[Auditor Audit Standards Protocol](categories/auditor-audit-standards.md)**: The metrics of the purge.
-- **[Inter Agent Communication Protocol](categories/inter-agent-communication.md)**: The protocol of the handoff.
+- **Inter Agent Communication Protocol**: The protocol of the handoff.
 
 ---
 

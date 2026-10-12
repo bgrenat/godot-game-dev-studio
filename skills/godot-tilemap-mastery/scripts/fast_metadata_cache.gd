@@ -10,7 +10,7 @@ var _hazard_cache: Dictionary = {} # Vector2i -> bool
 func rebuild_hazard_cache() -> void:
 	_hazard_cache.clear()
 	for cell in get_used_cells():
-		var data = get_cell_tile_data(cell)
+		var data := get_cell_tile_data(cell)
 		if data and data.get_custom_data("is_lava"):
 			_hazard_cache[cell] = true
 

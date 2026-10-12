@@ -7,7 +7,7 @@ extends VehicleBody3D
 
 class_name ArcadeVehiclePhysics
 
-@export var gravity_scale: float = 3.0 # Arcade cars need to stick to the ground
+@export var arcade_gravity_scale: float = 3.0 # Arcade cars need to stick to the ground
 @export var air_control: float = 0.5
 @export var drift_friction_slip: float = 1.0
 @export var normal_friction_slip: float = 3.0
@@ -23,13 +23,13 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
     # 1. Custom Gravity
     if not is_on_floor():
-        apply_central_force(Vector3.DOWN * 9.8 * gravity_scale * mass)
-        
+        apply_central_force(Vector3.DOWN * 9.8 * arcade_gravity_scale * mass)
+
         # 2. Air Control (Tilt)
         var pitch = Input.get_axis("forward", "back") * air_control
         var roll = Input.get_axis("left", "right") * air_control
         apply_torque(transform.basis.x * pitch + transform.basis.z * roll)
-        
+
     # 3. Drifting Logic
     if Input.is_action_pressed("drift"):
         is_drifting = true

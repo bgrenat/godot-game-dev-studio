@@ -1,6 +1,5 @@
 # wave_loop_patterns.gd
-extends Node
-
+extends Node3D
 # 1. Background Scene Preloading
 # EXPERT NOTE: Prevents frame-stutters when a massive wave or big boss is about to spawn.
 func prepare_boss_wave(scene_path: String) -> void:
@@ -26,9 +25,11 @@ func request_enemy_path(start: Vector3, end: Vector3, callback: Callable) -> voi
     params.start_position = start
     params.target_position = end
     # Assuming callback takes the result as an argument
-    NavigationServer3D.query_path(params, _on_path_result.bind(callback))
+    var result := NavigationPathQueryResult3D.new()
+    NavigationServer3D.query_path(params, result, _on_path_result.bind(result, callback))
 
 func _on_path_result(result: NavigationPathQueryResult3D, callback: Callable) -> void:
+    # query_path() fills `result` asynchronously, then invokes this callback.
     callback.call(result.path)
 
 # 5. Bypassing Nodes for Swarms (Server-Side)

@@ -1,6 +1,6 @@
 ---
 name: gamedev-procedural-gen
-description: "Imported awesome-gamedev-agent-skills guidance for procedural-gen workflows in game development projects."
+description: "Imported awesome-gamedev-agent-skills guidance for procedural-gen workflows in game development projects. Use when generating seeded, deterministic levels, terrain, or loot with noise, cellular automata, BSP, or WFC."
 ---
 # Procedural generation
 

@@ -21,7 +21,7 @@ class_name DataFactoryResource
 # 2. Static Factory Methods
 # Professional pattern: Ensure consistent initialization project-wide.
 static func create_item(id: String, val: int) -> DataFactoryResource:
-    var new_item = DataFactoryResource.new()
+    var new_item := DataFactoryResource.new()
     new_item.item_id = id
     new_item.base_value = val
     return new_item
@@ -29,15 +29,15 @@ static func create_item(id: String, val: int) -> DataFactoryResource:
 # 3. Recursive Resource Flattening
 # Pattern for deep cloning complex nested data.
 func clone() -> DataFactoryResource:
-    var new_clone = self.duplicate(true)
+    var new_clone := self.duplicate(true)
     # Perform additional deep-initialization if needed
     return new_clone
 
 ## EXPERT NOTE:
-## Use 'Custom Inspector Plugins': Create an 'EditorInspectorPlugin' 
+## Use 'Custom Inspector Plugins': Create an 'EditorInspectorPlugin'
 ## to add 'Preview' buttons directly to this Resource in the inspector.
-## NEVER modify shared Resources at runtime without calling '.duplicate()'. 
-## Modification of a shared .tres file in one scene will affect ALL 
+## NEVER modify shared Resources at runtime without calling '.duplicate()'.
+## Modification of a shared .tres file in one scene will affect ALL
 ## other scenes using that same file, leading to 'Ghost Bugs'.
-## Use 'ResourceSaver' to persist modified resources to binary .res 
+## Use 'ResourceSaver' to persist modified resources to binary .res
 ## files for 3-5x faster loading than .tres text format.

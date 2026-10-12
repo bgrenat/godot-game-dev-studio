@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-tween-animation
-description: "Imported GodotPrompter guidance for tween-animation workflows in game development projects."
+description: "Imported GodotPrompter guidance for tween-animation workflows in game development projects. Use when animating properties procedurally with Tweens instead of AnimationPlayer."
 ---
 # Tweens in Godot 4.3+
 

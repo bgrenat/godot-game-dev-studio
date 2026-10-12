@@ -10,7 +10,7 @@ func _ready() -> void:
 
 func _sync_new_player(id: int) -> void:
 	# Snapshot the entire game state
-	var state = {
+	var state := {
 		"score": 100,
 		"elapsed_time": 300.0,
 		"world_seed": 12345

@@ -16,7 +16,7 @@ func trigger_death() -> void:
 	_perform_respawn()
 
 func _perform_respawn() -> void:
-	var player = get_tree().get_first_node_in_group("Player")
+	var player := get_tree().get_first_node_in_group("Player")
 	if player:
 		player.global_position = active_checkpoint_pos
 		# Reset state (health, velocity, etc.)

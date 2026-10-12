@@ -1,6 +1,6 @@
 {
   "name": "godot-game-dev-studio",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Portable Godot 4.7+ game-development skills for Codex, Claude Code, Cursor, and VS Code, covering GDScript, gameplay systems, shaders, optimization, publishing workflows, and studio orchestration.",
   "author": {
     "name": "Powehi",

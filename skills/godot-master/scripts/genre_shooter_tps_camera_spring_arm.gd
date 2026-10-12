@@ -12,10 +12,10 @@ func _ready() -> void:
 	add_excluded_object(get_parent().get_rid())
 
 func swap_shoulder(to_right: bool) -> void:
-	var target = shoulder_offset if to_right else -shoulder_offset
+	var target := shoulder_offset if to_right else -shoulder_offset
 	# Expert Pattern: Use 'h_offset' to shift view without moving the collision ray
-	var tween = create_tween()
+	var tween := create_tween()
 	tween.tween_property(camera, "h_offset", target, 0.25).set_trans(Tween.TRANS_SINE)
 
-## [SKILL NOTICE]: Use 'h_offset' on the Camera3D child of a SpringArm3D 
+## [SKILL NOTICE]: Use 'h_offset' on the Camera3D child of a SpringArm3D
 ## for shoulder swapping. This keeps the collision ray centered on the player.

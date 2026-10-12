@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-physics-system
-description: "Imported GodotPrompter guidance for physics-system workflows in game development projects."
+description: "Imported GodotPrompter guidance for physics-system workflows in game development projects. Use when working with Godot physics bodies, collision shapes, layers and masks, areas, and raycasts."
 ---
 # Physics System in Godot 4.3+
 

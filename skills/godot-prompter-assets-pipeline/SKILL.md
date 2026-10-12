@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-assets-pipeline
-description: "Imported GodotPrompter guidance for assets-pipeline workflows in game development projects."
+description: "Imported GodotPrompter guidance for assets-pipeline workflows in game development projects. Use when configuring Godot asset import settings, .import files, texture/audio/3D import, and resource loading."
 ---
 # Assets Pipeline in Godot 4.3+
 

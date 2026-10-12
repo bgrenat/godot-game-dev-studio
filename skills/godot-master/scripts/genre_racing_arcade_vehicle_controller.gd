@@ -12,16 +12,16 @@ class_name ArcadeVehicleController
 @export var suspension_damping := 2.0
 
 func _physics_process(delta: float) -> void:
-    var input_dir = Input.get_vector(&"move_left", &"move_right", &"move_forward", &"move_back")
-    
+    var input_dir := Input.get_vector(&"move_left", &"move_right", &"move_forward", &"move_back")
+
     # Steering
     rotation.y -= input_dir.x * steering_limit * delta * (velocity.length() * 0.1)
-    
+
     # Simple Engine Acceleration
-    var forward_dir = -global_transform.basis.z
+    var forward_dir := -global_transform.basis.z
     velocity += forward_dir * input_dir.y * engine_force * delta
-    
+
     # Friction/Drag
     velocity *= 0.98
-    
+
     move_and_slide()

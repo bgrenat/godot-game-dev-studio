@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-player-controller
-description: "Imported GodotPrompter guidance for player-controller workflows in game development projects."
+description: "Imported GodotPrompter guidance for player-controller workflows in game development projects. Use when building a 2D or 3D player controller with CharacterBody or RigidBody."
 ---
 # Player Controllers in Godot 4.3+
 

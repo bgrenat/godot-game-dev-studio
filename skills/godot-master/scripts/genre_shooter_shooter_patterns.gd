@@ -1,6 +1,5 @@
 # shooter_patterns.gd
-extends Node
-
+extends Node3D
 # 1. Server-Bypassing Hitscan (PhysicsDirectSpaceState3D)
 # EXPERT NOTE: Direct raycasting is faster than standard ray nodes for high-frequency fire.
 func fire_hitscan(origin: Vector3, direction: Vector3, shooter_rid: RID) -> void:

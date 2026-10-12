@@ -5,7 +5,7 @@ class_name DynamicBPMHandler
 # Handling Mid-Song Tempo Changes
 # Adjusts beat calculation based on tempo map markers.
 
-struct BPMMarker:
+class BPMMarker:
     var beat: float
     var time: float
     var bpm: float
@@ -20,6 +20,6 @@ func get_beat_at_time(song_time: float) -> float:
             current_marker = marker
         else:
             break
-            
+
     var elapsed = song_time - current_marker.time
     return current_marker.beat + (elapsed * (current_marker.bpm / 60.0))

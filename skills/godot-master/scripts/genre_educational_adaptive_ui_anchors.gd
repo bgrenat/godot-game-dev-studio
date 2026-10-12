@@ -2,10 +2,10 @@
 # Managing UI scaling across different screen factors
 extends Control
 
-# EXPERT NOTE: Anchoring is essential for educational apps 
+# EXPERT NOTE: Anchoring is essential for educational apps
 # that must run on tablets (Landscape) and phones (Portrait).
 
-func _ready():
+func _ready() -> void:
 	# Programmatic anchoring for dynamic UI generation
 	anchor_left = 0.5
 	anchor_right = 0.5

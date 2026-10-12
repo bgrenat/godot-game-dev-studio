@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-godot-optimization
-description: "Imported GodotPrompter guidance for godot-optimization workflows in game development projects."
+description: "Imported GodotPrompter guidance for godot-optimization workflows in game development projects. Use when optimizing Godot performance: profiler, draw calls, physics, GDScript hot paths, memory, and pooling."
 ---
 # Godot Optimization
 

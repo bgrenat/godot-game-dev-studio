@@ -7,7 +7,7 @@ class_name ForceFeedbackRouter
 
 func trigger_impact(intensity: float, duration: float) -> void:
     # Pattern: Use Input.start_joy_vibration for localized haptics.
-    var device_id = 0 # Assume first controller
+    var device_id := 0 # Assume first controller
     Input.start_joy_vibration(device_id, intensity * 0.5, intensity, duration)
 
 func shake_on_surface(surface_type: StringName) -> void:

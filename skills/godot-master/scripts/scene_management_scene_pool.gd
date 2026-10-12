@@ -13,10 +13,10 @@ func prewarm(scene_path: String, count: int) -> void:
 	if not scene:
 		push_error("Failed to load scene: %s" % scene_path)
 		return
-		
+
 	if scene_path not in _pool:
 		_pool[scene_path] = []
-		
+
 	for i in range(count):
 		var instance := scene.instantiate()
 		instance.set_meta("_pooled", true)
@@ -30,9 +30,9 @@ func acquire(scene_path: String, parent: Node) -> Node:
 		instance.set_meta("_pooled", true)
 		parent.add_child(instance)
 		return instance
-	
+
 	# Reuse pooled instance
-	var instance := _pool[scene_path].pop_back()
+	var instance: Node = _pool[scene_path].pop_back()
 	parent.add_child(instance)
 	return instance
 
@@ -40,14 +40,14 @@ func release(instance: Node) -> void:
 	if not instance.has_meta("_pooled"):
 		instance.queue_free()
 		return
-		
+
 	var scene_path := instance.scene_file_path
 	if scene_path.is_empty():
 		instance.queue_free()
 		return
-		
+
 	instance.get_parent().remove_child(instance)
-	
+
 	if scene_path not in _pool:
 		_pool[scene_path] = []
 	_pool[scene_path].append(instance)

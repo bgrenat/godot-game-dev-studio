@@ -1,6 +1,6 @@
 ---
 name: studio-narrative-content-lead
-description: "Coordinate dialogue, quests, narrative structure, localization, content consistency, and story-facing Godot systems."
+description: "Use when you need to coordinate dialogue, quests, narrative structure, localization, content consistency, and story-facing Godot systems."
 ---
 
 # Studio Narrative Content Lead

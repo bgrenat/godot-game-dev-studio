@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-gdscript-patterns
-description: "Imported GodotPrompter guidance for gdscript-patterns workflows in game development projects."
+description: "Imported GodotPrompter guidance for gdscript-patterns workflows in game development projects. Use when writing idiomatic, statically typed GDScript: type hints, signals, exports, and common patterns."
 ---
 # GDScript Patterns in Godot 4.3+
 

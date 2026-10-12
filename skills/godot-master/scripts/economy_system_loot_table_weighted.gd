@@ -9,18 +9,18 @@ class_name LootTable
 @export var items: Array[LootItem] = []
 
 func get_random_item() -> Resource:
-    var total_weight = 0.0
+    var total_weight := 0.0
     for item in items:
         total_weight += item.weight
-    
+
     var roll = randf() * total_weight
-    var cumulative_weight = 0.0
-    
+    var cumulative_weight := 0.0
+
     for item in items:
         cumulative_weight += item.weight
         if roll <= cumulative_weight:
             return item.item_resource
-    
+
     return null
 
 ## Supporting Resource Type
@@ -30,5 +30,5 @@ class LootItem extends Resource:
     @export var tier: int = 1       # Optional metadata for filtering
 
 ## EXPERT NOTE:
-## Storing loot tables as Resources allows designers to swap tables 
+## Storing loot tables as Resources allows designers to swap tables
 ## (e.g., 'Normal Chest' vs 'Boss Chest') in the inspector without code changes.

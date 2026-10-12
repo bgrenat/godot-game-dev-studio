@@ -24,6 +24,6 @@ func record_revive() -> void:
 func _check_consequences() -> void:
 	# Example: Every 5 deaths, increase world difficulty (or decrease for mercy)
 	if death_count % difficulty_increase_threshold == 0:
-		var difficulty_level = int(death_count / difficulty_increase_threshold)
+		var difficulty_level := int(death_count / difficulty_increase_threshold)
 		difficulty_changed.emit(difficulty_level)
 		print("World Tendency Shifted: Custom Difficulty Level " + str(difficulty_level))

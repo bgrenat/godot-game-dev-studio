@@ -14,17 +14,17 @@ var _active_tween: Tween
 
 func _physics_process(_delta: float) -> void:
 	if not audio_player.playing: return
-	
-	var camera = get_viewport().get_camera_3d()
+
+	var camera := get_viewport().get_camera_3d()
 	if not camera: return
-	
+
 	# Check line of sight
-	var space = get_world_3d().direct_space_state
-	var query = PhysicsRayQueryParameters3D.create(global_position, camera.global_position, collision_mask, [audio_player.get_rid()])
-	var result = space.intersect_ray(query)
-	
-	var target_hz = FREQ_OCCLUDED if not result.is_empty() else FREQ_CLEAR
-	
+	var space := get_world_3d().direct_space_state
+	var query := PhysicsRayQueryParameters3D.create(global_position, camera.global_position, collision_mask, [audio_player.get_rid()])
+	var result := space.intersect_ray(query)
+
+	var target_hz := FREQ_OCCLUDED if not result.is_empty() else FREQ_CLEAR
+
 	if not is_equal_approx(audio_player.attenuation_filter_cutoff_hz, target_hz):
 		_fade_to_freq(target_hz)
 

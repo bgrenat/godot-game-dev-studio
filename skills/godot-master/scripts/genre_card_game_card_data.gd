@@ -4,7 +4,7 @@ extends Resource
 ## Card Data Resource (Expert Pattern)
 ## Data definition for cards. Can be created in Inspector.
 
-class_name CardData
+class_name CardDefinition
 
 enum CardType { ATTACK, SKILL, POWER, CURSE }
 enum TargetType { ENEMY, SELF, ALL_ENEMIES, NONE }

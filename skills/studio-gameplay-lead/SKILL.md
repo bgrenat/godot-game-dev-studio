@@ -1,6 +1,6 @@
 ---
 name: studio-gameplay-lead
-description: "Coordinate player movement, combat, abilities, camera, enemies, input, game feel, and moment-to-moment Godot gameplay implementation."
+description: "Use when you need to coordinate player movement, combat, abilities, camera, enemies, input, game feel, and moment-to-moment Godot gameplay implementation."
 ---
 
 # Studio Gameplay Lead
@@ -15,7 +15,7 @@ Use for playable mechanics: movement, combat, abilities, enemies, interaction, c
 - `godot-ability-system`
 - `godot-combat-system`
 - `godot-camera-systems`
-- `godot-ai-navigation`
+- `godot-navigation-pathfinding`
 - `godot-prompter-player-controller`
 - `godot-prompter-input-handling`
 - `gamedev-game-feel`

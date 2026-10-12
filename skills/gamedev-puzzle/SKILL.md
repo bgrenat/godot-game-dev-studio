@@ -1,6 +1,6 @@
 ---
 name: gamedev-puzzle
-description: "Imported awesome-gamedev-agent-skills guidance for puzzle workflows in game development projects."
+description: "Imported awesome-gamedev-agent-skills guidance for puzzle workflows in game development projects. Use when building grid or board puzzle games: board model, rules, matching or pushing, scoring, undo, and level progression."
 ---
 # Puzzle
 

@@ -26,8 +26,8 @@ func wait_for_selection() -> void:
 var turn_undo_redo := UndoRedo.new()
 func execute_unit_move(unit: Node2D, new_pos: Vector2) -> void:
     turn_undo_redo.create_action("Move Unit")
-    turn_undo_redo.add_do_method(unit, &"set_position", new_pos)
-    turn_undo_redo.add_undo_method(unit, &"set_position", unit.position)
+    turn_undo_redo.add_do_method(unit.set_position.bind(new_pos))
+    turn_undo_redo.add_undo_method(unit.set_position.bind(unit.position))
     turn_undo_redo.commit_action()
 
 # 4. Typed Dictionaries for Grid Board State

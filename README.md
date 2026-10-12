@@ -51,8 +51,9 @@ Relevant areas include:
 - `skills/` — Codex skills and reference material for Godot/game-development workflows
 - `assets/` — plugin visuals, banners, and selected supporting examples
 - `.codex-plugin/plugin.json` — Codex plugin manifest
-- `skills_index.json` — machine-readable skill index
-- `update_skills_index.py` — helper script for regenerating the index
+- `skills_index.json` — machine-readable skill index (all 188 skills)
+- `update_skills_index.py` — regenerates and validates the index
+- `scripts/` — agent entrypoint generator, repository validator, and Godot 4.7 GDScript compile check
 
 ## Who this is for
 
@@ -99,11 +100,11 @@ Use individual specialist skills when the request is narrow:
 
 ## Skills and orchestrators
 
-The library contains 189 specialist skills. Route first, load only relevant `SKILL.md` files, then read their required references. Do not load entire library into one task.
+The library contains 188 specialist skills. Route first, load only relevant `SKILL.md` files, then read their required references. Do not load entire library into one task.
 
 | Family | Count | Use it for |
 | --- | ---: | --- |
-| `godot-*` | 96 | Godot 4.7+ engine systems: architecture, scenes, signals, GDScript, UI, animation, physics, navigation, shaders, multiplayer, testing, optimization, export, platforms, and genre mechanics. |
+| `godot-*` | 95 | Godot 4.7+ engine systems: architecture, scenes, signals, GDScript, UI, animation, physics, navigation, shaders, multiplayer, testing, optimization, export, platforms, and genre mechanics. |
 | `godot-prompter-*` | 54 | Structured workflows for controllers, abilities, addons, C#, networking, localization, UI, resources, save/load, XR, and third-party Godot tools. |
 | `gamedev-*` | 27 | Cross-engine design workflows: genres, game feel, levels, procedural generation, publishing, audio, camera, AI, and game-jam scope. |
 | `studio-*` | 12 | Multi-discipline orchestration: route broad requests, coordinate specialists, set quality gates, and prepare release work. |
@@ -133,17 +134,17 @@ The full linked catalog is exposed below. Use scope to choose family, then open 
 
 | Catalog family | Scope | Skills |
 | --- | --- | --- |
-| Godot engine | Godot 4.7+ architecture, scenes, GDScript, animation, physics, navigation, shaders, UI, networking, testing, optimization, exports, platforms, and genre systems. | [96 `godot-*` skills](SKILL_CATALOG.md#godot--skills--96) |
+| Godot engine | Godot 4.7+ architecture, scenes, GDScript, animation, physics, navigation, shaders, UI, networking, testing, optimization, exports, platforms, and genre systems. | [95 `godot-*` skills](SKILL_CATALOG.md#godot--skills--95) |
 | GodotPrompter workflows | Structured implementation for systems, addons, C#, UI, multiplayer, resources, localization, XR, and production workflows. | [54 `godot-prompter-*` skills](SKILL_CATALOG.md#godot-prompter--skills--54) |
 | Game development | Game design, genres, game feel, level design, procedural generation, publishing, camera, AI, and game jams. | [27 `gamedev-*` skills](SKILL_CATALOG.md#gamedev--skills--27) |
 | Studio orchestration | Routing, creative and technical direction, production, gameplay, systems, QA, release, UX, level, narrative, and addon work. | [12 `studio-*` skills](SKILL_CATALOG.md#studio--skills--12) |
 
 <details>
-<summary>Godot engine catalog — 96 skills</summary>
+<summary>Godot engine catalog — 95 skills</summary>
 
 Domains: 2D/3D animation, physics, lighting, materials, world building, abilities, adaptation, navigation, architecture, audio, cameras, combat, composition, debugging, dialogue, economy, exports, game loops, GDScript, genres, input, inventory, multiplayer, particles, performance, platforms, procedural generation, projects, quests, raycasts, resources, RPG stats, save/load, scenes, servers, shaders, signals, state machines, tests, themes, tilemaps, turns, tweens, and UI.
 
-[Open all 96 direct skill links.](SKILL_CATALOG.md#godot--skills--96)
+[Open all 95 direct skill links.](SKILL_CATALOG.md#godot--skills--95)
 </details>
 
 <details>
@@ -166,11 +167,11 @@ Current package size:
 
 | Family | Count | Purpose |
 | --- | ---: | --- |
-| `godot-*` | 96 | Core Godot expert skills |
+| `godot-*` | 95 | Core Godot expert skills |
 | `godot-prompter-*` | 54 | GodotPrompter-style implementation workflows |
 | `gamedev-*` | 27 | General game-development workflows |
 | `studio-*` | 12 | Studio-role orchestration |
-| **Total** | **189** | Full Godot Game Dev Studio library |
+| **Total** | **188** | Full Godot Game Dev Studio library |
 
 Current package highlights and searchable keywords:
 
@@ -202,12 +203,12 @@ See [COMPATIBILITY.md](COMPATIBILITY.md) for setup guidance and recommended work
 
 ### Claude Code native workflow
 
-Claude Code reads [CLAUDE.md](CLAUDE.md) automatically and discovers tracked project extensions in [`.claude/`](.claude/). Integration adds focused entry points without copying the 189-skill library into Claude startup context.
+Claude Code reads [CLAUDE.md](CLAUDE.md) automatically and discovers tracked project extensions in [`.claude/`](.claude/). Integration adds focused entry points without copying the 188-skill library into Claude startup context.
 
 | Component | Invocation | Purpose |
 | --- | --- | --- |
 | [`godot-route`](.claude/skills/godot-route/SKILL.md) | `/godot-route` | Select smallest relevant skill set, load selected instructions, then continue task. Use before broad planning, implementation, debugging, or review. |
-| [`godot-library-check`](.claude/skills/godot-library-check/SKILL.md) | `/godot-library-check` | Run metadata, plugin, and whitespace validation after skill or compatibility changes; does not regenerate derived files by default. |
+| [`godot-library-check`](.claude/skills/godot-library-check/SKILL.md) | `/godot-library-check` | Run index, repository (mirrors, links, frontmatter), Godot 4.7 compile, plugin, and whitespace checks after skill or compatibility changes; does not regenerate derived files by default. |
 | [`godot-skill-router`](.claude/agents/godot-skill-router.md) | Delegate by name | Read-only subagent. Search catalog and return up to three relevant skills. |
 | [`godot-quality-reviewer`](.claude/agents/godot-quality-reviewer.md) | Delegate by name | Read-only Godot 4.7+ review: static typing, API, lifecycle, performance, and selected-skill anti-patterns. |
 
@@ -215,7 +216,21 @@ Keep personal permissions, credentials, and machine paths in `.claude/settings.l
 
 ## Development workflow
 
-Validate plugin manifest and skill metadata with installed Codex plugin tooling before publishing. Then reinstall:
+Run the repository checks before publishing (CI runs the same commands on every push to `main` and every pull request):
+
+```bash
+python update_skills_index.py            # regenerate skills_index.json after adding/renaming a skill or editing a description
+python update_skills_index.py --validate # every description needs a "Use when" clause or keywords
+python scripts/generate_agent_rules.py --target all
+python scripts/validate_agent_support.py # entrypoints, frontmatter, index completeness, godot-master mirrors, Markdown links, personal paths
+python scripts/check_gdscript.py --godot <path-to-godot-4.7>  # compiles every library script
+```
+
+`scripts/check_gdscript.py` copies the scripts into a throw-away Godot project and compiles them with a real Godot binary. Snippets that depend on context the library cannot ship (user autoloads, third-party addons, game assets) are listed in [`scripts/gdscript_known_failures.txt`](scripts/gdscript_known_failures.txt); any other failure fails the check.
+
+`skills/godot-master/scripts/` mirrors the scripts of every `godot-*` skill. Edit the original under `skills/godot-<name>/scripts/` and copy it to its mirror; the validator rejects mirrors that diverge.
+
+Then reinstall the Codex plugin:
 
 ```powershell
 codex plugin add godot-game-dev-studio@personal

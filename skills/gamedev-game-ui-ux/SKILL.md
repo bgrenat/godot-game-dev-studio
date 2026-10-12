@@ -1,6 +1,6 @@
 ---
 name: gamedev-game-ui-ux
-description: "Imported awesome-gamedev-agent-skills guidance for game-ui-ux workflows in game development projects."
+description: "Imported awesome-gamedev-agent-skills guidance for game-ui-ux workflows in game development projects. Use when building responsive HUDs and menus that scale across screens and support gamepad focus navigation."
 ---
 # Game UI/UX
 

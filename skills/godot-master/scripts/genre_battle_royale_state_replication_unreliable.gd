@@ -2,11 +2,11 @@
 # Synchronizing player transforms via unreliable streams
 extends Node
 
-# EXPERT NOTE: For 100 players, Reliable mode causes congestion. 
+# EXPERT NOTE: For 100 players, Reliable mode causes congestion.
 # ALWAYS use Unreliable/Unreliable Ordered for movement.
 
 @rpc("authority", "call_remote", "unreliable")
-func update_player_transform(p_id: int, pos: Vector3, rot: float):
+func update_player_transform(p_id: int, pos: Vector3, rot: float) -> void:
 	# Interpolate state on clients
 	_on_peer_transform_sync(p_id, pos, rot)
 

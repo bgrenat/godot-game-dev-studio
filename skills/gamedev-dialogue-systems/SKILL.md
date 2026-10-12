@@ -1,6 +1,6 @@
 ---
 name: gamedev-dialogue-systems
-description: "Imported awesome-gamedev-agent-skills guidance for dialogue-systems workflows in game development projects."
+description: "Imported awesome-gamedev-agent-skills guidance for dialogue-systems workflows in game development projects. Use when designing branching dialogue graphs with choices, conditions, and variables, or choosing between Ink/Yarn and a custom system."
 ---
 # Dialogue systems
 

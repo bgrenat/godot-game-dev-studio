@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-export-pipeline
-description: "Imported GodotPrompter guidance for export-pipeline workflows in game development projects."
+description: "Imported GodotPrompter guidance for export-pipeline workflows in game development projects. Use when configuring Godot export presets, platform templates, and automated or CI exports."
 ---
 # Export Pipeline in Godot 4.3+
 

@@ -2,16 +2,16 @@
 # Dedicated server pathing for battle royale hosts
 extends Node
 
-# EXPERT NOTE: Dedicated servers must skip UI and input 
+# EXPERT NOTE: Dedicated servers must skip UI and input
 # and use optimized physics drivers (Dummy).
 
-func _ready():
+func _ready() -> void:
 	if DisplayServer.get_name() == "headless":
 		_server_init()
 	else:
 		_client_init()
 
-func _server_init():
+func _server_init() -> void:
 	# Configure server-only timers or state update rates
 	multiplayer.peer_connected.connect(_on_peer_connected)
 	print("Dedicated Server active for Battle Royale session.")

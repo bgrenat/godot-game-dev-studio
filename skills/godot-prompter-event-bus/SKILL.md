@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-event-bus
-description: "Imported GodotPrompter guidance for event-bus workflows in game development projects."
+description: "Imported GodotPrompter guidance for event-bus workflows in game development projects. Use when setting up a global signal hub autoload so unrelated nodes communicate without direct references."
 ---
 # Event Bus in Godot 4.3+
 

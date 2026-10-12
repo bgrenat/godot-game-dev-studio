@@ -1,6 +1,6 @@
 ---
 name: gamedev-roguelike
-description: "Imported awesome-gamedev-agent-skills guidance for roguelike workflows in game development projects."
+description: "Imported awesome-gamedev-agent-skills guidance for roguelike workflows in game development projects. Use when building a roguelike: turn engine, procedural dungeons, field of view, permadeath, and run economy."
 ---
 # Roguelike
 

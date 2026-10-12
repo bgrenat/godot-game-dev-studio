@@ -12,9 +12,9 @@ func _check_stuck(current_pos: Vector3, delta: float) -> bool:
 		stuck_time += delta
 	else:
 		stuck_time = 0.0
-	
+
 	last_position = current_pos
-	
+
 	if stuck_time > stuck_timeout:
 		# AI is likely blocked or stuck in geometry
 		return true
@@ -22,6 +22,6 @@ func _check_stuck(current_pos: Vector3, delta: float) -> bool:
 
 func handle_recovery(agent: NavigationAgent3D) -> void:
 	# Recovery logic: Teleport slightly, recalculate path, or bump velocity
-	var random_bump = Vector3(randf_range(-1,1), 0, randf_range(-1,1)).normalized()
+	var random_bump := Vector3(randf_range(-1,1), 0, randf_range(-1,1)).normalized()
 	# agent.target_position = ...
 	stuck_time = 0.0

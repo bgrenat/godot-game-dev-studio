@@ -24,7 +24,7 @@ class ConnectionPoint extends RefCounted:
 			return items[filled_node_item].get_node_data(indices[filled_node_item])
 
 
-	func add(item : WorldmapViewItem, path : NodePath, node_index : int):
+	func add(item : WorldmapViewItem, path : NodePath, node_index : int) -> void:
 		items.append(item)
 		item_paths.append(path)
 		indices.append(node_index)
@@ -48,13 +48,13 @@ class NodeList extends RefCounted:
 	var indices : Array[int] = []
 	var costs : Array[float] = []
 
-	func append_list(other : NodeList):
+	func append_list(other : NodeList) -> void:
 		paths.append_array(other.paths)
 		indices.append_array(other.indices)
 		costs.append_array(other.costs)
 
 
-	func remove_at(index : int):
+	func remove_at(index : int) -> void:
 		paths.remove_at(index)
 		indices.remove_at(index)
 		costs.remove_at(index)
@@ -131,11 +131,11 @@ var _worldmap_style_overrides := {}
 var _updating_activatable := false
 
 
-func _init():
+func _init() -> void:
 	child_entered_tree.connect(_on_child_entered_tree)
 
 
-func _ready():
+func _ready() -> void:
 	editor_preview = false
 	if !is_instance_valid(initial_item):
 		initial_item = get_child(0)
@@ -143,7 +143,7 @@ func _ready():
 	reset()
 
 
-func _draw():
+func _draw() -> void:
 	var children := get_children()
 	if children.size() == 0:
 		return
@@ -264,7 +264,7 @@ func get_node_minimum_rect() -> Rect2:
 	return full_map_rect
 
 ## Resets all unlocks, leaving just the starting node.
-func reset():
+func reset() -> void:
 	var initial_array := []
 	initial_array.resize(initial_item.get_node_count())
 	initial_array.fill(0)
@@ -274,7 +274,7 @@ func reset():
 
 ## Looks through all child [WorldmapViewItem]s and builds a graph. Overlapping connectable points on different items are considered connected.[br]
 ## [b]Warning: [/b] this is called on ready, and must be called again when the map changes.
-func recalculate_map():
+func recalculate_map() -> void:
 	var connections_at_positions := {}
 	var connections_by_item_pairs := _connections_by_item_pairs
 	var default_array : Array[ConnectionPoint] = []
@@ -548,7 +548,7 @@ func get_state() -> Dictionary:
 
 ## Load the state of the entire map, in a format saved with [method get_state]. [br]
 ## The supplied dictionary must contain Strings or NodePaths as keys, and int Arrays as values corresponding to levels of the activated.
-func load_state(state : Dictionary):
+func load_state(state : Dictionary) -> void:
 	# --- TODO ---
 	_worldmap_state.clear()
 	var children := get_children()
@@ -571,7 +571,7 @@ func load_state(state : Dictionary):
 	_update_activatable()
 
 ## Override style to show on a node instead of [member style_active], [member style_can_activate] or [member style_inactive].
-func set_node_style_override(item : NodePath, node : int, style : WorldmapStyle):
+func set_node_style_override(item : NodePath, node : int, style : WorldmapStyle) -> void:
 	var new_arr : Array[WorldmapStyle]
 	if !_worldmap_style_overrides.has(item):
 		new_arr = []
@@ -584,7 +584,7 @@ func set_node_style_override(item : NodePath, node : int, style : WorldmapStyle)
 	new_arr[node] = style
 
 ## Called by child [WorldmapViewItem]s when a node is added at runtime.
-func view_item_node_added(node : WorldmapViewItem, index : int):
+func view_item_node_added(node : WorldmapViewItem, index : int) -> void:
 	var node_path := get_path_to(node)
 	_worldmap_can_activate[node_path].insert(index, false)
 	_worldmap_state[node_path].insert(index, 0.0)
@@ -592,14 +592,14 @@ func view_item_node_added(node : WorldmapViewItem, index : int):
 	queue_redraw()
 
 ## Called by child [WorldmapViewItem]s when a node is removed at runtime.
-func view_item_node_removed(node : WorldmapViewItem, index : int):
+func view_item_node_removed(node : WorldmapViewItem, index : int) -> void:
 	var node_path := get_path_to(node)
 	_worldmap_can_activate[node_path].remove_at(index)
 	_worldmap_state[node_path].remove_at(index)
 	queue_redraw()
 
 
-func _update_activatable():
+func _update_activatable() -> void:
 	if _updating_activatable: return
 	_updating_activatable = true
 	await get_tree().process_frame
@@ -616,7 +616,7 @@ func _update_activatable():
 	return
 
 
-func _update_activatable_local(item_path : NodePath):
+func _update_activatable_local(item_path : NodePath) -> void:
 	var item : WorldmapViewItem = get_node(item_path)
 	var nodes_state : Array = _worldmap_state[item_path]
 	var nodes_activatable : Array[bool] = []
@@ -640,7 +640,7 @@ func _update_activatable_local(item_path : NodePath):
 				nodes_activatable[x.y] = true
 
 
-func _update_activatable_interitem(connection : ConnectionPoint):
+func _update_activatable_interitem(connection : ConnectionPoint) -> void:
 	var filled_index := connection.indices[connection.filled_node_item]
 	var filled_item_path := connection.item_paths[connection.filled_node_item]
 	if _worldmap_state[filled_item_path][filled_index] > 0:
@@ -659,7 +659,7 @@ func _update_activatable_interitem(connection : ConnectionPoint):
 		_worldmap_can_activate[connection.item_paths[i]][connection.indices[i]] = activatable
 
 
-func _on_child_entered_tree(child : Node):
+func _on_child_entered_tree(child : Node) -> void:
 	if !child is WorldmapViewItem:
 		return
 
@@ -671,13 +671,13 @@ func _on_child_entered_tree(child : Node):
 		_connections_by_item_pairs[node_path] = []
 
 
-func _on_node_gui_input(event : InputEvent, node_id : int, resource : WorldmapNodeData, path : NodePath):
+func _on_node_gui_input(event : InputEvent, node_id : int, resource : WorldmapNodeData, path : NodePath) -> void:
 	node_gui_input.emit(event, path, node_id, resource)
 
 
-func _on_node_mouse_entered(node_id : int, resource : WorldmapNodeData, path : NodePath):
+func _on_node_mouse_entered(node_id : int, resource : WorldmapNodeData, path : NodePath) -> void:
 	node_mouse_entered.emit(path, node_id, resource)
 
 
-func _on_node_mouse_exited(node_id : int, resource : WorldmapNodeData, path : NodePath):
+func _on_node_mouse_exited(node_id : int, resource : WorldmapNodeData, path : NodePath) -> void:
 	node_mouse_exited.emit(path, node_id, resource)

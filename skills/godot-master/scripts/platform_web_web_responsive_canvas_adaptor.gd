@@ -9,10 +9,10 @@ func _ready() -> void:
 
 func _update_canvas_size() -> void:
 	if not OS.has_feature("web"): return
-	
+
 	# Force browser canvas to match window inner dimensions
 	JavaScriptBridge.eval("""
-		var canvas = document.getElementById('canvas');
+		var canvas := document.getElementById('canvas');
 		canvas.width = window.innerWidth;
 		canvas.height = window.innerHeight;
 	""")

@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-dedicated-server
-description: "Imported GodotPrompter guidance for dedicated-server workflows in game development projects."
+description: "Imported GodotPrompter guidance for dedicated-server workflows in game development projects. Use when building a headless Godot dedicated server: export, server loop, and deployment."
 ---
 # Dedicated Server in Godot 4.3+
 

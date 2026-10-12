@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-dialogue-system
-description: "Imported GodotPrompter guidance for dialogue-system workflows in game development projects."
+description: "Imported GodotPrompter guidance for dialogue-system workflows in game development projects. Use when building a custom Resource-based dialogue system with a dialogue UI in Godot."
 ---
 # Dialogue Systems in Godot 4.3+
 

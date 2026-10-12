@@ -9,13 +9,13 @@ const INTERP_DELAY_MS = 100
 
 func _process(_delta: float) -> void:
 	if is_multiplayer_authority(): return
-	
-	var render_time = Time.get_ticks_msec() - INTERP_DELAY_MS
-	
+
+	var render_time := Time.get_ticks_msec() - INTERP_DELAY_MS
+
 	# Find two snapshots for the 'render_time'
 	if snapshots.size() >= 2:
-		var s1 = snapshots[0]
-		var s2 = snapshots[1]
+		var s1 := snapshots[0]
+		var s2 := snapshots[1]
 		# Lerp position between s1 and s2...
 		global_position = s1.pos.lerp(s2.pos, 0.1)
 

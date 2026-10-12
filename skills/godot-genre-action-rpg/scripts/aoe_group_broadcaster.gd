@@ -2,10 +2,10 @@
 # Rapidly applying damage to groups of entities
 extends Node
 
-# EXPERT NOTE: call_group is an optimized engine-level broadcast 
+# EXPERT NOTE: call_group is an optimized engine-level broadcast
 # that avoids Python-style loop overhead for thousands of entities.
 
-func cast_fireball(pos: Vector2, radius: float, damage: int):
+func cast_fireball(pos: Vector2, radius: float, damage: int) -> void:
 	# Assuming enemies are added to the "enemies" group
 	get_tree().call_group("enemies", "take_aoe_damage", pos, radius, damage)
 

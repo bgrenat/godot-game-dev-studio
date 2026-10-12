@@ -22,24 +22,24 @@ func show_text(bbcode_text: String) -> void:
 	visible_ratio = 0.0
 	_target_visible_ratio = 1.0
 	_is_typing = true
-	
+
 	# Start tweening
 	var tween := create_tween()
 	var total_chars := get_total_character_count()
 	var duration := total_chars / speed_chars_per_sec
-	
+
 	# Create a method tween to handle granular logic (pauses)
 	tween.tween_method(_update_visible_chars, 0.0, 1.0, duration)
 	tween.finished.connect(_on_finished)
 
 func _update_visible_chars(ratio: float) -> void:
 	visible_ratio = ratio
-	
-	var char_count = get_total_character_count()
-	var current_index = int(ratio * char_count)
-	
+
+	var char_count := get_total_character_count()
+	var current_index := int(ratio * char_count)
+
 	character_displayed.emit(current_index)
-	
+
 	# Handle pauses for punctuation (This is a simplified example)
 	# For robust pauses, you would pre-scan the text for custom tags like [pause=1.0]
 

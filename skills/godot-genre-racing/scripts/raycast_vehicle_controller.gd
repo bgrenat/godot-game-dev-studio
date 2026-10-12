@@ -16,13 +16,13 @@ func _physics_process(delta: float) -> void:
 		if wheel.is_colliding():
 			var depth = spring_rest_length - wheel.get_collision_point().distance_to(wheel.global_position)
 			var spring_force = (depth * spring_stiffness)
-			
+
 			# Apply upward force at wheel position
 			apply_force(Vector3.UP * spring_force, wheel.position)
-			
+
 			# Lateral Friction (Grip)
-			var lateral_vel = global_transform.basis.x.dot(get_velocity_at_local_point(wheel.position))
+			var lateral_vel = global_transform.basis.x.dot(linear_velocity + angular_velocity.cross(global_transform.basis * wheel.position))
 			apply_force(-global_transform.basis.x * lateral_vel * tire_grip, wheel.position)
 
-## [SKILL NOTICE]: Avoid 'VehicleBody3D' for arcade feel. Manually 
+## [SKILL NOTICE]: Avoid 'VehicleBody3D' for arcade feel. Manually
 ## calculate suspension via RayCast3D and apply forces to a RigidBody3D.

@@ -1,6 +1,6 @@
 ---
 name: studio-ui-ux-game-lead
-description: "Coordinate HUD, menus, responsive Godot Control layouts, input navigation, accessibility, and game-facing UX flows."
+description: "Use when you need to coordinate HUD, menus, responsive Godot Control layouts, input navigation, accessibility, and game-facing UX flows."
 ---
 
 # Studio UI UX Game Lead

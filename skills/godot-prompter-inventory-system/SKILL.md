@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-inventory-system
-description: "Imported GodotPrompter guidance for inventory-system workflows in game development projects."
+description: "Imported GodotPrompter guidance for inventory-system workflows in game development projects. Use when building an inventory system in Godot: item Resources, slots, stacking, and inventory UI."
 ---
 # Inventory Systems in Godot 4.3+
 

@@ -8,9 +8,9 @@ extends CharacterBody2D
 @export var sub_steps: int = 4
 
 func _physics_process(delta: float) -> void:
-    var step_delta = delta / sub_steps
+    var step_delta := delta / sub_steps
     for i in range(sub_steps):
-        var collision = move_and_collide(velocity_per_second * step_delta)
+        var collision := move_and_collide(velocity_per_second * step_delta)
         if collision:
             _handle_collision(collision)
             break

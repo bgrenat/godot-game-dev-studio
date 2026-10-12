@@ -15,7 +15,7 @@ signal event_occurred(event_name: String, data: Dictionary)
 # RPC wrappers
 @rpc("any_peer", "call_remote", "unreliable")
 func send_input(input: Vector2) -> void:
-    var sender_id = multiplayer.get_remote_sender_id()
+    var sender_id := multiplayer.get_remote_sender_id()
     # Validate Authority: Server Logic
     if multiplayer.is_server():
         input_received.emit(sender_id, input)

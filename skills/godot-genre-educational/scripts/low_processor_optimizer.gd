@@ -2,10 +2,10 @@
 # Reducing CPU usage for stationary educational screens
 extends Node
 
-# EXPERT NOTE: Enabling low_processor_mode saves battery on 
+# EXPERT NOTE: Enabling low_processor_mode saves battery on
 # student laptops during non-animated quiz sections.
 
-func toggle_optimization(enable: bool):
+func toggle_optimization(enable: bool) -> void:
 	OS.low_processor_usage_mode = enable
 	# Set max sleep if enabled to further reduce draw frequency
 	if enable:

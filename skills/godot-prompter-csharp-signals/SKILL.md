@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-csharp-signals
-description: "Imported GodotPrompter guidance for csharp-signals workflows in game development projects."
+description: "Imported GodotPrompter guidance for csharp-signals workflows in game development projects. Use when declaring, connecting, and emitting Godot signals from C#."
 ---
 # Signals in C# (Godot 4.x)
 

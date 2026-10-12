@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-gdextension
-description: "Imported GodotPrompter guidance for gdextension workflows in game development projects."
+description: "Imported GodotPrompter guidance for gdextension workflows in game development projects. Use when writing native C++ or Rust code for Godot through GDExtension or wrapping an existing native library."
 ---
 # GDExtension
 

@@ -1,6 +1,5 @@
 # stealth_patterns.gd
-extends Node
-
+extends Node3D
 # 1. Physics Server Raycasting (Nodeless LOS)
 # EXPERT NOTE: Direct raycasting via the space state is drastically faster for many AI agents.
 func has_line_of_sight(from: Vector3, to: Vector3, exclude: Array[RID]) -> bool:

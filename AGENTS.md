@@ -15,4 +15,4 @@ When helping with a Godot or game-development task:
 5. Prefer Godot 4.7+ APIs and GDScript with static typing.
 6. Preserve upstream credits and license notices from [NOTICE.md](NOTICE.md) and [LICENSE](LICENSE).
 
-Do not load all 189 skills into context at once. Route first, then read narrowly.
+Do not load all 188 skills into context at once. Route first, then read narrowly.

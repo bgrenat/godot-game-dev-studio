@@ -11,17 +11,22 @@ func scan_fov():
 	var forward = -global_transform.basis.z
 	var start_angle = -view_angle / 2.0
 	var step = view_angle / (ray_count - 1)
-	var targets = []
-	
+	var targets := []
+
 	for i in range(ray_count):
 		var angle = deg_to_rad(start_angle + i * step)
 		# Rotate forward vector around UP axis
 		var dir = forward.rotated(Vector3.UP, angle)
-		
+
 		var query = PhysicsRayQueryParameters3D.create(global_position, global_position + dir * view_distance)
-		query.exclude = [self.get_rid()]
-		
+		query.exclude = _self_exclusion()
+
 		var hit = space_state.intersect_ray(query)
 		if hit: targets.append(hit)
-		
+
 	return targets
+
+## Excludes the parent physics body (this helper node has no RID of its own).
+func _self_exclusion() -> Array[RID]:
+	var body := get_parent() as CollisionObject3D
+	return [body.get_rid()] if body else []

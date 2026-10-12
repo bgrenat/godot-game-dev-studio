@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-camera-system
-description: "Imported GodotPrompter guidance for camera-system workflows in game development projects."
+description: "Imported GodotPrompter guidance for camera-system workflows in game development projects. Use when setting up Camera2D/Camera3D limits, smoothing, follow, zoom, and screen shake in Godot."
 ---
 # Camera Systems in Godot 4.3+
 

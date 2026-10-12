@@ -5,7 +5,7 @@ extends Resource
 ## Represents a purchasable producer (e.g., Grandma, Mine).
 ## Calculates cost scaling exponentially.
 
-class_name Generator
+class_name IdleClickerGenerator
 
 @export var id: String
 @export var name: String
@@ -18,12 +18,12 @@ class_name Generator
 var count: int = 0
 
 func get_cost() -> BigNumber:
-    var growth_mult = pow(cost_growth_factor, count)
-    var base = BigNumber.new(base_cost_mantissa, base_cost_exponent)
+    var growth_mult := pow(cost_growth_factor, count)
+    var base := BigNumber.new(base_cost_mantissa, base_cost_exponent)
     return base.multiply(growth_mult)
 
 func get_revenue_per_second() -> BigNumber:
-    var base = BigNumber.new(base_revenue_mantissa, base_revenue_exponent)
+    var base := BigNumber.new(base_revenue_mantissa, base_revenue_exponent)
     # Revenue = Base * Count (* Modifiers eventually)
     return base.multiply(float(count))
 

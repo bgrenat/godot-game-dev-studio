@@ -24,7 +24,7 @@ func _ready() -> void:
     nav_agent.velocity_computed.connect(_on_velocity_computed)
     nav_agent.avoidance_enabled = true
     nav_agent.radius = 20.0
-    
+
     if selection_visual:
         selection_visual.visible = false
 
@@ -43,13 +43,13 @@ func _physics_process(delta: float) -> void:
             state = State.IDLE
             velocity = Vector2.ZERO
             return
-            
-        var next = nav_agent.get_next_path_position()
-        var dir = global_position.direction_to(next)
-        
+
+        var next := nav_agent.get_next_path_position()
+        var dir := global_position.direction_to(next)
+
         # Trigger avoidance calc
         nav_agent.set_velocity(dir * speed)
-        
+
     elif state == State.ATTACK:
         # Attack logic here
         pass

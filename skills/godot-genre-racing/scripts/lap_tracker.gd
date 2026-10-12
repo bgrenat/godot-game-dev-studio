@@ -16,8 +16,8 @@ func _ready() -> void:
     lap_start_time = Time.get_ticks_msec() / 1000.0
 
 func on_checkpoint_passed(checkpoint: Node3D) -> void:
-    var idx = checkpoints.find(checkpoint)
-    
+    var idx := checkpoints.find(checkpoint)
+
     # Pattern: Validate sequence to stop lap-shortcuts.
     if idx == next_checkpoint_idx:
         next_checkpoint_idx += 1
@@ -25,10 +25,10 @@ func on_checkpoint_passed(checkpoint: Node3D) -> void:
             _complete_lap()
 
 func _complete_lap() -> void:
-    var end_time = Time.get_ticks_msec() / 1000.0
-    var lap_time = end_time - lap_start_time
+    var end_time := Time.get_ticks_msec() / 1000.0
+    var lap_time := end_time - lap_start_time
     lap_completed.emit(lap_time)
-    
+
     current_lap += 1
     next_checkpoint_idx = 0
     lap_start_time = end_time

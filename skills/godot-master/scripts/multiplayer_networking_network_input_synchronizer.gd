@@ -2,15 +2,15 @@
 # Handling latency with input replication
 extends MultiplayerSynchronizer
 
-# EXPERT NOTE: Sync only the essential inputs, not the 
+# EXPERT NOTE: Sync only the essential inputs, not the
 # calculated physics state, to save bandwidth.
 
 @export var input_direction: Vector2
 
-func _ready():
+func _ready() -> void:
 	# Configure what to sync in the Inspector (SceneReplicationConfig)
 	pass
 
-func _physics_process(_delta):
+func _physics_process(_delta) -> void:
 	if is_multiplayer_authority():
 		input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")

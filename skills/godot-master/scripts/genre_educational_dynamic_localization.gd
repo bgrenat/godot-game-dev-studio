@@ -2,14 +2,14 @@
 # Transitioning between languages at runtime using tr()
 extends Node
 
-# EXPERT NOTE: tr() and atr() allow for dynamic localization 
+# EXPERT NOTE: tr() and atr() allow for dynamic localization
 # without restarting the application.
 
-func update_language(locale: String):
+func update_language(locale: String) -> void:
 	TranslationServer.set_locale(locale)
 	_refresh_ui_text()
 
-func _refresh_ui_text():
+func _refresh_ui_text() -> void:
 	# Example for a button tag
 	# get_node("StartButton").text = tr("KEY_START")
 	pass

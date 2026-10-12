@@ -1,6 +1,6 @@
 ---
 name: gamedev-visual-novel
-description: "Imported awesome-gamedev-agent-skills guidance for visual-novel workflows in game development projects."
+description: "Imported awesome-gamedev-agent-skills guidance for visual-novel workflows in game development projects. Use when building a visual novel: branching script, text box and character presentation, choices, save anywhere, backlog, skip, and auto."
 ---
 # Visual Novel
 

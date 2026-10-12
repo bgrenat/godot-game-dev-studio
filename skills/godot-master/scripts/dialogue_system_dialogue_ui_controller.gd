@@ -5,10 +5,10 @@ extends Control
 @onready var text_label = $TextLabel
 @onready var options_container = $OptionsContainer
 
-func _ready():
+func _ready() -> void:
 	DialogueManager.line_started.connect(_on_line_started)
 
-func _on_line_started(node: DialogueNode):
+func _on_line_started(node: DialogueNode) -> void:
 	text_label.text = node.text
 	_clear_options()
 	for i in range(node.options.size()):
@@ -17,6 +17,6 @@ func _on_line_started(node: DialogueNode):
 		btn.pressed.connect(DialogueManager.select_option.bind(i))
 		options_container.add_child(btn)
 
-func _clear_options():
+func _clear_options() -> void:
 	for child in options_container.get_children():
 		child.queue_free()

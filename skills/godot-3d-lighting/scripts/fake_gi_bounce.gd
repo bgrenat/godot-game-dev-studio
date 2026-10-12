@@ -5,12 +5,12 @@ extends Node3D
 ## This script fakes 'floor bounce' by placing non-shadowed lights.
 
 func setup_fake_bounce(main_light: DirectionalLight3D) -> void:
-    var bounce_light = DirectionalLight3D.new()
+    var bounce_light := DirectionalLight3D.new()
     add_child(bounce_light)
-    
+
     # Rotate 180 degrees to point "up" from the ground
     bounce_light.rotation = main_light.rotation + Vector3(PI, 0, 0)
-    
+
     # Crucial performance settings
     bounce_light.shadow_enabled = false
     bounce_light.light_energy = 0.2 # Subdued bounce intensity

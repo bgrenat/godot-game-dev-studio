@@ -10,9 +10,11 @@ Ce projet utilise les fichiers `SKILL.md` comme source de vérité portable. Les
 ```yaml
 ---
 name: godot-example
-description: Explique quand et comment utiliser ce skill Godot 4.
+description: Ce que fait ce skill. Use when <situations qui doivent le déclencher>.
 ---
 ```
+
+   Le `name` doit correspondre au nom du dossier et la `description` doit contenir une clause `Use when` (ou `Keywords:`).
 
 3. Documenter le modèle mental, les décisions d’architecture, les exemples et les anti-patterns.
 4. Utiliser les APIs Godot 4.7+ et du GDScript typé lorsque du code est fourni.
@@ -40,7 +42,9 @@ Ne pas enrichir manuellement ces fichiers avec une logique qui devrait vivre dan
 - préférer des fonctions statiquement typées ;
 - éviter les APIs Godot 3 obsolètes ;
 - documenter les dépendances et le contexte d’exécution ;
-- tester le script dans Godot 4.7 lorsque l’exécutable est disponible ;
+- vérifier qu’il compile avec Godot 4.7 (`python scripts/check_gdscript.py --godot <godot>`) ;
+- ne pas réutiliser un `class_name` déjà déclaré dans le même skill, ni masquer une classe native Godot ;
+- pour un skill `godot-*`, recopier le script dans son miroir `skills/godot-master/scripts/` ;
 - ne pas présenter un exemple comme production-ready s’il n’a pas été validé.
 
 ## MCP
@@ -50,8 +54,11 @@ MCP est optionnel. Une contribution doit rester utilisable sans MCP avec les ski
 ## Vérifications avant contribution
 
 ```powershell
+python update_skills_index.py
+python update_skills_index.py --validate
 python scripts\generate_agent_rules.py --target all
 python scripts\validate_agent_support.py
+python scripts\check_gdscript.py --godot <chemin-vers-godot-4.7>
 Get-Content .codex-plugin\plugin.json | ConvertFrom-Json | Out-Null
 ```
 
@@ -59,7 +66,7 @@ La CI GitHub exécute automatiquement ces contrôles sur les pushs vers `main` e
 
 Vérifier également que le diff ne contient que les fichiers liés à la contribution et qu’aucun artefact comme `__pycache__` n’est ajouté.
 
-La validation automatique inspecte tous les fichiers texte du paquet pour détecter les chemins personnels et vérifie que chaque dossier de skill contient bien un `SKILL.md`. La validation syntaxique des scripts `.gd` doit être effectuée avec Godot 4.7 lorsqu’il est disponible.
+La validation automatique inspecte les fichiers texte du paquet pour détecter les chemins personnels, vérifie que chaque dossier de skill contient un `SKILL.md` dont le `name` correspond au dossier, que `skills_index.json` liste tous les skills sans doublon, que les miroirs de `skills/godot-master/scripts/` sont identiques à leurs originaux et que tous les liens Markdown relatifs aboutissent. La CI compile aussi chaque script `.gd` avec Godot 4.7 ; les extraits qui dépendent d’un contexte absent de la bibliothèque (autoload, addon, asset du jeu) sont listés dans `scripts/gdscript_known_failures.txt`.
 
 ## Pull request
 

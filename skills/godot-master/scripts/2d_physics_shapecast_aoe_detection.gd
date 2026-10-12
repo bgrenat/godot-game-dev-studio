@@ -2,8 +2,8 @@
 # Using ShapeCast2D for robust area-of-effect detection [Ray vs Shape]
 extends ShapeCast2D
 
-# EXPERT NOTE: RayCasts are pins. ShapeCasts are volumes. 
-# Use ShapeCast2D for ground detection or melee swings to 
+# EXPERT NOTE: RayCasts are pins. ShapeCasts are volumes.
+# Use ShapeCast2D for ground detection or melee swings to
 # prevent "skinny" collisions from missing targets.
 
 func check_grounded() -> bool:
@@ -13,7 +13,7 @@ func check_grounded() -> bool:
 	return is_colliding()
 
 func get_all_targets() -> Array:
-	var hits = []
+	var hits := []
 	for i in range(get_collision_count()):
 		hits.append(get_collider(i))
 	return hits

@@ -9,7 +9,7 @@ class_name NoteOrchestrator
 @export var scroll_speed: float = 500.0 # Pixels per beat
 
 func _process(_delta: float) -> void:
-	var current_beat = conductor.get_current_beat(bpm)
+	var current_beat = conductor.get_current_beat()
 	_update_note_positions(current_beat)
 
 func _update_note_positions(current_beat: float) -> void:
@@ -19,5 +19,5 @@ func _update_note_positions(current_beat: float) -> void:
 		# Interpolate visual position based on time distance
 		note.position.y = beats_away * scroll_speed
 
-## [SKILL NOTICE]: Use 'beats_away' to position notes. This ensures 
+## [SKILL NOTICE]: Use 'beats_away' to position notes. This ensures
 ## visual consistency regardless of framerate or lag spikes.

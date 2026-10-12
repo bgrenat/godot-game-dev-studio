@@ -21,14 +21,14 @@ var _monitor_names = {
 	MonitorType.CHUNK_LOAD_TIME_MS: "Game/Chunk Load (ms)"
 }
 
-var _monitor_values = {}
+var _monitor_values := {}
 
 func _ready() -> void:
 	# Only run in debug builds
 	if not OS.is_debug_build():
 		queue_free()
 		return
-		
+
 	# Register monitors
 	for type in _monitor_names:
 		var path = _monitor_names[type]

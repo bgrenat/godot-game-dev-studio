@@ -13,9 +13,9 @@ extends HBoxContainer
 
 func set_split_ratio(ratio: float) -> void:
 	# Custom weight management for asymmetric split-screen
-	var p1 = get_child(0) as Control
-	var p2 = get_child(1) as Control
-	
+	var p1 := get_child(0) as Control
+	var p2 := get_child(1) as Control
+
 	p1.size_flags_stretch_ratio = ratio
 	p2.size_flags_stretch_ratio = 1.0 - ratio
 

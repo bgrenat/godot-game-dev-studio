@@ -10,10 +10,10 @@ class_name PlatformerAnimationSync
 
 func _physics_process(_delta: float) -> void:
     if not anim_tree or not character: return
-    
-    var is_moving := abs(character.velocity.x) > 10.0
+
+    var is_moving: bool = absf(character.velocity.x) > 10.0
     var is_in_air := not character.is_on_floor()
-    
+
     # Pattern: Explicitly set booleans for logic-safe Advance Conditions.
     anim_tree.set("parameters/conditions/is_moving", is_moving)
     anim_tree.set("parameters/conditions/is_idle", not is_moving)

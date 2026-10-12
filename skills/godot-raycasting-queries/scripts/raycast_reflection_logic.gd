@@ -7,20 +7,25 @@ func calculate_bounce_path(start: Vector3, dir: Vector3, max_bounces: int = 4):
 	var path = [start]
 	var current_pos = start
 	var current_dir = dir.normalized()
-	
+
 	for i in max_bounces:
 		var query = PhysicsRayQueryParameters3D.create(current_pos, current_pos + current_dir * 500)
-		query.exclude = [self.get_rid()]
+		query.exclude = _self_exclusion()
 		var result = space_state.intersect_ray(query)
-		
+
 		if result:
 			current_pos = result.position
 			path.append(current_pos)
 			# Reflect the direction based on the hit normal
 			current_dir = current_dir.bounce(result.normal)
 			# Offset from surface to prevent hit_from_inside on next step
-			current_pos += current_dir * 0.05 
+			current_pos += current_dir * 0.05
 		else:
 			path.append(current_pos + current_dir * 500)
 			break
 	return path
+
+## Excludes the parent physics body (this helper node has no RID of its own).
+func _self_exclusion() -> Array[RID]:
+	var body := get_parent() as CollisionObject3D
+	return [body.get_rid()] if body else []

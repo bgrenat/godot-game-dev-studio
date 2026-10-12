@@ -1,6 +1,6 @@
 ---
 name: gamedev-game-feel
-description: "Imported awesome-gamedev-agent-skills guidance for game-feel workflows in game development projects."
+description: "Imported awesome-gamedev-agent-skills guidance for game-feel workflows in game development projects. Use when adding juice and feedback: screen shake, hit-stop, easing, particles, and input responsiveness."
 ---
 # Game feel (juice)
 

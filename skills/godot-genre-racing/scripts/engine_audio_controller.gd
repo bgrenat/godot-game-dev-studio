@@ -11,5 +11,5 @@ class_name EngineAudioController
 
 func update_engine_sound(current_speed: float) -> void:
     # Pattern: Calculate pitch based on speed/RPM curve.
-    var target_pitch = min_pitch + (current_speed * speed_scale)
+    var target_pitch := min_pitch + (current_speed * speed_scale)
     pitch_scale = lerp(pitch_scale, clamp(target_pitch, min_pitch, max_pitch), 0.1)

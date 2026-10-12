@@ -2,7 +2,7 @@
 # Authority-only variable updates
 extends Node
 
-# EXPERT NOTE: Never let clients dictate their own health 
+# EXPERT NOTE: Never let clients dictate their own health
 # or money. Only the server updates these variables.
 
 @export var health: int = 100:
@@ -12,7 +12,7 @@ extends Node
 
 signal health_changed(new_val)
 
-func damage(amount: int):
+func damage(amount: int) -> void:
 	# Damage logic should only execute on the server
 	if not multiplayer.is_server(): return
 	health -= amount

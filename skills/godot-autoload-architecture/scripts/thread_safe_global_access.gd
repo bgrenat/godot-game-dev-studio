@@ -2,13 +2,13 @@
 # Handling global data from background threads
 extends Node
 
-# EXPERT NOTE: Modifying Autoload nodes or SceneTree properties 
+# EXPERT NOTE: Modifying Autoload nodes or SceneTree properties
 # from threads is UNSAFE. Use Mutex for data or call_deferred for nodes.
 
 var _shared_data: Dictionary = {}
 var _lock: Mutex = Mutex.new()
 
-func update_data_safely(key: String, val: Variant):
+func update_data_safely(key: String, val: Variant) -> void:
 	_lock.lock()
 	_shared_data[key] = val
 	_lock.unlock()

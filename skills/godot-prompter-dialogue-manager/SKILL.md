@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-dialogue-manager
-description: "Imported GodotPrompter guidance for dialogue-manager workflows in game development projects."
+description: "Imported GodotPrompter guidance for dialogue-manager workflows in game development projects. Use when authoring branching dialogue with the Dialogue Manager addon, including conditions, mutations, and translation."
 ---
 # Dialogue Manager
 

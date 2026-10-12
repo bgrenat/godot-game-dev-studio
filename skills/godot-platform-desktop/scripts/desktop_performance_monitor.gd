@@ -9,7 +9,7 @@ func get_hardware_info() -> Dictionary:
 		"cpu": OS.get_processor_name(),
 		"ram_total_mb": OS.get_static_memory_usage() / 1024 / 1024, # Current usage
 		"gpu": RenderingServer.get_video_adapter_name(),
-		"is_sandboxed": OS.is_sandboxed_app()
+		"is_sandboxed": OS.is_sandboxed()
 	}
 
 func suggest_preset() -> StringName:

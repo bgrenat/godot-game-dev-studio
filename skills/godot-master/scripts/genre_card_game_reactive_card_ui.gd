@@ -4,13 +4,13 @@ extends Control
 
 @export var data: CardData
 
-@onready var label = $NameLabel
+@onready var label := $NameLabel
 
-func _ready():
+func _ready() -> void:
 	# EXPERT: React to data changes from ANY system
 	data.changed.connect(_update_ui)
 	_update_ui()
 
-func _update_ui():
+func _update_ui() -> void:
 	label.text = data.card_name
 	print("UI Refreshed for ", data.card_name)

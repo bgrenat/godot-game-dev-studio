@@ -18,10 +18,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
     # Simulating a perspective shift when the player moves rapidly
     # by slightly nudging the furthest background CanvasLayers in opposition to camera movement.
-    var cam_velocity = get_screen_center_position() - global_position
-    
+    var cam_velocity := get_screen_center_position() - global_position
+
     for i in range(depth_layers.size()):
-        var layer = depth_layers[i]
+        var layer := depth_layers[i]
         # Deeper layers (higher index) move slower, causing a parallax effect without using ParallaxBackground
-        var depth_factor = 1.0 - (float(i) / depth_layers.size()) * 0.5
+        var depth_factor := 1.0 - (float(i) / depth_layers.size()) * 0.5
         layer.offset = global_position * (1.0 - depth_factor)

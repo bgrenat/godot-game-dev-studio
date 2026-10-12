@@ -2,7 +2,7 @@
 # Pricing and availability for purchasables
 class_name ShopItem extends Resource
 
-# EXPERT NOTE: Shop items wrap InventoryItems with 
+# EXPERT NOTE: Shop items wrap InventoryItems with
 # pricing and stock metadata.
 
 @export var item: InventoryItem
@@ -12,5 +12,5 @@ class_name ShopItem extends Resource
 
 var current_stock: int = 0
 
-func _init():
+func _init() -> void:
 	current_stock = initial_stock

@@ -2,14 +2,14 @@
 # Interfacing quests with a dialogue system
 extends Node
 
-# EXPERT NOTE: The NPC logic should check the QuestManager state 
+# EXPERT NOTE: The NPC logic should check the QuestManager state
 # to decide which dialogue branch to play.
 
 @export var quest_to_give: Quest
 
-func interact():
+func interact() -> void:
 	var q_status = QuestManager.get_quest_status(quest_to_give.id)
-	
+
 	match q_status:
 		Quest.Status.AVAILABLE:
 			_show_offer_dialogue()
@@ -18,6 +18,12 @@ func interact():
 		Quest.Status.COMPLETED:
 			_show_thanks_dialogue()
 
-func _show_offer_dialogue():
+func _show_offer_dialogue() -> void:
 	# If player accepts in UI:
 	QuestManager.accept_quest(quest_to_give)
+
+func _show_reminder_dialogue() -> void:
+	pass # Remind the player of the active objective.
+
+func _show_thanks_dialogue() -> void:
+	pass # Thank the player once the quest is completed.

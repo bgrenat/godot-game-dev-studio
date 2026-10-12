@@ -17,9 +17,9 @@ func _on_hour_passed(hour: int) -> void:
 		_recalculate_path(schedule[hour])
 
 func _recalculate_path(target_pos: Vector3) -> void:
-	var map = get_world_3d().get_navigation_map()
+	var map := get_world_3d().get_navigation_map()
 	# Expert Pattern: Query NavServer directly to avoid NavAgent node overhead
 	active_path = NavigationServer3D.map_get_path(map, global_position, target_pos, true)
 
-## [SKILL NOTICE]: Connect NPCs to a central TimeManager signal 
+## [SKILL NOTICE]: Connect NPCs to a central TimeManager signal
 ## to trigger schedule updates without polling every frame.

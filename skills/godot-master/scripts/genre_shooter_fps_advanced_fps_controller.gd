@@ -16,15 +16,15 @@ var _walk_time: float = 0.0
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y -= 19.6 * delta # Gravity
-	
-	var input_dir = Input.get_vector("move_left", "move_right", "move_fwd", "move_back")
-	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	
+
+	var input_dir := Input.get_vector("move_left", "move_right", "move_fwd", "move_back")
+	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+
 	# Expert Pattern: Higher lerp weight on ground for snappiness
-	var weight = 10.0 if is_on_floor() else 10.0 * air_control
+	var weight := 10.0 if is_on_floor() else 10.0 * air_control
 	velocity.x = lerp(velocity.x, direction.x * walk_speed, weight * delta)
 	velocity.z = lerp(velocity.z, direction.z * walk_speed, weight * delta)
-	
+
 	move_and_slide()
 	_apply_head_bob(delta, direction)
 
@@ -35,5 +35,5 @@ func _apply_head_bob(delta: float, direction: Vector3) -> void:
 	else:
 		camera.transform.origin = camera.transform.origin.lerp(Vector3.ZERO, delta * 5.0)
 
-## [SKILL NOTICE]: Use 'is_on_floor()' to switch between ground/air 
+## [SKILL NOTICE]: Use 'is_on_floor()' to switch between ground/air
 ## interpolation weights. This prevents 'floaty' movement on the ground.

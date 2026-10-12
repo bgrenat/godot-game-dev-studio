@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-animation-system
-description: "Imported GodotPrompter guidance for animation-system workflows in game development projects."
+description: "Imported GodotPrompter guidance for animation-system workflows in game development projects. Use when choosing between AnimationPlayer and AnimationTree, blending animations, or driving state-machine animation."
 ---
 # Animation System in Godot 4.3+
 

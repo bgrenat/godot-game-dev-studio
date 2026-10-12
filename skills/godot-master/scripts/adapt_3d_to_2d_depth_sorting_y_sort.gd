@@ -17,7 +17,7 @@ func _process(_delta: float) -> void:
     _update_sorting()
 
 func _update_sorting() -> void:
-    # Z-index is clamped in Godot to [-4096, 4096]. 
+    # Z-index is clamped in Godot to [-4096, 4096].
     # If the world is larger, you must use CanvasLayer or scaled division.
-    var calculated_z = int(global_position.y + depth_offset)
+    var calculated_z := int(global_position.y + depth_offset)
     z_index = clampi(calculated_z, RenderingServer.CANVAS_ITEM_Z_MIN, RenderingServer.CANVAS_ITEM_Z_MAX)

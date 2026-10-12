@@ -5,7 +5,7 @@ extends Node
 # EXPERT NOTE: register_message_capture allows you to intercept
 # underlying engine errors that usually only go to the console.
 
-func _ready():
+func _ready() -> void:
 	if OS.is_debug_build():
 		EngineDebugger.register_message_capture("custom_logger", _on_engine_error)
 

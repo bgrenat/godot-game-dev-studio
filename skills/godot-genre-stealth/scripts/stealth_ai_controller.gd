@@ -14,36 +14,36 @@ var alertness_meter: float = 0.0
 @onready var player: Node3D = get_tree().get_first_node_in_group("player")
 
 func _physics_process(delta: float) -> void:
-    var can_see = _check_vision()
-    
+    var can_see := _check_vision()
+
     if can_see:
         # 1. Light-Dependent Detection Speed
-        var light_level = _get_player_light_level()
+        var light_level := _get_player_light_level()
         alertness_meter += delta * 50.0 * light_level
     else:
         # Cool down alertness
         alertness_meter -= delta * 10.0
-        
+
     alertness_meter = clamp(alertness_meter, 0, detection_threshold)
     _update_state()
 
 func _check_vision() -> bool:
     if not player: return false
-    
+
     # 2. Field of View & Line of Sight
-    var dir_to_player = player.global_position - global_position
-    var angle = global_transform.basis.z.angle_to(dir_to_player)
-    
+    var dir_to_player := player.global_position - global_position
+    var angle := global_transform.basis.z.angle_to(dir_to_player)
+
     if angle < deg_to_rad(45.0): # 90 degree FOV
         vision_cast.target_position = vision_cast.to_local(player.global_position)
         vision_cast.force_raycast_update()
         return not vision_cast.is_colliding() # Assuming layer mask only hits world
-        
+
     return false
 
 func _get_player_light_level() -> float:
     # 3. Light Gem Logic
-    # In an expert setup, the player calculates their own 'exposure' 
+    # In an expert setup, the player calculates their own 'exposure'
     # based on light probes or specific light overlaps.
     if player.has_method("get_light_exposure"):
         return player.get_light_exposure()
@@ -51,7 +51,7 @@ func _get_player_light_level() -> float:
 
 func on_sound_heard(sound_pos: Vector3, intensity: float) -> void:
     # 4. Hearing Implementation
-    var dist = global_position.distance_to(sound_pos)
+    var dist := global_position.distance_to(sound_pos)
     if dist < intensity * 10.0:
         alertness_meter += intensity * 20.0
         # Investigate sound source
@@ -66,7 +66,7 @@ func _update_state() -> void:
         current_state = State.IDLE
 
 ## EXPERT NOTE:
-## Use 'Composite Vision Cones'. A short, wide cone for immediate detection 
+## Use 'Composite Vision Cones'. A short, wide cone for immediate detection
 ## and a long, narrow cone for peripheral SUSPICION.
-## Use the 'Reaction Delay' pattern: AI should pause for 0.5s when first 
+## Use the 'Reaction Delay' pattern: AI should pause for 0.5s when first
 ## spotting the player to give the player time to duck back into cover.

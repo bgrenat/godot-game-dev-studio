@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-godot-project-setup
-description: "Imported GodotPrompter guidance for godot-project-setup workflows in game development projects."
+description: "Imported GodotPrompter guidance for godot-project-setup workflows in game development projects. Use when scaffolding a new Godot project: folder layout, project settings, autoloads, and version control."
 ---
 # Godot Project Setup
 

@@ -12,23 +12,23 @@ var _is_moving: bool = false
 
 func move(direction: Vector2i) -> void:
 	if _is_moving: return
-	
-	var target = logical_pos + direction
+
+	var target := logical_pos + direction
 	if _can_move(target):
 		_execute_move(target)
 
 func _can_move(target: Vector2i) -> bool:
-	var data = tile_map.get_cell_tile_data(target)
+	var data := tile_map.get_cell_tile_data(target)
 	return data != null and data.get_custom_data("walkable")
 
 func _execute_move(target: Vector2i) -> void:
 	_is_moving = true
 	logical_pos = target # Update logic instantly
-	
-	var world_pos = tile_map.map_to_local(logical_pos)
-	var tween = get_tree().create_tween().set_trans(Tween.TRANS_SINE)
+
+	var world_pos := tile_map.map_to_local(logical_pos)
+	var tween := get_tree().create_tween().set_trans(Tween.TRANS_SINE)
 	tween.tween_property(self, "position", world_pos, move_time)
 	tween.finished.connect(func(): _is_moving = false)
 
-## [SKILL NOTICE]: Resolve logical state (Vector2i) IMMEDIATELY upon 
+## [SKILL NOTICE]: Resolve logical state (Vector2i) IMMEDIATELY upon
 ## valid input. Use Tweens ONLY for visual representation to avoid race conditions.

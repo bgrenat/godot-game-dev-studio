@@ -1,6 +1,6 @@
 ---
 name: godot-prompter-popochiu
-description: "Imported GodotPrompter guidance for popochiu workflows in game development projects."
+description: "Imported GodotPrompter guidance for popochiu workflows in game development projects. Use when building a point-and-click adventure with the Popochiu addon."
 ---
 # Popochiu
 

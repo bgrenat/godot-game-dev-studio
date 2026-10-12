@@ -64,8 +64,8 @@ func _on_modifier_changed() -> void:
 # Inner class for easy portability
 class StatModifier extends Resource:
 	enum Type { ADD, MULTIPLY }
-	signal changed
-	
+	# `changed` is inherited from Resource.
+
 	@export var type: Type = Type.ADD:
 		set(v): type = v; changed.emit()
 	@export var value: float = 0.0:
