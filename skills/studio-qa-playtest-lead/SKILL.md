@@ -46,3 +46,9 @@ Produce:
 - Playtest script.
 - Bug triage notes.
 - Verification evidence required.
+
+## Optional agent playtest
+
+[Autopilot for Godot](https://github.com/ramenvr/autopilot/blob/main/plugin/godot/README.md) documents Godot 4.7+, a separate agent service, Aura sign-in or your own keys, and optional MCP setup for Codex. Follow upstream setup and review its run sharing settings before starting. The project uses Apache-2.0 and includes fonts under SIL OFL. Requirements are from upstream documentation reviewed on 2026-11-09.
+
+Choose exploration to discover issues, testing to exercise an area, verification to check a specific claim, or a goal run to attempt an outcome. Record the build and scene, the claim or goal, steps taken, direct observations, and links to captures or logs. Mark claims confirmed, refuted, or inconclusive. Use inconclusive when the run could not reach the relevant state or evidence is missing. Send ambiguous results and judgments about feel or balance to a human playtester.

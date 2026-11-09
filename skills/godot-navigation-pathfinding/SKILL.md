@@ -375,3 +375,7 @@ func run_benchmark(nav_mesh: NavigationMesh, source_geometry: NavigationMeshSour
 
 ### Related
 - Master Skill: [godot-master](../godot-master/SKILL.md)
+
+## Behavior selection
+
+When a game needs both a behavior tree and hierarchical states, evaluate [LimboAI](../godot-prompter-limboai/SKILL.md) as an optional decision layer. Keep pathfinding and movement in the existing navigation components. Follow the LimboAI adoption check for engine and export compatibility.

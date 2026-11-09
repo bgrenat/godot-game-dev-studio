@@ -91,3 +91,9 @@ These tools can also consume the repository as plain Markdown:
 - **Continue.dev**: index the repository or pin `SKILL_CATALOG.md` plus the needed `SKILL.md` files.
 
 For all tools, avoid loading every skill at once. This plugin contains 188 skills; use the catalog to choose the smallest useful subset.
+
+## Optional Godot editor integration
+
+[Godot AI Workbench](https://github.com/ZemDen/godot-ai-workbench) connects an MCP client to an open Godot project for scene and script inspection, diagnostics, screenshots, and play sessions. Upstream documents Windows 10+, Godot 4.x, and a local executable (gaw.exe). Follow its setup instructions to install the editor addon in the game project and register the executable with your MCP client. Start with Analysis for read-only inspection. Use Full Control when the task requires edits or runtime actions.
+
+Workbench is optional and licensed Apache-2.0. These requirements come from the upstream README reviewed on 2026-11-09. Check the chosen release and confirm the client can inspect an open scene before relying on it.

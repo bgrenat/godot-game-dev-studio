@@ -26,6 +26,12 @@ Relevant areas include:
   <img src="assets/hero_banner.webp" alt="Godot Game Dev Studio - Codex plugin for Godot game development" width="100%" />
 </div>
 
+## What's new in v2.2
+
+- Documented optional [Godot AI Workbench](COMPATIBILITY.md#optional-godot-editor-integration) setup, including MCP and editor access profiles.
+- Added an [Autopilot playtest workflow](skills/studio-qa-playtest-lead/SKILL.md#optional-agent-playtest) with evidence and verdict criteria.
+- Added a [LimboAI adoption check](skills/godot-prompter-limboai/SKILL.md#adoption-check) for Godot versions and target exports, linked from the navigation skill.
+
 ## Credits
 
 - **Plugin assembly, Codex packaging, curation, icon, and distribution**: [Powehi](https://powehi.eu)

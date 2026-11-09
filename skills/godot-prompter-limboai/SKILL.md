@@ -18,7 +18,7 @@ description: "Imported GodotPrompter guidance for limboai workflows in game deve
 | **Beehave** (GDScript addon) | Lightweight BT, GDScript-only projects |
 | **LimboAI** | BT **and** HSM together, visual editor, C++ performance, C# support (module build) |
 
-Choose LimboAI when you need a behavior tree with a polished visual debugger, want to combine it with a hierarchical state machine (`BTState` bridges them), or need C++ task execution speed. Note: LimboAI requires **Godot 4.6+** and is not usable on 4.3–4.5. For a simpler GDScript-only behavior tree, Beehave is a lighter alternative. For plain state machines without a BT, use the built-in `state-machine` skill instead.
+Choose LimboAI when you need a behavior tree with a polished visual debugger, want to combine it with a hierarchical state machine (`BTState` bridges them), or need C++ task execution speed. Note: The 1.8.x GDExtension requires **Godot 4.6+**. Older Godot releases need an older compatible LimboAI version. See the [upstream compatibility matrix](https://github.com/limbonaut/limboai#supported-godot-versions). For a simpler GDScript-only behavior tree, Beehave is a lighter alternative. For plain state machines without a BT, use the built-in `state-machine` skill instead.
 
 ---
 
@@ -390,3 +390,7 @@ public partial class IdleState : LimboState
 - [ ] HSM: `set_active(true)` called after `initialize()`
 - [ ] HSM transitions are exhaustive — every reachable state has an exit path
 - [ ] `BBParam` inspector binding: use module build; GDExtension lacks the param editor UI
+
+## Adoption check
+
+Use the [v1.8.0 release assets](https://github.com/limbonaut/limboai/releases/tag/v1.8.0) to check the package for your engine and target platforms. The v1.8.0 module targets Godot 4.7. The addon is optional. Start with one NPC, inspect its behavior tree in the debugger, and verify that the extension loads in each target export. Keep gameplay actions separate from tree tasks so the decision layer can be replaced. The upstream code is MIT, and the demo art and logo have separate CC BY 4.0 terms.
